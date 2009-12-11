@@ -1,0 +1,1287 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package packagerversion="1.8.1" version="2.0" xmlns="http://pear.php.net/dtd/package-2.0" xmlns:tasks="http://pear.php.net/dtd/tasks-1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://pear.php.net/dtd/tasks-1.0 http://pear.php.net/dtd/tasks-1.0.xsd http://pear.php.net/dtd/package-2.0 http://pear.php.net/dtd/package-2.0.xsd">
+ <name>Doctrine</name>
+ <channel>pear.phpdoctrine.org</channel>
+ <summary>PHP5 Database ORM</summary>
+ <description>Doctrine is an ORM (object relational mapper) for PHP 5.2.x+ that sits on top of
+a powerful DBAL (database abstraction layer). One of its key features is the
+ability to optionally write database queries in an OO (object oriented)
+SQL-dialect called DQL inspired by Hibernates HQL. This provides developers with
+a powerful alternative to SQL that maintains a maximum of flexibility without
+requiring needless code duplication.</description>
+ <lead>
+  <name>Konsta Vesterinen</name>
+  <user>zYne-</user>
+  <email>kvesteri@cc.hut.fi</email>
+  <active>yes</active>
+ </lead>
+ <lead>
+  <name>Jonathan H. Wage</name>
+  <user>jwage</user>
+  <email>jonwage@gmail.com</email>
+  <active>yes</active>
+ </lead>
+ <date>2009-07-27</date>
+ <time>15:51:49</time>
+ <version>
+  <release>1.1.3</release>
+  <api>1.1.3</api>
+ </version>
+ <stability>
+  <release>stable</release>
+  <api>stable</api>
+ </stability>
+ <license uri="http://www.phpdoctrine.org/license">LGPL license</license>
+ <notes>
+-
+ </notes>
+ <contents>
+  <dir baseinstalldir="Doctrine" name="/">
+   <file baseinstalldir="Doctrine" md5sum="a5a0bbee1381154befff6223c4258b6b" name="lib/Doctrine/Adapter/Statement/Interface.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="18d7fccf0489790c0601038d652b6163" name="lib/Doctrine/Adapter/Statement/Mock.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="aee000ac3f45a441706f97b98596ded2" name="lib/Doctrine/Adapter/Statement/Oracle.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="f2b78f685ba9865d1bd56390fe800f5c" name="lib/Doctrine/Adapter/Db2.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="202c108252847f0a4abab18803e9e784" name="lib/Doctrine/Adapter/Exception.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="b4990b3a67c3c33dcd8f6849331c37d4" name="lib/Doctrine/Adapter/Interface.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="75aefd848c4c697be563209a21c3a7d9" name="lib/Doctrine/Adapter/Mock.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="9816ff109be0364c19c03e4392c5a009" name="lib/Doctrine/Adapter/Mysqli.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="2f96c154e09f1c587b00e946d10d3caf" name="lib/Doctrine/Adapter/Oracle.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="e7932a362cfada022fb12d72250d62f8" name="lib/Doctrine/Adapter/Statement.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="68152b86c1063870293eacc437ffbd64" name="lib/Doctrine/AuditLog/Listener.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="d62323117bc035dddd39d82e8f1b7183" name="lib/Doctrine/Cache/Apc.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="e3689cfd4f92ddf1aea0aa789e8a0f67" name="lib/Doctrine/Cache/Array.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="4fe7672b2c006a5094a08c36f23401e3" name="lib/Doctrine/Cache/Db.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="cebdcbdb5a35f0fe1b25a7d7d8e2c0f7" name="lib/Doctrine/Cache/Driver.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="6591f16a21c131e18df8feecc009ccd2" name="lib/Doctrine/Cache/Exception.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="c260ef8460b927c16e8e8c1f3908de04" name="lib/Doctrine/Cache/Interface.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="756bee59ed54dad7eea08554f4140daf" name="lib/Doctrine/Cache/Memcache.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="c1aec45c639a0b40213c9b9265f615eb" name="lib/Doctrine/Cache/Xcache.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="84c3b1de2f098097230d0481557c0268" name="lib/Doctrine/Cli/AnsiColorFormatter.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="b63e18272c9aad04463f5b6ef247b345" name="lib/Doctrine/Cli/Exception.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="41a39f2154fdf11d3ca11b1f11145790" name="lib/Doctrine/Cli/Formatter.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="3175f1d0790d5ed845d0fae56c683aed" name="lib/Doctrine/Collection/Iterator/Expandable.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="2f3e6997a721e20cc4e020c778bb4529" name="lib/Doctrine/Collection/Iterator/Normal.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="840d04bab2cd9efc1bbbc982c05b145f" name="lib/Doctrine/Collection/Iterator/Offset.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="fcf56e2c8f20931cf2a453944765b17f" name="lib/Doctrine/Collection/Exception.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="18ca0aaf3efce9b5002a2ad7ddda2e30" name="lib/Doctrine/Collection/Iterator.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="21baa493cfb88a1692a22bb38f9c1d5d" name="lib/Doctrine/Collection/Offset.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="c8412b5d2da50ec1edddc03ba5fe338d" name="lib/Doctrine/Compiler/Exception.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="3403a1a013640acd29c2ae15ec6fbc8c" name="lib/Doctrine/Connection/Firebird/Exception.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="b30fd41d04c3a5af5f6bfaf49f73b7e5" name="lib/Doctrine/Connection/Informix/Exception.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="a6d2aef3e1f9c600690c53314288a513" name="lib/Doctrine/Connection/Mssql/Exception.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="03b2882d2a2f5f83400e70ecfd5f9b9b" name="lib/Doctrine/Connection/Mysql/Exception.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="7d0cb5b20fda41f41e1569caca4832f7" name="lib/Doctrine/Connection/Oracle/Exception.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="dfc415b6758a517116b4c7af73167a60" name="lib/Doctrine/Connection/Pgsql/Exception.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="eb1f8dd40770e80ce9bd273c9c81b750" name="lib/Doctrine/Connection/Profiler/Exception.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="8742a22957e7d28c51c67fba25cfc402" name="lib/Doctrine/Connection/Sqlite/Exception.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="8ff3816d6cd1ab33a699c1cda367b08d" name="lib/Doctrine/Connection/Common.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="cf9cccc7460f103ecda2ed6f02afbb65" name="lib/Doctrine/Connection/Db2.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="1ae8d479fa2a68330c7a3fb233e213a4" name="lib/Doctrine/Connection/Exception.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="2baa2f1c35fd5e031511410054f78f04" name="lib/Doctrine/Connection/Firebird.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="b5333b74f942bbd94b7bebb5b8345740" name="lib/Doctrine/Connection/Informix.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="5b6d3fdeec86eaeb7460cdaf046a521a" name="lib/Doctrine/Connection/Mock.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="79cc56dc6f98643f011161a0b86804ed" name="lib/Doctrine/Connection/Module.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="1d4b3fd73b2c8bd1736949e623cccd47" name="lib/Doctrine/Connection/Mssql.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="e11dde514a0666b5a3b5c54dcc1763a4" name="lib/Doctrine/Connection/Mysql.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="0ffcb644e477d4dc8937c5c332de387c" name="lib/Doctrine/Connection/Oracle.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="d6344ca930cb05ef0b08b51efdd1f95f" name="lib/Doctrine/Connection/Pgsql.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="5f652b78cd72d9745dd0afb504359322" name="lib/Doctrine/Connection/Profiler.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="fcfe5e9603f71d28c65ef0e8d082186c" name="lib/Doctrine/Connection/Sqlite.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="5daaabc6344ad3e0fc4c49e94ed241d5" name="lib/Doctrine/Connection/Statement.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="af99e265d8f9363f18dfce2e1cba469e" name="lib/Doctrine/Connection/UnitOfWork.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="055affaae62ec8302bb195331648a8e3" name="lib/Doctrine/Data/Exception.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="b35d2e1cee524aa4fd2a375d46362e25" name="lib/Doctrine/Data/Export.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="8df18857101038bf4b5b01480fab11d6" name="lib/Doctrine/Data/Import.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="deaf4340523daaddfba0c851562d90a9" name="lib/Doctrine/DataDict/Exception.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="2d8c6cc4d29bc5efe15aa22da3d3100f" name="lib/Doctrine/DataDict/Firebird.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="c8c13b96b2c26bdf95ed715baa1e75a6" name="lib/Doctrine/DataDict/Informix.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="6bc510797967d0a6be2ff27e6eb15ee8" name="lib/Doctrine/DataDict/Mssql.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="94be786aea6d4ed48f50e2423534a4cf" name="lib/Doctrine/DataDict/Mysql.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="98bd4fc5cfdb86e3c34c1eaab6bc70fd" name="lib/Doctrine/DataDict/Oracle.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="64aa2f6b20f3167bda9a427cc3669ccf" name="lib/Doctrine/DataDict/Pgsql.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="06709629dcf273b98b0dea72160d7480" name="lib/Doctrine/DataDict/Sqlite.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="07e5c090ea147af215ec3eff0bd9a56c" name="lib/Doctrine/EventListener/Chain.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="1da797b570764a60cffd442dde5bf191" name="lib/Doctrine/EventListener/Exception.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="b144c0ea6a8669522e440b856e706ad9" name="lib/Doctrine/EventListener/Interface.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="c671f5fe35ffabb41bd94e9249a3a8d0" name="lib/Doctrine/Export/Exception.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="fa4bc512884ea09099e45b3cbcee06ba" name="lib/Doctrine/Export/Firebird.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="193a50d66b35fe76880355c2de4f3661" name="lib/Doctrine/Export/Frontbase.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="47ce7c79a59c820fa43ae6f14189da68" name="lib/Doctrine/Export/Informix.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="64be0eac2e00e16e40ff9576ea8abc38" name="lib/Doctrine/Export/Mssql.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="05a3d4348704b888db5b572031daaf44" name="lib/Doctrine/Export/Mysql.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="c1a694c90fe332d31c8e36a90267aa11" name="lib/Doctrine/Export/Oracle.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="0f527f7a5d93c9ef019e137c9ede7f22" name="lib/Doctrine/Export/Pgsql.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="d387cbc3c24106c735bec20c5f7cb9ce" name="lib/Doctrine/Export/Reporter.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="2790e3e33d3a714052880f4595ac1f3b" name="lib/Doctrine/Export/Schema.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="befd4b7cbef1b2f05edf3d5e2432c2df" name="lib/Doctrine/Export/Sqlite.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="5069fcabb50bbee7695f8397694b0e81" name="lib/Doctrine/Expression/Driver.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="ebe0bc7486337c114b1589a0d14ebf1f" name="lib/Doctrine/Expression/Exception.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="6cfc1f75938023abf4b6e327cdad6b32" name="lib/Doctrine/Expression/Firebird.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="f9c6d37c1dd35b3befb3bf361dcbc66a" name="lib/Doctrine/Expression/Informix.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="2b9cb49a0d2c59ba85623492b2afd9a6" name="lib/Doctrine/Expression/Mock.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="7cca5e8f02ba053bb0cef99339958d33" name="lib/Doctrine/Expression/Mssql.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="a976ba80590d13c8ab982203e655bf7e" name="lib/Doctrine/Expression/Mysql.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="0548f620e35f242f57ded503c2093b3c" name="lib/Doctrine/Expression/Oracle.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="ab3ba5110452eb1e5a4edfd6d7ca6bbe" name="lib/Doctrine/Expression/Pgsql.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="fbda25029a6a4ca9e511b04676e27f63" name="lib/Doctrine/Expression/Sqlite.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="35fe7e1784d0149502a4bc169201b711" name="lib/Doctrine/File/Index.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="2a27ba587d767f1d2bb79f009ec7f5c0" name="lib/Doctrine/Hook/Parser/Complex.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="a31dab010aa09f783639d8f2ce554f61" name="lib/Doctrine/Hook/Equal.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="43f9f7c1d071fb387468d1b1f0412819" name="lib/Doctrine/Hook/Integer.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="7ddd09765ed1f20cffd39ad9db6e90f2" name="lib/Doctrine/Hook/Parser.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="8267d986e8828e217e63a6360f4fab20" name="lib/Doctrine/Hook/WordLike.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="921ef08fde51186a406cdbec6888c3d8" name="lib/Doctrine/Hydrator/Abstract.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="c4f2a9083ca8221266084733792572f9" name="lib/Doctrine/Hydrator/ArrayDriver.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="37df78ed0f75608943d97447d994f412" name="lib/Doctrine/Hydrator/Exception.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="be07043763e8be3dc7987735418d069a" name="lib/Doctrine/Hydrator/RecordDriver.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="f298097337aedba71d78454a0c8bacd1" name="lib/Doctrine/I18n/Exception.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="ac41a799db30deff284059a4a1fa2651" name="lib/Doctrine/Import/Builder/Exception.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="75e0603a2fca3a2d3a426aa10769140b" name="lib/Doctrine/Import/Builder.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="6d0392614f0c5bea78605fad48125850" name="lib/Doctrine/Import/Exception.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="9b1b848fc81e967ebeb5ee280949f1d9" name="lib/Doctrine/Import/Firebird.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="67658adacc4d7cd540d94ce5ae3ff267" name="lib/Doctrine/Import/Informix.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="50e7407330df8318e318fb008bb44be6" name="lib/Doctrine/Import/Mssql.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="ecb987f1d4a3aa81e31a24149b98284a" name="lib/Doctrine/Import/Mysql.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="9a07d31df217a8823f9b14f03437e80d" name="lib/Doctrine/Import/Oracle.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="75df2da6b8de1303ebcd383c9733e05b" name="lib/Doctrine/Import/Pgsql.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="17b328d58e7fc74a3e78aa81052549fc" name="lib/Doctrine/Import/Schema.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="fe6399a7bd423c91d3fc66ce05f68790" name="lib/Doctrine/Import/Sqlite.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="3d357486c1ee3328df13e6b74968d6b9" name="lib/Doctrine/Locator/Exception.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="99ec89af856aad05eddfb511d1656566" name="lib/Doctrine/Locator/Injectable.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="41603d19ceb6035faa0812969002f077" name="lib/Doctrine/Locking/Manager/Pessimistic.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="d49d9836e5449991c63bd97d4f95a891" name="lib/Doctrine/Locking/Exception.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="63686eb8d772e161c9fe77d1b2a3892c" name="lib/Doctrine/Manager/Exception.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="ad4f91d3141b86a8ac3e72abe24f2eee" name="lib/Doctrine/Migration/Base.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="fa6d9ca5e38c71feb6b5a1f776a1a4b6" name="lib/Doctrine/Migration/Builder.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="dfe076f813bba9ece29dbf746ad9a45e" name="lib/Doctrine/Migration/Diff.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="ba4b53846f292cb9126a512abdaa9ab4" name="lib/Doctrine/Migration/Exception.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="41d3d1b2d57e1803cce56c1a591100fd" name="lib/Doctrine/Migration/IrreversibleMigrationException.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="ce5885b3d463f2d6381c772c6cd9798c" name="lib/Doctrine/Migration/Process.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="e75a945159133affcbe0fdcac801a23b" name="lib/Doctrine/Node/AdjacencyList/LevelOrderIterator.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="608d6101e8da79573797f5f9b5711e12" name="lib/Doctrine/Node/AdjacencyList/PostOrderIterator.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="1367e6e590cedeecda6481d6bddc5e6a" name="lib/Doctrine/Node/AdjacencyList/PreOrderIterator.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="8f351f82b7004ee7fd962a253f42ed19" name="lib/Doctrine/Node/MaterializedPath/LevelOrderIterator.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="c2412568771b0fabea0c787455e183e3" name="lib/Doctrine/Node/MaterializedPath/PostOrderIterator.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="e7a3e008beca25670fa47e5e2ef2d832" name="lib/Doctrine/Node/MaterializedPath/PreOrderIterator.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="0d488716d54d28a624652bc7508a8778" name="lib/Doctrine/Node/NestedSet/LevelOrderIterator.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="1c8c4bb4dc18ef700ef35654bc7cf769" name="lib/Doctrine/Node/NestedSet/PostOrderIterator.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="7bdfec6ba403b802fd89b6e1c341e847" name="lib/Doctrine/Node/NestedSet/PreOrderIterator.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="d8ef695b177f4c4faa4f54557ed0da79" name="lib/Doctrine/Node/AdjacencyList.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="31c3d92337e334a41576793850afd80b" name="lib/Doctrine/Node/Exception.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="fcea653733b6674ee09dedfb6b2b0027" name="lib/Doctrine/Node/Interface.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="c3f812ce7f3956229b190ef044e856eb" name="lib/Doctrine/Node/MaterializedPath.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="6ab7a7e2a46ba8c57ef547173ac3bd34" name="lib/Doctrine/Node/NestedSet.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="2b66b94c7cbd61c804868ae8b029df11" name="lib/Doctrine/Pager/Range/Jumping.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="6b79575617e52460adcd7b59c9ce965e" name="lib/Doctrine/Pager/Range/Sliding.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="32f6c6d0ae976fd2a23bf1f652d15376" name="lib/Doctrine/Pager/Exception.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="c85d95cb61671fe8f14be0a342eb0761" name="lib/Doctrine/Pager/Layout.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="c349ed63476d760945a15704ec70e27d" name="lib/Doctrine/Pager/Range.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="8f053233e7b0b38e902a4812bee5d341" name="lib/Doctrine/Parser/Spyc/YamlNode.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="cf29df1cbb18971e3280a8fecb71bf5a" name="lib/Doctrine/Parser/YamlSf/Dumper.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="b626694ea9be294a6f05ce80e253cc2c" name="lib/Doctrine/Parser/YamlSf/Inline.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="af60570dfcc082e8de1dee6155cfa873" name="lib/Doctrine/Parser/YamlSf/Parser.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="d046a029948dfa978bd7b5dcf439673d" name="lib/Doctrine/Parser/Exception.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="27277cb0a2823aadc857048e70e62dba" name="lib/Doctrine/Parser/Json.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="b2c7d5d4714cd33a164a067ba2ae099a" name="lib/Doctrine/Parser/Serialize.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="f0890f32172a228c8a49b9733cb36c5f" name="lib/Doctrine/Parser/Spyc.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="c2e3250fcfe92b22aa0407cb95dbdb35" name="lib/Doctrine/Parser/Xml.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="80c1513c76fb5d95baeadcbe54b85454" name="lib/Doctrine/Parser/YamlSf.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="347f9476f867105e0983a840d0ddef79" name="lib/Doctrine/Parser/Yml.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="564d464f624fab8bbe95a2c35b4b0270" name="lib/Doctrine/Query/Filter/Chain.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="a364902bee725f750f3a6d713ceeb298" name="lib/Doctrine/Query/Filter/Interface.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="86c743642aaa031f0c6ea6a29ca54fad" name="lib/Doctrine/Query/Registry/Exception.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="a68eb1c663f437429decc4e78579deed" name="lib/Doctrine/Query/Tokenizer/Exception.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="42ca2430a5dfee35f1f9fec915579c9f" name="lib/Doctrine/Query/Abstract.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="495ba8edd8e437dcbaa817845305cb15" name="lib/Doctrine/Query/Check.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="e10b3b264b0c5c6baba0fd82ced5d9af" name="lib/Doctrine/Query/Condition.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="a6fa0bb49b47a45aaba75c49167aa62c" name="lib/Doctrine/Query/Exception.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="3795d1138fb82488e8f2a04759d0f1f6" name="lib/Doctrine/Query/Filter.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="72a4dd65fcb645181994beb87850fce4" name="lib/Doctrine/Query/Forupdate.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="134d720f1c4c55a80ae6a4ef16d77978" name="lib/Doctrine/Query/From.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="6e99cc3b4966c341ceda29e5ff982063" name="lib/Doctrine/Query/Groupby.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="33d0240fd8c62458a1017aff1f593ddf" name="lib/Doctrine/Query/Having.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="d7e34626b0bde16911260b539a2a9f27" name="lib/Doctrine/Query/JoinCondition.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="f2783322c511bd503d323b86a216f67b" name="lib/Doctrine/Query/Limit.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="ceb3e01c7657fc8f4ae965b1002e3088" name="lib/Doctrine/Query/Offset.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="456c4626f19e438656298214415d351f" name="lib/Doctrine/Query/Orderby.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="abeff773b6cd2a35ea8243bd0add01ee" name="lib/Doctrine/Query/Parser.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="eff07fc11e4e5d7be0df8a518b4a5c26" name="lib/Doctrine/Query/Part.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="b6a4e63cdfc5d48b3d4302c8fe4d3a3b" name="lib/Doctrine/Query/Registry.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="f10dafa6e16b96e25a2fd05b5e855895" name="lib/Doctrine/Query/Select.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="a31a32b7a6afd8e51ad333c61062b1ca" name="lib/Doctrine/Query/Set.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="34e11a244561eef54677d707f9c16528" name="lib/Doctrine/Query/Tokenizer.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="63fbcf519a1db425e83a3c246ac3f330" name="lib/Doctrine/Query/Where.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="8bb3fd4575a8b6ca96c40848cafb1b46" name="lib/Doctrine/RawSql/Exception.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="146aaab4d8a93de8c876afd9869dc0a7" name="lib/Doctrine/Record/Filter/Compound.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="1deb966c12f219c4bf07070ac7349579" name="lib/Doctrine/Record/Filter/Standard.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="fdf20f89917d54a31b168b599c9df30b" name="lib/Doctrine/Record/Listener/Chain.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="13e44bad249343c531bf62305a50ed59" name="lib/Doctrine/Record/Listener/Interface.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="155d48d2a97c591d57b904e351b1b2fe" name="lib/Doctrine/Record/State/Exception.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="5fc0e90c5cb779333dd67814ebff8c92" name="lib/Doctrine/Record/Abstract.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="a2755804e8500b60ba494ce457e78641" name="lib/Doctrine/Record/Exception.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="1d06aa08f927f5516c5ecfe398440dbe" name="lib/Doctrine/Record/Filter.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="cb150b227702dbcc8c6399bade10e314" name="lib/Doctrine/Record/Generator.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="0f09830229b24701e91f766dac639f42" name="lib/Doctrine/Record/Iterator.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="46ad9985237d4f5cc6289729961c3004" name="lib/Doctrine/Record/Listener.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="8b6cf5cd412c72543dbbff138a0835c6" name="lib/Doctrine/Record/UnknownPropertyException.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="e79fa93f68f203e26d8016e008ed17f0" name="lib/Doctrine/Relation/Association/Self.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="08ce95340bf234d11ea909fa4b27221c" name="lib/Doctrine/Relation/Parser/Exception.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="ecded262aac9b202ebc7edd0c810f8e5" name="lib/Doctrine/Relation/Association.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="13d7eb9bb637f1c5a217909784b9af8f" name="lib/Doctrine/Relation/Exception.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="07622dbe6def42b22b57b1e62af4b8ce" name="lib/Doctrine/Relation/ForeignKey.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="da38ecf6fe469cf812d769b9feb41fc7" name="lib/Doctrine/Relation/LocalKey.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="e01b767780c29d5f606c4f94b352e715" name="lib/Doctrine/Relation/Nest.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="c8e38146794bd26bf4539d9a0d5e5251" name="lib/Doctrine/Relation/Parser.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="30e2f2e439010f207cdfd67d4f0dd8e7" name="lib/Doctrine/Search/Analyzer/Exception.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="ffb3141e523475cd82930f06202ba27f" name="lib/Doctrine/Search/Analyzer/Interface.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="6e59758b629e878cf65e577a01063a3c" name="lib/Doctrine/Search/Analyzer/Standard.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="88542b172a3c88cd1d2f0d34a64673d1" name="lib/Doctrine/Search/Analyzer/Utf8.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="c9963a9a548a5e2582a2472c15692e00" name="lib/Doctrine/Search/Indexer/Dir.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="65bd5c1b755403b3bfdd176bca2c9141" name="lib/Doctrine/Search/Indexer/Exception.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="efe8b060807f10abcac6357e117106e1" name="lib/Doctrine/Search/Analyzer.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="a2818c4b007c6bbf9c765e54c488a910" name="lib/Doctrine/Search/Exception.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="568f403abd5f39345a9da13444ee5da8" name="lib/Doctrine/Search/File.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="805b2bc076c9a77c30ae33bc7d024bae" name="lib/Doctrine/Search/Indexer.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="046444de98514d395eb658d5ff4e5277" name="lib/Doctrine/Search/Listener.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="fd49ef891d1ddc2343b95344c153dc2e" name="lib/Doctrine/Search/Parser.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="f903039692cd45c701d2115a41d06307" name="lib/Doctrine/Search/Query.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="a696a3e791f5164834cc38e2d96bdb71" name="lib/Doctrine/Search/Record.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="4fcced02bf728ce32e53ff2ee82668f2" name="lib/Doctrine/Sequence/Db2.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="ccfed7df3f2204f3ad9f13329588f32b" name="lib/Doctrine/Sequence/Exception.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="7464f60726e6bc68d04538b9769b6215" name="lib/Doctrine/Sequence/Firebird.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="e8358a9bb0b86fc319a0200d261021e2" name="lib/Doctrine/Sequence/Informix.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="e6279ed74ddecac32a20c1499d867406" name="lib/Doctrine/Sequence/Mssql.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="b04d7b234382d8275724d4776cd8ccfa" name="lib/Doctrine/Sequence/Mysql.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="f4fc7a61486c0d7748e0817cf334c8e9" name="lib/Doctrine/Sequence/Oracle.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="571bd3c2e21591b801afa602292fdad0" name="lib/Doctrine/Sequence/Pgsql.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="129c47135dcc283fe6fb74d06737c7b0" name="lib/Doctrine/Sequence/Sqlite.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="2321384238378ed2265dafc2b453b95e" name="lib/Doctrine/Table/Repository/Exception.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="b7416d84196cb7207a0cc13936397852" name="lib/Doctrine/Table/Exception.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="59f678f3830ca04f5db29b4d954f6835" name="lib/Doctrine/Table/Repository.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="d3c6a7dbb8d8eb2adb53bdc1beef6582" name="lib/Doctrine/Task/BuildAll.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="9ad05f02d954d4475adc37fd11a2ce2f" name="lib/Doctrine/Task/BuildAllLoad.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="0564f2020537756ce3b5a6bc3a48eb9b" name="lib/Doctrine/Task/BuildAllReload.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="15c342f0ab89c5b293ab9c358d9085f9" name="lib/Doctrine/Task/Compile.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="0819843b8c0280221b04977b45b1150c" name="lib/Doctrine/Task/CreateDb.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="554bf981373bce8c45263bacf9fdc257" name="lib/Doctrine/Task/CreateTables.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="fff1518ed817e32a0d16c87c3811fb3d" name="lib/Doctrine/Task/Dql.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="f438796bc1c9893e1926460c6aa64879" name="lib/Doctrine/Task/DropDb.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="3ba439fb83240afe140f85b4c9d1eed8" name="lib/Doctrine/Task/DumpData.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="3e122cba1829c0124f7965529b71810f" name="lib/Doctrine/Task/Exception.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="4af03e47f81ce046426cd9db8d901aed" name="lib/Doctrine/Task/GenerateMigration.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="040b93a31a2ac99ad0fe9facdebac43a" name="lib/Doctrine/Task/GenerateMigrationsDb.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="87ce796e08bf838953837c3e8d4bdbcd" name="lib/Doctrine/Task/GenerateMigrationsDiff.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="2c66e27ccd2a0f4b5af619490c3880d9" name="lib/Doctrine/Task/GenerateMigrationsModels.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="c98695d9efbb6333b7afe2936e95387a" name="lib/Doctrine/Task/GenerateModelsDb.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="da9bf36b4d9dbcd1772bf2f8880cdc8e" name="lib/Doctrine/Task/GenerateModelsYaml.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="f05af7212d6ced49f44aea92cb02f1a1" name="lib/Doctrine/Task/GenerateSql.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="6a199a88dcec0db0b2e5dbe46e4926b5" name="lib/Doctrine/Task/GenerateYamlDb.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="95139b373e33b883e1b46ec78d04e7e4" name="lib/Doctrine/Task/GenerateYamlModels.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="f3ebb4e5035811bcb73f2a452c3932ed" name="lib/Doctrine/Task/LoadData.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="6d6a4dcdd6911ea1d67bae60d8ed967d" name="lib/Doctrine/Task/Migrate.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="de814f46f8469ba63616844ee88f1765" name="lib/Doctrine/Task/RebuildDb.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="462c6734695612e8d43f9f3f2c60502c" name="lib/Doctrine/Template/Listener/Sluggable.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="f21d2a763c525384e3bcd4d9fc3e01de" name="lib/Doctrine/Template/Listener/SoftDelete.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="eafe993dd44b0f72777acefd1e7b9039" name="lib/Doctrine/Template/Listener/Timestampable.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="44b8aaf259777730e16c43445d444627" name="lib/Doctrine/Template/Geographical.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="63716eb2d448c135a295340539e36246" name="lib/Doctrine/Template/I18n.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="0c2f1f2117d85b0fac9b26d6b3afc8dc" name="lib/Doctrine/Template/NestedSet.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="e7127a1aafd6ef73ff3ef662aeb85eba" name="lib/Doctrine/Template/Searchable.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="9d06211309e5227dbb5af82710015f68" name="lib/Doctrine/Template/Sluggable.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="f32195fd4522a54bba0d0e8c727c1ece" name="lib/Doctrine/Template/SoftDelete.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="70c2cb9ee98f78c24bf71378874820de" name="lib/Doctrine/Template/Timestampable.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="bca2a33843575eaf231631ce6ed02985" name="lib/Doctrine/Template/Versionable.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="edefc14d6c94bcff82f639773b6fd3ca" name="lib/Doctrine/Transaction/Exception.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="29562d367a291d7eef1ea8ee2ce68298" name="lib/Doctrine/Transaction/Firebird.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="c80a4c91451d907e82b757fbadf5fe93" name="lib/Doctrine/Transaction/Informix.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="286a1760e07fb982ab20a2e19c8c2e5d" name="lib/Doctrine/Transaction/Mock.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="c2ad0b613bf104062630f0e7137f83e6" name="lib/Doctrine/Transaction/Mssql.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="310f453e5e0a93416193da81f32b1c34" name="lib/Doctrine/Transaction/Mysql.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="45623449f2b289c13d1f133390730323" name="lib/Doctrine/Transaction/Oracle.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="cd36f7132f9df5e70b56e43a323f55b5" name="lib/Doctrine/Transaction/Pgsql.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="941012f398e7dc13768dec50dc04455d" name="lib/Doctrine/Transaction/Sqlite.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="5a8f383f8ccb31e5dac3dc0516d79479" name="lib/Doctrine/Tree/AdjacencyList.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="e67e665e985bf555d54a562cb5c72cc2" name="lib/Doctrine/Tree/Exception.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="50117f163f214ad8d5db338f9702543f" name="lib/Doctrine/Tree/Interface.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="d7198b3e739c9e0f99596353f9ea6bc1" name="lib/Doctrine/Tree/MaterializedPath.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="551a2869cec29498a6452e2d8f8d5210" name="lib/Doctrine/Tree/NestedSet.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="00fb5495d527f040cb813f240ca4df8b" name="lib/Doctrine/Validator/Country.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="c3571f42f6cad100b456b57be526ccc6" name="lib/Doctrine/Validator/Creditcard.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="1ccf2ef193f3e56d1b991c04b87f7045" name="lib/Doctrine/Validator/Date.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="050853a1b14945642dd33b97c8a8a398" name="lib/Doctrine/Validator/Driver.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="12d78e753bba42b8151d1451d901da96" name="lib/Doctrine/Validator/Email.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="a7e0a7d7ec462709b03e5b7b6b7ea4ec" name="lib/Doctrine/Validator/ErrorStack.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="68af7b173a8aff3fc86369ee92c280c1" name="lib/Doctrine/Validator/Exception.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="79cd17f71e9a1d722735d4851406b391" name="lib/Doctrine/Validator/Future.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="573fddb40885bbcf704160cf9e41aaeb" name="lib/Doctrine/Validator/Htmlcolor.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="7247c12abc874768d67898ddeb0ec462" name="lib/Doctrine/Validator/Ip.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="42e1b045cefb079da492e71f4a01e88f" name="lib/Doctrine/Validator/Minlength.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="74b7e0fd3631ae6a03672b686f8aa963" name="lib/Doctrine/Validator/Nospace.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="d8451c0da5210960f68f756aba678a99" name="lib/Doctrine/Validator/Notblank.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="a72c945b65c0a587d12ec3685bb0098b" name="lib/Doctrine/Validator/Notnull.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="ec81b5422bb8f0c6e94eaf021bcdc345" name="lib/Doctrine/Validator/Past.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="a79f62a77a813acd9c4d191209482d94" name="lib/Doctrine/Validator/Range.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="cff1d6388ce66111154499bd5c400c81" name="lib/Doctrine/Validator/Readonly.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="2055775b17a84b017ffe105a09e887f7" name="lib/Doctrine/Validator/Regexp.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="77cbeb99e6f336ca618eeb27a45648b3" name="lib/Doctrine/Validator/Time.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="9187c0fe2355ff390760367409a1f6ff" name="lib/Doctrine/Validator/Timestamp.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="0457f76470f405fa72a125e2c2737a79" name="lib/Doctrine/Validator/Unique.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="fa7234b40a62ff70fe0950b695507e3a" name="lib/Doctrine/Validator/Unsigned.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="8296afcb42287537de80d6921d12291a" name="lib/Doctrine/Validator/Usstate.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="8712df390e697d93f09d41a20dcb77df" name="lib/Doctrine/View/Exception.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="463db42d7e2d01763bb6030bde3b91bb" name="lib/Doctrine/Access.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="281f54ce36f18a8e2073d0e156bffb85" name="lib/Doctrine/Adapter.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="18c809fbbed785c887d5dd7f1a64240d" name="lib/Doctrine/AuditLog.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="2669cbf13e13d12f0603a2a2d9858228" name="lib/Doctrine/Builder.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="05cb6121b658d45d3930cd42641d84cc" name="lib/Doctrine/Cache.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="a15f61ebd2eab255ed79bc357bec5d2c" name="lib/Doctrine/Cli.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="6cc00a2bee337cae5ee5203dc6c996b1" name="lib/Doctrine/Collection.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="391bf9ea4b30b1b42cd0c633c8c0f3f7" name="lib/Doctrine/Column.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="9a98a393180eb0e6b3b6f9f3213a979b" name="lib/Doctrine/Compiler.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="0254089774688494e8ba42256d933910" name="lib/Doctrine/Configurable.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="18d3f6c2e4049d31ecf3f2d49aafc16c" name="lib/Doctrine/Connection.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="c909c720123a74dcd0ba2a1c9c865745" name="lib/Doctrine/Data.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="ac5130d8c1a38ee42536837cf5aef9e1" name="lib/Doctrine/DataDict.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="703620b959d8710013d50a86d589afc9" name="lib/Doctrine/DataType.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="e8d7f0d1481ec4d2dce6bf490091fbd9" name="lib/Doctrine/Event.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="6723f64ae6c07d37743047a30db4cbd9" name="lib/Doctrine/EventListener.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="e16397d5b4b722d060ebd18d469c737f" name="lib/Doctrine/Exception.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="b3517e74c48d4ff8485121f88d952ea8" name="lib/Doctrine/Export.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="442b7734a457f1ee67eb6af79da7d1f0" name="lib/Doctrine/Expression.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="eb810862b84f8ea523402b79f4957300" name="lib/Doctrine/File.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="3c3104eac47af1b6cc0263d6f7083cd6" name="lib/Doctrine/Formatter.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="ea68df551b81cd3215b5296f70c6aad3" name="lib/Doctrine/Hook.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="55868730d3e908ffb0f9ed7cea9f20e9" name="lib/Doctrine/Hydrator.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="ab95073e770262b526f9cde0758bde3f" name="lib/Doctrine/I18n.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="973a718916c11dbb6d140dfce61a6785" name="lib/Doctrine/Import.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="72b33dcdb42bf4b4e61baada4b98420a" name="lib/Doctrine/Inflector.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="54ac8d8e6962cb78e88d0ed226778291" name="lib/Doctrine/IntegrityMapper.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="5503915a944767f7ee637ade1217a0d2" name="lib/Doctrine/Lib.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="7533ce96e426e78061cff9f4fdbbacb8" name="lib/Doctrine/Locator.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="604edc573e716d8e539048521cf06911" name="lib/Doctrine/Manager.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="4264d8d948ccc5ed2e785c4c64f43ed1" name="lib/Doctrine/Migration.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="8f384b6c18de52022490f7d2a13a6bb5" name="lib/Doctrine/Node.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="5b6ebe3d9bbff4d4353515709ebb547d" name="lib/Doctrine/Null.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="0da5b94e56bb3cc2f949a24dfd5022be" name="lib/Doctrine/Overloadable.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="85b7f3f8f9c72e3783172186c3f3a6dc" name="lib/Doctrine/Pager.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="4f1c1475643f9ff10c5cc0785ffaf624" name="lib/Doctrine/Parser.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="685502efb39e855bd88a9b3403da5783" name="lib/Doctrine/Query.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="f78daffca4d41ad4856bb942b255dd88" name="lib/Doctrine/RawSql.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="cac34d3cd2286dda11da258f5fe8b184" name="lib/Doctrine/Record.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="320436d5dc8a62505de3bc4822fc0e32" name="lib/Doctrine/Relation.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="ecbb8939f0818d1fd8f20e04451a30dc" name="lib/Doctrine/Search.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="0aeaf5fd0482b5b44e69f1ddb87720d2" name="lib/Doctrine/Sequence.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="dfd1b2722aa7f1049cbd1679e508fa03" name="lib/Doctrine/Table.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="50bf022c59946cb405c088fef50a5bdc" name="lib/Doctrine/Task.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="8c267d3c5de3347e88ef1e0e35e4e814" name="lib/Doctrine/Template.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="7f7c4007349f77d32f9c2684743a67b2" name="lib/Doctrine/Transaction.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="8bd802cb277d4a67440a88dde3c46542" name="lib/Doctrine/Tree.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="95e07673e6f4c3e88002e966606525cf" name="lib/Doctrine/Util.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="e2d73135e63b0bc31d39dd416aec9dcd" name="lib/Doctrine/Validator.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="e01fc93b75577df981fd7bc7f429858e" name="lib/Doctrine/View.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="b635de9c2b76f6e736257a9a09d13f5e" name="lib/Doctrine.php" role="php" />
+   <file baseinstalldir="Doctrine" md5sum="b37056d2eb04d38414734865d8bcc35d" name="tests/Cache/Query/SqliteTestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="2bb1e505e8555b3ea5d7b2a187ae298d" name="tests/Cache/ApcTestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="2f9a3e0d9174b435896f7830db2d2574" name="tests/Cache/FileTestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="d5cde9b0c97fae53f45dd3594f318542" name="tests/Cache/MemcacheTestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="2a1512169adff07d44f00acb2ff682fe" name="tests/Cache/QuerySqliteTestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="fa02a5305fe50aee9152edea0cb1eafc" name="tests/Cache/SqliteTestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="83efdd19f0437d7459d5af420c3905f5" name="tests/Collection/SnapshotTestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="e08e52b7af2c69cba80120f6ff6a4fd8" name="tests/Connection/FirebirdTestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="c6c45e1d68ec5e979b2bb800529ada7f" name="tests/Connection/InformixTestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="ab3566cc69302833800956b14f95923e" name="tests/Connection/MssqlTestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="fff0487d9f7f054f5e5ac55d637a7b11" name="tests/Connection/MysqlTestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="2e98b17e2cdc807ecf98f1034e2e246c" name="tests/Connection/OracleTestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="ef8fef0ced8f7546f8961dd0a887a082" name="tests/Connection/PgsqlTestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="245d901a63250c143d108b7548e18780" name="tests/Connection/ProfilerTestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="26a4d6222325f9ce7ee9a6d35ddbbc77" name="tests/Connection/SqliteTestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="fcd1b0feeaee704eebc63514292799f2" name="tests/Connection/UnitOfWork.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="89fc3e7b99ffe5d1e283039ef98c7494" name="tests/Data/ExportTestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="a4bc491103fef335962bf355a0406469" name="tests/Data/ImportTestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="0152035539d571c89d41e3e74cb46435" name="tests/DataDict/FirebirdTestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="c1198fc37cbbdffba340b0a53a9e22b3" name="tests/DataDict/InformixTestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="6b101483bdb0e6ffdae1cd2b73f361db" name="tests/DataDict/MssqlTestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="ce432612dc62bd458d8b321a63b2d27b" name="tests/DataDict/MysqlTestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="9650e605ba77ec845ba010ebc2b3673d" name="tests/DataDict/OracleTestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="9921282e8a6bbe459a68b5700b88644b" name="tests/DataDict/PgsqlTestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="d2ce4be41c9ba419ca213434d3b4cb52" name="tests/DataDict/SqliteTestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="fec485d360bbae2ef792c4a1693d3d44" name="tests/DataType/BooleanTestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="cab631a44ed961ef23ddc8c84edf70f6" name="tests/DataType/EnumTestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="6b185f7bd6ec15677b8036fd82de301f" name="tests/Db/ProfilerTestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="6dd11b104109b45b03fb26eaccef2243" name="tests/DoctrineTest/Reporter/Cli.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="da3295db539f64633371c15d012ff4e3" name="tests/DoctrineTest/Reporter/Html.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="deb03efa96186cf940f0f01d00212db4" name="tests/DoctrineTest/Coverage.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="18e43dedb3333907cd37ef7cbfef6d7f" name="tests/DoctrineTest/Doctrine_UnitTestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="1ebd67184dbed241169bd2caa9e9e2a9" name="tests/DoctrineTest/GroupTest.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="4ed34cb554954578291a679a70c973f5" name="tests/DoctrineTest/Reporter.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="b3ed6af1c8aa7a83b3d83a763d294130" name="tests/DoctrineTest/UnitTestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="e11b79bf7f21c97d9a9ed4cda090dfc3" name="tests/EventListener/ChainTestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="539537f3a95c0d2a373822a08645e536" name="tests/Export/CheckConstraintTestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="1a3c78ab652638e46f5470d02d8e0b6e" name="tests/Export/FirebirdTestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="dbcddb34fdcef2f6149950e968bc38ab" name="tests/Export/InformixTestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="ae04a39be7319e9d5a603de4c375e690" name="tests/Export/MssqlTestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="25d7e5259e97697ab7d5c329632a5552" name="tests/Export/MysqlTestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="65f63ebb1875d1fcb28def78b4b36172" name="tests/Export/OracleTestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="39daa6865398890fb7579ca4f7aecc79" name="tests/Export/PgsqlTestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="7e58eb3c1d57197aa3318ecc6648913f" name="tests/Export/RecordTestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="9010b896c3287f7195ef5b5dd3ccf26a" name="tests/Export/SchemaTestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="82b1040fdf286aee58a5f6e9f3800177" name="tests/Export/SqliteTestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="d671dcdfd09a4b9c8f1a06de5d74c296" name="tests/Expression/DriverTestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="48ee35d14152c737ecc1d0766afb7508" name="tests/Expression/FirebirdTestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="4a632e6b2dca6376ac1a92b1eae9c8b6" name="tests/Expression/InformixTestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="e494f01b0dc641e06f753aac60895be6" name="tests/Expression/MssqlTestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="4ea5129e19ec146ded006370e872e6a1" name="tests/Expression/MysqlTestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="3b4632e7e21911b1981455ad93ab57e5" name="tests/Expression/OracleTestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="5984522c032550a5876dd80c654524cf" name="tests/Expression/PgsqlTestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="6ccf51b386fcd950aa58994145aad75c" name="tests/Expression/SqliteTestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="018193998fedc229598e9a8cca417056" name="tests/Hydrate/CollectionInitializationTestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="2fc465721a28fc63400ccacbfd8ea02c" name="tests/Hydrate/FetchModeTestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="407216f02ca164a5a3b851a3c62cde20" name="tests/Hydrate/ScalarTestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="257b33a2d414bd6006d8c55cad8fb08f" name="tests/Import/BuilderTestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="5b26ee10a6b21ca28584617839a32253" name="tests/Import/FirebirdTestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="3d5fd1f7e7d58d1d79ec8f16c111dcef" name="tests/Import/InformixTestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="72901dbf6ef66a97cc3a0dfdac59a648" name="tests/Import/MssqlTestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="10e750e02249dd5c7d3efe7977e4b9cd" name="tests/Import/MysqlTestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="5069fb8670f99824389d1c32bc378ba4" name="tests/Import/OracleTestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="01e4abc852a405258098ddb08180d85d" name="tests/Import/PgsqlTestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="1493926c5bf56aa005535db26e7096b2" name="tests/Import/PluginHierarchyTestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="67e8792b0f7c4dac324f98587dc742a1" name="tests/Import/SchemaTestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="ece1f3b3c6b5db469e356fa6bbaf4772" name="tests/Import/SqliteTestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="ee462cf83da8b48fc9960bc1a38749b3" name="tests/Migration/Diff/schema/from.yml" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="9a56ded6bab7c71fd7e04611b0c10ebd" name="tests/Migration/Diff/schema/to.yml" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="dc119908435668d4aec6927c8fcce8b9" name="tests/Migration/DiffTestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="f69e633c93150be9baefa12df4b50dea" name="tests/migration_classes/1224120878_add_phonenumber.class.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="bae4ea9d0045475ab3541755d4d907f8" name="tests/migration_classes/1224120879_add_user.class.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="c46c0eacff6871526f1ab5d075b8b7d6" name="tests/migration_classes/1224120880_add_profile.class.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="dcf735d387151ac8be4ebbc17796aaff" name="tests/migration_classes/1224120881_drop_profile.class.php.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="27c61d4f02206da5f94342596adb4b26" name="tests/ModelLoadingTest/Aggressive/Models.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="313e53294efe5a02497db6eaad90d7e4" name="tests/ModelLoadingTest/Aggressive/MoreModels.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="4b377aac801f276f4a7a4dfadb1bc6e0" name="tests/ModelLoadingTest/Conservative/BaseConservativeModelLoadingUser.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="8827286cd9b1b29702335aaa728b8bb2" name="tests/ModelLoadingTest/Conservative/ConservativeModelLoadingContact.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="24223777cdaa8070cfcae826f0a2f302" name="tests/ModelLoadingTest/Conservative/ConservativeModelLoadingProfile.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="9a311c056c54f87ecac3b9a3df71fc2e" name="tests/ModelLoadingTest/Conservative/ConservativeModelLoadingUser.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="b69f9aaa524e0dc40da42daeecb33cb0" name="tests/models/export/Cms_Category.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="042a986a7034d9645dde8638f9f52e04" name="tests/models/export/Cms_CategoryLanguages.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="a76acbb1afea515a81407cb6a0fe71ba" name="tests/models/Account.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="d509f00e71ab3dc225067e43e28b795d" name="tests/models/Address.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="2de348bade66e193c4d0557d16e1fb03" name="tests/models/Album.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="02f4767029c516da635dc9a5a1e9b101" name="tests/models/App.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="b0640ba74c584cd18d41e2bfa78ce5f0" name="tests/models/App_Category.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="5c48744866497c5b474776c5aa1cccbd" name="tests/models/App_User.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="b81044cb9a67cb7cab61526a950b78f2" name="tests/models/Assignment.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="41742fd830b3ef00de1ae6e2c0c73202" name="tests/models/Auth.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="06f440ad23181be4229be1593406aa3a" name="tests/models/Author.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="e75bea6b7de8e0a7b41d72af44028fe3" name="tests/models/BadlyNamed__Class.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="c50c996d24abf52cc3e1ebf8a9774899" name="tests/models/BarRecord.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="645b622d2cbdf998635f4d8b5c1487d8" name="tests/models/BaseSymfonyRecord.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="c565619ec8317e6bbd7e9b4f2a51a3c5" name="tests/models/Blog.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="cb6af1a07be99b956332d69629e5cac1" name="tests/models/BlogTag.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="2a5a755b594d24b70dc1a4aca095cc4d" name="tests/models/BoardWithPosition.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="653c5a6e989d3dd67d1e195a2dcd6de5" name="tests/models/Book.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="2395b72fc186867df99e77f61377131a" name="tests/models/Bookmark.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="bd74aafed8c61dbe04f21552c5355d21" name="tests/models/BookmarkUser.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="dcecbc480722614d7daf21ce12b6cd0a" name="tests/models/BooleanTest.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="d47c1df8bf2409dd0ed9e2ded457db1d" name="tests/models/CascadeDeleteRelatedTest.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="c96ccfee76c1fe5477e897dc5fd5ae69" name="tests/models/CascadeDeleteRelatedTest2.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="246d02b712f9300c1a0a18ba7381cfb3" name="tests/models/CascadeDeleteTest.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="1a93466596f73392209535056751ad04" name="tests/models/CategoryWithPosition.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="9e5218a292d0f1a91d74f00543637616" name="tests/models/CheckConstraintTest.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="38ee36eab277252ed5d06ef64f31358c" name="tests/models/ClientModel.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="279d8140e4fd470ea1c0eeb7467f451d" name="tests/models/ColumnAliasTest.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="adada81565125f66828fddf2e1abd179" name="tests/models/ConcreteEmail.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="519e29268b9dc1d0a13677108999a666" name="tests/models/ConcreteGroup.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="403a89ddb2f2e5d26c37368c8aad0148" name="tests/models/ConcreteGroupUser.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="7287077ec23ba87160a9da3911351325" name="tests/models/ConcreteInheritanceTestParent.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="e4851d41976b6670b4fb7e50dedd2d30" name="tests/models/ConcreteUser.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="380a5275c3eafaf146a1bbcf914faa87" name="tests/models/CoverageCodeN.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="e91b95eb08959dc297b029570b7766f2" name="tests/models/CPK_Association.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="4f0ff38f49206760a5d446a14c52e2c0" name="tests/models/CPK_Test.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="bd722a73f22ecce9632b06bab15a5f22" name="tests/models/CPK_Test2.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="a84281871f68e1ba3b237d06feb074cf" name="tests/models/CustomPK.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="e2a4eebccf9e45b2893932c2edfab6e2" name="tests/models/CustomSequenceRecord.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="6f16494aa09d59853288ab3af214f77d" name="tests/models/Data_File.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="ad0cf20da07507b88cf49e8eca356d18" name="tests/models/DateTest.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="1d25af79d4f85ee21673fceb269eb630" name="tests/models/Description.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="b9f21a622e08bd97c8d020aeec1e7ee6" name="tests/models/Element.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="049b8123cf979b23bf11bca85d77aa42" name="tests/models/Email.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="9fd006ddfe47de28597fbeed40b6cfc8" name="tests/models/Entity.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="0b1849605fa0023c0931d920f75669d8" name="tests/models/EntityAddress.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="7002cc2a68b1198a2aa42b7df7972bfc" name="tests/models/EntityReference.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="fa4b296bdb6e461a67eabbe6b10e0aba" name="tests/models/EnumTest.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="299f1a345a0c19ce7e2ae12cc6dbed98" name="tests/models/EnumTest2.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="68bcc09fdb21dbd4ae0cb99c8e2ea682" name="tests/models/EnumTest3.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="857b8b0f8da1f37cab6285ef18e6db23" name="tests/models/Error.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="5d5da62af1a6c1d5054e2a168c1927b4" name="tests/models/EventListenerChainTest.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="d93ca0a22a309dcdbbb44317849e3ebb" name="tests/models/EventListenerTest.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="a88ee0a170f03ad2d3dcc4eb276fe7c8" name="tests/models/FieldNameTest.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="85341efdc6863052176b65336cf2f5db" name="tests/models/File_Owner.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="a64deeb3b7a1e601103cef19b84f9d0f" name="tests/models/FilterTest.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="ae9e67fe7fa37d58d90e30b02d32e5bd" name="tests/models/FilterTest2.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="cd6de28c0fbfa24e5bce45243d1dd5b5" name="tests/models/FooBarRecord.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="b95092ab67fa0390cdd7751d6c7d618b" name="tests/models/FooForeignlyOwned.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="27b9d30aa94925a4d4c1c33a2fdfe277" name="tests/models/FooForeignlyOwnedWithPK.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="d7c7474ca2abcaae732a669e0c774ab3" name="tests/models/FooLocallyOwned.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="ebf4075395ec695601b253de5ae3c55e" name="tests/models/FooRecord.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="a60d9ae74b5b6b89008a854f5f2a88da" name="tests/models/FooReferenceRecord.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="2f92a322e494bce74e0fb3f3c03a52fa" name="tests/models/ForeignKeyTest.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="738ec968cbd60aa1616349ae0280a15f" name="tests/models/ForeignKeyTest2.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="a381835545378fad88fb1763ea96bdcd" name="tests/models/Forum_Board.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="d76b8fe41a1182526048a166b9e43e80" name="tests/models/Forum_Category.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="9df3c851096a6c286020df602d8f74b8" name="tests/models/Forum_Entry.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="198c0cc18dd912d698411ff70bb5994e" name="tests/models/Forum_Thread.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="7b16c8145e5c0227d802f0470737b608" name="tests/models/gnatEmail.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="124e91762eed9888ce6dbd5d2b79b6e8" name="tests/models/gnatUser.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="81ca758399efafa99eb286197b7a3d89" name="tests/models/Group.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="56b557db64df62c8dff232f522522cf4" name="tests/models/GroupUser.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="de8db55a0c97dd15200081a2e0cb901b" name="tests/models/GzipTest.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="1385e5c232952003eeaa00dc55d09a4a" name="tests/models/I18nRelationTest.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="4d4c203e47f00e31825700d7bb2810eb" name="tests/models/I18nTest.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="c0f6378a55487e93874774ad0468bb25" name="tests/models/InheritanceDeal.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="ec3c710288973623272412e27fa1164f" name="tests/models/InheritanceDealUser.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="333559121b7aada3dd374d9843bbb5b4" name="tests/models/InheritanceUser.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="e0ab37a20d028873fae7219e04889324" name="tests/models/JC1.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="c5d1f1da0bba4fb67af03f40a217ef5f" name="tests/models/JC2.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="d6b74df00271b895713878e765f4bbfb" name="tests/models/JC3.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="e773469954ed65733fe7b2bb15b832cf" name="tests/models/LiabilityCodeN.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="c3bfd4571ddbdadea529c0ac9f4913af" name="tests/models/Location.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="c92932015c5357257d65ed169d8de8c7" name="tests/models/LocationI18n.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="3106a135a8beff391db59a1afb524cc3" name="tests/models/Log_Entry.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="6372bd531ec17b5f118c3467f3888871" name="tests/models/Log_Status.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="f3383f195dbbcc0f65517d002d3409ac" name="tests/models/M2MTest.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="1917685adbf328d1b7b552069f9acf94" name="tests/models/M2MTest2.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="40511959efeebcde1f86215f8d25c23c" name="tests/models/MigrationTest.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="6e3f7b69f172398a23192dd077a34ee3" name="tests/models/mmrGroupUser_B.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="aa79aa3b93ee157278340258896a08a8" name="tests/models/mmrGroupUser_C.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="f02e3186c632ed68ff9a657f03a6875c" name="tests/models/mmrGroup_B.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="c50cfbe96cd3fb04fd066f2621957054" name="tests/models/mmrGroup_C.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="fb9fe886c8d436a76928dfa986fc5624" name="tests/models/mmrUser_B.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="50b5ccdebbaaed306d367224fb09175c" name="tests/models/mmrUser_C.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="87438db83a5eec4ce06660e8f8ccbefe" name="tests/models/MyGroup.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="3b885b6610ca0beb13ecebfba42a76df" name="tests/models/MyOneThing.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="4dc1f5b7b5706ec9fd4a4ced9f066d75" name="tests/models/MyOtherThing.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="dc0030bdc74d9599f65cf5c62f7713cb" name="tests/models/MysqlGroup.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="2f9cbfa9a33cc56d394d390894b12eea" name="tests/models/MysqlGroupMember.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="c807ccf7bb9cb0151506af3c62b61530" name="tests/models/MysqlIndexTestRecord.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="a0a95f8bc604129866ade7a96972b9a7" name="tests/models/MysqlTestRecord.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="582c4ab328231f98e391a912c56488b5" name="tests/models/MysqlUser.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="5723b88cb1af343608c0132ff4922c00" name="tests/models/MyUser.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="d445139c8bd84c6edcafaae0cb491153" name="tests/models/MyUser2.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="5f672b66f520ec0879e5b569d0b4db71" name="tests/models/MyUserGroup.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="1fe241cef0991aa47cbbda20835a3315" name="tests/models/MyUserOneThing.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="c6e7c22bcaf2dea4f1fd05ead42f560a" name="tests/models/MyUserOtherThing.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="7c0e9c4dbfb47b08a27436f1e1ddca62" name="tests/models/NestedSetTest_SingleRootNode.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="50ccfc0c9f048c5a17b186f080e89019" name="tests/models/NestedSet_MultiRootNode.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="07545c6c325b4cb9f6071fc7c8080138" name="tests/models/NestedSet_Timestampable_MultiRootNode.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="00c44a93f30e8c4173b60b50f0ea9edf" name="tests/models/NestReference.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="08e71859569f0f6f0d8b382428ddd07c" name="tests/models/NestTest.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="303f216dfff6b0f0636dca1b895bd6ae" name="tests/models/NotNullTest.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="f95d587f6e063b484ec35abba8571052" name="tests/models/ORM_AccessControl.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="00510ba7047e4adbe4259845331ad724" name="tests/models/ORM_AccessControlsGroups.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="5b3eb0256b90ed139ad8d866124fbd3c" name="tests/models/ORM_AccessGroup.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="4ebb61c18feb16e1dd5c26909a6e0258" name="tests/models/ORM_TestEntry.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="7098c87af214e3ab7632d68bce7a975e" name="tests/models/ORM_TestItem.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="41801a8545dfbf3938ed427576ec5aa0" name="tests/models/Package.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="cc089a1576e8bb1915cf801fc504fd05" name="tests/models/PackageVersion.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="586ce250fd39daae57c4fab9c34d7a2b" name="tests/models/PackageVersionNotes.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="4fcfe610333fc278476f6e1e2df23ce3" name="tests/models/Page.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="b6e3a1ee827cb80fa55d2bff6d04b019" name="tests/models/Phonenumber.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="56f6c15656adcb428e5e6c441587605f" name="tests/models/Photo.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="1a118206a7173d381f923fc0d649cdd3" name="tests/models/Phototag.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="6b6d522bb5703b053c4067d6d48a92c1" name="tests/models/PluginSymfonyRecord.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="bc659cee4d37a5cfecd7bb0d120dc6e9" name="tests/models/PluginSymfonyRecordTable.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="9ce0ddf3414dfada20adbdf99c057a80" name="tests/models/Policy.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="9ff519587166a5bc791f82c78d43a7eb" name="tests/models/PolicyAsset.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="88110f11c781f914892833b06fbcd50c" name="tests/models/PolicyCodeN.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="817808ee22e5f6b8aa499727d2a1392e" name="tests/models/PolicyN.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="f9c0039354ee8779aa20575d46fb451d" name="tests/models/QueryTest_Board.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="9becfbe802130ec8a14fb37b2381e24f" name="tests/models/QueryTest_Category.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="578d5bc39bb088ee4375ebc2af275548" name="tests/models/QueryTest_Entry.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="7bfaa2e7dd204cf3b18490613aebfe7a" name="tests/models/QueryTest_Item.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="061003ee4b42a1a52b7beb399153aa31" name="tests/models/QueryTest_Rank.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="1c842d65fdaf20bd9aa32f539c8a1412" name="tests/models/QueryTest_Subscription.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="ce604dfb4cb90d99eb3f66f2bbfd530e" name="tests/models/QueryTest_User.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="717fb217cdc910f50ff12486c4383afd" name="tests/models/QueryTest_UserRank.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="f561b349d6b3dbe78559c7e01a1de549" name="tests/models/RateN.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="494739e21ab3595ac2880dcbcd618330" name="tests/models/Rec1.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="c6af7777b19fbf819c69b4ad8972568a" name="tests/models/Rec2.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="af18f9784b384822836527f9eb4830bf" name="tests/models/RecordFilterTest.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="3011f32cd3b3d50855fcff94040dedff" name="tests/models/RecordHookTest.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="69f1b285468e3be76fd29b1eb03c28e5" name="tests/models/Record_City.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="864c0c0dc866e5436f3d56a672b3ddeb" name="tests/models/Record_Country.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="806e2cc7eb3c28c669a8ae99849434d2" name="tests/models/Record_District.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="c44abe3f3d775e433b976e9c20e08932" name="tests/models/RelationTest.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="3bc13a8e34f4d7c4dbd86dced3641afc" name="tests/models/Resource.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="754d2cbd54e45b1e2ac85cff3b743921" name="tests/models/ResourceReference.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="a94d6bc1810c57894545dedb64d917d5" name="tests/models/ResourceType.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="452bda568711e308209536c888afcdaf" name="tests/models/Role.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="21a2a9049e6751063aa29dceaf5ff1fd" name="tests/models/RTC1.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="5a87a1e530bb2ba2343ada71e64a31c9" name="tests/models/RTC2.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="9cd978ddaf17f5fbff8bc25c35e6c717" name="tests/models/RTC3.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="e806add708ae77755020ebd4cefda70c" name="tests/models/RTC4.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="608a446757003d313c5004536b471427" name="tests/models/SearchTest.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="07782f1540ec05a83bff10eb2c15bf02" name="tests/models/SelfRefTest.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="502568a1e52766e6123a051c4265619a" name="tests/models/SequenceRecord.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="8a58934438abeb41d6b2a4ede5568bae" name="tests/models/SerializeTest.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="cf91f72c254a469db4e6d00af085220e" name="tests/models/SoftDeleteBCTest.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="371f62145f519ec82b4a478fbd84fba7" name="tests/models/SoftDeleteTest.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="23f696ef76b94b4bc94d641cb45d9ac0" name="tests/models/Song.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="a6f39f690be227cdb4439ee195be74a0" name="tests/models/SymfonyRecord.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="0425398b077777950c8ed216028e9136" name="tests/models/SymfonyRecordTable.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="327a7bc06e5954022ed5002cd0a21f01" name="tests/models/Tag.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="63d625e35a7f58245df17ea28fd3ca6c" name="tests/models/Task.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="23866e308efb2c9904d6642d08f306f2" name="tests/models/TestMovie.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="6c0133c137cd266c9910803f1f2c5210" name="tests/models/TestMovieUserBookmark.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="ae6ee44620457bc8f215038e9dadbb1b" name="tests/models/TestMovieUserVote.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="d1b27091f115ff2906126add1e87ec47" name="tests/models/TestRecord.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="61c2d426fdb6b6d3e2e05b0135c16be8" name="tests/models/TestUser.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="555666502bb8a1bbd229c9ad7c28ba37" name="tests/models/TreeLeaf.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="1ee1d732880e7756c05eaa824eb89612" name="tests/models/UnderscoreColumn.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="14091e816f0ccc328fe82fc3431b0db8" name="tests/models/User.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="0c9f6f8a963da951a40cab384cd28d03" name="tests/models/ValidatorTest.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="36944af4ee7810cf060cc57853b6c3af" name="tests/models/ValidatorTest_AddressModel.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="26447f20b17d4fe2b62cabaffc57074d" name="tests/models/ValidatorTest_ClientModel.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="a76a11a1094bcb06a8232f14ed1894e8" name="tests/models/ValidatorTest_ClientToAddressModel.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="706c3b4ee5e77d136f7437f245a7f3f1" name="tests/models/ValidatorTest_DateModel.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="e6dd1c9300ad2d3708c4e92e8237fc47" name="tests/models/ValidatorTest_FootballPlayer.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="239e5c6a3893fa892ea6c67f8f346277" name="tests/models/ValidatorTest_Person.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="70e79981bf95447ee85e9e160257f508" name="tests/models/VersioningTest.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="c52891d17381db28e685f2ab61fa1a59" name="tests/models/ZeroValueTest.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="055ca5b7c1fd75ac9059395c975791a1" name="tests/mysql_migration_classes/001_mysql_add_table.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="16a04fae6561a534f2bd1ca2aaff8fdc" name="tests/mysql_migration_classes/002_mysql_change_column.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="cb6819c1e12f3c5aa8be1194b29d1094" name="tests/NestedSet/MultiRootTestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="87b96589496487fe4cf307da94b07600" name="tests/NestedSet/SingleRootTestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="82173188ff64283696b98b6073a1eb93" name="tests/NestedSet/TimestampableMultiRootTestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="37685c40573bf01a31617cd411593d80" name="tests/Query/AggregateValueTestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="64df1b22f0154f6868e23dbe232ab900" name="tests/Query/ApplyInheritanceTestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="190eaf82b77dad3f6be123b631fbd287" name="tests/Query/CacheTestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="5ad390669017485d82e0acf3b9457b00" name="tests/Query/CheckTestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="759a62bf75eca6e254fb0d26261d8a06" name="tests/Query/ComponentAliasTestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="2a18cc85f0aeafc68eaa87cbc6471ca3" name="tests/Query/ConditionTestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="4bf8d466d63795069c3ccd30cb542716" name="tests/Query/CopyTestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="39075fb2c5506703a2d0b6ae23713ac5" name="tests/Query/DeleteTestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="d31f08223b4d1acbd16f3109f84d96c6" name="tests/Query/DriverTestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="0a47cfbd4db789f52b59f9847165b520" name="tests/Query/ExpressionTestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="d36dfa31af3a03f6ab562983c68ea98b" name="tests/Query/FromTestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="710e2279365a38e84c3a164a42c1400e" name="tests/Query/GroupbyTestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="2594596cc154afa71cc11d9b73ee7358" name="tests/Query/HavingTestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="568f424b50c051a443ff2c004acd26f7" name="tests/Query/HydrateNoneTestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="72a1787842aa222315f4f88097aa5592" name="tests/Query/IdentifierQuotingTestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="2bbe72f9247e8517fa58c7e7a1aa753a" name="tests/Query/JoinConditionTestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="d33567997cf44126b6f8a584252ca8d7" name="tests/Query/JoinTestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="d754393dd70ed2a355ef98eafe2d100d" name="tests/Query/LimitTestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="fe90724b0739a20edce394d06300b03b" name="tests/Query/MultiJoin2TestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="09048927951f99ffc3c52a9fbda1cdeb" name="tests/Query/MultiJoinTestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="94775c72f4af028f5a2c53701e2f5bbd" name="tests/Query/MultipleAggregateValueTestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="5c5dba3a7752faadece49102d209a061" name="tests/Query/MysqlSubqueryHavingTestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="b2c669b9b132031c885803cc08ba4c5b" name="tests/Query/MysqlSubqueryTestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="fb5ff3a41bdd55e2f1cb1419ca4ea139" name="tests/Query/OneToOneFetchingTestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="874f84bba8e00309362a3904e103bb95" name="tests/Query/OrderbyTestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="3dc676b7bb15f899773db08948d7ebf2" name="tests/Query/PgsqlSubqueryTestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="bd6cd7fceccabc0943f7bd8474344f81" name="tests/Query/ReferenceModelTestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="518d1d6e01ebb63073faacc562a1da2a" name="tests/Query/RegistryTestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="e35806a3ff684ae7759df262a5a1496d" name="tests/Query/RemoveQueryPartTestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="4e01fa111a7c9e8a05ba30cf54ddd2ae" name="tests/Query/SelectExpressionTestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="d09618741d897382e22932f3cd5d4d30" name="tests/Query/SelectTestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="e065e9b32c32d8d02b58dcbd3aee8f33" name="tests/Query/ShortAliasesTestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="d032b81a32b29268ad8796902624508d" name="tests/Query/SubqueryTestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="2e84284e9bb5ad88c2883d3574fbc5d5" name="tests/Query/UpdateTestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="9390e99fe090b138564878205e3153d5" name="tests/Query/WhereTestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="236bdfe2a424d29cb27155fd60ae7267" name="tests/Record/CascadingDeleteTestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="774ca4dabd8484fe413d6535691e0a94" name="tests/Record/FilterTestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="68e8f90e633a6da48b9c7c7c40793226" name="tests/Record/FromArrayTestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="7d39ac75a0ada5b29bf3ab2013020118" name="tests/Record/GeneratorTestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="1d25719c25e01c47db137b3f6989a3f5" name="tests/Record/HookTestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="2af118b9ec4e64976efaf433445430af" name="tests/Record/InheritanceTestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="6a9837bad1fff97b75dab8082fb5f9e1" name="tests/Record/LockTestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="3480c28740084f80753f306f480acb8c" name="tests/Record/SaveBlankRecordTestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="468ccf8425bbed81663562e05460681d" name="tests/Record/SerializeUnserializeTestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="084ded0ccab2c0eab49acad4eddc2b2a" name="tests/Record/StateTestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="f1459a02fe69066fe82f9c93ba69c38a" name="tests/Record/SynchronizeTestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="5ea0283e3a6f43f226d684a13f3b9295" name="tests/Record/ZeroValuesTestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="cf4bd219b2b9f112ce0a08d6866d36d0" name="tests/Relation/AccessTestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="0df2c6efdbf9b033c375affc167cc4c2" name="tests/Relation/CircularSavingTestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="37ee8f915438635e77815f35ab964fef" name="tests/Relation/ColumnAliasesTestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="6acc38f1ca068cb5d19880c5798f4a54" name="tests/Relation/ManyToMany2TestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="24408966cdeee6b29a4fb689c4c76cb1" name="tests/Relation/ManyToManyTestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="c09645d68f1def2c20939daf00ab8379" name="tests/Relation/NestTestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="9ed5aac18d284b08158b3c629d5ed838" name="tests/Relation/OneToManyTestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="0be33d75bed66731906786c920b5d791" name="tests/Relation/OneToOneTestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="ea0d2659b12782f67cba8c98d3591a17" name="tests/Relation/ParserTestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="131f20df71ba558707869c14cf9d464a" name="tests/Search/_files/content.html" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="121438e0ffc85dc8d492837fc813bd3a" name="tests/Search/_files/content.txt" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="30d8dd5ce44688b7c47eae3d9e9351f7" name="tests/Search/FileTestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="4db31421bae378b383bb5c9b430ef4fa" name="tests/Search/IndexerTestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="f88f0666d1bcbdeadd0a2552da8c3bee" name="tests/Search/QueryTestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="a2ff8495dfaf92badb5c3538852adc08" name="tests/Search/QueryWeightTestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="c51bd7f290089551defe0d750b1c12d3" name="tests/Sequence/FirebirdTestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="34b075f5085d7468ca1c58000c07ca95" name="tests/Sequence/InformixTestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="aa760474fe91ff14d24992ec86750fd7" name="tests/Sequence/MssqlTestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="9d4c2238ad3cdfaf3f363500efefb620" name="tests/Sequence/MysqlTestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="3711cd32353b1075071adadf8953f16e" name="tests/Sequence/OracleTestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="764b0e845d01c6d993ab47b1b6d71f26" name="tests/Sequence/PgsqlTestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="736783a7a97d204ac0f24642436f8cea" name="tests/Sequence/SqliteTestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="a27c8afea1960bc7bc02142ea1a187a0" name="tests/Table/NamedQueryTestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="bb0b86d560e04dd986d950180413c757" name="tests/Table/RemoveColumnTestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="eb76877fbc21e5d70cd2cce9a51ba135" name="tests/Ticket/1727/models1/Ticket_1727_Model1.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="866a015355a84504efcc08322364cbce" name="tests/Ticket/1727/models1/Ticket_1727_Model2.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="68b7d4c5b3bd309a2c6db96d7c598b7a" name="tests/Ticket/1727/models2/Ticket_1727_Model3.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="f507a5a1148afa4ee335031928332973" name="tests/Ticket/1727/models2/Ticket_1727_Model4.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="e36a84ddbbc0326ee51c5ba8a2bbad6a" name="tests/Ticket/2375/models1/Ticket_2375_Model1.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="723b198a943434521ea76a06bfb01610" name="tests/Ticket/2375/models1/Ticket_2375_Model2.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="17dac8caa6c5b28bc391195093dc42ff" name="tests/Ticket/2375/models2/Ticket_2375_Model3.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="95680cf870de33b69e42205ce8d970d4" name="tests/Ticket/2375/models2/Ticket_2375_Model4.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="8932ff70ea6191a94b92687b4916407b" name="tests/Ticket/2375/models2/Ticket_2375_Model5.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="3c7b046ece60b70f21d41ce3ca99e4b1" name="tests/Ticket/255TestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="27c7deb20689af82dab6ac531421f82a" name="tests/Ticket/381TestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="6c014c795808a81889fcdeb95e0c7e1b" name="tests/Ticket/384TestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="f084ad27191c9b1158ce4f2e2216f718" name="tests/Ticket/424BTestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="0faa209a29a064fd39d0c1381fbcf8e6" name="tests/Ticket/424CTestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="95a896e2e76d8bf93a0b2dba17e973da" name="tests/Ticket/428TestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="289e006f6ed360c4ba3a158df76479c2" name="tests/Ticket/438TestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="0edf8235c7f125ddbecee82a973c07b0" name="tests/Ticket/480TestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="7e03aa2bb8f847e67e7391e77054f37b" name="tests/Ticket/486TestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="5c2d1b84d8120424d68045bafc9281b9" name="tests/Ticket/565TestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="eb6de6bbca37f4e35af1a4aaf71690da" name="tests/Ticket/574TestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="67f5b3544ff6a2bc5f0ef20e8b797295" name="tests/Ticket/576TestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="6558a96cd1bb9db0672043c8e5979c50" name="tests/Ticket/583TestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="c142edeb6bd58e067b16be3231791064" name="tests/Ticket/587TestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="4238ead19f758905d78876805e5a0adc" name="tests/Ticket/626BTestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="8b572115695f5883748b6320e61780b4" name="tests/Ticket/626CTestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="85233eca68e9702b201eb2732d9999e2" name="tests/Ticket/626DTestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="c28cf75229dc006e99e8ad36f0be2f9f" name="tests/Ticket/632TestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="75e826cbf2301c4359ff4504a8105423" name="tests/Ticket/638TestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="3160d91abdcb2c2ea970e0095cccd831" name="tests/Ticket/642TestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="9d03bf6701eb38d8ab574056176e0209" name="tests/Ticket/668TestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="e7c8fc6be31fead61c8ca663450832ab" name="tests/Ticket/673TestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="6bd233eb37968848159892d5e42d0ba7" name="tests/Ticket/697TestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="877c52bd83bdd614af21d238a5b2e3bd" name="tests/Ticket/736TestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="a853f6324a72a32c5e1d6a050603f4a2" name="tests/Ticket/741TestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="5082d84d5dd711518cda9ed78383dd1d" name="tests/Ticket/749TestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="1fe133a6368afe76b12f1597b617898a" name="tests/Ticket/753TestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="e93e45727de39d07c26e2ed5b0e233e1" name="tests/Ticket/786TestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="45a88baa62515ede0daf9c2c00e433b6" name="tests/Ticket/832TestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="4554646ec6d96eebc40781b0e73ab6ed" name="tests/Ticket/838TestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="867f3c2e6cf5e5319a1453594ed49feb" name="tests/Ticket/867TestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="fbe6ed920f795bc114a65596575d9c3f" name="tests/Ticket/876TestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="e687338a8d05d9973a8346dc3868e8a6" name="tests/Ticket/889TestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="1c032f40bb2eef6da44d16526ab5f98a" name="tests/Ticket/894TestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="7edae8560f490e0c506ef37bcfaf5621" name="tests/Ticket/904TestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="b1308d287d3323596aaf66641f04a9e7" name="tests/Ticket/912TestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="7a7213b16927ee47f60e94a29abe1687" name="tests/Ticket/915TestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="4a0e45557c65a6824d806a0c4a5958dd" name="tests/Ticket/923TestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="5b20df1395949b4e19b88f9e6fba210f" name="tests/Ticket/927TestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="de3b2f85e12a6b4cbf2d4e0af1a26036" name="tests/Ticket/929TestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="b6d719d0f4fc0624db7b9cfb9437f7b3" name="tests/Ticket/930TestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="584050381b1c4f9b4a708a401c324264" name="tests/Ticket/932TestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="142b139c4ac29a52ab57f17993ae55a5" name="tests/Ticket/935TestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="577d1dc61c69618107c6893a9de97be2" name="tests/Ticket/941TestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="4d1cf95374ae5a9e0c2afc44068a65e7" name="tests/Ticket/950TestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="01ffedbd8c49cd116c643abbf40847fe" name="tests/Ticket/952TestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="7f4a735b89adcf52d6c88e2d42af3c81" name="tests/Ticket/963TestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="0f2e4bfa158a38dafe6192ebbeff49b5" name="tests/Ticket/966TestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="76b95d498c4fd5945cf908a0c83abd66" name="tests/Ticket/969TestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="889de3189595f02216f38cb4831365ac" name="tests/Ticket/973TestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="251b6d1d16210a69123773e907ccd90c" name="tests/Ticket/982TestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="91d9bab45a62f540dca82b2fcc5178c9" name="tests/Ticket/987TestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="1c7c4a1b4f0a9e3ee6b8fe63c58c3695" name="tests/Ticket/990TestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="84a6ea25b1f89428c18e9ba002c1a780" name="tests/Ticket/1015TestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="52dfdef03684869fb96cdab90c2e801b" name="tests/Ticket/1028TestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="064a5729995c5204cf632ac7b76b99de" name="tests/Ticket/1044TestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="50457494e8a61c9bda58c20a9d39721c" name="tests/Ticket/1071TestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="4cf47ff43025c1187ac8db9f0de7fcc0" name="tests/Ticket/1072TestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="57ad29153438c1a881dace2e15d67bcf" name="tests/Ticket/1077TestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="f8b2df7d552123734524c3e3484ee2e5" name="tests/Ticket/1099TestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="deacc9bdc56fb47d7a0aab443d7a85d1" name="tests/Ticket/1106TestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="c55899b4997886fa419ddb3b10d748a5" name="tests/Ticket/1113TestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="3f4613ad0985b196c25c508dbbfabdd4" name="tests/Ticket/1116TestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="e8b151c810d5779f8c5c45caac34f824" name="tests/Ticket/1118TestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="97553db3efbc85dfb91cd6bb1e5ff59b" name="tests/Ticket/1121TestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="3810bb7446480e5395e2e8c4350304bc" name="tests/Ticket/1123TestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="e279fc169fbf6bba1e7bfaaba4380c96" name="tests/Ticket/1124TestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="500f50cb22d057a51041a31a5c1320fe" name="tests/Ticket/1125TestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="acec5bd6b556bc4e99c80f820f086288" name="tests/Ticket/1131TestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="441f1d2117319fa2bf2e621cac08d1af" name="tests/Ticket/1133TestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="a283602c08f30eff93fcec9faae410ca" name="tests/Ticket/1134TestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="f0534e15814d01966ad949e277cd2fbb" name="tests/Ticket/1160TestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="72838bd12f8021a85477f55146ad6d93" name="tests/Ticket/1175TestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="2a293fcf7bce082ea7466630d02c4def" name="tests/Ticket/1192TestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="daca1ba711f5f2fafd1417d9526ce982" name="tests/Ticket/1195TestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="25c0f99fbcdf79f4c5636993eab57fdd" name="tests/Ticket/1205TestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="7e35bcbfada51019ffb072bde7ed3059" name="tests/Ticket/1206TestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="c7e702f993aeb7688deb5e34758d0a96" name="tests/Ticket/1208TestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="38670aa6ee7fecb0665b812e1acd87be" name="tests/Ticket/1211TestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="56056da6f37226d646bde2f76fa7ef8d" name="tests/Ticket/1213TestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="520f2cd9f834014156bf4d84e03f478a" name="tests/Ticket/1215TestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="c409c6f0dfefae6a06d1ac7d6273297e" name="tests/Ticket/1225TestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="daa673e8a91296227504eb76b4dfcb08" name="tests/Ticket/1228TestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="f2a30b7b54c5debea916d59a9abae279" name="tests/Ticket/1230TestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="53f0a74678f81b02d1911f10e51dc92f" name="tests/Ticket/1236TestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="48650176173b4495198067d20b150de2" name="tests/Ticket/1244TestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="f40b9090811805e310c513b9813e8d93" name="tests/Ticket/1250TestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="b23c3196063823a94dcfa6d8425dbb42" name="tests/Ticket/1251TestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="b8bef632b7a64b5f62bd1829f572b4a4" name="tests/Ticket/1253TestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="78716c519b4ee0c4ce895b4bed34bacd" name="tests/Ticket/1254TestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="92c61e96617e2848668728a9c0081e8a" name="tests/Ticket/1257TestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="3365e4eaf632738b8a23c4990de72501" name="tests/Ticket/1276TestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="3141c4428cfd98b57dd1b195bef9dac7" name="tests/Ticket/1277TestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="528d8619f54de90179b5c20319846cb5" name="tests/Ticket/1280TestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="2165f1469e8b894b2466bdde30fb6a4d" name="tests/Ticket/1281TestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="528c124aae940078e972bdaa561e5e4e" name="tests/Ticket/1289TestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="b7c52a351daa12e1f031e8bea5c3e401" name="tests/Ticket/1296TestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="0edf0ee7b1146ce940fb7bb1c2b04615" name="tests/Ticket/1304TestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="d0a0ef809937195a7642e5384aa7ac09" name="tests/Ticket/1305TestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="b91a9e2846cdbf49f8928206971806a5" name="tests/Ticket/1307TestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="e4a96c18e655e5f205f8c523d0a72dba" name="tests/Ticket/1315TestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="a7f06753701cf92822c5e59409d3d407" name="tests/Ticket/1323b2TestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="a0602c8061d7f23497ba4b9ddc13ca62" name="tests/Ticket/1323TestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="c77f4aa0551cf572f429f5e57836089e" name="tests/Ticket/1325TestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="6168543c300620a6da7cbfb3db5d5795" name="tests/Ticket/1326TestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="9218a1bcc6e5d9d23fb55c04a41d9559" name="tests/Ticket/1335TestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="88abaaa46ceae5b62f099a5ee5ead3d2" name="tests/Ticket/1338TestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="42554151a06f983f279a6b649251901e" name="tests/Ticket/1341TestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="2949702f22fe16eceb21561c59a643b4" name="tests/Ticket/1351TestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="bbf016f50ddda988c9cb1be68dfbf45f" name="tests/Ticket/1365TestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="d89a005f4abb33d8a6bcfd37c965e1f2" name="tests/Ticket/1372TestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="96c5c104cb0bccea9b4dcf65011e8d7e" name="tests/Ticket/1380TestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="60e4ada7332fe62472854e5bacbb1bfa" name="tests/Ticket/1381TestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="94089d8685545635a0fe938469392ca0" name="tests/Ticket/1383TestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="4f57bee91bb6a34728dee3c02f83d8a0" name="tests/Ticket/1385TestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="b951ae8e7e7ae25268c0bb9a6c832ba3" name="tests/Ticket/1390TestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="7fcf093c72cc147cbcc0786956050832" name="tests/Ticket/1395TestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="ea2ebb7f2a307ef23d7c57c406ba4b15" name="tests/Ticket/1400TestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="25011ace9934283e4fdf5a7f8daa1fcb" name="tests/Ticket/1417TestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="486b7ebafbf23eb4566471f8eab3f16e" name="tests/Ticket/1419TestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="0f076146cbd2e358e35cb76fa981d412" name="tests/Ticket/1436TestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="6501019f95d32d24b4cc07643de5c1ac" name="tests/Ticket/1441TestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="5832db6fda6dd2778d6bcefde3c24f4d" name="tests/Ticket/1449TestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="140dddda14fd8985104ac45392a73f4b" name="tests/Ticket/1452TestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="355c5741da59d694d9e7f7bca82d153b" name="tests/Ticket/1454TestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="7868e677bd20b9e34b3d8c25bd3c51c4" name="tests/Ticket/1461TestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="3a6822439a8a9c0b528eb8c29cb5eb38" name="tests/Ticket/1464TestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="7dc5c18e512567431daf838f61b8eaef" name="tests/Ticket/1465TestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="85ff26887a2454e4c95d08c4f401d7f2" name="tests/Ticket/1467TestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="0a75d51d4d50b8c8d380d2f867a99d89" name="tests/Ticket/1480TestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="015887405594d277d9882f0d5865c28e" name="tests/Ticket/1483TestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="1f61c2be300a235b314ca772600f9c3a" name="tests/Ticket/1488TestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="1aa307d8bc058de6a2de1735bac75ab9" name="tests/Ticket/1494TestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="694e9e8d6f0edecb239203c156e38ec9" name="tests/Ticket/1500TestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="5f713fcdd9ca049579b5bba1bce21929" name="tests/Ticket/1507TestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="4e49049123952792d8ef97ecbbb9be52" name="tests/Ticket/1513TestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="c3ed1ebeee369350bfcc69e45cabf7db" name="tests/Ticket/1520TestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="46436eb928a1caaa553256ccccc087e7" name="tests/Ticket/1522TestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="a6c259a227f3b26c1cb88187382427f2" name="tests/Ticket/1523TestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="a331d17a93aa3f6ac3369bc86d00e08c" name="tests/Ticket/1524TestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="50803cbc61ff7211694c09ed4d089fa8" name="tests/Ticket/1527TestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="8fef827d2b3a798d9ccdb4b3dd4de476" name="tests/Ticket/1537TestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="26b2e3ab615ad88c337b777dbed67aff" name="tests/Ticket/1540TestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="7c2f836c3d8deacd83de37e77cf4234e" name="tests/Ticket/1543TestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="eaef35ebd98635a9c3e185b9acfc12d4" name="tests/Ticket/1545TestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="841a877e0c621530ea87d3de80c78d93" name="tests/Ticket/1558TestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="0a2a645dc3a3cca4e6abf3acb61b6e3a" name="tests/Ticket/1562TestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="7072b95c7733797bb3d371fb71095395" name="tests/Ticket/1567TestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="70df7967f9e23fd70aff520baa3b8157" name="tests/Ticket/1604TestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="29b6b85c40655a31264bfd5fc4546a67" name="tests/Ticket/1617TestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="c201ab767e812b11d8f2323ff06371f1" name="tests/Ticket/1617_schema.yml" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="522be397e93720599c3565f41ac8c1c9" name="tests/Ticket/1619TestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="f0e744f0e293e52edd85215397b56952" name="tests/Ticket/1621bTestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="45a9922fc110e801e13179cedc7a38e4" name="tests/Ticket/1621TestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="1a4e5773dea15be53f64055719289763" name="tests/Ticket/1622TestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="f72fe94c456fe6f6560f69798893fd0f" name="tests/Ticket/1628TestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="bcb5970dedc014cc6e46599264c9ab06" name="tests/Ticket/1629TestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="da3fcbb2aa685e592e474399360e6403" name="tests/Ticket/1630TestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="d26a342f9a310f1ac97392eed1ae9dee" name="tests/Ticket/1636TestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="ea7988287f4cbd9fafc46cc850ea98b4" name="tests/Ticket/1641TestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="da76061ab91ed6ed1111ff6170e688ca" name="tests/Ticket/1653TestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="2d66cce33084adf9110d1a248ce1d170" name="tests/Ticket/1658TestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="40656e27ce13b92a8c5ca73f08e17699" name="tests/Ticket/1703TestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="ec751801e1070d15b77a4039a1656e4e" name="tests/Ticket/1706TestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="b71ba40c1361e95c4481dec1d49551b9" name="tests/Ticket/1713TestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="82d5ab7c61ff4f6015e393dfa83a1e58" name="tests/Ticket/1716TestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="461b8a4c9cd9fe8537c8b40e70be5ec3" name="tests/Ticket/1725TestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="10e7c55bf7590e5505b8beb264691cde" name="tests/Ticket/1727TestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="3c45dac117bbe32564bb3fdd3f0bcf82" name="tests/Ticket/1729TestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="efd2df00558ec900a9bd17a0e14e1c69" name="tests/Ticket/1745TestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="28b14f59b5e86dc58fd7ea9d55242eeb" name="tests/Ticket/1762TestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="d86aaa387d265b11726cf3121b750801" name="tests/Ticket/1763TestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="6a6e5b4cdfbe400ec1565d9842ab223e" name="tests/Ticket/1764TestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="52f5739217b64471e0b0d69b7a4c2c0d" name="tests/Ticket/1768TestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="fd50b7c9df16f50157aeab81bedfed16" name="tests/Ticket/1783TestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="a1378e789b09ffe1eb5bc9e5eacd3e11" name="tests/Ticket/1793TestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="98eb5d3c418cde32a41df57bdbb8832b" name="tests/Ticket/1795TestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="2c84b23679ee41b61fb266c0fe74470b" name="tests/Ticket/1799TestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="2df12ad26b0aa89fe2a4f4cfe93868f7" name="tests/Ticket/1818TestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="ab900342463a0aa9b85c65f6da4d31fb" name="tests/Ticket/1821TestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="9a593687761be8ea0eda50d3e2e3536d" name="tests/Ticket/1824TestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="246e07265c433802b8abfb60c40df694" name="tests/Ticket/1830TestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="19f32a7605dfa50c07b9f6c89cce920d" name="tests/Ticket/1841TestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="ed6e2e5d4ca09baf44a1714e580aab81" name="tests/Ticket/1843TestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="fc082964124a8b57a88410a37df31d84" name="tests/Ticket/1858TestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="ae7f9157b1c9d0e56288f7c9ccbe3489" name="tests/Ticket/1860TestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="9cfd1f63fd403efadeac4627baad63b1" name="tests/Ticket/1865TestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="2fefda15502b240fe6e5d39fc677513d" name="tests/Ticket/1875TestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="8bd7b8a505937275f148d12aa9658e56" name="tests/Ticket/1876bTestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="07fbb3d9e0fcb35675364fa9a263ebaa" name="tests/Ticket/1876TestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="29338ea52eb0183dd6ffab231bd2c185" name="tests/Ticket/1923TestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="11996c306faa672c045e0d0e73f134b2" name="tests/Ticket/1935TestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="c5b3fb586c2c1f4eb6ba244f2e431229" name="tests/Ticket/1940TestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="47bbef4ea1a99934ee804eb7d2a2ec3d" name="tests/Ticket/1958TestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="c0dd59f36f5d0c1990d40a3a92ff9a45" name="tests/Ticket/1986TestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="00f24b66e42cc84eadff139eae9f7509" name="tests/Ticket/1991TestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="8ba17ad14c5a75851cff075d5a708f87" name="tests/Ticket/1992TestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="fd1a7fd626dac83e44fceec082de9086" name="tests/Ticket/2015TestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="eda29cf61711b709118ac36d5a1e9728" name="tests/Ticket/2032TestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="815f26161a0f5a95b3c4ad5579d40273" name="tests/Ticket/2105TestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="2ec42fcbce908589c84e9c66ac01cbbf" name="tests/Ticket/2158TestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="c0885129079e7c12fae59ec007026a82" name="tests/Ticket/2159TestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="36762a2ba1de7feb9f83c9d18e326b64" name="tests/Ticket/2160TestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="593cd46c13c9e5dbc2bd55e6d851a990" name="tests/Ticket/2184TestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="d075473c3e4d35ebc21666308ac40033" name="tests/Ticket/2190TestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="e4ddc2e27121e9cd5a4b29b698b0e36f" name="tests/Ticket/2204TestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="7d1551b3ab538c3cf283cc5d8c0f8b92" name="tests/Ticket/2229TestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="8c610d5cd438c70908079b80a10b4f03" name="tests/Ticket/2251TestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="ab8e134a985481e187a53efbbb6c5d4c" name="tests/Ticket/2292TestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="d895d8d85e0591a5aa4e105e4df7220b" name="tests/Ticket/2334TestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="710615ea7855ee99f8bb048c58b33307" name="tests/Ticket/2355TestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="dd299d380492b0741d76c18dfad44212" name="tests/Ticket/2375TestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="d1f79eb1032ae37f66968a7416c5a935" name="tests/Ticket/2377TestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="7d8f9b081c5b62243bd271604c37cba2" name="tests/Ticket/AyoubTestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="7fb45126fea4c55db155546170111958" name="tests/Ticket/NewTicketTestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="e43af71a3809de6f2a6b2df0a15b239c" name="tests/Ticket/NjeroTestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="8c7c16bec9da586f4de00ae03981bcf5" name="tests/Transaction/FirebirdTestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="2e0b571c6a1612b5ea8ee23a98483ba4" name="tests/Transaction/InformixTestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="5330adc7df92998720ff915c7e540be0" name="tests/Transaction/MssqlTestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="40b805a1263e58f9fac0a2590d6db08d" name="tests/Transaction/MysqlTestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="afac645ad64b67dbf4e9aa1fba462125" name="tests/Transaction/OracleTestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="2a0d0f6d1fa5b2b3cbb5f1eabbca2237" name="tests/Transaction/PgsqlTestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="7125601450e2c2abc6dc9241cafc60fd" name="tests/Transaction/SqliteTestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="e756f0fdf7b52d34290d785813fb8b15" name="tests/Validator/ForeignKeysTestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="1cf08d785729a3230c8caf2c11b26cee" name="tests/Validator/FutureTestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="269c9e99fd9dc4d901accf98edfd8415" name="tests/Validator/PastTestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="fb1291def1af7c6bf70190849302d30c" name="tests/AccessTestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="d7d7b7baffcfa7f2871cf7b7a54faa77" name="tests/AuditLogTestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="494e2f6440f01c54ddd2c7bba0db6180" name="tests/BaseTestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="9c6bae4af44b8d431fe6cf6af9374b88" name="tests/BatchIteratorTestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="18f75e1e6630a76e8d7039df50dc735d" name="tests/CacheSqliteTestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="5c06c66117bc3f29e5d108f89fd6e284" name="tests/CacheTestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="318f5e7a7a116cdef1f9bee07e1caec2" name="tests/ClassTableInheritanceTestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="4f1d8af923aca224db9b008bc21f7dbb" name="tests/CollectionOffsetTestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="3c85e992845d70463c59aa281d23d59c" name="tests/CollectionTestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="72f668e56b94efbc9a161b622afc124d" name="tests/ColumnAggregationInheritanceTestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="5fcb4ce1c654304a82c40145d1d52205" name="tests/ColumnAliasTestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="bf3234dab792e3a2e076e0097891d939" name="tests/CompositePrimaryKeyTestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="4e787df680cdcb71182a7bdbd337b3df" name="tests/ConcreteInheritanceTestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="58746e24d484cbdb3f9964c0d7eeeb10" name="tests/ConfigurableTestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="27f5977dd80c334159368f5329e925fe" name="tests/ConnectionTestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="da6a515d66bff09e352a3a2dea84f2eb" name="tests/ConnectionTransactionTestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="a9337774340e5c2d6e3238c6ec8ad25d" name="tests/CtiColumnAggregationInheritanceTestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="59f0c7bc1a4f8cf21e5c8955a9b21269" name="tests/CustomPrimaryKeyTestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="95fe2388d5533b0adaf0295ddd09d723" name="tests/CustomResultSetOrderTestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="31d6406914b7f53206e9eadb16d7c15e" name="tests/DataDictSqliteTestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="2574e4162b8705a1f8028eca66229421" name="tests/DataDictTestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="1115b617acde301d4cca4d3de6df63fc" name="tests/DbProfilerTestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="1ac1dcca6a3bab78b5d3258d300b1ee3" name="tests/DBTestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="522612ca91a5213139d0bc608529340a" name="tests/DoctrineTest.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="2528d3e35264198af04f7ed6e1908217" name="tests/DriverTestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="5976f985f66b83c13df69350d511e675" name="tests/EventListenerTestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="286ed4c622f1149f6f355e145425f89e" name="tests/ExportTestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="404de32d24b9125d97636dfe379e4514" name="tests/ExpressionTestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="d510dd0bd7395ae469e79833a72b50e9" name="tests/ForeignKeyTestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="99ac747d194b898729f9591b96d46cda" name="tests/HookTestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="711287564c46b50574026ab4d56d8c15" name="tests/HydrateTestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="5d30c17403ec092984c02daa31bc4359" name="tests/I18nTestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="7270a820743c4cb4a568a24f29cc2645" name="tests/ImportTestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="814ee5329dc19e152e3913e01fca33fa" name="tests/index.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="03ab8ae4b0bcd41e7757b4bf6416dad9" name="tests/IntegrityActionTestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="88f508b0d668fee542f07ab877d767f2" name="tests/ManagerTestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="7abc9914e38c5daad645ec00c712d624" name="tests/MigrationTestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="fb050f21921a81b59dc9c3cb10d65964" name="tests/NewCoreTestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="fd8bd4c7ccfab39f1e92f098112707c5" name="tests/OneTableOneClassInheritanceTestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="8cd4c3e1bc3325e436934cf8ad172934" name="tests/ParserTestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="fd4964e0f6eb3ee2f9bf230f460149f8" name="tests/PessimisticLockingTestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="33bdb03c8c637b7be394cf8e8d31ff03" name="tests/PluginTestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="32465afcd07b580b881d4034f9f1a52f" name="tests/QueryTestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="d757a47e31d37510d94b379996aebe7c" name="tests/RawSqlTestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="8678346cf1dfdd2e53b9eab7fef8502d" name="tests/RecordFilterTestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="9f2edb54437187d4c376a002863e327e" name="tests/RecordTestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="c05ffdffe9903715f0cdb3ab3af5f4c7" name="tests/RelationTestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="c3809621c9d998c1f7f052115ac1dd57" name="tests/RepositoryTestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="5cdee20a7f4496cb13a267843bfff3e0" name="tests/run.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="e32417f07716967cca0bba25c21b7309" name="tests/schema.xml" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="bcfd847805a577390bf37aa007ce0ffc" name="tests/schema.yml" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="49d95addd3ba59192f20d78887f14259" name="tests/SearchTestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="b6069f082abd9e0dbca6bff57f6f026f" name="tests/SequenceTestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="9c9ac1a9702a68c55e0755bb291d61aa" name="tests/SluggableTestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="b2259aa0c8eaa65d2475ae41536b2e63" name="tests/SoftDeleteBCTestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="3d9296ab832ebc162008495e43f81223" name="tests/SoftDeleteTestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="c69eb7d6cc9517ae6baf480be6b953f1" name="tests/TableTestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="23e8d4bfd91f8e311054d2af2197135b" name="tests/template.tpl" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="0da17ebd231211ab709cbf4126b443bb" name="tests/TemplateTestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="0d016dea69ba5adcbca6cd4920cb3d65" name="tests/TokenizerTestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="c9266547265e11f8cef044443576338b" name="tests/TransactionTestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="b35ddbdd6c6a41a9aee7b8c71973c8e6" name="tests/TreeStructureTestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="188a585f1bf53f8e630e231990999c31" name="tests/UnitOfWorkTestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="773db7e7866562b0fab561702152e7cd" name="tests/unsolved.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="81f8839d50e35d78c5d58573688fa390" name="tests/UnsortedTestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="5d1ac40eb1266c2231bec1ec06f8785d" name="tests/ValidatorTestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="893d970579dcc1203bc1b1c93eb36e61" name="tests/ValueHolderTestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="32844b351f00c1ee8eb48c3da32c010c" name="tests/ViewTestCase.php" role="test" />
+   <file baseinstalldir="Doctrine" md5sum="85f0c338f6ea50d700cc78ccea93f588" name="CHANGELOG" role="doc" />
+   <file baseinstalldir="Doctrine" md5sum="a5fd34775b97cbbe2e89b4aafd2f6b3d" name="COPYRIGHT" role="doc" />
+   <file baseinstalldir="Doctrine" md5sum="ab0e2a7c09df7fc844fcb1480d01dd2d" name="LICENSE" role="doc" />
+  </dir>
+ </contents>
+ <dependencies>
+  <required>
+   <php>
+    <min>5.2.3</min>
+   </php>
+   <pearinstaller>
+    <min>1.4.0b1</min>
+   </pearinstaller>
+   <package>
+    <name>PEAR</name>
+    <channel>pear.php.net</channel>
+    <min>1.3.6</min>
+   </package>
+   <extension>
+    <name>pdo</name>
+   </extension>
+  </required>
+  <optional>
+   <extension>
+    <name>pdo_dblib</name>
+   </extension>
+   <extension>
+    <name>pdo_mysql</name>
+   </extension>
+   <extension>
+    <name>pdo_odbc</name>
+   </extension>
+   <extension>
+    <name>pdo_sqlite</name>
+   </extension>
+   <extension>
+    <name>pdo_firebird</name>
+   </extension>
+   <extension>
+    <name>pdo_oci</name>
+   </extension>
+   <extension>
+    <name>pdo_pgsql</name>
+   </extension>
+  </optional>
+ </dependencies>
+ <phprelease />
+ <changelog>
+  <release>
+   <version>
+    <release>1.1.3</release>
+    <api>1.1.3</api>
+   </version>
+   <stability>
+    <release>stable</release>
+    <api>stable</api>
+   </stability>
+   <date>2009-07-27</date>
+   <license uri="http://www.phpdoctrine.org/license">LGPL license</license>
+   <notes>
+-
+   </notes>
+  </release>
+  <release>
+   <version>
+    <release>1.1.2</release>
+    <api>1.1.2</api>
+   </version>
+   <stability>
+    <release>stable</release>
+    <api>stable</api>
+   </stability>
+   <date>2009-06-15</date>
+   <license uri="http://www.phpdoctrine.org/license">LGPL license</license>
+   <notes>
+-
+   </notes>
+  </release>
+  <release>
+   <version>
+    <release>1.1.1</release>
+    <api>1.1.1</api>
+   </version>
+   <stability>
+    <release>stable</release>
+    <api>stable</api>
+   </stability>
+   <date>2009-05-11</date>
+   <license uri="http://www.phpdoctrine.org/license">LGPL license</license>
+   <notes>
+-
+   </notes>
+  </release>
+  <release>
+   <version>
+    <release>1.1.0</release>
+    <api>1.1.0</api>
+   </version>
+   <stability>
+    <release>stable</release>
+    <api>stable</api>
+   </stability>
+   <date>2009-03-16</date>
+   <license uri="http://www.phpdoctrine.org/license">LGPL license</license>
+   <notes>
+-
+   </notes>
+  </release>
+  <release>
+   <version>
+    <release>1.0.2</release>
+    <api>1.0.2</api>
+   </version>
+   <stability>
+    <release>stable</release>
+    <api>stable</api>
+   </stability>
+   <date>2008-09-11</date>
+   <license uri="http://www.phpdoctrine.org/license">LGPL license</license>
+   <notes>
+-
+   </notes>
+  </release>
+  <release>
+   <version>
+    <release>1.0.1</release>
+    <api>1.0.1</api>
+   </version>
+   <stability>
+    <release>stable</release>
+    <api>stable</api>
+   </stability>
+   <date>2008-09-09</date>
+   <license uri="http://www.phpdoctrine.org/license">LGPL license</license>
+   <notes>
+-
+   </notes>
+  </release>
+  <release>
+   <version>
+    <release>1.0.0</release>
+    <api>1.0.0</api>
+   </version>
+   <stability>
+    <release>stable</release>
+    <api>stable</api>
+   </stability>
+   <date>2008-09-01</date>
+   <license uri="http://www.phpdoctrine.org/license">LGPL license</license>
+   <notes>
+-
+   </notes>
+  </release>
+  <release>
+   <version>
+    <release>0.11.0</release>
+    <api>0.11.0</api>
+   </version>
+   <stability>
+    <release>stable</release>
+    <api>stable</api>
+   </stability>
+   <date>2008-06-23</date>
+   <license uri="http://www.phpdoctrine.org/license">LGPL license</license>
+   <notes>
+-
+   </notes>
+  </release>
+  <release>
+   <version>
+    <release>0.10.4</release>
+    <api>0.10.4</api>
+   </version>
+   <stability>
+    <release>beta</release>
+    <api>beta</api>
+   </stability>
+   <date>2008-03-28</date>
+   <license uri="http://www.phpdoctrine.org/license">LGPL license</license>
+   <notes>
+-
+   </notes>
+  </release>
+  <release>
+   <version>
+    <release>0.10.3</release>
+    <api>0.10.3</api>
+   </version>
+   <stability>
+    <release>beta</release>
+    <api>beta</api>
+   </stability>
+   <date>2008-03-18</date>
+   <license uri="http://www.phpdoctrine.org/license">LGPL license</license>
+   <notes>
+-
+   </notes>
+  </release>
+  <release>
+   <version>
+    <release>0.10.2</release>
+    <api>0.10.2</api>
+   </version>
+   <stability>
+    <release>beta</release>
+    <api>beta</api>
+   </stability>
+   <date>2008-03-01</date>
+   <license uri="http://www.phpdoctrine.org/license">LGPL license</license>
+   <notes>
+-
+   </notes>
+  </release>
+  <release>
+   <version>
+    <release>0.10.1</release>
+    <api>0.10.1</api>
+   </version>
+   <stability>
+    <release>beta</release>
+    <api>beta</api>
+   </stability>
+   <date>2008-02-29</date>
+   <license uri="http://www.phpdoctrine.org/license">LGPL license</license>
+   <notes>
+-
+   </notes>
+  </release>
+  <release>
+   <version>
+    <release>0.10.0</release>
+    <api>0.10.0</api>
+   </version>
+   <stability>
+    <release>beta</release>
+    <api>beta</api>
+   </stability>
+   <date>2008-02-13</date>
+   <license uri="http://www.phpdoctrine.org/license">LGPL license</license>
+   <notes>
+-
+   </notes>
+  </release>
+  <release>
+   <version>
+    <release>0.9</release>
+    <api>0.9</api>
+   </version>
+   <stability>
+    <release>beta</release>
+    <api>beta</api>
+   </stability>
+   <date>2008-02-06</date>
+   <license uri="http://phpdoctrine.net/license">MIT license</license>
+   <notes>
+barfoo
+   </notes>
+  </release>
+ </changelog>
+</package>
