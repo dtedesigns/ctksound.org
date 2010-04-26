@@ -16,6 +16,8 @@
  * @property integer $year
  * @property integer $disk
  * @property string $type
+ * @property string $engineer
+ * @property string $processor
  * @property timestamp $created_at
  * @property timestamp $updated_at
  * 
@@ -113,6 +115,22 @@ abstract class BaseSermons extends Doctrine_Record
              'primary' => false,
              'default' => 'Sermon',
              'notnull' => true,
+             'autoincrement' => false,
+             ));
+        $this->hasColumn('engineer', 'string', 255, array(
+             'type' => 'string',
+             'length' => 255,
+             'fixed' => false,
+             'primary' => false,
+             'notnull' => false,
+             'autoincrement' => false,
+             ));
+        $this->hasColumn('processor', 'string', 255, array(
+             'type' => 'string',
+             'length' => 255,
+             'fixed' => false,
+             'primary' => false,
+             'notnull' => false,
              'autoincrement' => false,
              ));
         $this->hasColumn('created_at', 'timestamp', null, array(

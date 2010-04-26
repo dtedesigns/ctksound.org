@@ -16,19 +16,27 @@ $disabled['cue'] = (count($labels) > 0 && $dates[0] != NULL) ? '' : 'disabled';
 		<?php } ?>
 	</form>
 
-	<br />Current label file:
+	<br />	Processed sound files:
+	<ul>
+	<?php foreach($mp3s as $file) {
+		echo '<li>' . array_pop(split('/',$file)) . '</li>';
+	} ?>
+	</ul>
+
+	Original sound files:
+	<ul>
+	<?php foreach($originals as $file) {
+		echo '<li>' . array_pop(split('/',$file)) . '</li>';
+	} ?>
+	</ul>
+
+	Label file:
 	<ul>
 	<?php foreach($labels as $file) {
 		echo "<li>" . array_pop(split('/',$file)) . "</li>";
 	} ?>
 	</ul>
 
-	Current sound files:
-	<ul>
-	<?php foreach($mp3s as $file) {
-		echo '<li>' . array_pop(split('/',$file)) . '</li>';
-	} ?>
-	</ul>
 
 	<p>
 		<button <?= $disabled['id3'] ?> >Write ID3 tags</button>

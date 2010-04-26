@@ -33,7 +33,7 @@ label {
 	float: left;
 	width: 90px;
 	text-align: right;
-	padding-right: 10px;
+	padding: 5px 10px 0 0;
 }
 pre {
 	margin-top: 0;

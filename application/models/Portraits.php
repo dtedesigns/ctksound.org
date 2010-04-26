@@ -13,4 +13,8 @@
 class Portraits extends BasePortraits
 {
 
+	public function setUp() {
+		$this->actAs('Timestampable');
+	}
+
 }

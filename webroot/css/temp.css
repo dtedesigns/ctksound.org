@@ -1,0 +1,42 @@
+@media handheld {
+html,body {
+font:12px/15px sans-serif;
+background:#fff;
+color:#000;
+margin:0;
+padding:3px;
+}
+
+#sidebar,#footer {
+display:none;
+}
+
+h1,h2,h3,h4,h5,h6 {
+font-weight:400;
+}
+
+#content img {
+max-width:250px;
+}
+
+.center {
+width:100%;
+text-align:center;
+}
+
+a:link,a:visited {
+text-decoration:underline;
+color:#00C;
+}
+
+a:hover,a:active {
+text-decoration:underline;
+color:#606;
+}
+}
+
+@media only screen and max-device-width 480px {
+html {
+-webkit-text-size-adjust:none;
+}
+}

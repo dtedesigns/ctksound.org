@@ -4,6 +4,10 @@
 
 class Util_Controller extends Controller
 {
+
+	// Set the name of the template to use
+	//public $template = 'template';
+
 	public function index() {
 	  $this->template->content = 'No direct access.';
 	}
@@ -49,7 +53,7 @@ class Util_Controller extends Controller
 		$content .= "	<tr><th><hr /></th><td><hr /></td></tr>";
 		$content .= "</tbody></table>";
 
-		$this->template->content .= $content;
+		echo $content;
 	}
 
 	public function kill_session() {

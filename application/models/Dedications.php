@@ -13,4 +13,8 @@
 class Dedications extends BaseDedications
 {
 
+	public function setUp() {
+		$this->actAs('Timestampable');
+	}
+
 }

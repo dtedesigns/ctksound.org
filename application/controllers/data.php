@@ -19,6 +19,14 @@ class Data_Controller extends Template_Controller {
 		self::record('Aces', $date);
 	}
 
+	public function portraits($date) {
+		self::record('Portraits', $date);
+	}
+
+	public function dedications($date) {
+		self::record('Dedications', $date);
+	}
+
 	public function record($type, $date = null) {
 		$this->template = new View('ajax');
 
@@ -35,7 +43,7 @@ class Data_Controller extends Template_Controller {
 		else echo 'null';
 	}
 
-	public function gencue($date) {
+	public function gencue($date,$as_file = TRUE) {
 		$this->template = null;
 		$this->auto_render = FALSE;
 
@@ -47,10 +55,12 @@ class Data_Controller extends Template_Controller {
 		$snd->filename = $filenames[0];
 
 		$filenames = glob('/var/www/sound/webroot/labels/'.$date.'*.labels');
-		header("Cache-Control: no-cache, must-revalidate"); // HTTP/1.1
-		header("Expires: Sat, 26 Jul 1997 05:00:00 GMT"); // Date in the past
-		header("Content-Type: text/plain; charset: utf-8");
-		header("Content-Disposition: attachment; filename=$date.cue");
+		if($as_file) {
+			header("Cache-Control: no-cache, must-revalidate"); // HTTP/1.1
+			header("Expires: Sat, 26 Jul 1997 05:00:00 GMT"); // Date in the past
+			header("Content-Type: text/plain; charset: utf-8");
+			header("Content-Disposition: attachment; filename=$date.cue");
+		}
 		echo $snd->gen_cue($filenames[0]);
 	}
 

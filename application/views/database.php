@@ -34,28 +34,39 @@
 		</p>
 
 		<p>
-		<label for='preacher'>Preacher</label>
-		<input type='text' name='preacher' id='sermon_preacher' <?php if($sermon) echo "value=\"{$sermon['preacher']}\""; ?>/>
-		</p>
-
-		<p>
-		<label for='title'>Title</label>
-		<input type='text' name='title' id='sermon_title' <?php if($sermon) echo "value=\"{$sermon['title']}\""; ?>/>
-		</p>
-
-		<p>
 		<label for='scripture'>Scripture</label>
-		<input type='text' name='scripture' id='sermon_scripture' <?php if($sermon) echo "value=\"{$sermon['scripture']}\""; ?>/>
+		<input type='text' name='scripture' id='sermon_scripture' <?php if($sermon) echo "value=\"".htmlspecialchars($sermon['scripture'])."\""; ?>/>
 		</p>
 
 		<p>
 		<label for='reader'>Reader</label>
-		<input type='text' name='reader' id='sermon_reader' <?php if($sermon) echo "value=\"{$sermon['reader']}\""; ?>/>
+		<input type='text' name='reader' id='sermon_reader' <?php if($sermon) echo "value=\"".htmlspecialchars($sermon['reader'])."\""; ?>/>
 		</p>
 
 		<p>
 		<label for='series'>Series</label>
-		<input type='text' name='series' id='sermon_series' <?php if($sermon) echo "value=\"{$sermon['series']}\""; ?>/>
+		<input type='text' name='series' id='sermon_series' <?php if($sermon) echo "value=\"".htmlspecialchars($sermon['series'])."\""; ?>/>
+		</p>
+
+		<p>
+		<label for='title'>Title</label>
+		<input type='text' name='title' id='sermon_title' <?php if($sermon) echo "value=\"".htmlspecialchars($sermon['title'])."\""; ?>/>
+		</p>
+
+		<p>
+		<label for='preacher'>Preacher</label>
+		<input type='text' name='preacher' id='sermon_preacher' <?php if($sermon) echo "value=\"".htmlspecialchars($sermon['preacher'])."\""; ?>/>
+		</p>
+
+		<p>
+		<label for='engineer'>Tech</label>
+		<input type='text' name='engineer' id='sermon_engineer' <?php if($sermon) echo "value=\"".htmlspecialchars($sermon['engineer'])."\""; ?>/>
+		</p>
+
+
+		<p>
+		<label for='processor'>Processor</label>
+		<input type='text' name='processor' id='sermon_processor' <?php if($sermon) echo "value=\"".htmlspecialchars($sermon['processor'])."\""; ?>/>
 		</p>
 
 		<input type='submit' value='submit' /> &nbsp; <span id='sermon_message' />
@@ -76,23 +87,23 @@
 		</p>
 
 		<p>
-			<label for='teacher'>Teacher</label>
-			<input type='text' name='teacher' id='ace_teacher' <?php if($ace) echo "value=\"{$ace['teacher']}\""; ?>/>
+			<label for='series'>Series</label>
+			<input type='text' name='series' id='ace_series' <?php if($ace) echo "value=\"".htmlspecialchars($ace['series'])."\""; ?>/>
 		</p>
 
 		<p>
 			<label for='title'>Title</label>
-			<input type='text' name='title' id='ace_title' <?php if($ace) echo "value=\"{$ace['title']}\""; ?>/>
+			<input type='text' name='title' id='ace_title' <?php if($ace) echo "value=\"".htmlspecialchars($ace['title'])."\""; ?>/>
 		</p>
 
 		<p>
-			<label for='series'>Series</label>
-			<input type='text' name='series' id='ace_series' <?php if($ace) echo "value=\"{$ace['series']}\""; ?>/>
+			<label for='teacher'>Teacher</label>
+			<input type='text' name='teacher' id='ace_teacher' <?php if($ace) echo "value=\"".htmlspecialchars($ace['teacher'])."\""; ?>/>
 		</p>
 
 		<p>
 			<label for='comment'>Comment</label>
-			<input type='text' name='comment' id='ace_comment' <?php if($ace) echo "value=\"{$ace['comment']}\""; ?>/>
+			<input type='text' name='comment' id='ace_comment' <?php if($ace) echo "value=\"".htmlspecialchars($ace['comment'])."\""; ?>/>
 		</p>
 
 		<input type='submit' value='submit' /> &nbsp; <span id='ace_message' />
@@ -112,12 +123,12 @@
 
 		<p>
 			<label for='preacher'>Speaker</label>
-			<input type='text' name='preacher' id='portrait_speaker' <?php if($portrait) echo "value='{$portrait['preacher']}'"; ?>/>
+			<input type='text' name='speaker' id='portrait_speaker' <?php if($portrait) echo "value='".htmlspecialchars($portrait['speaker'])."'"; ?>/>
 		</p>
 
 		<p>
 			<label for='scripture'>Comment</label>
-			<input type='text' name='scripture' id='portrait_scripture' <?php if($portrait) echo "value='{$portrait['scripture']}'"; ?>/>
+			<input type='text' name='comment' id='portrait_comment' <?php if($portrait) echo "value='".htmlspecialchars($portrait['comment'])."'"; ?>/>
 		</p>
 
 		<input type='submit' value='submit' /> &nbsp; <span id='portrait_message' />
@@ -125,7 +136,7 @@
 </div>
 
 <div id="dedication" class='hidden'>
-	<form id='dedication' action='/dash/write_record/' mode='post'><fieldset>
+	<form id='enter_dedication' action='/dash/write_record/' mode='post'><fieldset>
 		<legend>Enter Child Dedication Information</legend>
 
 		<input type='hidden' name='type' value='Dedications' />
@@ -136,18 +147,18 @@
 		</p>
 
 		<p>
-			<label for='preacher'>Official</label>
-			<input type='text' name='preacher' id='dedication_preacher' <?php if($dedication) echo "value=\"{$dedication['preacher']}\""; ?>/>
+			<label for='official'>Official</label>
+			<input type='text' name='official' id='dedication_official' <?php if($dedication) echo "value=\"".htmlspecialchars($dedication['official'])."\""; ?>/>
 		</p>
 
 		<p>
-			<label for='reader'>Child</label>
-			<input type='text' name='reader' id='dedication_reader' <?php if($dedication) echo "value=\"{$dedication['reader']}\""; ?>/>
+			<label for='child'>Child</label>
+			<input type='text' name='child' id='dedication_child' <?php if($dedication) echo "value=\"".htmlspecialchars($dedication['child'])."\""; ?>/>
 		</p>
 
 		<p>
-			<label for='scripture'>Comment</label>
-			<input type='text' name='scripture' id='dedication_scripture' <?php if($dedication) echo "value=\"{$dedication['scripture']}\""; ?>/>
+			<label for='comment'>Comment</label>
+			<input type='text' name='comment' id='dedication_comment' <?php if($dedication) echo "value=\"".htmlspecialchars($dedication['comment'])."\""; ?>/>
 		</p>
 
 		<input type='submit' value='submit' /> &nbsp; <span id='dedication_message' />
@@ -225,32 +236,40 @@ $('#enter_christmas').ajaxForm({
 	}
 });
 
-$('#sermon_preacher').autocomplete("/dash/autocomplete?type=Sermon&val=preacher",{
+$('#sermon_preacher').autocomplete("/dash/autocomplete?type=Sermons&val=preacher",{
 	cacheLength:10, autoFill:true, selectFirst:true
 });
-$('#sermon_title').autocomplete("/dash/autocomplete?type=Sermon&val=title",{
+$('#sermon_title').autocomplete("/dash/autocomplete?type=Sermons&val=title",{
 	cacheLength:10, autoFill:true, selectFirst:true
 });
-$('#sermon_scripture').autocomplete("/dash/autocomplete?type=Sermon&val=book",{
+$('#sermon_scripture').autocomplete("/dash/autocomplete?type=Sermons&val=book",{
 	cacheLength:10, autoFill:true, selectFirst:true
 });
-$('#sermon_reader').autocomplete("/dash/autocomplete?type=Sermon&val=reader",{
+$('#sermon_reader').autocomplete("/dash/autocomplete?type=Sermons&val=reader",{
 	cacheLength:10, autoFill:true, selectFirst:true
 });
-$('#sermon_series').autocomplete("/dash/autocomplete?type=Sermon&val=series",{
+$('#sermon_series').autocomplete("/dash/autocomplete?type=Sermons&val=series",{
 	cacheLength:10, autoFill:true, selectFirst:true
 });
 
-$('#ace_teacher').autocomplete("/dash/autocomplete?type=ACE&val=preacher",{
+$('#sermon_engineer').autocomplete("/dash/autocomplete?type=Sermons&val=engineer",{
 	cacheLength:10, autoFill:true, selectFirst:true
 });
-$('#ace_title').autocomplete("/dash/autocomplete?type=ACE&val=title",{
+
+$('#sermon_processor').autocomplete("/dash/autocomplete?type=Sermons&val=processor",{
 	cacheLength:10, autoFill:true, selectFirst:true
 });
-$('#ace_scripture').autocomplete("/dash/autocomplete?type=ACE&val=book",{
+
+$('#ace_teacher').autocomplete("/dash/autocomplete?type=Aces&val=teacher",{
 	cacheLength:10, autoFill:true, selectFirst:true
 });
-$('#ace_series').autocomplete("/dash/autocomplete?type=ACE&val=series",{
+$('#ace_title').autocomplete("/dash/autocomplete?type=Aces&val=title",{
+	cacheLength:10, autoFill:true, selectFirst:true
+});
+$('#ace_scripture').autocomplete("/dash/autocomplete?type=Aces&val=book",{
+	cacheLength:10, autoFill:true, selectFirst:true
+});
+$('#ace_series').autocomplete("/dash/autocomplete?type=Aces&val=series",{
 	cacheLength:10, autoFill:true, selectFirst:true
 });
 
