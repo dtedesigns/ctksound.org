@@ -2,11 +2,12 @@
 // vim: set noet fenc= ff=unix sts=0 sw=4 ts=4 : 
 /* SVN FILE: $Id$ */
 header('Content-Type: application/rss+xml');
-define('DIRECTORY', '/var/www/ctk');
+//define('DIRECTORY', '../../webroot/recordings/');
+define('DIRECTORY', '/var/www/sound/webroot/recordings/');
 $dir = glob(DIRECTORY."/*.mp3");
 rsort($dir);
 
-require_once('/var/www/sound/getid3/getid3.php');
+require_once('/var/www/sound/application/vendor/getid3/getid3.php');
 
 $rss = "<?xml version='1.0' encoding='UTF-8'?>
 <rss version='2.0' xmlns:atom='http://www.w3.org/2005/Atom'>
