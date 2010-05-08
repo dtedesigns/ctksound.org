@@ -11,7 +11,7 @@
 
 class extras_Core
 {
-	public public function calc_time($time, $include_frames = TRUE) {
+	public function calc_time($time, $include_frames = TRUE) {
 		$min = floor($time/60);
 		$sec = floor($time - $min*60);
 		$frames = ($time - ($min*60 + $sec)) * 75;
