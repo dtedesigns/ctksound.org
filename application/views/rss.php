@@ -46,6 +46,9 @@ foreach ($dir as $file) {
 		->execute()
 		->getFirst();
 
+	// Ignore unpublished entries
+	if ($dbo['published'] === NULL) continue;
+
 	if (isset($id3['tags_html']['id3v2']['text'][1])) $sermon = TRUE;
 	else $sermon = FALSE;
 
@@ -74,6 +77,8 @@ foreach ($dir as $file) {
 
 	$url = htmlentities("http://".$_SERVER['SERVER_NAME']."/ctk/".$filename);
 	$url = preg_replace('/\s/','%20',$url);
+	$url = preg_replace('/\[/','%91',$url);
+	$url = preg_replace('/\]/','%93',$url);
 
 	$description = $short_date . ", ";
 	$description .= $lastname . ", ";

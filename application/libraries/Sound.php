@@ -398,7 +398,11 @@ www.ctkfoxvalley.org";
 		$description .= $playtime . " Total<br />";
 		if ($sermon) $description .= $readtime . " Scripture Reading";
 
-		return "<br />Label Info:<br /><span id='label_info'>". $description . '</span>';
+		$labelInfo = "<br />Label Info:";
+		$labelInfo .= ($dbo[published] === NULL) ? " (Unpublished)" : "";
+		$labelInfo .= "<br /><span id='label_info'>". $description . '</span>';
+
+		return $labelInfo;
 	}
 function last_sunday($time = NULL) {
 	if($time == NULL) $date = time();
