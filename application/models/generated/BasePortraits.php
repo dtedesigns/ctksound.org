@@ -10,6 +10,7 @@
  * @property string $speaker
  * @property string $comment
  * @property integer $notice_sent
+ * @property timestamp $published
  * @property timestamp $created_at
  * @property timestamp $updated_at
  * 
@@ -56,6 +57,12 @@ abstract class BasePortraits extends Doctrine_Record
              'type' => 'integer',
              'length' => 1,
              'unsigned' => 1,
+             'primary' => false,
+             'notnull' => false,
+             'autoincrement' => false,
+             ));
+        $this->hasColumn('published', 'timestamp', null, array(
+             'type' => 'timestamp',
              'primary' => false,
              'notnull' => false,
              'autoincrement' => false,

@@ -12,6 +12,7 @@
  * @property string $comment
  * @property date $date
  * @property integer $disk
+ * @property timestamp $published
  * @property timestamp $created_at
  * @property timestamp $updated_at
  * 
@@ -74,6 +75,12 @@ abstract class BaseAces extends Doctrine_Record
              'type' => 'integer',
              'length' => 4,
              'unsigned' => 0,
+             'primary' => false,
+             'notnull' => false,
+             'autoincrement' => false,
+             ));
+        $this->hasColumn('published', 'timestamp', null, array(
+             'type' => 'timestamp',
              'primary' => false,
              'notnull' => false,
              'autoincrement' => false,

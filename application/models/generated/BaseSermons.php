@@ -18,6 +18,7 @@
  * @property string $type
  * @property string $engineer
  * @property string $processor
+ * @property timestamp $published
  * @property timestamp $created_at
  * @property timestamp $updated_at
  * 
@@ -129,6 +130,12 @@ abstract class BaseSermons extends Doctrine_Record
              'type' => 'string',
              'length' => 255,
              'fixed' => false,
+             'primary' => false,
+             'notnull' => false,
+             'autoincrement' => false,
+             ));
+        $this->hasColumn('published', 'timestamp', null, array(
+             'type' => 'timestamp',
              'primary' => false,
              'notnull' => false,
              'autoincrement' => false,
