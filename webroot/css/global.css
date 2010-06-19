@@ -25,9 +25,17 @@ ul, li {
 	padding-left: 7px;
 }
 #tabs {	font-size: 100%; }
+.ui-tabs-panel {
+	min-height: 490px;
+	_height: 490px;
+}
 #downloads p {
 	font-size: 65%;
 	margin-bottom: 1px;
+}
+#downloads p#nofiles {
+	font-size: 100%;
+	font-weight: bold;
 }
 label {
 	float: left;

@@ -14,17 +14,20 @@ $disabled[2] = ($dates[2] == NULL) ? 'disabled' : '';
 			<!--
 			<a href='download.php?f=<?= $mp3 ?>' class='filename'><?= array_pop(split('/', $mp3)) ?></a>
 			-->
-			<a href='/recordings/<?= array_pop(split('/', $mp3)) ?>' class='filename'><?= array_pop(split('/', $mp3)) ?></a>
+			<a href='<?= url::base() ?>recordings/<?= array_pop(split('/', $mp3)) ?>' class='filename'><?= array_pop(split('/', $mp3)) ?></a>
 		</p>
 
 	<?php
 		$labels .= Sound::label_info($mp3);
 	}
+	if (count($mp3s) === 0) { ?>
+		<p id="nofiles">No files were found for this date.</p>
+	<?php }
 	echo $labels;
 	?>
 		
 <script type='text/javascript'>
 function load_date(date) {
-	$('#downloads').load('/dash/downloads/'+date);
+	$('#downloads').load('<?= url::base() ?>dash/downloads/'+date);
 }
 </script>

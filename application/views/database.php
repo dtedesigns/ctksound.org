@@ -23,7 +23,7 @@
 <p />
 
 <div id="sermon" class='hidden'>
-	<form id='enter_sermon' action='/dash/write_record/' mode='post'><fieldset>
+	<form id='enter_sermon' action='<?= url::base() ?>dash/write_record/' mode='post'><fieldset>
 		<legend>Enter Sermon Information</legend>
 
 		<input type='hidden' name='type' value='Sermons' />
@@ -75,7 +75,7 @@
 </div>
 
 <div id="ace" class='hidden'>
-	<form id='enter_ace' action='/dash/write_record/' mode='post'><fieldset>
+	<form id='enter_ace' action='<?= url::base() ?>dash/write_record/' mode='post'><fieldset>
 		<legend>Enter A.C.E. Information</legend>
 		<!-- Aces: series, title, teacher, comment, date, disk -->
 
@@ -111,7 +111,7 @@
 </div>
 
 <div id="portrait" class='hidden'>
-	<form id='enter_portrait' action='/dash/write_record/' mode='post'><fieldset>
+	<form id='enter_portrait' action='<?= url::base() ?>dash/write_record/' mode='post'><fieldset>
 		<legend>Enter Portrait of Grace Information</legend>
 
 		<input type='hidden' name='type' value='Portraits' />
@@ -136,7 +136,7 @@
 </div>
 
 <div id="dedication" class='hidden'>
-	<form id='enter_dedication' action='/dash/write_record/' mode='post'><fieldset>
+	<form id='enter_dedication' action='<?= url::base() ?>dash/write_record/' mode='post'><fieldset>
 		<legend>Enter Child Dedication Information</legend>
 
 		<input type='hidden' name='type' value='Dedications' />
@@ -236,40 +236,40 @@ $('#enter_christmas').ajaxForm({
 	}
 });
 
-$('#sermon_preacher').autocomplete("/dash/autocomplete?type=Sermons&val=preacher",{
+$('#sermon_preacher').autocomplete("<?= url::base() ?>dash/autocomplete?type=Sermons&val=preacher",{
 	cacheLength:10, autoFill:true, selectFirst:true
 });
-$('#sermon_title').autocomplete("/dash/autocomplete?type=Sermons&val=title",{
+$('#sermon_title').autocomplete("<?= url::base() ?>dash/autocomplete?type=Sermons&val=title",{
 	cacheLength:10, autoFill:true, selectFirst:true
 });
-$('#sermon_scripture').autocomplete("/dash/autocomplete?type=Sermons&val=book",{
+$('#sermon_scripture').autocomplete("<?= url::base() ?>dash/autocomplete?type=Sermons&val=book",{
 	cacheLength:10, autoFill:true, selectFirst:true
 });
-$('#sermon_reader').autocomplete("/dash/autocomplete?type=Sermons&val=reader",{
+$('#sermon_reader').autocomplete("<?= url::base() ?>dash/autocomplete?type=Sermons&val=reader",{
 	cacheLength:10, autoFill:true, selectFirst:true
 });
-$('#sermon_series').autocomplete("/dash/autocomplete?type=Sermons&val=series",{
-	cacheLength:10, autoFill:true, selectFirst:true
-});
-
-$('#sermon_engineer').autocomplete("/dash/autocomplete?type=Sermons&val=engineer",{
+$('#sermon_series').autocomplete("<?= url::base() ?>dash/autocomplete?type=Sermons&val=series",{
 	cacheLength:10, autoFill:true, selectFirst:true
 });
 
-$('#sermon_processor').autocomplete("/dash/autocomplete?type=Sermons&val=processor",{
+$('#sermon_engineer').autocomplete("<?= url::base() ?>dash/autocomplete?type=Sermons&val=engineer",{
 	cacheLength:10, autoFill:true, selectFirst:true
 });
 
-$('#ace_teacher').autocomplete("/dash/autocomplete?type=Aces&val=teacher",{
+$('#sermon_processor').autocomplete("<?= url::base() ?>dash/autocomplete?type=Sermons&val=processor",{
 	cacheLength:10, autoFill:true, selectFirst:true
 });
-$('#ace_title').autocomplete("/dash/autocomplete?type=Aces&val=title",{
+
+$('#ace_teacher').autocomplete("<?= url::base() ?>dash/autocomplete?type=Aces&val=teacher",{
 	cacheLength:10, autoFill:true, selectFirst:true
 });
-$('#ace_scripture').autocomplete("/dash/autocomplete?type=Aces&val=book",{
+$('#ace_title').autocomplete("<?= url::base() ?>dash/autocomplete?type=Aces&val=title",{
 	cacheLength:10, autoFill:true, selectFirst:true
 });
-$('#ace_series').autocomplete("/dash/autocomplete?type=Aces&val=series",{
+$('#ace_scripture').autocomplete("<?= url::base() ?>dash/autocomplete?type=Aces&val=book",{
+	cacheLength:10, autoFill:true, selectFirst:true
+});
+$('#ace_series').autocomplete("<?= url::base() ?>dash/autocomplete?type=Aces&val=series",{
 	cacheLength:10, autoFill:true, selectFirst:true
 });
 

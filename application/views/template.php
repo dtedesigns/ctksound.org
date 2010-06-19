@@ -15,27 +15,27 @@ $mp3s = glob('/var/www/ctk/'.$dbo['date'].'*.mp3');
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 <head>
 	<title>Christ the King Sound Team</title>
-	<script type="text/javascript" src="/js/jquery-1.3.1.js"> </script>
-	<script type="text/javascript" src="/js/jquery.autocomplete.min.js"> </script>
-	<script type="text/javascript" src="/js/jquery.form.js"> </script>
-	<!-- <script type="text/javascript" src="/js/uploadify/jquery.uploadify.js"> </script> -->
-	<script type="text/javascript" src="/js/jqUploader/jquery.jqUploader.js"> </script>
-	<script type="text/javascript" src="/js/jquery-ui/jquery-ui-personalized-1.6rc6.js"> </script>
+	<script type="text/javascript" src="<?= url::base() ?>js/jquery-1.3.1.js"> </script>
+	<script type="text/javascript" src="<?= url::base() ?>js/jquery.autocomplete.min.js"> </script>
+	<script type="text/javascript" src="<?= url::base() ?>js/jquery.form.js"> </script>
+	<!-- <script type="text/javascript" src="<?= url::base() ?>js/uploadify/jquery.uploadify.js"> </script> -->
+	<script type="text/javascript" src="<?= url::base() ?>js/jqUploader/jquery.jqUploader.js"> </script>
+	<script type="text/javascript" src="<?= url::base() ?>js/jquery-ui/jquery-ui-personalized-1.6rc6.js"> </script>
 	<!--
 	<script type="text/javascript" src="http://ui.jquery.com/themeroller/themeswitchertool/"> </script>
 	-->
-	<link href="/rss/" title="CtK Released Sound Files" type="application/rss+xml" rel="alternate"/>
+	<link href="<?= url::base() ?>rss/" title="CtK Released Sound Files" type="application/rss+xml" rel="alternate"/>
 
-	<link title="Tabbed Interface" rel="stylesheet" type="text/css" href="/css/global.css" />
-	<link title="Alternate Interface" media="stylesheet" type="text/css" href="/css/alternate.css" rel="stylesheet"/>
-	<link title="Handheld" media="handheld" type="text/css" href="/css/handheld.css" rel="stylesheet"/>
+	<link title="Tabbed Interface" rel="stylesheet" type="text/css" href="<?= url::base() ?>css/global.css" />
+	<link title="Alternate Interface" media="stylesheet" type="text/css" href="<?= url::base() ?>css/alternate.css" rel="stylesheet"/>
+	<link title="Handheld" media="handheld" type="text/css" href="<?= url::base() ?>css/handheld.css" rel="stylesheet"/>
 
-	<link rel="stylesheet" type="text/css" href="/css/jquery.autocomplete.css" />
-	<link rel="stylesheet" type="text/css" href="/js/uploadify/uploadify.css" />
-	<link type="text/css" rel="stylesheet" href="/css/ui.all.css" />
+	<link rel="stylesheet" type="text/css" href="<?= url::base() ?>css/jquery.autocomplete.css" />
+	<link rel="stylesheet" type="text/css" href="<?= url::base() ?>js/uploadify/uploadify.css" />
+	<link type="text/css" rel="stylesheet" href="<?= url::base() ?>js/jquery-ui/theme/ui.all.css" />
 
-	<link media="Screen" type="text/css" href="/repository/tags/1.6rc6/themes/base/ui.base.css" rel="stylesheet"/>
-	<link media="Screen" type="text/css" href="/sound/themeroller/css/parseTheme.css.php?ctl=themeroller" rel="stylesheet"/>
+	<!-- <link media="Screen" type="text/css" href="<?= url::base() ?>js/jquery-ui/theme/base/ui.base.css" rel="stylesheet"/> -->
+	<!-- <link media="Screen" type="text/css" href="<?= url::base() ?>css/themeroller/css/parseTheme.css.php?ctl=themeroller" rel="stylesheet"/> -->
 
 	<!-- Stylesheet Tips 
 	Persistent: no title
@@ -56,7 +56,7 @@ $mp3s = glob('/var/www/ctk/'.$dbo['date'].'*.mp3');
 	</script>
 </head>
 <body>
-<h1>Christ the King Sound Team</h1>
+<h1>Christ the King<br/>Sound Team</h1>
 <div id='switcher'> </div>
 
 <div id='tabs' class='ui-tabs ui-widget ui-widget-content ui-corner-all'>
@@ -64,8 +64,8 @@ $mp3s = glob('/var/www/ctk/'.$dbo['date'].'*.mp3');
 		<li class="ui-state-default ui-corner-top ui-tabs-selected ui-state-active"><a href="#schedule">Schedule</a></li>
 		<li class="ui-state-default ui-corner-top"><a href="#downloads">Download</a></li>
 		<li class="ui-state-default ui-corner-top"><a href="#database">Database</a></li>
-		<li class="ui-state-default ui-corner-top"><a href="#tools">T</a></li>
-		<li class="ui-state-default ui-corner-top"><a href="#filelist">F</a></li>
+		<li class="ui-state-default ui-corner-top"><a href="#tools">Tools</a></li>
+		<?php // <li class="ui-state-default ui-corner-top"><a href="#filelist">F</a></li> ?>
 	</ul>
 
 	<div id="database" class="ui-tabs-panel ui-widget-content ui-corner-bottom ui-tabs-hide">
@@ -84,9 +84,11 @@ $mp3s = glob('/var/www/ctk/'.$dbo['date'].'*.mp3');
 		<?= $schedule ?>
 	</div>
 
+	<!--
 	<div id="filelist" class="ui-tabs-panel ui-widget-content ui-corner-bottom">
 		<?= $filelist ?>
 	</div>
+	-->
 
 </div>
 

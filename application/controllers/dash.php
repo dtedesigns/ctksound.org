@@ -37,8 +37,8 @@ class Dash_Controller extends Template_Controller {
 
 		$v->todo = array(
 				"Download links don't work for archived files",
-				"Alternate template",
-				"Mobile template",
+				//"Alternate template",
+				//"Mobile template",
 				"Fix Tools tab",
 				);
 
@@ -119,10 +119,10 @@ class Dash_Controller extends Template_Controller {
 		$dates = $snd->retrieve_dates($date);
 
 		$v->dates = $dates;
-		$v->mp3s = glob('/var/www/ctk/'.$dates[0].'*.mp3');
-		$v->mp3s = array_merge($v->mp3s, glob('/var/www/ctk/Older/'.$dates[0].'*.mp3'));
-		$v->labels = glob("/var/www/sound/webroot/labels/".$dates[0]."*.labels");
-		$v->originals = glob("/var/www/sound/webroot/Originals/".$dates[0]."*.flac");
+		$v->mp3s = glob('/var/www/sound_demo/webroot/recordings/'.$dates[0].'*.mp3');
+		$v->mp3s = array_merge($v->mp3s, glob('/var/www//sound_demo/webroot/recordings/Older/'.$dates[0].'*.mp3'));
+		$v->labels = glob("/var/www/sound_demo/webroot/labels/".$dates[0]."*.labels");
+		$v->originals = glob("/var/www/sound_demo/webroot/Originals/".$dates[0]."*.flac");
 
 		if(request::is_ajax()) 
 			$this->template->content = $v;
@@ -168,7 +168,6 @@ class Dash_Controller extends Template_Controller {
 		$values = Doctrine_Query::create()
 			->select($val)
 			->from($type)
-			//->where("{$val} LIKE '{$q}%'")
 			->where($val.' LIKE ?', $q.'%')
 			//->orderBy($val)
 			//->limit($limit)
@@ -232,6 +231,8 @@ class Dash_Controller extends Template_Controller {
 	public function write_record() {
 		if(request::is_ajax()) $this->template = new View('ajax');
 		else die('Invalid request.');
+		
+		//if(!in_array($_POST['type'], array('Sermons','Aces','Portraits','Dedications'))) die('Invalid form request.');
 
 		// Sermon: series, title, preacher, scripture, reader, date, disk, type
 		// Aces: series, title, teacher, comment, date, disk
@@ -240,7 +241,6 @@ class Dash_Controller extends Template_Controller {
 
 		$record = Doctrine_Query::create()
 			->from($_REQUEST['type'])
-			//->where('type = ? AND date = ?', array($_REQUEST['type'],$_REQUEST['date']))
 			->where('date = ?', $_REQUEST['date'])
 			->orderBy('id desc')
 			->execute()
@@ -248,8 +248,6 @@ class Dash_Controller extends Template_Controller {
 
 		if(!$record) {
 			$record = new $_REQUEST['type'];
-			//$record->created_at = date('Y-m-d H:i:s');
-			//$record->updated_at = date('Y-m-d H:i:s');
 		}
 
 		$record->merge($_REQUEST);
@@ -262,11 +260,9 @@ class Dash_Controller extends Template_Controller {
 			$record->year = date('Y',strtotime($_REQUEST['date']));
 		}
 
-		//$record->save();
 		if($record->trySave())
 			$this->template->content = "Write successful!";
 		else
 			$this->template->content = "Write failed!";
-			//$this->template->content = var_dump(get_class($record));
 	}
 }

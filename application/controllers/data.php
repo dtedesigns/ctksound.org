@@ -51,10 +51,10 @@ class Data_Controller extends Template_Controller {
 		$snd->date = $date;
 		$snd->mode = "Sermon";
 		$snd->retrieve_record();
-		$filenames = glob('/var/www/ctk/'.$date.'*.mp3');
+		$filenames = glob('/var/www/sound_demo/webroot/recordings/'.$date.'*.mp3');
 		$snd->filename = $filenames[0];
 
-		$filenames = glob('/var/www/sound/webroot/labels/'.$date.'*.labels');
+		$filenames = glob('/var/www/sound_demo/webroot/labels/'.$date.'*.labels');
 		if($as_file) {
 			header("Cache-Control: no-cache, must-revalidate"); // HTTP/1.1
 			header("Expires: Sat, 26 Jul 1997 05:00:00 GMT"); // Date in the past

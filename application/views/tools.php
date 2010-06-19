@@ -1,7 +1,8 @@
 <?php
 // vim: set noet fenc= ff=unix sts=0 sw=4 ts=4 : 
 /* SVN FILE: $Id$ */
-$disabled['id3'] = (count($labels) > 0 && count($mp3s) > 0) ? '' : 'disabled';
+//$disabled['id3'] = (count($labels) > 0 && count($mp3s) > 0) ? '' : 'disabled';
+$disabled['id3'] = 'disabled';
 $disabled['cue'] = (count($labels) > 0 && $dates[0] != NULL) ? '' : 'disabled';
 ?>
 	<form enctype="multipart/form-data" action="uploader.php" method="POST">
@@ -40,6 +41,6 @@ $disabled['cue'] = (count($labels) > 0 && $dates[0] != NULL) ? '' : 'disabled';
 
 	<p>
 		<button <?= $disabled['id3'] ?> >Write ID3 tags</button>
-		<button <?= $disabled['cue'] ?> onclick="window.location = '/dash/gencue/<?= $dates[0] ?>'">Download Cue File</button>
+		<button <?= $disabled['cue'] ?> onclick="window.location = '<?= url::base() ?>data/gencue/<?= $dates[0] ?>'">Download Cue File</button>
 	</p>
 
