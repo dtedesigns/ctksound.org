@@ -61,19 +61,14 @@ $mp3s = glob('/var/www/ctk/'.$dbo['date'].'*.mp3');
 
 <div id='tabs' class='ui-tabs ui-widget ui-widget-content ui-corner-all'>
 	<ul class="ui-tabs-nav ui-helper-reset ui-helper-clearfix ui-widget-header ui-corner-all">
-		<li class="ui-state-default ui-corner-top ui-tabs-selected ui-state-active"><a href="#schedule">Schedule</a></li>
+		<li class="ui-state-default ui-corner-top"><a href="#schedule">Schedule</a></li>
 		<li class="ui-state-default ui-corner-top"><a href="#downloads">Download</a></li>
-		<li class="ui-state-default ui-corner-top"><a href="#database">Database</a></li>
-		<li class="ui-state-default ui-corner-top"><a href="#tools">Tools</a></li>
+		<li class="ui-state-default ui-corner-top ui-tabs-selected ui-state-active"><a href="#database">Database</a></li>
 		<?php // <li class="ui-state-default ui-corner-top"><a href="#filelist">F</a></li> ?>
 	</ul>
 
 	<div id="database" class="ui-tabs-panel ui-widget-content ui-corner-bottom ui-tabs-hide">
 		<?= $database ?>
-	</div>
-
-	<div id="tools" class="ui-tabs-panel ui-widget-content ui-corner-bottom ui-tabs-hide">
-		<?= $tools ?>
 	</div>
 
 	<div id="downloads" class="ui-tabs-panel ui-widget-content ui-corner-bottom">

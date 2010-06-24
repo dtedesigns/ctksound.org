@@ -68,6 +68,8 @@ class Dash_Controller extends Template_Controller {
 		$v->dates = $dates;
 		$v->mp3s = glob('recordings/'.$dates[0].'*.mp3');
 		$v->mp3s = array_merge($v->mp3s, glob('recordings/Older/'.$dates[0].'*.mp3'));
+		$v->labels = glob("/var/www/sound/webroot/labels/".$dates[0]."*.labels");
+		$v->originals = glob("/var/www/sound/webroot/Originals/".$dates[0]."*.flac");
 
 		if(request::is_ajax()) 
 			$this->template->content = $v;
@@ -119,10 +121,10 @@ class Dash_Controller extends Template_Controller {
 		$dates = $snd->retrieve_dates($date);
 
 		$v->dates = $dates;
-		$v->mp3s = glob('/var/www/sound_demo/webroot/recordings/'.$dates[0].'*.mp3');
-		$v->mp3s = array_merge($v->mp3s, glob('/var/www//sound_demo/webroot/recordings/Older/'.$dates[0].'*.mp3'));
-		$v->labels = glob("/var/www/sound_demo/webroot/labels/".$dates[0]."*.labels");
-		$v->originals = glob("/var/www/sound_demo/webroot/Originals/".$dates[0]."*.flac");
+		$v->mp3s = glob('/var/www/sound/webroot/recordings/'.$dates[0].'*.mp3');
+		$v->mp3s = array_merge($v->mp3s, glob('/var/www//sound/webroot/recordings/Older/'.$dates[0].'*.mp3'));
+		$v->labels = glob("/var/www/sound/webroot/labels/".$dates[0]."*.labels");
+		$v->originals = glob("/var/www/sound/webroot/Originals/".$dates[0]."*.flac");
 
 		if(request::is_ajax()) 
 			$this->template->content = $v;
