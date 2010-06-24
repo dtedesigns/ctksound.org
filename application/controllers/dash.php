@@ -35,13 +35,6 @@ class Dash_Controller extends Template_Controller {
 		if(request::is_ajax()) $this->template = new View('ajax');
 		$v =  new View('schedule');
 
-		$v->todo = array(
-				"Download links don't work for archived files",
-				//"Alternate template",
-				//"Mobile template",
-				"Fix Tools tab",
-				);
-
 		//$v->schedule = Doctrine::getTable('Schedule')->findAll()->toArray();
 		$v->schedule = Doctrine_Query::create()
 			->from('Schedule')

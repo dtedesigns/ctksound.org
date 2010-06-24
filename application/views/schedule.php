@@ -14,11 +14,3 @@
 	<?php } ?>
 </tbody>
 </table>
-
-<h3 style='margin-bottom: 0;'>Development To Do</h3>
-<ul id='todo'>
-	<?php foreach($todo as $item) { ?>
-		<li><?= $item ?></li>
-	<?php } ?>
-</ul>
-
