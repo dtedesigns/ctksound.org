@@ -71,7 +71,7 @@ $mp3s = glob('/var/www/ctk/'.$dbo['date'].'*.mp3');
 		<p>Feel free to change values, add input, etc.</p>
 		<p>This is both a work in progress and my testing ground for new technologies.  Expect the interface is a little rough around the edges.  Some functionality has been disabled until it is complete.</p>
 		<p>This was built with Kohana 2.x, PHPDoctrine 1.x, jQuery, and jQuery UI.</p>
-		<p>With these caveats, welcome! Please enter <a href="<?= url::base() ?>demo/dash/">CTKSound</a>.</p>
+		<p>With these caveats, welcome! Please enter <a href="/demo/dash/">CTKSound</a>.</p>
 	</div>
 </div>
 
