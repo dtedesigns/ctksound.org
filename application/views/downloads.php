@@ -15,9 +15,7 @@ $disabled['cue'] = (count($labels) > 0 && $dates[0] != NULL) ? '' : 'disabled';
 	<?php foreach($mp3s as $mp3) { ?>
 		<a href='<?= url::base() ?>recordings/<?= array_pop(split('/', $mp3)) ?>' class='filename'><?= array_pop(split('/', $mp3)) ?></a>
 		<br/>
-	<?php
-		$label_info .= Sound::label_info($mp3);
-	} ?>
+	<?php } ?>
 
 	<?php foreach($originals as $file) { ?>
 		<a href="<?= url::base() ?>Originals/<?= array_pop(split('/', $file)) ?>" class="filename"><?= array_pop(split('/', $file)) ?></a>
@@ -34,9 +32,7 @@ $disabled['cue'] = (count($labels) > 0 && $dates[0] != NULL) ? '' : 'disabled';
 		<br/>
 	<?php } ?>
 
-	<?php
-	echo $label_info;
-	?>
+	<?= $labelInfo ?>
 
 	<?php
 	if (count($mp3s) === 0) { ?>

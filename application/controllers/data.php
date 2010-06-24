@@ -64,5 +64,39 @@ class Data_Controller extends Template_Controller {
 		echo $snd->gen_cue($filenames[0]);
 	}
 
+	public function label($file) {
+		$filename = '/var/www/sound/webroot/recordings/' . basename($file);
+		if(!file_exists($filename)) $filename = '/var/www/sound/webroot/recordings/Older/' . basename($file);
+		if(!file_exists($filename)) return false;
+
+		$category = (strpos($file,', ACE')) ? 'Aces' : 'Sermons';
+		$size = filesize($filename);
+
+		$getID3 = new getID3;
+		$id3 = $getID3->analyze($filename);
+
+		$date = date('r',strtotime($id3['tags_html']['id3v2']['recording_time'][0]));
+		//$short_date = date('n/d',strtotime($id3['tags_html']['id3v2']['recording_time'][0]));
+
+		$dbo = Doctrine_Query::create()
+			->from('Sermons')
+			->where('date = ? and type = ?', array(date("Y-m-d H:i:s", strtotime($date)),$category))
+			->execute()
+			->getFirst();
+
+		$playtime = $id3['playtime_string'];
+		$readtime = $id3['tags_html']['id3v2']['text'][1];
+
+		$v = new View('label_info');
+		$v->date = $date;
+		$v->preacher = $dbo['preacher'];
+		$v->scripture = $dbo['scripture'];
+		$v->title = $dbo['title'];
+		$v->total_time = $playtime;
+		$v->reading_time = $readtime;
+
+		return $v->render();
+	}
+
 }
 ?>

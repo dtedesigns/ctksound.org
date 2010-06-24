@@ -68,8 +68,12 @@ class Dash_Controller extends Template_Controller {
 		$v->dates = $dates;
 		$v->mp3s = glob('recordings/'.$dates[0].'*.mp3');
 		$v->mp3s = array_merge($v->mp3s, glob('recordings/Older/'.$dates[0].'*.mp3'));
-		$v->labels = glob("/var/www/sound/webroot/labels/".$dates[0]."*.labels");
-		$v->originals = glob("/var/www/sound/webroot/Originals/".$dates[0]."*.flac");
+		$v->labels = glob("labels/".$dates[0]."*.labels");
+		$v->originals = glob("Originals/".$dates[0]."*.flac");
+
+		foreach($v->mp3s as $file) {
+			$v->labelInfo = Data_Controller::label($file);
+		}
 
 		if(request::is_ajax()) 
 			$this->template->content = $v;

@@ -29,7 +29,10 @@ ul, li {
 	min-height: 490px;
 	_height: 490px;
 }
-#downloads p, #downloads a {
+#downloads p {
+	margin-bottom: 0;
+}
+#downloads a {
 	font-size: 65%;
 	margin-bottom: 1px;
 }
