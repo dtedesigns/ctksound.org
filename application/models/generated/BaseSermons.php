@@ -18,6 +18,8 @@
  * @property string $type
  * @property string $engineer
  * @property string $processor
+ * @property string $hymns_spl
+ * @property string $sermon_spl
  * @property timestamp $published
  * @property timestamp $created_at
  * @property timestamp $updated_at
@@ -127,6 +129,22 @@ abstract class BaseSermons extends Doctrine_Record
              'autoincrement' => false,
              ));
         $this->hasColumn('processor', 'string', 255, array(
+             'type' => 'string',
+             'length' => 255,
+             'fixed' => false,
+             'primary' => false,
+             'notnull' => false,
+             'autoincrement' => false,
+             ));
+        $this->hasColumn('hymns_spl', 'string', 255, array(
+             'type' => 'string',
+             'length' => 255,
+             'fixed' => false,
+             'primary' => false,
+             'notnull' => false,
+             'autoincrement' => false,
+             ));
+        $this->hasColumn('sermon_spl', 'string', 255, array(
              'type' => 'string',
              'length' => 255,
              'fixed' => false,

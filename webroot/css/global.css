@@ -1,7 +1,7 @@
 html {	background: #eee; }
 body {
-	width: 480px;
-	margin: 50px auto;
+	width: 620px;
+	margin: 30px auto;
 	position: relative;
 	/*background: #cff;*/
 }
@@ -9,7 +9,7 @@ h1 { text-align: center; }
 h2 {
 	text-align: center;
 	font-size: 110%;
-	margin: 0 auto 30px auto;
+	margin: 0 auto 7px auto;
 }
 h3 {
 	text-align: left;
@@ -24,27 +24,120 @@ ul, li {
 	margin-left: 7px;
 	padding-left: 7px;
 }
-#tabs {	font-size: 100%; }
+
+.tabs {
+	font-size: 100%;
+	font-weight: normal;
+}
 .ui-tabs-panel {
-	min-height: 490px;
+	min-height: 420px;
 	_height: 490px;
+}
+.tooltip {
+	background-color: #ffa;
+	border: 1px solid #cc9;
+	/*color:  #fff;*/
+	display: none;
+	font-size: 13px;
+	padding: 3px;
+	-moz-box-shadow: 2px 2px 11px #666;
+	-webkit-box-shadow: 2px 2px 11px #666;
+}
+#downloads .recording {
+	background: url(/css/images/recording_bg.png) #fff;
+	color: #222;
+	margin: 5px 0;
+	padding: 5px 7px;
+	-o-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+#downloads .published {
+	background: url(/css/images/recording_bg_active.png) #fff;
+}
+#downloads .unpublished {
+	background: url(/css/images/recording_bg_inactive.png) #fff;
+}
+#downloads .name {
+	display: inline-block;
+	width: 318px;
 }
 #downloads p {
 	margin-bottom: 0;
 }
 #downloads a {
-	font-size: 65%;
-	margin-bottom: 1px;
+	background: #ccc;
+	border: 1px solid #aaa;
+	-o-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	display: inline-block;
+	/*font-size: 125%;*/
+	padding: 3px 7px;
+	text-decoration: none;
 }
+#downloads h2 { margin: 0 auto 30px auto; }
+#downloads .mp3 { background: #f88; }
+#downloads .flac { background: #ff8; }
+#downloads .labels { background: #88f; }
+#downloads .cue { background: #8f8; }
+
 #downloads p#nofiles {
 	font-size: 100%;
 	font-weight: bold;
 }
+#database {
+	position: relative;
+	/*margin: 15px;*/
+}
+	#database #nav {
+		left: 0;
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		position: absolute;
+		position: relative;
+		top: 35px;
+		width: 110px;
+	}
+		#database li {
+			background: url("images/ui-bg_highlight-soft_75_cccccc_1x100.png") repeat-x scroll 50% 50% #bbbbbb;
+			-moz-border-radius: 3px;
+			border-radius: 3px;
+			margin: 5px 0;
+			padding: 3px 12px;
+			z-index: -10;
+		}
+		#database li.selected {
+			background: #fff;
+			border: 2px solid #bbb;
+			border-right: none;
+			position: relative;
+			z-index: 10;
+		}
+		#database #nav a {
+			color: #000;
+			display: inline-block;
+			text-decoration: none;
+			font-size: 14px;
+		}
+	#database .hidden {
+		left: 136px;
+		position: absolute;
+		top: 30px;
+		width: 440px;
+	}
+	#database input[type=text] { width: 300px; }
+
 label {
+	color: #000;
+	font-weight: bold;
 	float: left;
-	width: 90px;
-	text-align: right;
 	padding: 5px 10px 0 0;
+	text-align: right;
+	width: 90px;
 }
 pre {
 	margin-top: 0;
@@ -70,12 +163,12 @@ pre {
 	list-style: none;
 }
 
-#label_info {
-	/*font-family: "Courier New";*/
-	/*font-size: 12px;*/
-	/*font: 14px/1 "Times New Roman";*/
-	/*line-height: 80%;*/
-font: 14px/1.2 arial;
+#label_info { margin-bottom: 20px; }
+.label_info { font-weight: normal; }
+
+#dates {
+	width: 260px;
+	margin-left: 350px;
 }
 
 /* CALENDAR / SCHEDULE MODULE */
@@ -90,4 +183,14 @@ table#schedule th {
 table#schedule td {
 	padding-left: 7px;
 	text-align: left;
+}
+
+/* FIXME: CSS for new tabbed interface */
+.panes > div {
+	background: #fff;
+	border: 1px solid black;
+	border-top: none;
+	min-height: 430px;
+	padding: 30px;
+	_height: 490px;
 }

@@ -11,63 +11,103 @@
 }
 </style>
 
-<a href='javascript:;' onclick="$('.hidden').hide();$('#sermon').show();">Sermon</a>
-<a href='javascript:;' onclick="$('.hidden').hide();$('#ace').show();">A.C.E.</a>
-<a href='javascript:;' onclick="$('.hidden').hide();$('#portrait').show();">Portrait</a>
-<a href='javascript:;' onclick="$('.hidden').hide();$('#dedication').show();">Dedication</a>
-<!--
-<a href='javascript:;' onclick="$('.hidden').hide();$('#baptism').show();">Baptism</a>
-<a href='javascript:;' onclick="$('.hidden').hide();$('#good_friday').show();">Good Friday</a>
-<a href='javascript:;' onclick="$('.hidden').hide();$('#christmas').show();">Christmas</a>
--->
-<p />
+<ul id="nav">
+	<li class="selected" onclick="$('.hidden').hide();$('#sermon').show();"><a href='javascript:;'>Sermon</a></li>
+	<li onclick="$('.hidden').hide();$('#ace').show();"><a href='javascript:;'>A.C.E.</a></li>
+	<li onclick="$('.hidden').hide();$('#portrait').show();"><a href='javascript:;'>Portrait</a></li>
+	<li onclick="$('.hidden').hide();$('#dedication').show();"><a href='javascript:;'>Dedication</a></li>
+	<!--
+	<li><a href='javascript:;' onclick="$('.hidden').hide();$('#baptism').show();">Baptism</a></li>
+	<li><a href='javascript:;' onclick="$('.hidden').hide();$('#good_friday').show();">Good Friday</a></li>
+	<li><a href='javascript:;' onclick="$('.hidden').hide();$('#christmas').show();">Christmas</a></li>
+	-->
+</ul>
 
 <div id="sermon" class='hidden'>
-	<form id='enter_sermon' action='<?= url::base() ?>dash/write_record/' mode='post'><fieldset>
+	<form id='enter_sermon' action='<?= url::base() ?>dash/write_record/' method='post'><fieldset>
 		<legend>Enter Sermon Information</legend>
 
 		<input type='hidden' name='type' value='Sermons' />
 
 		<p>
 		<label for='date'>Date</label>
-		<input type='text' name='date' id='date' value='<?= $last_sunday ?>' />
+		<input type='text' name='date' id='date' value='<?= $sunday ?>' />
 		</p>
 
 		<p>
-		<label for='scripture'>Scripture</label>
-		<input type='text' name='scripture' id='sermon_scripture' <?php if($sermon) echo "value=\"".htmlspecialchars($sermon['scripture'])."\""; ?>/>
+			<label for='scripture'>Scripture</label>
+			<input
+					type='text'
+					name='scripture'
+					id='sermon_scripture'
+					<?php if($sermon) echo "value=\"".htmlspecialchars($sermon['scripture'])."\""; ?>
+			/>
 		</p>
 
 		<p>
-		<label for='reader'>Reader</label>
-		<input type='text' name='reader' id='sermon_reader' <?php if($sermon) echo "value=\"".htmlspecialchars($sermon['reader'])."\""; ?>/>
+			<label for='reader'>Reader</label>
+			<input
+					type='text'
+					name='reader'
+					id='sermon_reader'
+					<?php if($sermon) echo "value=\"".htmlspecialchars($sermon['reader'])."\""; ?>
+			/>
 		</p>
 
 		<p>
-		<label for='series'>Series</label>
-		<input type='text' name='series' id='sermon_series' <?php if($sermon) echo "value=\"".htmlspecialchars($sermon['series'])."\""; ?>/>
+			<label for='series'>Series</label>
+			<input
+					type='text'
+					name='series'
+					id='sermon_series'
+					<?php if($sermon) echo "value=\"".htmlspecialchars($sermon['series'])."\""; ?>
+			/>
 		</p>
 
 		<p>
-		<label for='title'>Title</label>
-		<input type='text' name='title' id='sermon_title' <?php if($sermon) echo "value=\"".htmlspecialchars($sermon['title'])."\""; ?>/>
+			<label for='title'>Title</label>
+			<input
+					type='text'
+					name='title'
+					id='sermon_title'
+					<?php if($sermon) echo "value=\"".htmlspecialchars($sermon['title'])."\""; ?>
+			/>
 		</p>
 
 		<p>
-		<label for='preacher'>Preacher</label>
-		<input type='text' name='preacher' id='sermon_preacher' <?php if($sermon) echo "value=\"".htmlspecialchars($sermon['preacher'])."\""; ?>/>
+			<label for='preacher'>Preacher</label>
+			<input
+					type='text'
+					name='preacher'
+					id='sermon_preacher'
+					<?php if($sermon) echo "value=\"".htmlspecialchars($sermon['preacher'])."\""; ?>
+			/>
 		</p>
 
 		<p>
-		<label for='engineer'>Tech</label>
-		<input type='text' name='engineer' id='sermon_engineer' <?php if($sermon) echo "value=\"".htmlspecialchars($sermon['engineer'])."\""; ?>/>
+			<label for='engineer'>Tech</label>
+			<input
+					type='text'
+					name='engineer'
+					id='sermon_engineer'
+					<?php if($sermon) echo "value=\"".htmlspecialchars($sermon['engineer'])."\""; ?>
+			/>
 		</p>
 
 
 		<p>
-		<label for='processor'>Processor</label>
-		<input type='text' name='processor' id='sermon_processor' <?php if($sermon) echo "value=\"".htmlspecialchars($sermon['processor'])."\""; ?>/>
+			<label for='processor'>Processor</label>
+			<input
+					type='text'
+					name='processor'
+					id='sermon_processor'
+					<?php if($sermon) echo "value=\"".htmlspecialchars($sermon['processor'])."\""; ?>
+			/>
 		</p>
+		<!--
+		<p><?php if($sermon) { echo $sermon['hymns_spl']; } ?></p>
+		<p><?php if($sermon) { echo $sermon['sermon_spl']; } ?></p>
+		-->
 
 		<input type='submit' value='submit' /> &nbsp; <span id='sermon_message' />
 
@@ -75,7 +115,7 @@
 </div>
 
 <div id="ace" class='hidden'>
-	<form id='enter_ace' action='<?= url::base() ?>dash/write_record/' mode='post'><fieldset>
+	<form id='enter_ace' action='<?= url::base() ?>dash/write_record/' method='post'><fieldset>
 		<legend>Enter A.C.E. Information</legend>
 		<!-- Aces: series, title, teacher, comment, date, disk -->
 
@@ -83,7 +123,7 @@
 
 		<p>
 			<label for='date'>Date</label>
-			<input type='text' name='date' id='date' value='<?= $last_sunday ?>' />
+			<input type='text' name='date' id='date' value='<?= $sunday ?>' />
 		</p>
 
 		<p>
@@ -111,14 +151,14 @@
 </div>
 
 <div id="portrait" class='hidden'>
-	<form id='enter_portrait' action='<?= url::base() ?>dash/write_record/' mode='post'><fieldset>
+	<form id='enter_portrait' action='<?= url::base() ?>dash/write_record/' method='post'><fieldset>
 		<legend>Enter Portrait of Grace Information</legend>
 
 		<input type='hidden' name='type' value='Portraits' />
 
 		<p>
 		<label for='date'>Date</label>
-		<input type='text' name='date' id='date' value='<?= $last_sunday ?>' />
+		<input type='text' name='date' id='date' value='<?= $sunday ?>' />
 		</p>
 
 		<p>
@@ -136,14 +176,14 @@
 </div>
 
 <div id="dedication" class='hidden'>
-	<form id='enter_dedication' action='<?= url::base() ?>dash/write_record/' mode='post'><fieldset>
+	<form id='enter_dedication' action='<?= url::base() ?>dash/write_record/' method='post'><fieldset>
 		<legend>Enter Child Dedication Information</legend>
 
 		<input type='hidden' name='type' value='Dedications' />
 
 		<p>
 		<label for='date'>Date</label>
-		<input type='text' name='date' id='date' value='<?= $last_sunday ?>' />
+		<input type='text' name='date' id='date' value='<?= $sunday ?>' />
 		</p>
 
 		<p>
@@ -166,7 +206,7 @@
 </div>
 
 <div id="baptism" class='hidden'>
-	<form id='enter_baptism' action='/sound/write.php' mode='post'><fieldset>
+	<form id='enter_baptism' action='/sound/write.php' method='post'><fieldset>
 		<legend>Enter Baptism Information</legend>
 
 		<input type='hidden' name='type' value='Baptisms' />
@@ -175,7 +215,7 @@
 </div>
 
 <div id="good_friday" class='hidden'>
-	<form id='enter_good_friday' action='/sound/write.php' mode='post'><fieldset>
+	<form id='enter_good_friday' action='/sound/write.php' method='post'><fieldset>
 		<legend>Enter Good Friday Information</legend>
 
 		<input type='hidden' name='type' value='Good_Fridays' />
@@ -184,7 +224,7 @@
 </div>
 
 <div id="christmas" class='hidden'>
-	<form id='enter_christmas' action='/sound/write.php' mode='post'><fieldset>
+	<form id='enter_christmas' action='/sound/write.php' method='post'><fieldset>
 		<legend>Enter Christmas (Eve) Information</legend>
 
 		<input type='hidden' name='type' value='Christmases' />
@@ -193,6 +233,11 @@
 </div>
 
 <script type='text/javascript'>
+	$('#nav li').click(function() {
+		$('#nav li').removeClass('selected');
+		$(this).addClass('selected');
+	});
+
 $('#enter_sermon').ajaxForm({
 	target: $('#sermon_message'),
 	success: function(data) {
@@ -271,6 +316,21 @@ $('#ace_scripture').autocomplete("<?= url::base() ?>dash/autocomplete?type=Aces&
 });
 $('#ace_series').autocomplete("<?= url::base() ?>dash/autocomplete?type=Aces&val=series",{
 	cacheLength:10, autoFill:true, selectFirst:true
+});
+
+// initial value
+$('input[type=submit]').attr('disabled','disabled');
+
+// unsaved value
+$('input').change(function() {
+	$('input[type=submit]').removeAttr('disabled');
+});
+
+// after saving, disable submit
+//		save with Ajax use the return value to verify saving
+//		throw error if failure
+$('form').submit(function() {
+	$('input[type=submit]').attr('disabled','disabled');
 });
 
 </script>

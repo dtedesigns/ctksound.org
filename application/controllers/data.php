@@ -51,10 +51,10 @@ class Data_Controller extends Template_Controller {
 		$snd->date = $date;
 		$snd->mode = "Sermon";
 		$snd->retrieve_record();
-		$filenames = glob('/var/www/sound_demo/webroot/recordings/'.$date.'*.mp3');
+		$filenames = glob('/var/www/sound/webroot/recordings/'.$date.'*.mp3');
 		$snd->filename = $filenames[0];
 
-		$filenames = glob('/var/www/sound_demo/webroot/labels/'.$date.'*.labels');
+		$filenames = glob('/var/www/sound/webroot/labels/'.$date.'*.labels');
 		if($as_file) {
 			header("Cache-Control: no-cache, must-revalidate"); // HTTP/1.1
 			header("Expires: Sat, 26 Jul 1997 05:00:00 GMT"); // Date in the past
@@ -69,7 +69,15 @@ class Data_Controller extends Template_Controller {
 		if(!file_exists($filename)) $filename = '/var/www/sound/webroot/recordings/Older/' . basename($file);
 		if(!file_exists($filename)) return false;
 
-		$category = (strpos($file,', ACE')) ? 'Aces' : 'Sermons';
+		$category = 'Sermons';
+		//if(strpos($file,', ACE')) $category = 'Aces';
+		//if(strpos($file,', Dedication')) $category = 'Dedications';
+		//if(strpos($file,', Baptism')) $category = 'Dedications';
+		//if(strpos($file,', Portrait')) $category = 'Portraits';
+		if(strpos($file,', ACE')) return false;
+		if(strpos($file,', Dedication')) return false;
+		if(strpos($file,', Baptism')) return false;
+		if(strpos($file,', Portrait')) return false;
 		$size = filesize($filename);
 
 		$getID3 = new getID3;
@@ -78,9 +86,10 @@ class Data_Controller extends Template_Controller {
 		$date = date('r',strtotime($id3['tags_html']['id3v2']['recording_time'][0]));
 		//$short_date = date('n/d',strtotime($id3['tags_html']['id3v2']['recording_time'][0]));
 
+		// FIXME this query should not use type!!
 		$dbo = Doctrine_Query::create()
 			->from('Sermons')
-			->where('date = ? and type = ?', array(date("Y-m-d H:i:s", strtotime($date)),$category))
+			->where('date = ?', date("Y-m-d H:i:s", strtotime($date)))
 			->execute()
 			->getFirst();
 
@@ -98,5 +107,43 @@ class Data_Controller extends Template_Controller {
 		return $v->render();
 	}
 
+	public function db_entry($file) {
+		$filename = '/var/www/sound/webroot/recordings/' . basename($file);
+		if(!file_exists($filename)) $filename = '/var/www/sound/webroot/recordings/Older/' . basename($file);
+		if(!file_exists($filename)) return false;
+
+		$category = 'Sermons';
+		if(strpos($file,', ACE')) $category = 'Aces';
+		if(strpos($file,', Dedication')) $category = 'Dedications';
+		if(strpos($file,', Baptism')) $category = 'Dedications';
+		if(strpos($file,', Portrait')) $category = 'Portraits';
+
+		$getID3 = new getID3;
+		$id3 = $getID3->analyze($filename);
+		$date = date('r',strtotime($id3['tags_html']['id3v2']['recording_time'][0]));
+
+		//$dbo = Doctrine_Query::create()
+			//->from($category)
+			//->where('date = ?', array(date("Y-m-d H:i:s", strtotime($date))))
+			//->execute()
+			//->getFirst();
+		$dbo = Doctrine::getTable($category)->findOneByDate(date("Y-m-d H:i:s", strtotime($date)));
+
+		return $dbo;
+	}
+
+	public function publish() {
+		if(!request::is_ajax()) return false;
+		$this->template = new View('ajax');
+
+		$date = $_POST['date'];
+		$category = $_POST['record'];
+		$this->template = new View('ajax');
+		$dbo = Doctrine::getTable($category)->findOneById($_POST['number']);
+		if($dbo->published) $dbo->set('published', null);
+		else $dbo->published = date("Y-m-d H:i:s");
+		$dbo->save();
+		$this->template->content = json_encode($dbo->published ? "active" : "inactive");
+	}
 }
 ?>

@@ -12,6 +12,7 @@
  * @property string $comment
  * @property date $date
  * @property integer $disk
+ * @property string $spl
  * @property timestamp $published
  * @property timestamp $created_at
  * @property timestamp $updated_at
@@ -75,6 +76,14 @@ abstract class BaseAces extends Doctrine_Record
              'type' => 'integer',
              'length' => 4,
              'unsigned' => 0,
+             'primary' => false,
+             'notnull' => false,
+             'autoincrement' => false,
+             ));
+        $this->hasColumn('spl', 'string', 255, array(
+             'type' => 'string',
+             'length' => 255,
+             'fixed' => false,
              'primary' => false,
              'notnull' => false,
              'autoincrement' => false,

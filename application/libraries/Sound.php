@@ -96,25 +96,31 @@ class Sound {
 	}
 
 	public function retrieve_dates($date = NULL) {
-		if($date == NULL) $date = last_sunday();
+		if($date == NULL or $date == last_sunday()) {
+			$current_date = last_sunday();
+			$next_date = NULL;
+		}
 
-		/* Next Date */
-		$result = $this->db->query("SELECT DISTINCT date FROM sermons WHERE date > '$date' ORDER BY date asc LIMIT 1;");
-		if (PEAR::isError($result)) return "Couldn't execute SELECT: " . $result->getMessage();
+		else {
+			/* Next Date */
+			$result = $this->db->query("SELECT DISTINCT date FROM sermons WHERE date > '$date' ORDER BY date asc LIMIT 1;");
+			if (PEAR::isError($result)) return "Couldn't execute SELECT: " . $result->getMessage();
 
-		$row = $result->fetchRow(MDB2_FETCHMODE_ASSOC);
-		if (PEAR::isError($row)) return "Couldn't execute fetchRow: " . $row->getMessage();
+			$row = $result->fetchRow(MDB2_FETCHMODE_ASSOC);
+			if (PEAR::isError($row)) return "Couldn't execute fetchRow: " . $row->getMessage();
 
-		$next_date = $row['date'];
+			$next_date = $row['date'];
 
-		/* Current Date */
-		$result = $this->db->query("SELECT DISTINCT date FROM sermons WHERE date <= '$date' ORDER BY date desc LIMIT 1;");
-		if (PEAR::isError($result)) return "Couldn't execute SELECT: " . $result->getMessage();
 
-		$row = $result->fetchRow(MDB2_FETCHMODE_ASSOC);
-		if (PEAR::isError($row)) return "Couldn't execute fetchRow: " . $row->getMessage();
+			/* Current Date */
+			$result = $this->db->query("SELECT DISTINCT date FROM sermons WHERE date <= '$date' ORDER BY date desc LIMIT 1;");
+			if (PEAR::isError($result)) return "Couldn't execute SELECT: " . $result->getMessage();
 
-		$current_date = $row['date'];
+			$row = $result->fetchRow(MDB2_FETCHMODE_ASSOC);
+			if (PEAR::isError($row)) return "Couldn't execute fetchRow: " . $row->getMessage();
+
+			$current_date = $row['date'];
+		}
 
 		/* Previous Date */
 		$result = $this->db->query("SELECT DISTINCT date FROM sermons WHERE date < '$current_date' ORDER BY date desc LIMIT 1;");
@@ -125,6 +131,8 @@ class Sound {
 
 		$previous_date = $row['date'];
 
+
+		if($next_date == NULL and $current_date != last_sunday()) $next_date = last_sunday();
 		return array($current_date, $previous_date, $next_date);
 	}
 
@@ -400,7 +408,7 @@ www.ctkfoxvalley.org";
 
 		$labelInfo = "<br />Label Info:";
 		$labelInfo .= ($dbo[published] === NULL) ? " (Unpublished)" : "";
-		$labelInfo .= "<br /><span id='label_info'>". $description . '</span>';
+		$labelInfo .= "<br /><span>". $description . '</span>';
 
 		return $labelInfo;
 	}
