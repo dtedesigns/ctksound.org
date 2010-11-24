@@ -1,6 +1,11 @@
 <?php
 /* vim: set noet fenc= ff=unix sts=0 sw=4 ts=4 : */
 /* SVN FILE: $Id: php 135 2009-06-10 02:20:13Z kevin $ */
+
+$spl_hymns = json_decode($sermon['hymns_spl'],TRUE);
+$spl_sermon = json_decode($sermon['sermon_spl'],TRUE);
+$spl_ace = json_decode($ace['spl'],TRUE);
+
 ?>
 <style type='text/css'>
 .hidden {
@@ -104,10 +109,66 @@
 					<?php if($sermon) echo "value=\"".htmlspecialchars($sermon['processor'])."\""; ?>
 			/>
 		</p>
-		<!--
-		<p><?php if($sermon) { echo $sermon['hymns_spl']; } ?></p>
-		<p><?php if($sermon) { echo $sermon['sermon_spl']; } ?></p>
-		-->
+
+		<p>
+			<label for='hymns_value1'>Hymns SPL</label>
+			<input
+					type='text'
+					name='hymns_value1'
+					class='spl_value'
+					<?php if($sermon) echo "value=\"".htmlspecialchars($spl_hymns[0]['value'])."\""; ?>
+			/>
+			<select id="hymns_type1" name="hymns_type1" class="spl_type">
+				<option value="average">Average (dB)</option>
+				<option value="min">Min (dB)</option>
+				<option value="max">Max (dB)</option>
+			</select>
+			<script type="text/javascript">$("#hymns_type1 option[value='<?= $spl_hymns[0]['type'] ?>']").attr("selected","selected");</script>
+			<br />
+			<label>&nbsp;</label>
+			<input
+					type='text'
+					name='hymns_value2'
+					class='spl_value spl_second'
+					<?php if($sermon) echo "value=\"".htmlspecialchars($spl_hymns[1]['value'])."\""; ?>
+			/>
+			<select id="hymns_type2" name="hymns_type2" class="spl_type">
+				<option value="average">Average (dB)</option>
+				<option value="min">Min (dB)</option>
+				<option value="max">Max (dB)</option>
+			</select>
+			<script type="text/javascript">$("#hymns_type2 option[value='<?= $spl_hymns[1]['type'] ?>']").attr("selected","selected");</script>
+		</p>
+
+		<p>
+			<label for='sermon_spl'>Sermon SPL</label>
+			<input
+					type='text'
+					name='sermon_value1'
+					class='spl_value'
+					<?php if($sermon) echo "value=\"".htmlspecialchars($spl_sermon[0]['value'])."\""; ?>
+			/>
+			<select id="sermon_type1" name="sermon_type1" class="spl_type">
+				<option value="average">Average (dB)</option>
+				<option value="min">Min (dB)</option>
+				<option value="max">Max (dB)</option>
+			</select>
+			<script type="text/javascript">$("#sermon_type1 option[value='<?= $spl_sermon[0]['type'] ?>']").attr("selected","selected");</script>
+			<br />
+			<label>&nbsp;</label>
+			<input
+					type='text'
+					name='sermon_value2'
+					class='spl_value spl_second'
+					<?php if($sermon) echo "value=\"".htmlspecialchars($spl_sermon[1]['value'])."\""; ?>
+			/>
+			<select id="sermon_type2" name="sermon_type2" class="sermon_type">
+				<option value="average">Average (dB)</option>
+				<option value="min">Min (dB)</option>
+				<option value="max">Max (dB)</option>
+			</select>
+			<script type="text/javascript">$("#sermon_type2 option[value='<?= $spl_sermon[1]['type'] ?>']").attr("selected","selected");</script>
+		</p>
 
 		<input type='submit' value='submit' /> &nbsp; <span id='sermon_message' />
 
@@ -144,6 +205,36 @@
 		<p>
 			<label for='comment'>Comment</label>
 			<input type='text' name='comment' id='ace_comment' <?php if($ace) echo "value=\"".htmlspecialchars($ace['comment'])."\""; ?>/>
+		</p>
+
+		<p>
+			<label for='sermon_spl'>A.C.E. SPL</label>
+			<input
+					type='text'
+					name='spl_value1'
+					class='spl_value'
+					<?php if($sermon) echo "value=\"".htmlspecialchars($spl_ace[0]['value'])."\""; ?>
+			/>
+			<select id="sermon_type1" name="spl_type1" class="spl_type">
+				<option value="average">Average (dB)</option>
+				<option value="min">Min (dB)</option>
+				<option value="max">Max (dB)</option>
+			</select>
+			<script type="text/javascript">$("#sermon_type1 option[value='<?= $spl_ace[0]['type'] ?>']").attr("selected","selected");</script>
+			<br />
+			<label>&nbsp;</label>
+			<input
+					type='text'
+					name='spl_value2'
+					class='spl_value spl_second'
+					<?php if($sermon) echo "value=\"".htmlspecialchars($spl_ace[1]['value'])."\""; ?>
+			/>
+			<select id="spl_type2" name="spl_type2" class="sermon_type">
+				<option value="average">Average (dB)</option>
+				<option value="min">Min (dB)</option>
+				<option value="max">Max (dB)</option>
+			</select>
+			<script type="text/javascript">$("#spl_type2 option[value='<?= $spl_ace[1]['type'] ?>']").attr("selected","selected");</script>
 		</p>
 
 		<input type='submit' value='submit' /> &nbsp; <span id='ace_message' />

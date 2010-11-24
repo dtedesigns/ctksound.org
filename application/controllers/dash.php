@@ -14,7 +14,7 @@ class Dash_Controller extends Template_Controller {
 		$this->template->schedule = self::schedule();
 		$this->template->downloads = self::downloads();
 		$this->template->database = self::database();
-		$this->template->tools = self::tools();
+		$this->template->uploads = self::uploads();
 		$this->template->filelist = self::filelist();
 		$this->template->dates = self::dates();
 	}
@@ -139,9 +139,9 @@ class Dash_Controller extends Template_Controller {
 			return $v->render();
 	}
 
-	public function tools($date = null) {
+	public function uploads($date = null) {
 		if(request::is_ajax()) $this->template = new View('ajax');
-		$v = new View('tools');
+		$v = new View('uploads');
 
 		$snd = new Sound;
 		$dates = $snd->retrieve_dates($date);
@@ -287,6 +287,22 @@ class Dash_Controller extends Template_Controller {
 		if($_REQUEST['type'] == 'Sermons') {
 			$record->track = date('W',strtotime($_REQUEST['date']));
 			$record->year = date('Y',strtotime($_REQUEST['date']));
+
+			// Encode the SPL fields
+			extract($_REQUEST);
+			$hymns_spl = array(array('type'=>$hymns_type1, 'value'=>$hymns_value1),
+				array('type'=>$hymns_type2, 'value'=>$hymns_value2));
+			$record->hymns_spl = json_encode($hymns_spl);
+			$sermon_spl = array(array('type'=>$sermon_type1, 'value'=>$sermon_value1),
+				array('type'=>$sermon_type2, 'value'=>$sermon_value2));
+			$record->sermon_spl = json_encode($sermon_spl);
+		}
+
+		if($_REQUEST['type'] == 'Aces') {
+			extract($_REQUEST);
+			$spl = array(array('type'=>$spl_type1, 'value'=>$spl_value1),
+				array('type'=>$spl_type2, 'value'=>$spl_value2));
+			$record->spl = json_encode($spl);
 		}
 
 		if($record->trySave())

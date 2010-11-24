@@ -87,6 +87,8 @@ ul, li {
 #downloads p#nofiles {
 	font-size: 100%;
 	font-weight: bold;
+	margin-top: 200px;
+	text-align: center;
 }
 #database {
 	position: relative;
@@ -129,15 +131,17 @@ ul, li {
 		top: 30px;
 		width: 440px;
 	}
-	#database input[type=text] { width: 300px; }
+	#database input[type=text] { width: 280px; }
+	.spl_value { width: 165px !important; }
+	.spl_second { margin-top: 7px; }
 
 label {
 	color: #000;
 	font-weight: bold;
 	float: left;
-	padding: 5px 10px 0 0;
+	padding: 0 10px 0 0;
 	text-align: right;
-	width: 90px;
+	width: 115px;
 }
 pre {
 	margin-top: 0;
@@ -190,7 +194,7 @@ table#schedule td {
 	background: #fff;
 	border: 1px solid black;
 	border-top: none;
-	min-height: 430px;
+	min-height: 500px;
 	padding: 30px;
-	_height: 490px;
+	_height: 500px;
 }
