@@ -73,8 +73,8 @@ $mp3s = glob('/var/www/ctk/'.$dbo['date'].'*.mp3');
 	-->
 	<ul class="tabs">
 		<li class="ui-state-default ui-corner-top"><a href="#schedule">Schedule</a></li>
-		<li class="ui-state-default ui-corner-top"><a href="#downloads">Download</a></li>
 		<li class="ui-state-default ui-corner-top ui-tabs-selected ui-state-active"><a href="#database">Database</a></li>
+		<li class="ui-state-default ui-corner-top"><a href="#files">Files</a></li>
 		<!--
 		<li class="ui-state-default ui-corner-top"><a href="#uploads">Upload</a></li>
 		-->
@@ -85,12 +85,12 @@ $mp3s = glob('/var/www/ctk/'.$dbo['date'].'*.mp3');
 			<?= $schedule ?>
 		</div>
 
-		<div id="downloads" class="ui-tabs-panel ui-widget-content ui-corner-bottom">
-			<?= $downloads ?>
-		</div>
-
 		<div id="database" class="ui-tabs-panel ui-widget-content ui-corner-bottom ui-tabs-hide">
 			<?= $database ?>
+		</div>
+
+		<div id="files" class="ui-tabs-panel ui-widget-content ui-corner-bottom">
+			<?= $files ?>
 		</div>
 
 		<!--

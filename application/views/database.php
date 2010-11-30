@@ -90,27 +90,6 @@ $spl_ace = json_decode($ace['spl'],TRUE);
 		</p>
 
 		<p>
-			<label for='engineer'>Tech</label>
-			<input
-					type='text'
-					name='engineer'
-					id='sermon_engineer'
-					<?php if($sermon) echo "value=\"".htmlspecialchars($sermon['engineer'])."\""; ?>
-			/>
-		</p>
-
-
-		<p>
-			<label for='processor'>Processor</label>
-			<input
-					type='text'
-					name='processor'
-					id='sermon_processor'
-					<?php if($sermon) echo "value=\"".htmlspecialchars($sermon['processor'])."\""; ?>
-			/>
-		</p>
-
-		<p>
 			<label for='hymns_value1'>Hymns SPL</label>
 			<input
 					type='text'
@@ -168,6 +147,31 @@ $spl_ace = json_decode($ace['spl'],TRUE);
 				<option value="max">Max (dB)</option>
 			</select>
 			<script type="text/javascript">$("#sermon_type2 option[value='<?= $spl_sermon[1]['type'] ?>']").attr("selected","selected");</script>
+		</p>
+
+		<p>
+			<label for='engineer'>Tech</label>
+			<input
+					type='text'
+					name='engineer'
+					id='sermon_engineer'
+					<?php if($sermon) echo "value=\"".htmlspecialchars($sermon['engineer'])."\""; ?>
+			/>
+		</p>
+
+		<p>
+			<label for='processor'>Processor</label>
+			<input
+					type='text'
+					name='processor'
+					id='sermon_processor'
+					<?php if($sermon) echo "value=\"".htmlspecialchars($sermon['processor'])."\""; ?>
+			/>
+		</p>
+
+		<p>
+			<label for="notes">Notes</label>
+			<textarea name="notes" id="sermon_notes" rows="4" cols="39" ><?php if($sermon) echo htmlspecialchars($sermon['notes']); ?></textarea>
 		</p>
 
 		<input type='submit' value='submit' /> &nbsp; <span id='sermon_message' />
@@ -413,7 +417,7 @@ $('#ace_series').autocomplete("<?= url::base() ?>dash/autocomplete?type=Aces&val
 $('input[type=submit]').attr('disabled','disabled');
 
 // unsaved value
-$('input').change(function() {
+$('input,textarea,select').change(function() {
 	$('input[type=submit]').removeAttr('disabled');
 });
 

@@ -12,7 +12,7 @@ class Dash_Controller extends Template_Controller {
 		// In Kohana, all views are loaded and treated as objects.
 		$this->template->content = new View('dashboard');
 		$this->template->schedule = self::schedule();
-		$this->template->downloads = self::downloads();
+		$this->template->files = self::files();
 		$this->template->database = self::database();
 		$this->template->uploads = self::uploads();
 		$this->template->filelist = self::filelist();
@@ -54,9 +54,9 @@ class Dash_Controller extends Template_Controller {
 			return $v->render();
 	}
 
-	public function downloads($date = NULL) {
+	public function files($date = NULL) {
 		if(request::is_ajax()) $this->template = new View('ajax');
-		$v = new View('downloads');
+		$v = new View('files');
 
 		$snd = new Sound;
 		$dates = $snd->retrieve_dates($date);
@@ -66,6 +66,7 @@ class Dash_Controller extends Template_Controller {
 		// 1. query the database for the approriate entries
 		// 2. glob for that file and add it to the array
 		$files = array_merge(glob('recordings/'.$dates[0].'*.mp3'), glob('recordings/Older/'.$dates[0].'*.mp3'));
+		FB::log('recordings/'.$dates[0].'*.mp3');
 		foreach($files as $file) {
 			$collection = array();
 			$collection['mp3'] = $file;

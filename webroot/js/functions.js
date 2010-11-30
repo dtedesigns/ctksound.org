@@ -1,6 +1,6 @@
 function load_date(date) {
 	$('#dates').load('/dash/dates/'+date)
-	$('#downloads').load('/dash/downloads/'+date);
+	$('#files').load('/dash/files/'+date);
 	$('#database').load('/dash/database/'+date);
 }
 

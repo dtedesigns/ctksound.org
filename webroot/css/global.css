@@ -43,7 +43,7 @@ ul, li {
 	-moz-box-shadow: 2px 2px 11px #666;
 	-webkit-box-shadow: 2px 2px 11px #666;
 }
-#downloads .recording {
+#files .recording {
 	background: url(/css/images/recording_bg.png) #fff;
 	color: #222;
 	margin: 5px 0;
@@ -53,20 +53,20 @@ ul, li {
 	-moz-border-radius: 5px;
 	border-radius: 5px;
 }
-#downloads .published {
+#files .published {
 	background: url(/css/images/recording_bg_active.png) #fff;
 }
-#downloads .unpublished {
+#files .unpublished {
 	background: url(/css/images/recording_bg_inactive.png) #fff;
 }
-#downloads .name {
+#files .name {
 	display: inline-block;
 	width: 318px;
 }
-#downloads p {
+#files p {
 	margin-bottom: 0;
 }
-#downloads a {
+#files a {
 	background: #ccc;
 	border: 1px solid #aaa;
 	-o-border-radius: 5px;
@@ -78,13 +78,13 @@ ul, li {
 	padding: 3px 7px;
 	text-decoration: none;
 }
-#downloads h2 { margin: 0 auto 30px auto; }
-#downloads .mp3 { background: #f88; }
-#downloads .flac { background: #ff8; }
-#downloads .labels { background: #88f; }
-#downloads .cue { background: #8f8; }
+#files h2 { margin: 0 auto 30px auto; }
+#files .mp3 { background: #f88; }
+#files .flac { background: #ff8; }
+#files .labels { background: #88f; }
+#files .cue { background: #8f8; }
 
-#downloads p#nofiles {
+#files p#nofiles {
 	font-size: 100%;
 	font-weight: bold;
 	margin-top: 200px;
@@ -131,7 +131,8 @@ ul, li {
 		top: 30px;
 		width: 440px;
 	}
-	#database input[type=text] { width: 280px; }
+	#database input[type="text"] { width: 280px; }
+	#database textarea { width: 280px; }
 	.spl_value { width: 165px !important; }
 	.spl_second { margin-top: 7px; }
 
@@ -194,7 +195,7 @@ table#schedule td {
 	background: #fff;
 	border: 1px solid black;
 	border-top: none;
-	min-height: 500px;
+	min-height: 590px;
 	padding: 30px;
-	_height: 500px;
+	_height: 590px;
 }
