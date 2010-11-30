@@ -13,7 +13,7 @@ define('DOCTRINE_MODELS',APPPATH . 'models');
 spl_autoload_register(array('Doctrine', 'autoload'));
 $manager = Doctrine_Manager::getInstance();
 
-$dsn = 'mysql:dbname=sermons;host=127.0.0.1';
+$dsn = 'mysql:dbname=sermons;host=gandalf';
 $user = 'sermons';
 $password = 'sermons';
 
