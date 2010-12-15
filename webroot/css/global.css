@@ -131,9 +131,9 @@ ul, li {
 		top: 30px;
 		width: 440px;
 	}
-	#database input[type="text"] { width: 280px; }
-	#database textarea { width: 280px; }
-	.spl_value { width: 165px !important; }
+	#database input[type="text"] { width: 275px; }
+	#database textarea { width: 275px; }
+	.spl_value { width: 155px !important; }
 	.spl_second { margin-top: 7px; }
 
 label {
@@ -195,7 +195,7 @@ table#schedule td {
 	background: #fff;
 	border: 1px solid black;
 	border-top: none;
-	min-height: 590px;
+	min-height: 650px;
 	padding: 30px;
-	_height: 590px;
+	_height: 650px;
 }
