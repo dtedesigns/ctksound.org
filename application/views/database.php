@@ -17,10 +17,10 @@ $spl_ace = json_decode($ace['spl'],TRUE);
 </style>
 
 <ul id="nav">
-	<li class="selected" onclick="$('.hidden').hide();$('#sermon').show();"><a href='javascript:;'>Sermon</a></li>
-	<li onclick="$('.hidden').hide();$('#ace').show();"><a href='javascript:;'>A.C.E.</a></li>
-	<li onclick="$('.hidden').hide();$('#portrait').show();"><a href='javascript:;'>Portrait</a></li>
-	<li onclick="$('.hidden').hide();$('#dedication').show();"><a href='javascript:;'>Dedication</a></li>
+	<li class="selected" onclick="$('.hidden').hide();$('#sermon').show();$('#sermon_scripture').focus();"><a href='javascript:;'>Sermon</a></li>
+	<li onclick="$('.hidden').hide();$('#ace').show();$('#ace_series').focus();"><a href='javascript:;'>A.C.E.</a></li>
+	<li onclick="$('.hidden').hide();$('#portrait').show();$('#portrait_speaker').focus();"><a href='javascript:;'>Portrait</a></li>
+	<li onclick="$('.hidden').hide();$('#dedication').show();$('#dedication_official').focus();"><a href='javascript:;'>Dedication</a></li>
 	<!--
 	<li><a href='javascript:;' onclick="$('.hidden').hide();$('#baptism').show();">Baptism</a></li>
 	<li><a href='javascript:;' onclick="$('.hidden').hide();$('#good_friday').show();">Good Friday</a></li>
@@ -36,7 +36,7 @@ $spl_ace = json_decode($ace['spl'],TRUE);
 
 		<p>
 		<label for='date'>Date</label>
-		<input type='text' name='date' id='date' value='<?= $sunday ?>' />
+		<input type='date' name='date' id='date' placeholder="Enter sermon date..." value='<?= $sunday ?>' />
 		</p>
 
 		<p>
@@ -45,6 +45,8 @@ $spl_ace = json_decode($ace['spl'],TRUE);
 					type='text'
 					name='scripture'
 					id='sermon_scripture'
+					placeholder='Enter scripture passage...'
+					autofocus
 					<?php if($sermon) echo "value=\"".htmlspecialchars($sermon['scripture'])."\""; ?>
 			/>
 		</p>
@@ -55,6 +57,7 @@ $spl_ace = json_decode($ace['spl'],TRUE);
 					type='text'
 					name='reader'
 					id='sermon_reader'
+					placeholder='Enter scripture reader...'
 					<?php if($sermon) echo "value=\"".htmlspecialchars($sermon['reader'])."\""; ?>
 			/>
 		</p>
@@ -65,6 +68,7 @@ $spl_ace = json_decode($ace['spl'],TRUE);
 					type='text'
 					name='series'
 					id='sermon_series'
+					placeholder='Enter sermon series...'
 					<?php if($sermon) echo "value=\"".htmlspecialchars($sermon['series'])."\""; ?>
 			/>
 		</p>
@@ -75,6 +79,7 @@ $spl_ace = json_decode($ace['spl'],TRUE);
 					type='text'
 					name='title'
 					id='sermon_title'
+					placeholder='Enter sermon title...'
 					<?php if($sermon) echo "value=\"".htmlspecialchars($sermon['title'])."\""; ?>
 			/>
 		</p>
@@ -85,6 +90,7 @@ $spl_ace = json_decode($ace['spl'],TRUE);
 					type='text'
 					name='preacher'
 					id='sermon_preacher'
+					placeholder='Enter preacher name...'
 					<?php if($sermon) echo "value=\"".htmlspecialchars($sermon['preacher'])."\""; ?>
 			/>
 		</p>
@@ -92,9 +98,10 @@ $spl_ace = json_decode($ace['spl'],TRUE);
 		<p>
 			<label for='hymns_value1'>Hymns SPL</label>
 			<input
-					type='text'
+					type='number'
 					name='hymns_value1'
 					class='spl_value'
+					placeholder='Enter hymn spl...'
 					<?php if($sermon) echo "value=\"".htmlspecialchars($spl_hymns[0]['value'])."\""; ?>
 			/>
 			<select id="hymns_type1" name="hymns_type1" class="spl_type">
@@ -106,9 +113,10 @@ $spl_ace = json_decode($ace['spl'],TRUE);
 			<br />
 			<label>&nbsp;</label>
 			<input
-					type='text'
+					type='number'
 					name='hymns_value2'
 					class='spl_value spl_second'
+					placeholder='Enter hymn spl...'
 					<?php if($sermon) echo "value=\"".htmlspecialchars($spl_hymns[1]['value'])."\""; ?>
 			/>
 			<select id="hymns_type2" name="hymns_type2" class="spl_type">
@@ -122,9 +130,10 @@ $spl_ace = json_decode($ace['spl'],TRUE);
 		<p>
 			<label for='sermon_spl'>Sermon SPL</label>
 			<input
-					type='text'
+					type='number'
 					name='sermon_value1'
 					class='spl_value'
+					placeholder='Enter sermon spl...'
 					<?php if($sermon) echo "value=\"".htmlspecialchars($spl_sermon[0]['value'])."\""; ?>
 			/>
 			<select id="sermon_type1" name="sermon_type1" class="spl_type">
@@ -136,9 +145,10 @@ $spl_ace = json_decode($ace['spl'],TRUE);
 			<br />
 			<label>&nbsp;</label>
 			<input
-					type='text'
+					type='number'
 					name='sermon_value2'
 					class='spl_value spl_second'
+					placeholder='Enter sermon spl...'
 					<?php if($sermon) echo "value=\"".htmlspecialchars($spl_sermon[1]['value'])."\""; ?>
 			/>
 			<select id="sermon_type2" name="sermon_type2" class="sermon_type">
@@ -155,6 +165,7 @@ $spl_ace = json_decode($ace['spl'],TRUE);
 					type='text'
 					name='engineer'
 					id='sermon_engineer'
+					placeholder='Enter mixer operator...'
 					<?php if($sermon) echo "value=\"".htmlspecialchars($sermon['engineer'])."\""; ?>
 			/>
 		</p>
@@ -165,16 +176,23 @@ $spl_ace = json_decode($ace['spl'],TRUE);
 					type='text'
 					name='processor'
 					id='sermon_processor'
+					placeholder='Enter sound processor...'
 					<?php if($sermon) echo "value=\"".htmlspecialchars($sermon['processor'])."\""; ?>
 			/>
 		</p>
 
 		<p>
 			<label for="notes">Notes</label>
-			<textarea name="notes" id="sermon_notes" rows="4" cols="39" ><?php if($sermon) echo htmlspecialchars($sermon['notes']); ?></textarea>
+			<textarea
+				name="notes"
+				id="sermon_notes"
+				rows="4"
+				cols="39"
+				placeholder='Enter notes...'
+			><?php if($sermon) echo htmlspecialchars($sermon['notes']); ?></textarea>
 		</p>
 
-		<input type='submit' value='submit' /> &nbsp; <span id='sermon_message' />
+		<input type='submit' value='submit' /> &nbsp;
 
 	</fieldset></form>
 </div>
@@ -188,35 +206,55 @@ $spl_ace = json_decode($ace['spl'],TRUE);
 
 		<p>
 			<label for='date'>Date</label>
-			<input type='text' name='date' id='date' value='<?= $sunday ?>' />
+			<input
+					type='date'
+					name='date'
+					id='date'
+					placeholder='Enter ACE date...'
+					value='<?= $sunday ?>'
+			/>
 		</p>
 
 		<p>
 			<label for='series'>Series</label>
-			<input type='text' name='series' id='ace_series' <?php if($ace) echo "value=\"".htmlspecialchars($ace['series'])."\""; ?>/>
+			<input
+				type='text'
+				name='series'
+				id='ace_series'
+				placeholder='Enter ACE series title...'
+				<?php if($ace) echo "value=\"".htmlspecialchars($ace['series'])."\""; ?>
+			/>
 		</p>
 
 		<p>
 			<label for='title'>Title</label>
-			<input type='text' name='title' id='ace_title' <?php if($ace) echo "value=\"".htmlspecialchars($ace['title'])."\""; ?>/>
+			<input
+				type='text'
+				name='title'
+				id='ace_title'
+				placeholder='Enter ACE title...'
+				<?php if($ace) echo "value=\"".htmlspecialchars($ace['title'])."\""; ?>
+			/>
 		</p>
 
 		<p>
 			<label for='teacher'>Teacher</label>
-			<input type='text' name='teacher' id='ace_teacher' <?php if($ace) echo "value=\"".htmlspecialchars($ace['teacher'])."\""; ?>/>
-		</p>
-
-		<p>
-			<label for='comment'>Comment</label>
-			<input type='text' name='comment' id='ace_comment' <?php if($ace) echo "value=\"".htmlspecialchars($ace['comment'])."\""; ?>/>
-		</p>
-
-		<p>
-			<label for='sermon_spl'>A.C.E. SPL</label>
 			<input
-					type='text'
+				type='text'
+				name='teacher'
+				id='ace_teacher'
+				placeholder='Enter ACE teacher name...'
+				<?php if($ace) echo "value=\"".htmlspecialchars($ace['teacher'])."\""; ?>
+			/>
+		</p>
+
+		<p>
+			<label for='spl_value1'>A.C.E. SPL</label>
+			<input
+					type='number'
 					name='spl_value1'
 					class='spl_value'
+					placeholder='Enter spl...'
 					<?php if($sermon) echo "value=\"".htmlspecialchars($spl_ace[0]['value'])."\""; ?>
 			/>
 			<select id="sermon_type1" name="spl_type1" class="spl_type">
@@ -228,9 +266,10 @@ $spl_ace = json_decode($ace['spl'],TRUE);
 			<br />
 			<label>&nbsp;</label>
 			<input
-					type='text'
+					type='number'
 					name='spl_value2'
 					class='spl_value spl_second'
+					placeholder='Enter spl...'
 					<?php if($sermon) echo "value=\"".htmlspecialchars($spl_ace[1]['value'])."\""; ?>
 			/>
 			<select id="spl_type2" name="spl_type2" class="sermon_type">
@@ -241,7 +280,18 @@ $spl_ace = json_decode($ace['spl'],TRUE);
 			<script type="text/javascript">$("#spl_type2 option[value='<?= $spl_ace[1]['type'] ?>']").attr("selected","selected");</script>
 		</p>
 
-		<input type='submit' value='submit' /> &nbsp; <span id='ace_message' />
+		<p>
+			<label for='comment'>Comment</label>
+			<textarea
+				name="comment"
+				id="ace_comment"
+				rows="4"
+				cols="39"
+				placeholder='Enter notes...'
+			><?php if($ace) echo htmlspecialchars($ace['comment']); ?></textarea>
+		</p>
+
+		<input type='submit' value='submit' /> &nbsp; 
 	</fieldset></form>
 </div>
 
@@ -253,20 +303,37 @@ $spl_ace = json_decode($ace['spl'],TRUE);
 
 		<p>
 		<label for='date'>Date</label>
-		<input type='text' name='date' id='date' value='<?= $sunday ?>' />
+		<input
+				type='date'
+				name='date'
+				id='date'
+				value='<?= $sunday ?>'
+		/>
 		</p>
 
 		<p>
 			<label for='preacher'>Speaker</label>
-			<input type='text' name='speaker' id='portrait_speaker' <?php if($portrait) echo "value='".htmlspecialchars($portrait['speaker'])."'"; ?>/>
+			<input
+				type='text'
+				name='speaker'
+				id='portrait_speaker'
+				placeholder='Enter speaker...'
+				<?php if($portrait) echo "value='".htmlspecialchars($portrait['speaker'])."'"; ?>
+			/>
 		</p>
 
 		<p>
 			<label for='scripture'>Comment</label>
-			<input type='text' name='comment' id='portrait_comment' <?php if($portrait) echo "value='".htmlspecialchars($portrait['comment'])."'"; ?>/>
+			<textarea
+				name="comment"
+				id="portrait_comment"
+				rows="4"
+				cols="39"
+				placeholder='Enter notes...'
+			><?php if($portrait) echo htmlspecialchars($portrait['comment']); ?></textarea>
 		</p>
 
-		<input type='submit' value='submit' /> &nbsp; <span id='portrait_message' />
+		<input type='submit' value='submit' /> &nbsp; 
 	</fieldset></form>
 </div>
 
@@ -278,25 +345,49 @@ $spl_ace = json_decode($ace['spl'],TRUE);
 
 		<p>
 		<label for='date'>Date</label>
-		<input type='text' name='date' id='date' value='<?= $sunday ?>' />
+		<input
+			type='date'
+			name='date'
+			id='date'
+			placeholder='Enter Dedication Date...'
+			value='<?= $sunday ?>'
+		/>
 		</p>
 
 		<p>
 			<label for='official'>Official</label>
-			<input type='text' name='official' id='dedication_official' <?php if($dedication) echo "value=\"".htmlspecialchars($dedication['official'])."\""; ?>/>
+			<input
+				type='text'
+				name='official'
+				id='dedication_official'
+				placeholder='Enter Dedication Speaker...'
+				<?php if($dedication) echo "value=\"".htmlspecialchars($dedication['official'])."\""; ?>
+			/>
 		</p>
 
 		<p>
 			<label for='child'>Child</label>
-			<input type='text' name='child' id='dedication_child' <?php if($dedication) echo "value=\"".htmlspecialchars($dedication['child'])."\""; ?>/>
+			<input
+				type='text'
+				name='child'
+				id='dedication_child'
+				placeholder="Enter Child's Name..."
+				<?php if($dedication) echo "value=\"".htmlspecialchars($dedication['child'])."\""; ?>
+			/>
 		</p>
 
 		<p>
 			<label for='comment'>Comment</label>
-			<input type='text' name='comment' id='dedication_comment' <?php if($dedication) echo "value=\"".htmlspecialchars($dedication['comment'])."\""; ?>/>
+			<textarea
+				name="comment"
+				id="dedication_comment"
+				rows="4"
+				cols="39"
+				placeholder='Enter notes...'
+			><?php if($dedication) echo htmlspecialchars($dedication['comment']); ?></textarea>
 		</p>
 
-		<input type='submit' value='submit' /> &nbsp; <span id='dedication_message' />
+		<input type='submit' value='submit' /> &nbsp; 
 	</fieldset></form>
 </div>
 
@@ -305,7 +396,7 @@ $spl_ace = json_decode($ace['spl'],TRUE);
 		<legend>Enter Baptism Information</legend>
 
 		<input type='hidden' name='type' value='Baptisms' />
-		<input type='submit' value='submit' /> &nbsp; <span id='baptism_message' />
+		<input type='submit' value='submit' /> &nbsp; 
 	</fieldset></form>
 </div>
 
@@ -314,7 +405,7 @@ $spl_ace = json_decode($ace['spl'],TRUE);
 		<legend>Enter Good Friday Information</legend>
 
 		<input type='hidden' name='type' value='Good_Fridays' />
-		<input type='submit' value='submit' /> &nbsp; <span id='good_friday_message' />
+		<input type='submit' value='submit' /> &nbsp; 
 	</fieldset></form>
 </div>
 
@@ -323,56 +414,52 @@ $spl_ace = json_decode($ace['spl'],TRUE);
 		<legend>Enter Christmas (Eve) Information</legend>
 
 		<input type='hidden' name='type' value='Christmases' />
-		<input type='submit' value='submit' /> &nbsp; <span id='christmas_message' />
+		<input type='submit' value='submit' /> &nbsp; 
 	</fieldset></form>
 </div>
 
 <script type='text/javascript'>
-	$('#nav li').click(function() {
-		$('#nav li').removeClass('selected');
-		$(this).addClass('selected');
-	});
+$('#sermon_scripture').focus();
+
+$('#nav li').click(function() {
+	$('#nav li').removeClass('selected');
+	$(this).addClass('selected');
+});
 
 $('#enter_sermon').ajaxForm({
-	target: $('#sermon_message'),
-	success: function(data) {
-		$('#sermon_message').fadeOut(5000);
+	//target: $('#sermon_message'),
+	success: function(response, status, el) {
+		$('#sermon fieldset').append('<span>'+response+'</span>').children('span').fadeOut(5000);
 	}
 });
 $('#enter_ace').ajaxForm({
-	target: $('#ace_message'),
-	success: function(data) {
-		$('#ace_message').fadeOut(5000);
+	success: function(response, status, el) {
+		$('#ace fieldset').append('<span>'+response+'</span>').children('span').fadeOut(5000);
 	}
 });
 $('#enter_portrait').ajaxForm({
-	target: $('#portrait_message'),
-	success: function(data) {
-		$('#portrait_message').fadeOut(5000);
+	success: function(response, status, el) {
+		$('#portrait fieldset').append('<span>'+response+'</span>').children('span').fadeOut(5000);
 	}
 });
 $('#enter_dedication').ajaxForm({
-	target: $('#dedication_message'),
-	success: function(data) {
-		$('#dedication_message').fadeOut(5000);
+	success: function(response, status, el) {
+		$('#dedication fieldset').append('<span>'+response+'</span>').children('span').fadeOut(5000);
 	}
 });
 $('#enter_baptism').ajaxForm({
-	target: $('#baptism_message'),
-	success: function(data) {
-		$('#baptism_message').fadeOut(5000);
+	success: function(response, status, el) {
+		$('#baptism fieldset').append('<span>'+response+'</span>').children('span').fadeOut(5000);
 	}
 });
 $('#enter_good_friday').ajaxForm({
-	target: $('#good_friday_message'),
-	success: function(data) {
-		$('#good_friday_message').fadeOut(5000);
+	success: function(response, status, el) {
+		$('#good_friday fieldset').append('<span>'+response+'</span>').children('span').fadeOut(5000);
 	}
 });
 $('#enter_christmas').ajaxForm({
-	target: $('#christmas_message'),
-	success: function(data) {
-		$('#christmas_message').fadeOut(5000);
+	success: function(response, status, el) {
+		$('#christmas fieldset').append('<span>'+response+'</span>').children('span').fadeOut(5000);
 	}
 });
 

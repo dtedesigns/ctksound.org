@@ -11,6 +11,7 @@ $disabled['cue'] = (count($labels) > 0 && $dates[0] != NULL) ? '' : 'disabled';
 		if(key_exists('label_info', $collection)) { echo $collection['label_info']; }
 	} ?>
 	</div>
+	<!--<a id="send_mail" href="mailto:kgust@pobox.com">Send Email</a>-->
 
 	<div id="filelist">
 		<h3>Files (click to download):</h3>
@@ -37,6 +38,7 @@ $disabled['cue'] = (count($labels) > 0 && $dates[0] != NULL) ? '' : 'disabled';
 				if($type === 'data') continue;
 				$filetype = substr(strrchr($file, '.'), 1);
 				if($type == 'label_info') continue; ?>
+        </div>
 				<a href='<?= url::base() . $file ?>' class="<?= $filetype ?>" title="<?= array_pop(split('/', $file)) ?>"><?= $filetype ?></a>
 			<?php } ?>
 			<?php if($collection['label_info']) { ?>
@@ -44,7 +46,6 @@ $disabled['cue'] = (count($labels) > 0 && $dates[0] != NULL) ? '' : 'disabled';
 			<?php } ?>
 			</div>
 			<script type="text/javascript">
-				//$('.recording').tooltip({position: "top left"});
 				$("#<?= $record_type."_".$data[id] ?>").dblclick(function() {
 					$.post("/data/publish",
 						{

@@ -66,7 +66,6 @@ class Dash_Controller extends Template_Controller {
 		// 1. query the database for the approriate entries
 		// 2. glob for that file and add it to the array
 		$files = array_merge(glob('recordings/'.$dates[0].'*.mp3'), glob('recordings/Older/'.$dates[0].'*.mp3'));
-		FB::log('recordings/'.$dates[0].'*.mp3');
 		foreach($files as $file) {
 			$collection = array();
 			$collection['mp3'] = $file;

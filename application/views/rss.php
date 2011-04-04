@@ -3,7 +3,7 @@
 /* SVN FILE: $Id$ */
 header('Content-Type: application/rss+xml');
 //define('DIRECTORY', '../../webroot/recordings/');
-define('DIRECTORY', '/var/www/sound/webroot/recordings/');
+define('DIRECTORY', '/var/www/sound/webroot/recordings');
 $dir = glob(DIRECTORY."/*.mp3");
 rsort($dir);
 
@@ -13,10 +13,10 @@ $rss = "<?xml version='1.0' encoding='UTF-8'?>
 <rss version='2.0' xmlns:atom='http://www.w3.org/2005/Atom'>
 	<channel>
 		<title>Christ the King Released Sound Files - ".htmlentities($_SERVER['SERVER_NAME'])."</title>
-		<link>http://{$_SERVER['SERVER_NAME']}/ctk/</link>
+		<link>http://{$_SERVER['SERVER_NAME']}/</link>
 		<description>This is the place to get all recently released Christ the King sound files</description>
 		<language>en-us</language>
-		<copyright>Copyright 2009 Christ the King Church</copyright>
+		<copyright>Copyright 2001-2011 Christ the King Church</copyright>
 		<image>
 			<url>http://{$_SERVER['SERVER_NAME']}/ctk.gif</url>
 			<title>Christ the King Released Sound Files - ".htmlentities($_SERVER['SERVER_NAME'])."</title>
@@ -37,17 +37,19 @@ foreach ($dir as $file) {
 	$getID3 = new getID3;
 	$id3 = $getID3->analyze($file);
 
-	$date = date('r',strtotime($id3['tags_html']['id3v2']['recording_time'][0]));
-	$short_date = date('n/d',strtotime($id3['tags_html']['id3v2']['recording_time'][0]));
-
 	$dbo = Doctrine_Query::create()
 		->from($category)
-		->where('date = ?', date("Y-m-d H:i:s", strtotime($id3['tags_html']['id3v2']['recording_time'][0])))
+		->where('date = ?', substr($filename,0,10))
 		->execute()
 		->getFirst();
 
 	// Ignore unpublished entries
 	if ($dbo['published'] === NULL) continue;
+
+	//$date = date('r',strtotime($id3['tags_html']['id3v2']['recording_time'][0]));
+	$date = date('r',strtotime($dbo['published']));
+
+	$short_date = date('n/d',strtotime($id3['tags_html']['id3v2']['recording_time'][0]));
 
 	if (isset($id3['tags_html']['id3v2']['text'][1])) $sermon = TRUE;
 	else $sermon = FALSE;
@@ -75,8 +77,8 @@ foreach ($dir as $file) {
 	$playtime = $id3['playtime_string'];
 	$readtime = $id3['tags_html']['id3v2']['text'][1];
 
-	$url = htmlentities("http://".$_SERVER['SERVER_NAME']."/ctk/".$filename);
-	$url = preg_replace('/\s/','%20',$url);
+	$url = htmlentities("http://".$_SERVER['SERVER_NAME']."/recordings/".$filename);
+	$url = preg_replace('/\s/',' ',$url);
 	$url = preg_replace('/\[/','%91',$url);
 	$url = preg_replace('/\]/','%93',$url);
 
