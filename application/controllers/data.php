@@ -118,16 +118,9 @@ class Data_Controller extends Template_Controller {
 		if(strpos($file,', Baptism')) $category = 'Dedications';
 		if(strpos($file,', Portrait')) $category = 'Portraits';
 
-		$getID3 = new getID3;
-		$id3 = $getID3->analyze($filename);
-		$date = date('r',strtotime($id3['tags_html']['id3v2']['recording_time'][0]));
+		$date = substr($file, 11, 10);
 
-		//$dbo = Doctrine_Query::create()
-			//->from($category)
-			//->where('date = ?', array(date("Y-m-d H:i:s", strtotime($date))))
-			//->execute()
-			//->getFirst();
-		$dbo = Doctrine::getTable($category)->findOneByDate(date("Y-m-d H:i:s", strtotime($date)));
+		$dbo = Doctrine::getTable($category)->findOneByDate(date("Y-m-d", strtotime($date)));
 
 		return $dbo;
 	}
