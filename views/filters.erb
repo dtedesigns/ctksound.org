@@ -1,0 +1,101 @@
+<div>
+  <label for="date_selector" class="static">Date Filter</label>
+  <select id="date_selector">
+    <option>Last week</option>
+    <option>This month</option>
+    <option>Last month</option>
+    <option>This year</option>
+    <option>Last year</option>
+    <option>Everything</option>
+  </select>
+</div>
+
+<div>
+  <label for="speaker" class="static">Speaker</label>
+  <select id="speaker">
+    <option>Pastor Ken Carr</option>
+    <option>Pastor Jeff Holwerda</option>
+    <option>Tighe Farrow</option>
+    <option>Pulgh Pakoota</option>
+  </select>
+</div>
+
+<div>
+  <label for="search" class="static">Search</label>
+  <input type="text" name="search"/>
+</div>
+
+<div class="checkboxes">
+<ul>
+  <li>
+    <input type="checkbox" name="Sermons" checked="checked"/>
+    <label for="Sermons">Sermons</label>
+  </li>
+  <li>
+    <input type="checkbox" name="ACE" checked="checked"/>
+    <label for="ACE">ACE (Sunday School)</label>
+  </li>
+</ul>
+<ul>
+  <li>
+    <input type="checkbox" name="Published" checked="checked"/>
+    <label for="Published">Published</label>
+  </li>
+  <li>
+    <input type="checkbox" name="Unpublished" checked="checked"/>
+    <label for="Unpublished">Unpublished</label>
+  </li>
+  <li>
+    <input type="checkbox" name="Archived" checked="checked"/>
+    <label for="Archived">Archived</label>
+  </li>
+</ul>
+
+</div>
+<div class="checkboxes">
+<ul id="specials">
+  <li>
+    <input type="checkbox" name="Specials" checked="checked"/>
+    <label for="Specials">Specials</label>
+    <ul>
+      <li>
+        <input type="checkbox" name="Portrait" checked="checked"/>
+        <label for="Portrait">Portrait of Grace</label>
+      </li>
+      <li>
+        <input type="checkbox" name="Dedication" checked="checked"/>
+        <label for="Dedication">Child Dedication</label>
+      </li>
+      <li>
+        <input type="checkbox" name="Baptism" checked="checked"/>
+        <label for="Baptism">Baptism</label>
+      </li>
+      <li>
+        <input type="checkbox" name="Christmas" checked="checked"/>
+        <label for="Christmas">Christmas</label>
+      </li>
+      <li>
+        <input type="checkbox" name="GoodFriday" checked="checked"/>
+        <label for="GoodFriday">Good Friday</label>
+      </li>
+    </ul>
+  </li>
+</ul>
+</div>
+
+<div id="uploaded_files">
+  <span class="icon mp3"></span>
+  <span class="icon mp3"></span>
+  <span class="icon mp3"></span>
+  <span class="icon flac"></span>
+  <span class="icon label"></span>
+</div>
+<div id="drop_target"> </div>
+
+<script src="/js/jquery.dnduploader.js" type="text/javascript"></script>
+<script type="text/javascript">
+$("#drop_target").dndUploader({
+  url : "/",
+  method : "PUT"
+});
+</script>

@@ -1,0 +1,12 @@
+<div id="parent">
+
+  <aside id="filters">
+    <%= erb :filters %>
+  </aside>
+
+  <div id="items">
+  <% data.each do |row| %>
+    <%= row %>
+  <% end %>
+  </div>
+</div>

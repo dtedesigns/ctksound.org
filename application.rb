@@ -2,94 +2,61 @@
 
 require 'rubygems'
 require 'sinatra'
+require 'sequel'
+require 'logger'
+#require 'fileutils'
+#require 'ftools'
 require 'less'      # LESS CSS templates
-#require 'haml'
 require 'erb'
+#require 'haml'
 #require 'rdiscount' # for markdown
 #require 'redcloth'  # for textile
 #require 'partial_helper'
-require 'liquid'
-require 'fileutils'
-
-#set :layout_engine => :erb
 #set :textile, :layout_engine => :erb
 #set :markdown, :layout_engine => :erb
+require 'Sermon'
 
 # use Rack::Auth::Basic "Restricted Area" do |username, password|
 #     [username, password] == ['admin','admin']
 # end
 
-def authorized?
-    @auth ||= Rack::Auth::Basic::Request.new(request.env)
-    @auth.provided? && @auth.basic? && @auth.credentials == ['admin','admin']
+#def authorized?
+    #@auth ||= Rack::Auth::Basic::Request.new(request.env)
+    #@auth.provided? && @auth.basic? && @auth.credentials == ['admin','admin']
+#end
+
+#def protected!
+    #unless authorized?
+        #response['WWW-Authenticate'] = %(Basic realm="Restricted Area")
+        #throw(:halt, [401, "Not authorized\n"])
+    #end
+#end
+DB = Sequel.connect('mysql://sermons:sermons@localhost/sermons', :logger => Logger.new('log/ctksound_db.log'))
+
+def applyFilter
+
 end
 
-def protected!
-    unless authorized?
-        response['WWW-Authenticate'] = %(Basic realm="Restricted Area")
-        throw(:halt, [401, "Not authorized\n"])
+def getData
+    rows = []
+
+    sermons = DB['select * from sermons'].limit(10).order(:date.desc)
+    sermons.each() do |sermon|
+        rows.push(erb :sermon_record, :locals => { :data => sermon }, :layout => false)
     end
-end
 
-# Examples
-#post '/' do
-     #create something
-#end
+    #portraits = DB['select * from portraits'].limit(10)
+    #aces = DB['select * from aces'].limit(10)
+    #dedications = DB['select * from dedications'].limit(10)
 
-
-#put '/' do
-    # replace something
-#end
-
-#patch '/' do
-    # modify something
-#end
-
-delete '/' do
-    # annihilate something
-end
-
-options '/' do
-    # appease something
+    rows
+ 
+    #Sermon.new('')
 end
 
 
-get '/hello/:name' do |n|
-    "Hello #{n}!"
-end
-
-get '/haml' do
-    haml :example
-end
-
-get '/erb' do
-    erb :example
-end
-
-get '/markdown' do
-    markdown :example
-end
-
-get '/textile' do
-    textile :example
-end
-
-# Fox Valley Theological Society
 get '/' do
-    liquid :index, :locals => { :sidebar => "sidebary", :event => "eventy" }
-end
-
-get '/who_are_we' do
-    textile :who_are_we
-end
-
-get '/events' do
-    erb :events, :locals => { :test => "fubar" }
-end
-
-get '/talk_to_me' do
-    textile :talk_to_me
-    #@full = markdown :talk_to_me
+    erb :"wireframe", :locals => { :data => getData }
 end
 
 # Possible stylesheet route
@@ -102,18 +69,37 @@ get '/default.css' do
     less :"style/default"
 end
 
+get '/sequel' do
+    rows = []
+
+    DB = Sequel.connect('mysql://kgustavson:kgustavson11@localhost/ctksound', :logger => Logger.new('log/ctksound_db.log'))
+
+    portraits = DB['select date,speaker,comment,created_at,updated_at from portraits']
+    portraits = portraits.filter("comment like '%test%'")
+    puts "filtered: #{portraits.count}"
+    portraits.order(:date.desc).each do |row|
+        rows += [row.to_s]
+    end
+
+    rows.join('<br>')
+
+    #sermons = DB[:sermons]
+    #p sermons.count
+    #p sermons.first
+
+    #DB['desc portraits'].each do |col|
+        #p col
+    #end
+end
+
 get '/test' do
-    protected!
+    #protected!
     str = ''
     Dir.foreach('views/event') { |f|
         next if f.index('.') == 0
         str << "#{f}<br>"
     }
     str
-end
-
-get '/upload/:name/:filename' do
-    erb :form
 end
 
 #post '/upload/:name/:filename' do
@@ -133,41 +119,52 @@ end
 # upload with:
 # curl -v -F "data=@/path/to/filename" http://localhost:4567/user/filename
 
-post '/:type/:date' do
-    if ( ['recordings','labels','Originals'].include? params[:type] )
-        userdir = File.join("/var/www/sound/webroot", params[:type])
-        FileUtils.mkdir_p(userdir)
-        filename = File.join(userdir, params[:date])
+post '/something' do 
+    #if ( ['recordings','labels','Originals'].include? params[:type] )
         datafile = params[:data]
+        userdir = File.join('/var/www/sound/webroot', 'recordings')
+        filename = File.join(userdir, '2011-07-31')
+        FileUtils.mkdir_p(userdir)
         File.open(filename, 'wb') do |file|
             file.write(datafile[:tempfile].read)
         end
-        "wrote to #{filename}\n"
-    else
-        "this is an invalid file type\n"
-    end
+        mimetype = `file -Ib #{filename}`.gsub(/\n/,"")
+        "wrote file of #{mimetype} to #{filename}\n"
+    #else
+        #"this is an invalid file type (#{mimetype}\n"
+    #end
 end
 
-get '/dnduploader' do
-    erb :index, :layout => false
+get '/dndupload' do
+    erb :index
 end
+
+put '/something' do
+    datafile = params[:data]
+    #userdir = File.join('/var/www/sound/webroot', 'recordings')
+    #FileUtils.mkdir_p(userdir)
+    filename = "/var/www/sound/webroot/recordings/2011-07-31"
+    #FileUtils.cp(datafile[:tempfile], filename)
+    #File.open(filename, 'wb') do |file|
+        #file.write(datafile[:tempfile].read)
+    #end
+    #mimetype = `file -Ib #{filename}`.gsub(/\n/,"")
+    #"wrote file of #{mimetype} to #{filename}\n"
+    #"uploaded #{env['HTTP_X_FILENAME']} - #{request.body.read.size} bytes"
+end
+
 
 put '/' do
-    "uploaded #{env['HTTP_X_FILENAME']} - #{request.body.read.size} bytes"
+  tempfile = params['file'][:tempfile]
+  filename = params['file'][:filename]
+  File.mv(tempfile.path,File.join(File.expand_path(File.dirname(File.dirname(__FILE__))),"public","#{filename}"))
+  #redirect '/'
 end
 
-#use_in_file_templates!
+#curl -v --location --upload-file file.txt http://localhost:4567/upload/
+put '/upload/:id' do
+  File.open(params[:id], 'w+') do |file|
+    file.write(request.body.read)
+  end
+end
 
-__END__
-
-@@ form
-<form action="" method="post" enctype="multipart/form-data">
-<p>
-<label for="file">File:</label>
-<input type="file" name="file">
-</p>
-
-<p>
-<input name="commit" type="submit" value="Upload" />
-</p>
-</form>
