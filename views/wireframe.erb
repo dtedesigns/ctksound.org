@@ -6,7 +6,7 @@
 
   <div id="items">
   <% data.each do |row| %>
-    <%= row %>
+    <%= erb :sermon_record, :locals => { :data => row }, :layout => false %>
   <% end %>
   </div>
 </div>

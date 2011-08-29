@@ -2,19 +2,32 @@
 
 require 'rubygems'
 require 'sinatra'
-require 'sequel'
+require 'sinatra/sequel'
 require 'logger'
-#require 'fileutils'
-#require 'ftools'
 require 'less'      # LESS CSS templates
 require 'erb'
+require 'Sermon'
+
 #require 'haml'
 #require 'rdiscount' # for markdown
 #require 'redcloth'  # for textile
+
+#require 'fileutils'
+#require 'ftools'
+
 #require 'partial_helper'
 #set :textile, :layout_engine => :erb
 #set :markdown, :layout_engine => :erb
-require 'Sermon'
+
+set :database, 'mysql://kgustavson:kgustavson11@localhost/ctksound'
+
+class Sermons < Sequel::Model
+    def validate
+        super
+        errors.add(:title, 'cannot be empty') if !title || title.empty?
+    end
+end
+#Sermons.row_proc = proc{|row| erb :sermon_record, :locals => { :data => row }, :layout => false }
 
 # use Rack::Auth::Basic "Restricted Area" do |username, password|
 #     [username, password] == ['admin','admin']
@@ -31,11 +44,7 @@ require 'Sermon'
         #throw(:halt, [401, "Not authorized\n"])
     #end
 #end
-DB = Sequel.connect('mysql://sermons:sermons@localhost/sermons', :logger => Logger.new('log/ctksound_db.log'))
-
-def applyFilter
-
-end
+#DB = Sequel.connect('mysql://kgustavson:kgustavson11@localhost/ctksound', :logger => Logger.new('log/ctksound_db.log'))
 
 def getData
     rows = []
@@ -50,13 +59,12 @@ def getData
     #dedications = DB['select * from dedications'].limit(10)
 
     rows
- 
-    #Sermon.new('')
 end
 
 
 get '/' do
-    erb :"wireframe", :locals => { :data => getData }
+    sermons = database[:sermons].filter('date > 2011-01-01').order(:date.desc)
+    erb :"wireframe", :locals => { :data => sermons }
 end
 
 # Possible stylesheet route
