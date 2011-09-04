@@ -1,0 +1,12 @@
+<div id="parent">
+
+  <aside id="filters">
+  {{filters}}
+  </aside>
+
+  <div id="items">
+  {% for key in keys %}
+    {{items[key]}}
+  {% endfor %}
+  </div>
+</div>

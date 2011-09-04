@@ -86,24 +86,26 @@ nav li {
     span {
         color: 0;
         display: block;
-        height: 15px;
-        overflow: elipsis;
+        height: 25px;
         position: relative;
+        text-overflow: elipsis;
         white-space: nowrap;
         width: 1024px;
     }
     .title, .passage {
         height: 25px;
+        overflow: hidden;
         /*top: -60px;*/
-        width: 600px;
+        width: 545px;
     }
     .title, .speaker { font-size: 125%; }
     .record_details { left: 55px; }
     .speaker, .date {
         left: 550px;
+        overflow: hidden;
         position: relative;
-        width: 280px;
-        top: -40px;
+        width: 230px;
+        top: -50px;
     }
     .speaker { top: -50px; }
     .passage, .date { font-size: 85%; }
@@ -123,12 +125,14 @@ nav li {
         right: 5px;
     }
     #type {
-        background: white url(../images/teaching.png);
+        background: white;
         height: 44px;
         position: absolute;
         top: 0;
         width: 50px;
     }
+    #type.sermon { background-image: url(../images/sermon.png); }
+    #type.teaching { background-image: url(../images/teaching.png); }
 }
 #items > div {
     background: #ccc;

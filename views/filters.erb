@@ -90,8 +90,16 @@
   <span class="icon flac"></span>
   <span class="icon label"></span>
 </div>
-<div id="drop_target"> </div>
 
+<div id="drop_target"> </div>
+<p id="drop_status"> </p>
+<p id="drop_list"> </p>
+<script src="/js/html5uploader.js" type="text/javascript"></script>
+<script type="text/javascript">
+  uploader = new uploader('drop_target', 'drop_status', 'upload', 'drop_list');
+</script>
+
+<!--
 <script src="/js/jquery.dnduploader.js" type="text/javascript"></script>
 <script type="text/javascript">
 $("#drop_target").dndUploader({
@@ -99,3 +107,4 @@ $("#drop_target").dndUploader({
   method : "PUT"
 });
 </script>
+-->
