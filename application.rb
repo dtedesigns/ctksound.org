@@ -60,11 +60,12 @@ get '/' do
         dates[date] = liquid(:ace_record, :layout => false, :locals => ace)
     end
 
+    portraits.each do |portrait|
+        date = portrait[:date].to_s+'_2_portrait' #.strftime('%s_0_portrait')
+        dates[date] = liquid(:portrait_record, :layout => false, :locals => portrait)
+    end
+
     #erb :"wireframe", :locals => { :data => sermons }
-    #items = {}
-    #dates.keys.sort.each do |key|
-        #items[key] = dates[key]
-    #end
     liquid :wireframe, :layout_engine => :erb, :locals => {
         :filters => erb(:filters, :layout => false),
         :items => dates,
