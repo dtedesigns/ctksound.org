@@ -18,7 +18,8 @@ require 'yaml'
 #set :markdown, :layout_engine => :erb
 
 #set :database, 'mysql://kgustavson:kgustavson11@localhost/ctksound'
-set :database, 'mysql://sermons:sermons@gandalf/sermons'
+#set :database, 'mysql://sermons:sermons@gandalf/sermons'
+set :database, 'sqlite://db/ctksound.db'
 
 class Sermons < Sequel::Model
     def validate
@@ -46,23 +47,36 @@ end
 
 get '/' do
     dates = Hash.new #{ |l, k| l[k] = Hash.new(&l.default_proc) }
-    aces = database[:aces].filter().order(:date)
-    portraits = database[:portraits].filter().order(:date)
-    sermons = database[:sermons].filter(:type => 'Sermons').order(:date.desc)
+    teaching = database[:aces].order(:date)
+    baptisms = database[:dedications].filter(:type => 'infant_baptism').order(:date)
+    dedications = database[:dedications].filter(:type => 'dedication').order(:date)
+    labels = database[:labels].order(:date)
+    portraits = database[:portraits].exclude(:speaker => 'Test Speaker').order(:date)
+    sermons = database[:sermons].filter(:type => 'Sermons').exclude(:title => 'Unavailable').order(:date.desc)
 
     sermons.each do |sermon|
         date = sermon[:date].to_s+'_0_sermon' #.strftime('%s_0_sermon')
         dates[date] = liquid(:sermon_record, :layout => false, :locals => sermon)
     end
 
-    aces.each do |ace|
-        date = ace[:date].to_s+'_1_ace' #.strftime('%s_0_ace')
-        dates[date] = liquid(:ace_record, :layout => false, :locals => ace)
+    teaching.each do |lesson|
+        date = lesson[:date].to_s+'_1_lesson' #.strftime('%s_1_lesson')
+        dates[date] = liquid(:teaching_record, :layout => false, :locals => lesson)
     end
 
     portraits.each do |portrait|
-        date = portrait[:date].to_s+'_2_portrait' #.strftime('%s_0_portrait')
+        date = portrait[:date].to_s+'_2_portrait' #.strftime('%s_2_portrait')
         dates[date] = liquid(:portrait_record, :layout => false, :locals => portrait)
+    end
+
+    baptisms.each do |baptism|
+        date = baptism[:date].to_s+'_3_baptism' #.strftime('%s_3_baptism')
+        dates[date] = liquid(:infant_baptism_record, :layout => false, :locals => baptism)
+    end
+
+    dedications.each do |dedication|
+        date = dedication[:date].to_s+'_4_dedication' #.strftime('%s_4_dedication')
+        dates[date] = liquid(:dedication_record, :layout => false, :locals => dedication)
     end
 
     #erb :"wireframe", :locals => { :data => sermons }
@@ -102,27 +116,7 @@ post '/upload' do
     File.open(upload_path+upload[:filename], 'wb') do |file|
         file.write(upload[:tempfile].read)
     end
-                    #if(count($_FILES)>0) do
-                        #$_FILES.each() do |file|
-                            #data = params[:data]
-                            #File.mv(upload_path+data['upload']['name'], data['upload']['tmp_name'])
-                        #end
-                    #else (isset($_GET['up']))
-                    #// If the browser does not support sendAsBinary ()
-                    #if(isset($_GET['base64'])) {
-                        #$content = base64_decode(file_get_contents('php://input'));
-                    #} else {
-                        #$content = file_get_contents('php://input');
-                    #}
-
-                    #$headers = getallheaders();
-                    #$headers = array_change_key_case($headers, CASE_UPPER);
-
-                    #//if(file_put_contents($upload_folder.'/'.$headers['UP-FILENAME'], $content)) {
-                    #//  echo 'done';
-                    #//}
-                    #exit();
-                #}
+    params["'upload'"][:tempfile].path
 end
 
 put '/' do
