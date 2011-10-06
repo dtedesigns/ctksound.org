@@ -1,7 +1,8 @@
 <div>
   <label for="date_selector" class="static">Date Filter</label>
   <select id="date_selector">
-    <option>Last week</option>
+    <option>All</option>
+    <option selected="selected">Last week</option>
     <option>This month</option>
     <option>Last month</option>
     <option>This year</option>
@@ -13,6 +14,7 @@
 <div>
   <label for="speaker" class="static">Speaker</label>
   <select id="speaker">
+    <option selected="selected">Everyone</option>
     <option>Pastor Ken Carr</option>
     <option>Pastor Jeff Holwerda</option>
     <option>Tighe Farrow</option>
@@ -23,6 +25,33 @@
 <div>
   <label for="search" class="static">Search</label>
   <input type="text" name="search"/>
+</div>
+
+<div class="checkboxes">
+<ul>
+  <li>
+    <input type="checkbox" name="Sermons" checked="checked"/>
+    <label for="Sermons">Sermons</label>
+  </li>
+  <li>
+    <input type="checkbox" name="ACE" checked="checked"/>
+    <label for="ACE">ACE (Sunday School)</label>
+  </li>
+</ul>
+<ul>
+  <li>
+    <input type="checkbox" name="Published" checked="checked"/>
+    <label for="Published">Published</label>
+  </li>
+  <li>
+    <input type="checkbox" name="Unpublished" checked="checked"/>
+    <label for="Unpublished">Unpublished</label>
+  </li>
+  <li>
+    <input type="checkbox" name="Archived" checked="checked"/>
+    <label for="Archived">Archived</label>
+  </li>
+</ul>
 </div>
 
 <div class="checkboxes">
@@ -56,33 +85,6 @@
 </ul>
 </div>
 
-<div class="checkboxes">
-<ul>
-  <li>
-    <input type="checkbox" name="Sermons" checked="checked"/>
-    <label for="Sermons">Sermons</label>
-  </li>
-  <li>
-    <input type="checkbox" name="ACE" checked="checked"/>
-    <label for="ACE">ACE (Sunday School)</label>
-  </li>
-</ul>
-<ul>
-  <li>
-    <input type="checkbox" name="Published" checked="checked"/>
-    <label for="Published">Published</label>
-  </li>
-  <li>
-    <input type="checkbox" name="Unpublished" checked="checked"/>
-    <label for="Unpublished">Unpublished</label>
-  </li>
-  <li>
-    <input type="checkbox" name="Archived" checked="checked"/>
-    <label for="Archived">Archived</label>
-  </li>
-</ul>
-</div>
-
 <div id="uploaded_files">
   <span class="icon mp3"></span>
   <span class="icon mp3"></span>
@@ -94,12 +96,25 @@
 <div id="drop_target"> </div>
 <p id="drop_status"> </p>
 <p id="drop_list"> </p>
+
+<!--
+<script src="js/jquery.fileupload-ui.js"> </script>
+<script type="text/javascript">
+  $('#drop_target').fileupload({
+      type: 'PUT',
+      dataType: 'json',
+      dropZone: '#drop_target'
+      url: '/upload/'
+  });
+</script>
+-->
+<!--
 <script src="/js/html5uploader.js" type="text/javascript"></script>
 <script type="text/javascript">
   uploader = new uploader('drop_target', 'drop_status', 'upload', 'drop_list');
 </script>
+-->
 
-<!--
 <script src="/js/jquery.dnduploader.js" type="text/javascript"></script>
 <script type="text/javascript">
 $("#drop_target").dndUploader({
@@ -107,4 +122,3 @@ $("#drop_target").dndUploader({
   method : "PUT"
 });
 </script>
--->

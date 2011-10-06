@@ -3,10 +3,10 @@
 require 'rubygems'
 require 'sinatra'
 require 'sinatra/sequel'
+require 'json'
 require 'logger'
 require 'less'      # LESS CSS templates
 require 'erb'
-#require 'Sermon'
 require 'yaml'
 
 #require 'haml'
@@ -17,16 +17,7 @@ require 'yaml'
 #set :textile, :layout_engine => :erb
 #set :markdown, :layout_engine => :erb
 
-#set :database, 'mysql://kgustavson:kgustavson11@localhost/ctksound'
-#set :database, 'mysql://sermons:sermons@gandalf/sermons'
-set :database, 'sqlite://db/ctksound.db'
-
-class Sermons < Sequel::Model
-    def validate
-        super
-        errors.add(:title, 'cannot be empty') if !title || title.empty?
-    end
-end
+#enable :sessions
 
 # use Rack::Auth::Basic "Restricted Area" do |username, password|
 #     [username, password] == ['admin','admin']
@@ -44,52 +35,81 @@ end
     #end
 #end
 
+#set :database, 'mysql://kgustavson:kgustavson11@localhost/ctksound'
+#set :database, 'mysql://sermons:sermons@gandalf/sermons'
+set :database, 'sqlite://db/ctksound.db'
+#set :database, Sequel.connect('sqlite://db/ctksound.db')
+require 'Models'
+set :records, {
+    :teaching   => database[:aces].order(:date),
+    :baptism    => database[:dedications].filter(:type => 'infant_baptism').order(:date),
+    :dedication => database[:dedications].filter(:type => 'dedication').order(:date),
+    :label      => database[:labels].order(:date),
+    :portrait   => database[:portraits].exclude(:speaker => 'Test Speaker').order(:date),
+    :sermon     => database[:sermons].filter(:type => 'Sermons').exclude(:title => 'Unavailable').order(:date.desc)
+}
 
-get '/' do
-    dates = Hash.new #{ |l, k| l[k] = Hash.new(&l.default_proc) }
-    teaching = database[:aces].order(:date)
-    baptisms = database[:dedications].filter(:type => 'infant_baptism').order(:date)
-    dedications = database[:dedications].filter(:type => 'dedication').order(:date)
-    labels = database[:labels].order(:date)
-    portraits = database[:portraits].exclude(:speaker => 'Test Speaker').order(:date)
-    sermons = database[:sermons].filter(:type => 'Sermons').exclude(:title => 'Unavailable').order(:date.desc)
-
-    sermons.each do |sermon|
-        date = sermon[:date].to_s+'_0_sermon' #.strftime('%s_0_sermon')
-        dates[date] = liquid(:sermon_record, :layout => false, :locals => sermon)
-    end
-
-    teaching.each do |lesson|
-        date = lesson[:date].to_s+'_1_lesson' #.strftime('%s_1_lesson')
-        dates[date] = liquid(:teaching_record, :layout => false, :locals => lesson)
-    end
-
-    portraits.each do |portrait|
-        date = portrait[:date].to_s+'_2_portrait' #.strftime('%s_2_portrait')
-        dates[date] = liquid(:portrait_record, :layout => false, :locals => portrait)
-    end
-
-    baptisms.each do |baptism|
-        date = baptism[:date].to_s+'_3_baptism' #.strftime('%s_3_baptism')
-        dates[date] = liquid(:infant_baptism_record, :layout => false, :locals => baptism)
-    end
-
-    dedications.each do |dedication|
-        date = dedication[:date].to_s+'_4_dedication' #.strftime('%s_4_dedication')
-        dates[date] = liquid(:dedication_record, :layout => false, :locals => dedication)
-    end
-
-    #erb :"wireframe", :locals => { :data => sermons }
-    liquid :wireframe, :layout_engine => :erb, :locals => {
-        :filters => erb(:filters, :layout => false),
-        :items => dates,
-        :keys => dates.keys.sort,
-    }
+before do
+    # FIXME this should happen when the connection is created
+    database.loggers << Logger.new('log/ctksound_db.log')
 end
 
 # stylesheet route
 get '/style/:name' do |n|
     less :"style/#{n}"
+end
+
+get '/data/:record_type/:date' do
+    options.records[ params[:record_type].to_sym ][:date => params[:date]].to_json
+end
+
+get '/:record_type/:date' do
+    record = options.records[ params[:record_type].to_sym ][:date => params[:date]]
+    liquid(
+        :"#{params['record_type']}_record",
+        :layout => false,
+        :locals => record
+    )
+end
+
+get '/' do
+    "Welcome to ctksound.dev"
+end
+
+get '/dash' do
+    dates = Hash.new #{ |l, k| l[k] = Hash.new(&l.default_proc) }
+    records = options.records
+
+    records[:sermon].each do |sermon|
+        date = sermon[:date].to_s+'_0_sermon' #.strftime('%s_0_sermon')
+        dates[date] = liquid(:sermon_record, :layout => false, :locals => sermon)
+    end
+
+    records[:teaching].each do |lesson|
+        date = lesson[:date].to_s+'_1_lesson' #.strftime('%s_1_lesson')
+        dates[date] = liquid(:teaching_record, :layout => false, :locals => lesson)
+    end
+
+    records[:portrait].each do |portrait|
+        date = portrait[:date].to_s+'_2_portrait' #.strftime('%s_2_portrait')
+        dates[date] = liquid(:portrait_record, :layout => false, :locals => portrait)
+    end
+
+    records[:baptism].each do |baptism|
+        date = baptism[:date].to_s+'_3_baptism' #.strftime('%s_3_baptism')
+        dates[date] = liquid(:infant_baptism_record, :layout => false, :locals => baptism)
+    end
+
+    records[:dedication].each do |dedication|
+        date = dedication[:date].to_s+'_4_dedication' #.strftime('%s_4_dedication')
+        dates[date] = liquid(:dedication_record, :layout => false, :locals => dedication)
+    end
+
+    liquid :wireframe, :layout_engine => :erb, :locals => {
+        :filters => erb(:filters, :layout => false),
+        :items => dates,
+        :keys => dates.keys.sort,
+    }
 end
 
 
@@ -119,21 +139,6 @@ post '/upload' do
     params["'upload'"][:tempfile].path
 end
 
-put '/' do
-    file = File.open('files/'+request.env['HTTP_X_FILENAME'], 'w+')
-    request.body.read do |io|
-        pos = io.tell
-        while buffer = io.read(2**8)
-            file.write(pos, buffer)
-            pos = io.tell
-        end
-        file.close
-    end
-
-    media_type = request.media_type
-    #YAML::dump(request.body.read)
-end
-
 #curl -v --location --upload-file file.txt http://localhost:4567/upload/
 put '/upload/:id' do
   File.open(params[:id], 'w+') do |file|
@@ -141,3 +146,35 @@ put '/upload/:id' do
   end
 end
 
+#put '/' do
+    #request.inspect
+    #request.body.inspect
+    #env.inspect
+    #request.env['HTTP_X_FILENAME']
+#end
+
+put '/' do
+    #file = File.open('files/'+request.env['HTTP_X_FILENAME'], 'w+')
+    #request.body.read do |io|
+        #pos = io.tell
+        #while buffer = io.read(2**8)
+            #file.write(pos, buffer)
+            #pos = io.tell
+        #end
+        #file.close
+    #end
+    file = File.open('files/'+request.env['HTTP_X_FILENAME'], 'w+')
+    file.write(request.body.read)
+    file.close
+
+    media_type = request.media_type
+end
+
+# Demonstrate flash
+#post '/set-flash' do
+    #flash[:notice] = 'Thanks for signing up!'
+
+    #puts flash[:notice]
+
+    #flash.now[:notice] = 'Thanks for signing up!'
+#end
