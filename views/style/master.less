@@ -1,6 +1,6 @@
 @zoom: 1.00;
 @text_color: #555555;
-@nav_color: #6ACC6A;
+@nav_color: #CCC;
 @item_color: #fff;
 @filter_width: 400px * @zoom;
 @items_width: 850px * @zoom;
@@ -13,26 +13,70 @@
     margin: 0;
     padding: 0;
 }
+
+header {
+    background: lightgray;
+    /*height: 35px;*/
+    width: 100%;
+}
+
 article {
     color: @text_color;
     margin: 0 auto;
     width: @body_width;
 }
+
 select {
     font-size: 100% * @zoom;
     option { font-size: 100% * @zoom; }
 }
+
 nav {
     background: @nav_color;
-    height: 30px;
-    min-width: @filter_width + @items_width + 20px;
+    height: 95px;
+    left: -116px;
+    /*min-width: @filter_width + @items_width + 20px;*/
+    padding: 5px 15px 5px 5px;
+    position: fixed;
+    top: 250px;
+    z-index: 100;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+
+    li {
+        /*float: left;*/
+        list-style-type: none;
+        margin-top: 5px;
+        /*margin-left: 10px * @zoom;*/
+        /*padding-top: 3px * @zoom;*/
+    }
+
+    #nav_handle {
+        background: @nav_color;
+        border-top: 1px dotted #888;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+        color:       #000;
+        display:     block;
+        left:        75px;
+        padding:     5px;
+        text-align:  center;
+        top:         40px;
+        width:       95px;
+        position:    absolute;
+        z-index:     -1;
+        -webkit-transform: rotate(-90deg);
+    }
 }
-nav li {
-    float: left;
-    list-style-type: none;
-    margin-left: 10px * @zoom;
-    padding-top: 3px * @zoom;
+nav:hover {
+    -moz-transform: translate(116px,0);
+    -ms-transform: translate(116px,0);
+    -o-transform: translate(116px,0);
+    -webkit-transform: translate(116px,0);
 }
+
 #parent {
     position: relative;
 }
@@ -71,7 +115,7 @@ nav li {
     }
 
     #drop_target {
-        border: 1px dashed #aaa;
+        border: 2px dashed #ccc;
         clear: both;
         height: 130px * @zoom;
         width: 390px * @zoom;
@@ -83,12 +127,31 @@ nav li {
             z-index: 100;
         }
     }
+
+    #drop_target.dragover, #drop_target:hover {
+        background-color:  #ffe;
+        border: 2px solid #999;
+        cursor: pointer;
+        cursor: hand;
+    }
+
+    #progress {
+      border: 1px solid #888;
+      height: 30px;
+      width: 98%;
+    }
+
+    #progressbar {
+      background: lightblue;
+      height: inherit;
+      width:  1%;
+    }
 }
 #items {
   color:       #000;
   left:        @filter_width + 10px;
-  height:      800px;
-  overflow:    scroll;
+  /*height:      800px;*/
+  /*overflow:    scroll;*/
   padding-top: 10px;
   position:    absolute;
   top:         0;

@@ -41,27 +41,35 @@
 
       if (dataTransfer.files.length > 0) {
         $.each(dataTransfer.files, function ( i, file ) {
-          var xhr    = new XMLHttpRequest();
+          var xhr  = new XMLHttpRequest();
           var upload = xhr.upload;
 
           xhr.open($this.data('method') || 'POST', $this.data('url'), true);
-          xhr.setRequestHeader('X-Filename', file.fileName);
+          xhr.setRequestHeader('X-Filename', file.name);
+          xhr.setRequestHeader('X-Gustavson', 'Kevin was here!');
 
           xhr.send(file);
         });
-      };
+      }
 
       return false;
     }
   };
 
   $.fn.dndUploader = function( method ) {
+
     if ( methods[method] ) {
+
       return methods[method].apply( this, Array.prototype.slice.call( arguments, 1 ));
+
     } else if ( typeof method === 'object' || ! method ) {
+
       return methods.init.apply( this, arguments );
+
     } else {
+
       $.error( 'Method ' +  method + ' does not exist on jQuery.dndUploader' );
+
     }
   };
 })( jQuery );

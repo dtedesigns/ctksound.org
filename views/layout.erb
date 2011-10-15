@@ -6,19 +6,25 @@
   <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
   <link rel="stylesheet" href="/style/master" type="text/css" media="screen" title="no title">
   <script type='text/javascript' src='js/jquery.js'></script>
+  <script type='text/javascript' src='js/jquery.progressbar.js'></script>
   <title>CTKSound.org Version 2</title>
 </head>
 
 <body>
   <header id="banner">
-    <nav>
-      <ul>
-        <li class="active"><a href="#">Dashboard</a></li>
-        <li><a href="#">Documentation</a></li>
-        <li><a href="#">Team Information</a></li>
-      </ul>
-    </nav>
+  <p style="font-size: 24px;">CTKSound.org</p>
+  <p>Serving all your recording needs since 2008...</p>
   </header>
+
+  <nav>
+    <ul>
+      <li class="active"><a href="/">Recordings</a></li>
+      <li><a href="/docs">Documentation</a></li>
+      <li><a href="/team">Team Information</a></li>
+      <li><a href="http://ctksound.org/dash">Original Site</a></li>
+    </ul>
+    <p id="nav_handle">Menu</p>
+  </nav>
 
   <article>
     <%= yield %>

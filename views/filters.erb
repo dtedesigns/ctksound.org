@@ -85,7 +85,13 @@
 </ul>
 </div>
 
-<div id="uploaded_files">
+<div id="drop_target"> </div>
+<p id="drop_status"> </p>
+<p id="drop_list"> </p>
+
+<div id="progress"> </div>
+
+<div id="uploaded_files" style="display: none;">
   <span class="icon mp3"></span>
   <span class="icon mp3"></span>
   <span class="icon mp3"></span>
@@ -93,9 +99,146 @@
   <span class="icon label"></span>
 </div>
 
-<div id="drop_target"> </div>
-<p id="drop_status"> </p>
-<p id="drop_list"> </p>
+<!-- From the dropbox example! -->
+<div class="filelist"> </div>
+
+<script src="/js/jquery.dnduploader.js" type="text/javascript"></script>
+<script type="text/javascript">
+$("div#dropbox").dndUploader({
+  url : "/",
+  method : "PUT",
+  progress: $("div#progress"),
+  callback: function() {
+  console.log(' callback function initzed after completed update to get updated file list');
+  setTimeout(function() {
+    Foodle_Group.getFiles(showFiles);
+    }, 400)
+  }
+});
+
+/*
+ * Show a list of files in the <div class="filelist"> container.
+ */
+function showFiles(files) {
+      var i;
+
+      $("div.filelist").empty();
+      for(i = 0; i < files.length; i++) {
+              $("div.filelist").append(files[i].view() );
+      }
+}
+
+var Foodle_Group = function() {
+
+        var
+                // Dependencies
+                api = Foodle_API,
+
+                // Local variables
+                groupid;
+
+        function setGroupid(sgroupid) {
+                groupid = sgroupid;
+        }
+
+
+        function getFiles(callback) {
+                console.log('Get file list');
+                api.getData('/api/files/' + groupid, null, FOODLE.data.File, callback);
+        }
+
+        function getActivity(callback) {
+                api.getData('/api/activity/group/' + groupid, null, FOODLE.data.Activity, callback);
+        }
+
+        function getMembers(callback) {
+                api.getData('/api/contacts/' + groupid, null, FOODLE.data.Person, callback);
+        }
+
+        return {
+                // Initialization methods
+                setGroupid: setGroupid,
+
+                // Get data methods
+                getFiles: getFiles,
+                getMembers: getMembers,
+                getActivity: getActivity
+        };
+
+}();
+
+/**
+ * Generic Foodle API, that may be used to perform all ajax calls towards Foodle
+ * Handles the usertoken that is required, error handling and custom callabacks.
+ */
+var Foodle_API = function() {
+
+        var
+                userToken;
+
+        /*
+         * The Foodle_API library needs to be initialized with the user token
+         * before it can be used
+         */
+        function init(setUserToken) {
+                userToken = setUserToken;
+        }
+
+        /*
+         * The processResponse function returns a closure with a specific callback() function
+         */
+        function processResponse(constructor, callback) {
+                return function(data) {
+
+                        var
+                                i,
+                                processed = [];
+
+                        if (data.status == 'ok' && data.data) {
+
+                                //console.log('got data');
+                                //console.log(data.data);
+
+                                if (constructor && typeof constructor === 'function') {
+                                        for(i = 0; i < data.data.length; i++) {
+                                                processed.push(new constructor(data.data[i]));
+                                        }
+                                        if (callback && typeof callback === 'function') callback(processed);
+                                } else {
+                                        if (callback && typeof callback === 'function') callback(data.data);
+                                }
+
+                        } else {
+                                throw new Error('Error response on Foodle API: ' + data.message);
+                        }
+                }
+        }
+
+        // Perform a API call.
+        function getData(endpoint, params, constructor, callback) {
+
+                if(!userToken) throw new Error('UserToken was not set before API call was initiated at endpoint [' + endpoint + ']');
+
+                var key;
+                var parameters = {userToken: userToken};
+
+                for(key in params) {
+                        if (params.hasOwnProperty(key)) {
+                                parameters[key] = params[key];
+                        }
+                }
+
+                $.getJSON(endpoint, parameters, processResponse(constructor, callback) );
+
+        }
+
+        return {
+                init: init,
+                getData: getData
+        };
+
+}();
+</script>
 
 <!--
 <script src="js/jquery.fileupload-ui.js"> </script>
@@ -115,8 +258,11 @@
 </script>
 -->
 
-<script src="/js/jquery.dnduploader.js" type="text/javascript"></script>
 <script type="text/javascript">
+$("#progress").progressbar({
+    value: 8,
+});
+
 $("#drop_target").dndUploader({
   url : "/",
   method : "PUT"

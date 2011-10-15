@@ -72,11 +72,15 @@ get '/:record_type/:date' do
     )
 end
 
-get '/' do
-    "Welcome to ctksound.dev"
+get '/docs' do
+    "<p>Put documents here"
 end
 
-get '/dash' do
+get '/team' do
+    "<p>Put team info here"
+end
+
+get '/' do
     dates = Hash.new #{ |l, k| l[k] = Hash.new(&l.default_proc) }
     records = options.records
 
