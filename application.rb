@@ -77,7 +77,7 @@ get '/docs' do
 end
 
 get '/team' do
-    "<p>Put team info here"
+    "<p>Put team info here</p>"
 end
 
 get '/' do

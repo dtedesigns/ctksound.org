@@ -1,5 +1,25 @@
 (function( $ ){
 
+  var callbackProgress = function(pbar, file) {
+    return function(ev) {
+      var percentComplete = Math.round(100 * ev.loaded / ev.total);
+      console.log('Progress ' + percentComplete);
+      if (ev.lengthComputable) {
+        pbar.progressbar('value', percentComplete);
+      }
+    };
+  };
+
+  var callbackComplete = function(pbar, file) {
+    return function(ev) {
+      console.log('Upload complete');
+      console.log(ev);
+      pbar.progressbar('value', 100);
+      $('#uploaded_files').append('<span>');
+      $("<span class='icon'>"+file.name+"</span>").appendTo('#uploaded_files');
+    };
+  };
+
   var methods = {
     init : function( options ) {
 
@@ -42,11 +62,14 @@
       if (dataTransfer.files.length > 0) {
         $.each(dataTransfer.files, function ( i, file ) {
           var xhr  = new XMLHttpRequest();
-          var upload = xhr.upload;
 
           xhr.open($this.data('method') || 'POST', $this.data('url'), true);
           xhr.setRequestHeader('X-Filename', file.name);
           xhr.setRequestHeader('X-Gustavson', 'Kevin was here!');
+
+          var pbar = $('#progress');
+          xhr.upload.addEventListener('progress', callbackProgress(pbar, file), false);
+          xhr.upload.addEventListener('load', callbackComplete(pbar, file), false);
 
           xhr.send(file);
         });
