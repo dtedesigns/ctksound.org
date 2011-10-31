@@ -88,7 +88,7 @@
 <div id="drop_target"> </div>
 <div id="uploaded_files">
   {% for file in files %}
-    <p>{{ file }}</p>
+    <p draggable="true">{{ file }}</p>
   {% endfor %}
 </div>
 
@@ -112,4 +112,5 @@ $("#drop_target").dndUploader({
     }, 400)
   }
 });
+
 </script>

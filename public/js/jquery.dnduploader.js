@@ -1,9 +1,16 @@
+/**
+ * Drag-N-Drop Uploader
+ * Originally created by:
+ * Progress updating by Kevin Gustavson
+ * Requires: jquery.progressbar.js
+ */
+
 (function( $ ){
 
   var callbackProgress = function(pbar, file) {
     return function(ev) {
       var percentComplete = Math.round(100 * ev.loaded / ev.total);
-      console.log('Progress ' + percentComplete);
+      console.log('File: ' + file.name + ' Progress: ' + percentComplete);
       if (ev.lengthComputable) {
         pbar.progressbar('value', percentComplete);
       }
@@ -14,9 +21,8 @@
     return function(ev) {
       console.log('Upload complete');
       console.log(ev);
-      pbar.progressbar('value', 100);
-      $('#uploaded_files').append('<span>');
-      $("<span class='icon'>"+file.name+"</span>").appendTo('#uploaded_files');
+      pbar.progressbar('value', 100)
+        .replaceWith("<p class='icon' draggable='true'>"+file.name+"</p>");
     };
   };
 
@@ -67,7 +73,7 @@
           xhr.setRequestHeader('X-Filename', file.name);
           xhr.setRequestHeader('X-Gustavson', 'Kevin was here!');
 
-          var pbar = $('#progress');
+          var pbar = $('<div id="progress"/>').progressbar().appendTo('#uploaded_files');
           xhr.upload.addEventListener('progress', callbackProgress(pbar, file), false);
           xhr.upload.addEventListener('load', callbackComplete(pbar, file), false);
 

@@ -31,6 +31,20 @@ select {
     option { font-size: 100% * @zoom; }
 }
 
+[draggable] {
+    cursor: move;
+    user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -khtml-user-drag: element;
+}
+
+.droppable_over {
+    background-color: lightyellow;
+}
+
 nav {
     background: @nav_color;
     height: 95px;
@@ -67,6 +81,9 @@ nav {
         width:       95px;
         position:    absolute;
         z-index:     -1;
+        -moz-transform: rotate(-90deg);
+        -ms-transform: rotate(-90deg);
+        -o-transform: rotate(-90deg);
         -webkit-transform: rotate(-90deg);
     }
 }
@@ -129,7 +146,7 @@ nav:hover {
         }
     }
 
-    #drop_target.dragover, #drop_target:hover {
+    #drop_target.draggable_over {
         background-color:  #ffe;
         border: 2px solid #999;
         cursor: pointer;

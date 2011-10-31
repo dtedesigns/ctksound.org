@@ -81,11 +81,17 @@ get '/team' do
 end
 
 get '/' do
+    cwd = Dir.pwd
+    Dir.chdir('files')
+    files = Dir['*'].entries
+    Dir.chdir(cwd)
+
     dates = Hash.new #{ |l, k| l[k] = Hash.new(&l.default_proc) }
     records = options.records
 
     records[:sermon].each do |sermon|
         date = sermon[:date].to_s+'_0_sermon' #.strftime('%s_0_sermon')
+        sermon['type'] = 'sermon'
         dates[date] = liquid(:sermon_record, :layout => false, :locals => sermon)
     end
 
@@ -109,70 +115,79 @@ get '/' do
         dates[date] = liquid(:dedication_record, :layout => false, :locals => dedication)
     end
 
-    liquid :wireframe, :layout_engine => :erb, :locals => {
-        :filters => erb(:filters, :layout => false),
+    liquid :items, :layout_engine => :erb, :locals => {
+        :filters => liquid(:filters, :layout => false, :locals => { :files => files }),
         :items => dates,
         :keys => dates.keys.sort,
     }
 end
 
 
-# upload with:
-# curl -v -F "data=@/path/to/filename" http://localhost:4567/user/filename
-post '/:user/:file' do 
-    data = params[:data]
-    userdir = File.join('/var/www/sound/webroot', 'recordings')
-    filename = File.join(userdir, data[:file])
-    FileUtils.mkdir_p(userdir)
-    File.open(filename, 'wb') do |file|
-        file.write(data[:tempfile].read)
-    end
-    mimetype = `file -Ib #{filename}`.gsub(/\n/,"")
-    "wrote file of #{mimetype} to #{filename}\n"
-    #"this is an invalid file type (#{mimetype}\n"
+post '/import_file/*.*' do |file, ext|
+    # Move using new filename (generated from record)
+    # - If label file, import it
+    #   + Need a function to import label files to Labels table
+    #   + Q: Do I want to store the processed label files or not? (Yes, initially)
+    # - If sound file, label it if possible.
+    #   + Might want to refuse a drop until the database has been populated
+    # Remove the filename from uploaded files list
+
+    path = 'files/'+file+'.'+ext
+    response = {}
+
+    response[:id] = request.params['id']
+    response[:type] = request.params['type']
+    response[:file] = file
+    response[:path] = path
+    response[:filetype] = `/usr/bin/file -b "#{path}"`
+
+    response.to_json
 end
-
-post '/upload' do
-    # Destination
-    upload_path = 'files/'
-    upload = params["'upload'"]
-
-    File.open(upload_path+upload[:filename], 'wb') do |file|
-        file.write(upload[:tempfile].read)
-    end
-    params["'upload'"][:tempfile].path
-end
-
-#curl -v --location --upload-file file.txt http://localhost:4567/upload/
-put '/upload/:id' do
-  File.open(params[:id], 'w+') do |file|
-    file.write(request.body.read)
-  end
-end
-
-#put '/' do
-    #request.inspect
-    #request.body.inspect
-    #env.inspect
-    #request.env['HTTP_X_FILENAME']
-#end
 
 put '/' do
-    #file = File.open('files/'+request.env['HTTP_X_FILENAME'], 'w+')
-    #request.body.read do |io|
-        #pos = io.tell
-        #while buffer = io.read(2**8)
-            #file.write(pos, buffer)
-            #pos = io.tell
-        #end
-        #file.close
-    #end
     file = File.open('files/'+request.env['HTTP_X_FILENAME'], 'w+')
     file.write(request.body.read)
     file.close
 
     media_type = request.media_type
 end
+
+#
+# The following routes should be A) Disabled and B) Deleted
+#
+
+# upload with:
+#curl -v --location --upload-file file.txt http://localhost:4567/upload/
+#put '/upload/:id' do
+  #File.open(params[:id], 'w+') do |file|
+    #file.write(request.body.read)
+  #end
+#end
+
+# curl -v -F "data=@/path/to/filename" http://localhost:4567/user/filename
+#post '/:user/:file' do 
+    #data = params[:data]
+    #userdir = File.join('/var/www/sound/webroot', 'recordings')
+    #filename = File.join(userdir, data[:file])
+    #FileUtils.mkdir_p(userdir)
+    #File.open(filename, 'wb') do |file|
+        #file.write(data[:tempfile].read)
+    #end
+    #mimetype = `file -Ib #{filename}`.gsub(/\n/,"")
+    #"wrote file of #{mimetype} to #{filename}\n"
+    #"this is an invalid file type (#{mimetype}\n"
+#end
+
+#post '/upload' do
+    # Destination
+    #upload_path = 'files/'
+    #upload = params["'upload'"]
+
+    #File.open(upload_path+upload[:filename], 'wb') do |file|
+        #file.write(upload[:tempfile].read)
+    #end
+    #params["'upload'"][:tempfile].path
+#end
 
 # Demonstrate flash
 #post '/set-flash' do
