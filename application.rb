@@ -3,10 +3,11 @@
 require 'rubygems'
 require 'sinatra'
 require 'sinatra/sequel'
-require 'json'
 require 'logger'
-require 'less'      # LESS CSS templates
 require 'erb'
+require 'liquid'
+require 'less'      # LESS CSS templates
+require 'json'
 require 'yaml'
 
 #require 'haml'

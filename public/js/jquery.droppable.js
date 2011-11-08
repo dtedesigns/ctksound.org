@@ -59,6 +59,7 @@
     },
 
     dragOver : function (ev) {
+      this.classList.add('droppable_over');
       if (ev.preventDefault) {
         ev.stopPropagation();
         ev.preventDefault();
@@ -73,6 +74,8 @@
       // this/ev.target = target element
 
       console.log('dragDrop');
+      this.classList.remove('droppable_over');
+
       if (ev.stopPropagation) {
         ev.stopPropagation();
         ev.preventDefault();
