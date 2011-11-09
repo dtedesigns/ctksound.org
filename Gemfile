@@ -16,6 +16,7 @@ gem "liquid"
 gem "sequel"
 #sinatra (1.3.1)
 gem "sinatra"
+gem "sinatra-contrib"
 #sinatra-sequel (0.9.0)
 gem "sinatra-sequel"
 #sqlite3 (1.3.4)
