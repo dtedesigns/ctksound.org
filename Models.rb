@@ -24,6 +24,7 @@ class Sermon < Sequel::Model(:sermons)
   plugin :validation_helpers
   subset(:published) {:published != nil}
   subset(:unpublished) {:published == nil}
+  #subset(:cleanup) {:title != 'Unavailable', :type == 'Sermons'}  # causes syntax error
 
   def validate
     super
@@ -64,6 +65,8 @@ class Dedication < Sequel::Model(:dedications)
   plugin :validation_helpers
   subset(:published) {:published != nil}
   subset(:unpublished) {:published == nil}
+  subset(:dedication) {:type == 'dedication'}
+  subset(:infant_baptism) {:type == 'infant_baptism'}
 
   def validate
     super
@@ -81,6 +84,7 @@ class Portrait < Sequel::Model(:portraits)
   plugin :validation_helpers
   subset(:published) {:published != nil}
   subset(:unpublished) {:published == nil}
+  subset(:cleanup) {:speaker != 'Test Speaker'}
 
   def validate
     super

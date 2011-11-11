@@ -1,0 +1,32 @@
+<div id="items">
+<div id="{{type}}_{{id}}" class="item">
+  <div class='date'>
+    <span class='month'>{{date | date: "%b" }}</span>
+    <span class='day'>{{date | date: "%d" }}</span>
+    <span class='year'>{{date | date: "%Y" }}</span>
+  </div>
+  <div class="type" />
+  <span class="record_details">
+    <span class="title">{{title}}</span>
+    <span class="passage">{{scripture}}</span>
+    <span class="speaker">{{preacher}}</span>
+  </span>
+  <select>
+    <option name="">Download</option>
+    <option name="sermon">Sermon</option>
+    <option name="cue">CUE File</option>
+    <option name="original">Original</option>
+    <option name="zipfile">ALL (.zip)</option>
+  </select>
+  <div class="file_indicators">
+    <div class="right">
+      <p>MP3</p>
+      <p>CUE</p>
+    </div>
+    <div class="left">
+      <p>FLAC</p>
+      <p>LABEL</p>
+    </div>
+  </div>
+</div>
+</div>

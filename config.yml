@@ -1,0 +1,29 @@
+title:
+    production: CTKSound.org (prod)
+    test: CTKSound.org (test)
+    development: CTKSound.org (dev)
+subtitle: Serving the Church's recordings needs since 2008...
+Copyright: Design & Copyright &copy; 2011-2012 Kevin Gustavson. All rights reserved.
+PoweredBy: Powered by Sinatra.
+
+sessions:
+    development: true
+    test: false
+    production: true
+
+database:
+    development: sqlite://db/ctksound.db
+    test: sqlite://db/ctksound_test.db
+    production: mysql://sermons:sermons@localhost/sermons
+
+#database.loggers << Logger.new('log/ctksound_db.log')
+#set :baz, Proc.new { "Hello " + foo }
+
+records:
+    teaching:   Proc.new { Teaching.order(:date) }
+    baptism:    Proc.new { Dedication.filter(:type => 'infant_baptism').order(:date) }
+    dedication: Proc.new { Dedication.filter(:type => 'dedication').order(:date) }
+    label:      Proc.new { Label.order(:date) }
+    portrait:   Proc.new { Portrait.exclude(:speaker => 'Test Speaker').order(:date) }
+    sermon:     Proc.new { Sermon.filter(:type => 'Sermons').exclude(:title => 'Unavailable').order(:date.desc) }
+

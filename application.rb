@@ -1,24 +1,21 @@
-# routes.rb
-
 require 'rubygems'
+#require 'bundler/setup'
 require 'sinatra'
+require 'sinatra/config_file'
 require 'sinatra/sequel'
 require 'logger'
 require 'erb'
 require 'liquid'
 require 'less'      # LESS CSS templates
 require 'json'
-require 'yaml'
 
-#require 'haml'
-#require 'rdiscount' # for markdown
-#require 'redcloth'  # for textile
-
+set :liquid, :layout_engine => :erb
 #require 'partial_helper'
-#set :textile, :layout_engine => :erb
-#set :markdown, :layout_engine => :erb
 
-#enable :sessions
+set :environment, :development
+config_file 'config.yml'
+
+require 'Models'
 
 # use Rack::Auth::Basic "Restricted Area" do |username, password|
 #     [username, password] == ['admin','admin']
@@ -36,20 +33,6 @@ require 'yaml'
     #end
 #end
 
-#set :database, 'mysql://kgustavson:kgustavson11@localhost/ctksound'
-#set :database, 'mysql://sermons:sermons@gandalf/sermons'
-set :database, 'sqlite://db/ctksound.db'
-#set :database, Sequel.connect('sqlite://db/ctksound.db')
-require 'Models'
-set :records, {
-    :teaching   => database[:aces].order(:date),
-    :baptism    => database[:dedications].filter(:type => 'infant_baptism').order(:date),
-    :dedication => database[:dedications].filter(:type => 'dedication').order(:date),
-    :label      => database[:labels].order(:date),
-    :portrait   => database[:portraits].exclude(:speaker => 'Test Speaker').order(:date),
-    :sermon     => database[:sermons].filter(:type => 'Sermons').exclude(:title => 'Unavailable').order(:date.desc)
-}
-
 before do
     # FIXME this should happen when the connection is created
     database.loggers << Logger.new('log/ctksound_db.log')
@@ -61,16 +44,21 @@ get '/style/:name' do |n|
 end
 
 get '/data/:record_type/:date' do
-    options.records[ params[:record_type].to_sym ][:date => params[:date]].to_json
+    database[ params[:record_type].to_sym ][:date => params[:date]].to_json
+    #settings.records[ params[:record_type].to_sym ][:date => params[:date]].to_json
 end
 
 get '/:record_type/:date' do
-    record = options.records[ params[:record_type].to_sym ][:date => params[:date]]
+    record = database[ params[:record_type].to_sym ][:date => params[:date]]
     liquid(
-        :"#{params['record_type']}_record",
-        :layout => false,
+        :"record_template",
+        :layout => true,
         :locals => record
     )
+end
+
+get '/info' do
+    # test here
 end
 
 get '/docs' do
@@ -88,33 +76,35 @@ get '/' do
     Dir.chdir(cwd)
 
     dates = Hash.new #{ |l, k| l[k] = Hash.new(&l.default_proc) }
-    records = options.records
 
-    records[:sermon].each do |sermon|
+    Sermon.each do |sermon|
         date = sermon[:date].to_s+'_0_sermon' #.strftime('%s_0_sermon')
         sermon['type'] = 'sermon'
-        dates[date] = liquid(:sermon_record, :layout => false, :locals => sermon)
+        dates[date] = liquid(:sermon_record, :layout => false, :locals => sermon.values)
     end
 
-    records[:teaching].each do |lesson|
+    Teaching.each do |lesson|
         date = lesson[:date].to_s+'_1_lesson' #.strftime('%s_1_lesson')
-        dates[date] = liquid(:teaching_record, :layout => false, :locals => lesson)
+        dates[date] = liquid(:teaching_record, :layout => false, :locals => lesson.values)
     end
 
-    records[:portrait].each do |portrait|
+    Portrait.each do |portrait|
         date = portrait[:date].to_s+'_2_portrait' #.strftime('%s_2_portrait')
-        dates[date] = liquid(:portrait_record, :layout => false, :locals => portrait)
+        dates[date] = liquid(:portrait_record, :layout => false, :locals => portrait.values)
     end
 
-    records[:baptism].each do |baptism|
+    Dedication.infant_baptism.each do |baptism|
         date = baptism[:date].to_s+'_3_baptism' #.strftime('%s_3_baptism')
-        dates[date] = liquid(:infant_baptism_record, :layout => false, :locals => baptism)
+        dates[date] = liquid(:infant_baptism_record, :layout => false, :locals => baptism.values)
     end
 
-    records[:dedication].each do |dedication|
+    Dedication.dedication.each do |baptism|
         date = dedication[:date].to_s+'_4_dedication' #.strftime('%s_4_dedication')
-        dates[date] = liquid(:dedication_record, :layout => false, :locals => dedication)
+        dates[date] = liquid(:dedication_record, :layout => false, :locals => dedication.values)
     end
+
+    @title = settings.title
+    @subtitle = settings.subtitle
 
     liquid :items, :layout_engine => :erb, :locals => {
         :filters => liquid(:filters, :layout => false, :locals => { :files => files }),
@@ -124,6 +114,7 @@ get '/' do
 end
 
 
+# import a file into the system
 post '/import_file/*.*' do |file, ext|
     # Move using new filename (generated from record)
     # - If label file, import it
@@ -145,6 +136,7 @@ post '/import_file/*.*' do |file, ext|
     response.to_json
 end
 
+# Upload a file
 put '/' do
     file = File.open('files/'+request.env['HTTP_X_FILENAME'], 'w+')
     file.write(request.body.read)

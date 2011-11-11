@@ -1,5 +1,5 @@
-require 'rubygems'
-require 'sinatra'
+#require 'rubygems'
+#require 'sinatra'
 require 'application'
 
 set :run, false
@@ -11,8 +11,7 @@ $stdout.reopen(log)
 $stderr.reopen(log)
 
 run Sinatra::Application
-
-#require 'rubygems'
-#require 'modular_application'
-#
-#run Postie::Application
+#app = proc do |env|
+    #[200, { "Content-Type" => "text/html" }, ["hello <b>world</b>"]]
+#end
+#run app
