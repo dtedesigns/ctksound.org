@@ -1,5 +1,5 @@
 title:
-    production: CTKSound.org (prod)
+    production: CTKSound.org
     test: CTKSound.org (test)
     development: CTKSound.org (dev)
 subtitle: Serving the Church's recordings needs since 2008...
@@ -14,7 +14,7 @@ sessions:
 database:
     development: sqlite://db/ctksound.db
     test: sqlite://db/ctksound_test.db
-    production: mysql://sermons:sermons@localhost/sermons
+    production: mysql://sermons:sermons@gandalf/sermons
 
 #database.loggers << Logger.new('log/ctksound_db.log')
 #set :baz, Proc.new { "Hello " + foo }

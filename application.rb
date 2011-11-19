@@ -3,6 +3,7 @@ require 'rubygems'
 require 'sinatra'
 require 'sinatra/config_file'
 require 'sinatra/sequel'
+require 'mysql'
 require 'logger'
 require 'erb'
 require 'liquid'
@@ -12,7 +13,7 @@ require 'json'
 set :liquid, :layout_engine => :erb
 #require 'partial_helper'
 
-set :environment, :development
+#set :environment, :production
 config_file 'config.yml'
 
 require 'Models'
@@ -73,7 +74,7 @@ end
 
 # Get documentation
 get '/docs' do
-    "<p>Put documents here"
+    "<p>Put documents here</p>"
 end
 
 # Get team info
