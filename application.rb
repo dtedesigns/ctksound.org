@@ -43,32 +43,45 @@ get '/style/:name' do |n|
     less :"style/#{n}"
 end
 
+# Return json-formatted data object
 get '/data/:record_type/:date' do
     database[ params[:record_type].to_sym ][:date => params[:date]].to_json
     #settings.records[ params[:record_type].to_sym ][:date => params[:date]].to_json
 end
 
+# Returns a formatted data record
 get '/:record_type/:date' do
     record = database[ params[:record_type].to_sym ][:date => params[:date]]
     liquid(
-        :"record_template",
+        :"sermon_record",
         :layout => true,
         :locals => record
     )
 end
 
+# FIXME temporary info router action for development
 get '/info' do
-    # test here
+   <<-HTML
+    <a href='/auth/twitter'>Sign in with Twitter</a>
+
+    <form action='/auth/open_id' method='post'>
+      <input type='text' name='identifier'/>
+      <input type='submit' value='Sign in with OpenID'/>
+    </form>
+    HTML
 end
 
+# Get documentation
 get '/docs' do
     "<p>Put documents here"
 end
 
+# Get team info
 get '/team' do
     "<p>Put team info here</p>"
 end
 
+# Index route
 get '/' do
     cwd = Dir.pwd
     Dir.chdir('files')
@@ -114,7 +127,7 @@ get '/' do
 end
 
 
-# import a file into the system
+# Import a file into the system
 post '/import_file/*.*' do |file, ext|
     # Move using new filename (generated from record)
     # - If label file, import it
@@ -145,10 +158,8 @@ put '/' do
     media_type = request.media_type
 end
 
-#
-# The following routes should be A) Disabled and B) Deleted
-#
 
+# The following routes should be A) Disabled and B) Deleted
 # upload with:
 #curl -v --location --upload-file file.txt http://localhost:4567/upload/
 #put '/upload/:id' do

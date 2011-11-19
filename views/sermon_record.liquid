@@ -1,4 +1,9 @@
-<div id="{{type}}_{{id}}">
+<div id="{{type}}_{{id}}"
+    {% if published %}
+        class="unpublished"
+    {%else%}
+        class="unpublished"
+    {%endif%}>
     <img class="type" src="images/sermon.svg"> </img>
     <span class="record_details">
       <span class="title">{{title}}</span>

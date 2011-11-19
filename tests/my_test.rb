@@ -7,7 +7,7 @@ ENV['RACK_ENV'] = 'test'
 
 class IndexTest < Test::Unit::TestCase
     include Capybara
-    Capybara.default_driver = :selenium
+    #Capybara.default_driver = :selenium
 
     def setup
         Capybara.app = Sinatra::Application.new

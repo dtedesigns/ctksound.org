@@ -1,6 +1,9 @@
 # CTKSound.org Model classes
-# Author: Kevin Gustavson
+# Author:: Kevin Gustavson
+# Copyright:: Copyright (c)2011 Kevin D. Gustavson. All rights reserved.
+# License::   On request only.
 
+# This class modifies the Sequel::Model superclass for these models.
 class Sequel::Model
   def validate
     super
@@ -20,9 +23,12 @@ class Sequel::Model
   end
 end
 
+# This is the Sermon model (sermons table)
 class Sermon < Sequel::Model(:sermons)
   plugin :validation_helpers
+  # The published sermons filter
   subset(:published) {:published != nil}
+  # The unpublished sermons filter
   subset(:unpublished) {:published == nil}
   #subset(:cleanup) {:title != 'Unavailable', :type == 'Sermons'}  # causes syntax error
 
@@ -43,9 +49,12 @@ class Sermon < Sequel::Model(:sermons)
   end
 end
 
+# This is the Teaching model (aces table)
 class Teaching < Sequel::Model(:aces)
   plugin :validation_helpers
+  # The published teaching filter
   subset(:published) {:published != nil}
+  # The unpublished teaching filter
   subset(:unpublished) {:published == nil}
 
   def validate
@@ -61,11 +70,16 @@ class Teaching < Sequel::Model(:aces)
   end
 end
 
+# This is the Dedication model (dedications table)
 class Dedication < Sequel::Model(:dedications)
   plugin :validation_helpers
+  # The published dedication filter
   subset(:published) {:published != nil}
+  # The unpublished dedication filter
   subset(:unpublished) {:published == nil}
+  # The dedication-only filter
   subset(:dedication) {:type == 'dedication'}
+  # The baptism-only filter
   subset(:infant_baptism) {:type == 'infant_baptism'}
 
   def validate
@@ -80,6 +94,7 @@ class Dedication < Sequel::Model(:dedications)
   end
 end
 
+# This is the Portrait model (portraits table)
 class Portrait < Sequel::Model(:portraits)
   plugin :validation_helpers
   subset(:published) {:published != nil}
@@ -97,6 +112,7 @@ class Portrait < Sequel::Model(:portraits)
   end
 end
 
+# This is the Label model (labels table)
 class Label < Sequel::Model(:labels)
   plugin :validation_helpers
 
@@ -112,3 +128,7 @@ class Label < Sequel::Model(:labels)
   end
 end
 
+# This is the Identity model (identities table)
+class Identity < Sequel::Model
+  # put stuff here
+end

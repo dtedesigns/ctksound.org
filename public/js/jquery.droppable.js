@@ -11,23 +11,12 @@
     init : function( options ) {
       return this.each( function() {
 
-        //$(this).prop('droppable', 'true');
-
-        //this.addEventListener('dragstart', methods.dragStart, false);
         this.addEventListener('dragenter', methods.dragEnter, false);
         this.addEventListener('dragover', methods.dragOver, false);
         this.addEventListener('dragleave', methods.dragLeave, false);
         this.addEventListener('drop', methods.drop, false);
         this.addEventListener('dragend', methods.dragEnd, false);
 
-        //items = document.querySelectorAll('#items > div');
-        //[].forEach.call(items, function(item) {
-          //item.addEventListener('dragenter', methods.dragEnter, false);
-          //item.addEventListener('dragover', methods.dragOver, false);
-          //item.addEventListener('dragleave', methods.dragLeave, false);
-          //item.addEventListener('drop', methods.drop, false);
-          //item.addEventListener('dragend', methods.dragEnd, false);
-        //});
       });
     },
 
@@ -100,12 +89,6 @@
     dragEnd: function (ev) {
       // this/e.target = source node
       console.log('dragEnd');
-
-      //this.style.opacity = '1.0';
-
-      //[].forEach.call(cols, function (col) {
-        //col.classList.remove('droppable_over');
-      //});
     }
 
   };
