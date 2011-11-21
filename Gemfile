@@ -23,6 +23,11 @@ gem "sinatra-sequel"
 gem "sqlite3"
 gem "mysql"
 
+group(:auth) do
+	gem "omniauth"
+	gem "omniauth-google-oauth2"
+end
+
 group(:test) do
     gem "cucumber"
     #gem "rspec"

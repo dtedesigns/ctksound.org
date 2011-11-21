@@ -1,4 +1,5 @@
 require 'rubygems'
+require 'omniauth'
 require 'bundler'
 require 'sinatra'
 require 'sinatra/config_file'
@@ -15,6 +16,16 @@ set :liquid, :layout_engine => :erb
 
 #set :environment, :production
 config_file 'config.yml'
+
+# Authorization
+require 'omniauth-google-oauth2'
+OpenSSL::SSL::VERIFY_PEER = OpenSSL::SSL::VERIFY_NONE
+
+use OmniAuth::Builder do
+	provider :google_oauth2, ENV['GOOGLE_CLIENT_ID'], ENV['GOOGLE_SECRET'], {
+		:scope => 'https://www.googleapis.com/auth/plus.me'
+	}
+end
 
 require 'Models'
 
@@ -62,19 +73,24 @@ end
 
 # Index route
 get '/' do
-   <<-HTML
-    <a href='/auth/google_oauth2'>Sign in with Google</a>
+	<<-HTML
+	<a href='/auth/google_oauth2'>Sign in with Google</a>
+	HTML
 
-    <form action='/auth/open_id' method='post'>
-      <input type='text' name='identifier'/>
-      <input type='submit' value='Sign in with OpenID'/>
-    </form>
-    HTML
+    #<form action='/auth/open_id' method='post'>
+      #<input type='text' name='identifier'/>
+      #<input type='submit' value='Sign in with OpenID'/>
+    #</form>
+    #ENV.inspect
 end
 
 get '/auth/:provider/callback' do
     content_type 'text/plain'
-    request.env['omniauth'].to_hash.inspect rescue "No Data"
+	request.env['omniauth.auth'].to_hash.inspect rescue "No Data"
+
+    request.env.to_hash.inspect rescue "No Data"
+	# RESPONSE
+	#{"info"=>{"name"=>"kdgustavson@gmail.com", "uid"=>"kdgustavson@gmail.com", "email"=>"kdgustavson@gmail.com"}, "uid"=>"kdgustavson@gmail.com", "credentials"=>{"expires_at"=>1321893270, "expires"=>true, "token"=>"ya29.AHES6ZSKkNfChbQeDNjz9dfsaWqVzdyCb6jgB7Se-eFEAEE", "refresh_token"=>"1/wa352Vtts5uo-LWqJct_kPc2gQ4WiukKbK1bfCUQ81Q"}, "extra"=>{"user_hash"=>{"data"=>{"isVerified"=>true, "email"=>"kdgustavson@gmail.com"}}}, "provider"=>"google_oauth2"}
 end
 
 # Get documentation
