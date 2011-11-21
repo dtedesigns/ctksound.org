@@ -22,9 +22,9 @@ require 'omniauth-google-oauth2'
 OpenSSL::SSL::VERIFY_PEER = OpenSSL::SSL::VERIFY_NONE
 
 use OmniAuth::Builder do
-	provider :google_oauth2, ENV['GOOGLE_CLIENT_ID'], ENV['GOOGLE_SECRET'], {
-		:scope => 'https://www.googleapis.com/auth/plus.me'
-	}
+    provider :google_oauth2, ENV['GOOGLE_CLIENT_ID'], ENV['GOOGLE_SECRET'], {
+        :scope => 'https://www.googleapis.com/auth/plus.me'
+    }
 end
 
 require 'Models'
@@ -33,17 +33,18 @@ require 'Models'
 #     [username, password] == ['admin','admin']
 # end
 
-#def authorized?
+def authorized?
     #@auth ||= Rack::Auth::Basic::Request.new(request.env)
     #@auth.provided? && @auth.basic? && @auth.credentials == ['admin','admin']
-#end
+    session[:auth].inspect
+end
 
-#def protected!
-    #unless authorized?
+def protected!
+    unless authorized?
         #response['WWW-Authenticate'] = %(Basic realm="Restricted Area")
-        #throw(:halt, [401, "Not authorized\n"])
-    #end
-#end
+        throw(:halt, [401, "Not authorized\n"])
+    end
+end
 
 before do
     # FIXME this should happen when the connection is created
@@ -73,9 +74,9 @@ end
 
 # Index route
 get '/' do
-	<<-HTML
-	<a href='/auth/google_oauth2'>Sign in with Google</a>
-	HTML
+    <<-HTML
+    <a href='/auth/google_oauth2'>Sign in with Google</a>
+    HTML
 
     #<form action='/auth/open_id' method='post'>
       #<input type='text' name='identifier'/>
@@ -86,24 +87,28 @@ end
 
 get '/auth/:provider/callback' do
     content_type 'text/plain'
-	request.env['omniauth.auth'].to_hash.inspect rescue "No Data"
-
-    request.env.to_hash.inspect rescue "No Data"
-	# RESPONSE
-	#{"info"=>{"name"=>"kdgustavson@gmail.com", "uid"=>"kdgustavson@gmail.com", "email"=>"kdgustavson@gmail.com"}, "uid"=>"kdgustavson@gmail.com", "credentials"=>{"expires_at"=>1321893270, "expires"=>true, "token"=>"ya29.AHES6ZSKkNfChbQeDNjz9dfsaWqVzdyCb6jgB7Se-eFEAEE", "refresh_token"=>"1/wa352Vtts5uo-LWqJct_kPc2gQ4WiukKbK1bfCUQ81Q"}, "extra"=>{"user_hash"=>{"data"=>{"isVerified"=>true, "email"=>"kdgustavson@gmail.com"}}}, "provider"=>"google_oauth2"}
+    session[:auth] = request.env['omniauth.auth']['info']
+    request.env['omniauth.auth'].to_hash.inspect rescue "No Data"
+    #redirect here
 end
 
 # Get documentation
 get '/docs' do
+    protected!
+
     "<p>Put documents here</p>"
 end
 
 # Get team info
 get '/team' do
+    protected!
+
     "<p>Put team info here</p>"
 end
 
 get '/files' do
+    protected!
+
     cwd = Dir.pwd
     Dir.chdir('files')
     files = Dir['*'].entries
