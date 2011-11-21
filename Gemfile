@@ -21,6 +21,7 @@ gem "sinatra-contrib"
 gem "sinatra-sequel"
 #sqlite3 (1.3.4)
 gem "sqlite3"
+gem "mysql"
 
 group(:test) do
     gem "cucumber"

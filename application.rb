@@ -1,5 +1,5 @@
 require 'rubygems'
-#require 'bundler/setup'
+require 'bundler'
 require 'sinatra'
 require 'sinatra/config_file'
 require 'sinatra/sequel'
@@ -60,16 +60,21 @@ get '/:record_type/:date' do
     )
 end
 
-# FIXME temporary info router action for development
-get '/info' do
+# Index route
+get '/' do
    <<-HTML
-    <a href='/auth/twitter'>Sign in with Twitter</a>
+    <a href='/auth/google_oauth2'>Sign in with Google</a>
 
     <form action='/auth/open_id' method='post'>
       <input type='text' name='identifier'/>
       <input type='submit' value='Sign in with OpenID'/>
     </form>
     HTML
+end
+
+get '/auth/:provider/callback' do
+    content_type 'text/plain'
+    request.env['omniauth'].to_hash.inspect rescue "No Data"
 end
 
 # Get documentation
@@ -82,8 +87,7 @@ get '/team' do
     "<p>Put team info here</p>"
 end
 
-# Index route
-get '/' do
+get '/files' do
     cwd = Dir.pwd
     Dir.chdir('files')
     files = Dir['*'].entries
