@@ -1,3 +1,5 @@
 db/*.db
+doc/*
+examples/*
 files/*
 log/*

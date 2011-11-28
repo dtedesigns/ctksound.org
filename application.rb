@@ -22,12 +22,13 @@ require 'omniauth-google-oauth2'
 OpenSSL::SSL::VERIFY_PEER = OpenSSL::SSL::VERIFY_NONE
 
 use OmniAuth::Builder do
+    provider :developer unless ENV['environment'] == 'production'
     provider :google_oauth2, ENV['GOOGLE_CLIENT_ID'], ENV['GOOGLE_SECRET'], {
         :scope => 'https://www.googleapis.com/auth/plus.me'
     }
 end
 
-require 'Models'
+require 'models/Models.rb'
 
 # use Rack::Auth::Basic "Restricted Area" do |username, password|
 #     [username, password] == ['admin','admin']
