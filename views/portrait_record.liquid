@@ -1,23 +1,22 @@
-<div>
+<div id="{{type}}_{{id}}"
+    {% if published %}
+        class="unpublished"
+    {%else%}
+        class="unpublished"
+    {%endif%}>
+    <div class="date">
+        <span class="month">{{ date | date: "%b" }}</span>
+        <span class="day">{{ date | date: "%d" }}</span>
+        <span class="year">{{ date | date: "%Y" }}</span>
+    </div>
     <img class="type" src="images/portrait.svg"> </img>
     <span class="record_details">
         <span class="title">Portrait of Grace - {{speaker}}</span>
+      <span class="speaker">{{speaker}}</span> &bull;
       <span class="passage">{{comment}}</span>
-      <span class="speaker">{{speaker}}</span>
-      <span class="date">{{date}}</span>
     </span>
     <select>
         <option name="">Download</option>
         <option name="portrait">Portrait</option>
     </select>
-    <div class="file_indicators">
-        <div class="right">
-            <p>MP3</p>
-            <p>CUE</p>
-        </div>
-        <div class="left">
-            <p>FLAC</p>
-            <p>LABEL</p>
-        </div>
-    </div>
 </div>

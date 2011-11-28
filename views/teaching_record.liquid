@@ -1,11 +1,20 @@
 <!-- id, series, title, teacher, comment, date, disk, spl, published, created_at, updated_at -->
-<div>
+<div id="{{type}}_{{id}}"
+    {% if published %}
+        class="unpublished"
+    {%else%}
+        class="unpublished"
+    {%endif%}>
+    <div class="date">
+        <span class="month">{{ date | date: "%b" }}</span>
+        <span class="day">{{ date | date: "%d" }}</span>
+        <span class="year">{{ date | date: "%Y" }}</span>
+    </div>
     <img class="type" src="images/teaching.svg"> </img>
     <span class="record_details">
         <span class="title">{{:title}}</span>
+        <span class="speaker">{{:teacher}}</span> &bull;
         <span class="passage">{{:series}}</span>
-        <span class="speaker">{{:teacher}}</span>
-        <span class="date">{{:date}}</span>
     </span>
     <select>
         <option name="">Download</option>
@@ -14,14 +23,4 @@
         <option name="original">Original</option>
         <option name="zipfile">ALL (.zip)</option>
     </select>
-    <div class="file_indicators">
-        <div class="right">
-            <p>MP3</p>
-            <p>CUE</p>
-        </div>
-        <div class="left">
-            <p>FLAC</p>
-            <p>LABEL</p>
-        </div>
-    </div>
 </div>
