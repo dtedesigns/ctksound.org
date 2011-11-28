@@ -1,6 +1,8 @@
+require 'rubygems'
 require 'hello_world'
 require 'test/unit'
 require 'rack/test'
+require 'sinatra'
 
 ENV['RACK_ENV'] = 'test'
 

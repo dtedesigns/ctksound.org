@@ -1,5 +1,5 @@
 require 'application'
-#require 'capybara'
+require 'capybara'
 require 'capybara/dsl'
 require 'test/unit'
 
