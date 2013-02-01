@@ -9,8 +9,7 @@
 02:06 Scripture Reading
 </pre>
 -->
-	<h3>Label Info:</h3>
-	<span class="label_info">
+	<h3>Label Info:</h3><span class="label_info">
 	<?php
 
 		echo date('n/d', strtotime($date)) . ', ';

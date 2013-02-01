@@ -8,6 +8,21 @@ class Util_Controller extends Controller
 	// Set the name of the template to use
 	//public $template = 'template';
 
+    public function __construct() {
+        parent::__construct();
+        $this->session = Session::instance();
+        $auth = new Auth;
+        var_dump( $auth->logged_in() );
+
+        if (! $auth->logged_in()) {
+            $this->session->set("requested_url","/".url::current()); // this will redirect from the login page back to this page
+            url::redirect('/user/login');
+        } else {
+            $this->user = $auth->get_user(); // now you have user info access
+        }
+    }
+
+
 	public function index() {
 	  $this->template->content = 'No direct access.';
 	}

@@ -1,6 +1,11 @@
-html {	background: #eee; }
+@import url("handheld.css");
+
+html {
+	background: #eee;
+	font: 14px/1.4 sans-serif;
+}
 body {
-	width: 620px;
+	width: 610px;
 	margin: 30px auto;
 	position: relative;
 	/*background: #cff;*/
@@ -9,7 +14,8 @@ h1 { text-align: center; }
 h2 {
 	text-align: center;
 	font-size: 110%;
-	margin: 0 auto 7px auto;
+	/*margin: 0 auto 7px auto;*/
+	padding-top: 2px;
 }
 h3 {
 	text-align: left;
@@ -29,10 +35,10 @@ ul, li {
 	font-size: 100%;
 	font-weight: normal;
 }
-.ui-tabs-panel {
-	min-height: 420px;
-	_height: 490px;
-}
+/*.ui-tabs-panel {*/
+	/*min-height: 420px;*/
+	/*_height: 490px;*/
+/*}*/
 .tooltip {
 	background-color: #ffa;
 	border: 1px solid #cc9;
@@ -66,7 +72,7 @@ ul, li {
 #files p {
 	margin-bottom: 0;
 }
-#files a {
+#filelist a {
 	background: #ccc;
 	border: 1px solid #aaa;
 	-o-border-radius: 5px;
@@ -126,15 +132,39 @@ ul, li {
 			font-size: 14px;
 		}
 	#database .hidden {
-		left: 136px;
+		left: 126px;
 		position: absolute;
 		top: 30px;
-		width: 440px;
+		width: 450px;
 	}
-	#database input[type="text"] { width: 275px; }
+	#database input[type="date"],
+	#database input[type="text"]
+	{ width: 275px; }
+
 	#database textarea { width: 275px; }
 	.spl_value { width: 155px !important; }
 	.spl_second { margin-top: 7px; }
+
+	.subdocument_action {
+		background: #888;
+		padding: 5px;
+		border-radius: 5px;
+		margin: 0;
+	}
+		.subdocument {
+			background: #ccc;
+			margin: 0;
+			padding: 0 10px;
+			border-bottom-left-radius: 5px;
+			border-bottom-right-radius: 5px;
+	}
+		.subdocument h1 {
+			margin: 0;
+			padding: 18px 0;
+		}
+		.subdocument li {
+			padding: 2px 0;
+		}
 
 label {
 	color: #000;
@@ -153,7 +183,7 @@ pre {
 	top: -30px;
 	right: 0;
 }
-#sermon_message, #ace_message {
+fieldset span {
 	color: #f00;
 	font-weight: bold;
 }
@@ -172,7 +202,7 @@ pre {
 .label_info { font-weight: normal; }
 
 #dates {
-	width: 260px;
+	width: 270px;
 	margin-left: 350px;
 }
 
@@ -196,6 +226,6 @@ table#schedule td {
 	border: 1px solid black;
 	border-top: none;
 	min-height: 650px;
-	padding: 30px;
+	padding: 20px;
 	_height: 650px;
 }

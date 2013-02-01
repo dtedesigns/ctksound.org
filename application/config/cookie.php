@@ -6,7 +6,7 @@
  * you are encouraged to set this option. An empty setting allows the cookie
  * to be read by any website domain.
  */
-$config['domain'] = '';
+$config['domain'] = 'ctksound.org';
 
 /**
  * Restrict cookies to a specific path, typically the installation directory.
@@ -29,4 +29,4 @@ $config['secure'] = FALSE;
  * Enable this option to disable the cookie from being accessed when using a
  * secure protocol. This option is only available in PHP 5.2 and above.
  */
-$config['httponly'] = FALSE;
+$config['httponly'] = TRUE;

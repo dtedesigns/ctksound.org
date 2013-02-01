@@ -5,7 +5,7 @@
  *
  * Sets the default route to "welcome"
  */
-$config['_default'] = 'welcome';
+$config['_default'] = 'user';
 //$config['_default'] = 'dashboard';
 
 // Add aliases here
