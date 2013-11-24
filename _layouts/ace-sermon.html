@@ -1,0 +1,34 @@
+---
+layout: default
+---
+
+<style type="text/css">
+.title {
+  font-weight: bold;
+  margin: 10px 0 0 0;
+}
+</style>
+
+<!-- Files -->
+<div id="files">
+  <div id="ace">
+    <p class="type">ACE:</p>
+  </div>
+  <div id="sermon">
+    <p class="type">Sermon:</p>
+  </div>
+</div>
+
+<!-- Label -->
+<div id="label">
+  <span class="title">Label Info:</span><br/>
+  {{page.date|date: "%m/%d"}}, {{page.sermon.preacher|split: ' '|last}}, {{page.sermon.scripture}}, {{page.sermon.title}}<br/>
+  {{page.sermon.length}} Total<br/>
+  {{page.sermon.scripture_length}} Scripture Reading
+</div>
+
+<!-- Tracks -->
+<div id="tracks">
+  <span class="title">Label Info:</span><br/>
+  <p>Put track information here.</p>
+</div>
