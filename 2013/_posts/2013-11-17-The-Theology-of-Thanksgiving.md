@@ -1,5 +1,6 @@
 ---
 layout: ace-sermon
+title: 2013-11-17, Psalm 111, The Theology of Thanksgiving
 
 date: 2013-11-17
 version: 1

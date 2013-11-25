@@ -7,15 +7,27 @@ layout: default
   font-weight: bold;
   margin: 10px 0 0 0;
 }
+#files {
+  text-align: left;
+}
+    #files p {
+        margin: auto 0;
+    }
+
+table th, table td {
+  padding: 0 7px;
+}
 </style>
 
 <!-- Files -->
 <div id="files">
   <div id="ace">
     <p class="type">ACE:</p>
+        <a href="http://recordings.ctksound.org/{{page.date|date: "%Y-%m-%d"}}/{{page.date|date: "%Y-%m-%d"}}, ACE, {{page.ace.title}}.mp3">http://recordings.ctksound.org/{{page.date|date: "%Y-%m-%d"}}/{{page.date|date: "%Y-%m-%d"}}, ACE, {{page.ace.title}}.mp3</a>
   </div>
   <div id="sermon">
     <p class="type">Sermon:</p>
+    <a href="http://recordings.ctksound.org/{{page.date|date: "%Y-%m-%d"}}/{{page.date|date: "%Y-%m-%d"}}, {{page.sermon.preacher|split: ' '|last}}, {{page.sermon.scripture}}, {{page.sermon.title}}.mp3">http://recordings.ctksound.org/{{page.date|date: "%Y-%m-%d"}}/{{page.date|date: "%Y-%m-%d"}}, {{page.sermon.preacher|split: ' '|last}}, {{page.sermon.scripture}}, {{page.sermon.title}}.mp3</a>
   </div>
 </div>
 
@@ -29,6 +41,15 @@ layout: default
 
 <!-- Tracks -->
 <div id="tracks">
-  <span class="title">Label Info:</span><br/>
-  <p>Put track information here.</p>
+  <span class="title">Tracks:</span><br/>
+  <table>
+    <tr><th>Speaker</th><th>Description</th><th>Length</th></tr>
+  {% for track in page.tracks %}
+  <tr>
+      <td>{{ track[3] }}</td>
+      <td>{{ track[2] }}</td>
+      <td>{{ track[1] - track[0] | divided_by: 60  }}</td>
+  </tr>
+  {% endfor %}
+  </table>
 </div>
