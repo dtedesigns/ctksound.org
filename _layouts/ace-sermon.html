@@ -1,7 +1,6 @@
 ---
 layout: default
 ---
-
 <style type="text/css">
 .title {
   font-weight: bold;
@@ -19,15 +18,20 @@ table th, table td {
 }
 </style>
 
+{% assign date = page.date|date: "%Y-%m-%d" %}
+{% assign scripture = page.sermon.scripture|scripture_url %}
+{% assign ace_url = {{date}}|append:"/"|append:date|append:", ACE, "|append:page.ace.title|title_url|append:".mp3" %}
+{% assign sermon_url = '' %}
+
 <!-- Files -->
 <div id="files">
   <div id="ace">
     <p class="type">ACE:</p>
-        <a href="http://recordings.ctksound.org/{{page.date|date: "%Y-%m-%d"}}/{{page.date|date: "%Y-%m-%d"}}, ACE, {{page.ace.title}}.mp3">http://recordings.ctksound.org/{{page.date|date: "%Y-%m-%d"}}/{{page.date|date: "%Y-%m-%d"}}, ACE, {{page.ace.title}}.mp3</a>
+    <a href="http://recordings.ctksound.org/{{ace_url}}">{{ace_urlk}</a>
   </div>
   <div id="sermon">
     <p class="type">Sermon:</p>
-    <a href="http://recordings.ctksound.org/{{page.date|date: "%Y-%m-%d"}}/{{page.date|date: "%Y-%m-%d"}}, {{page.sermon.preacher|split: ' '|last}}, {{page.sermon.scripture}}, {{page.sermon.title}}.mp3">http://recordings.ctksound.org/{{page.date|date: "%Y-%m-%d"}}/{{page.date|date: "%Y-%m-%d"}}, {{page.sermon.preacher|split: ' '|last}}, {{page.sermon.scripture}}, {{page.sermon.title}}.mp3</a>
+    <a href="{{sermon_url}}">{{sermon_url}}</a>
   </div>
 </div>
 
