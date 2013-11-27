@@ -19,19 +19,26 @@ table th, table td {
 </style>
 
 {% assign date = page.date|date: "%Y-%m-%d" %}
-{% assign scripture = page.sermon.scripture|scripture_url %}
-{% assign ace_url = {{date}}|append:"/"|append:date|append:", ACE, "|append:page.ace.title|title_url|append:".mp3" %}
-{% assign sermon_url = '' %}
+{% assign ace_url = {{date}}|append:", ACE, "|append:page.ace.title|title_url %}
+
+{% assign scripture = page.sermon.scripture | scripture_url %}
+{% assign title = page.sermon.title | title_url %}
+{% assign sermon = {{date}}|append:", "|append:{{page.sermon.scripture}}|append:", "|append:{{page.sermon.title}} %}
+{% assign sermon_url = {{date}}|append:", "|append:{{scripture}}|append:", "|append:{{title}} %}
 
 <!-- Files -->
 <div id="files">
   <div id="ace">
     <p class="type">ACE:</p>
-    <a href="http://recordings.ctksound.org/{{ace_url}}">{{ace_urlk}</a>
+    <a href="http://recordings.ctksound.org/{{date}}/{{ace_url}}.mp3">
+        {{ace_url}}.mp3
+    </a>
   </div>
   <div id="sermon">
     <p class="type">Sermon:</p>
-    <a href="{{sermon_url}}">{{sermon_url}}</a>
+    <a href="http://recordings.ctksound.org/{{date}}/{{sermon_url}}.mp3">
+        {{sermon}}.mp3
+    </a>
   </div>
 </div>
 
@@ -45,14 +52,14 @@ table th, table td {
 
 <!-- Tracks -->
 <div id="tracks">
-  <span class="title">Tracks:</span><br/>
+  <p> </p>
   <table>
     <tr><th>Speaker</th><th>Description</th><th>Length</th></tr>
   {% for track in page.tracks %}
   <tr>
       <td>{{ track[3] }}</td>
       <td>{{ track[2] }}</td>
-      <td>{{ track[1] - track[0] | divided_by: 60  }}</td>
+      <td>{{ track[1]|minus:track[0] | format_time  }}</td>
   </tr>
   {% endfor %}
   </table>

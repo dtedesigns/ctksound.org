@@ -6,7 +6,13 @@ module Jekyll
 
     def title_url(input)
       input.gsub!(/[\/]/, '_')
-      return input.gsub(/[^a-zA-Z0-9_-\/]/, '')
+      return input.gsub(/[^a-zA-Z0-9 \-\/,_]/, '')
+    end
+
+    def format_time(time)
+      minutes = (time / 60).to_i
+      seconds = (time % 60).to_i
+      return sprintf('%d:%02d', minutes, seconds)
     end
   end
 end
