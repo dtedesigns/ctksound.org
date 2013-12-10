@@ -11,9 +11,9 @@ ace:
   published: 2013-11-22 06:06:12
   id: 133
   series: 2013 ACE Fall Series
-  title: Who is Christ? / The Mediator
+  title: Who is Christ?
   teacher: Pastor Ken Carr
-  comment: ~
+  comment: Who is Christ? / The Mediator
   date: 2013-11-17
   disk: 11
 
