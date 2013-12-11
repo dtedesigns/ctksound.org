@@ -24,7 +24,7 @@ sermon:
   track: 49
   date: 2013-12-08
   reader: Pastor Jeff Holwerda
-  scripture: "1 Timothy 6:20-21"
+  scripture: 1 Timothy 6:20-21
   preacher: Pastor Ken Carr
   title: Guard the Good Deposit
   series: Book of 1 Timothy
