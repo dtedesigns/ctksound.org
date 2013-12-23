@@ -1,13 +1,14 @@
 module Jekyll
   module AssetFilter
     def scripture_url(input)
-      return input.gsub(':', '_')
+      temp = input.gsub(':', '_')
+      return temp
     end
 
     def title_url(input)
-      input.gsub!('&', 'and')
-      input.gsub!(/[\/]/, '_')
-      return input.gsub(/[^a-zA-Z0-9 \-\/,_]/, '')
+      temp = input.gsub('&', 'and')
+      temp.gsub!(/[\/]/, '_')
+      return temp.gsub(/[^a-zA-Z0-9 \-\/,_]/, '')
     end
 
     def format_time(time)

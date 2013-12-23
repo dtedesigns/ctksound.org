@@ -1,4 +1,5 @@
 ---
+permalink: 2013/2013-12-01/
 layout: ace-sermon
 title: 2013-12-01, Evanglism and the Message of Foolishness
 
@@ -10,7 +11,7 @@ sermon:
     track: 48
     date: 2013-12-01
     reader: Pastor Jeff Holwerda
-    scripture: 1 Corinthians 1:18-25
+    scripture: "1 Corinthians 1:18-25"
     preacher: Missionary Victor Kuligin
     title: Evangelism & the Message of Foolishness
     series: Book of 1 Corinthians

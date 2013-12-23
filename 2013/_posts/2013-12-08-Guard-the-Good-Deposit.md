@@ -1,4 +1,5 @@
 ---
+permalink: 2013/2013-12-08/
 layout: ace-sermon
 title: 2013-12-08, Guard the Good Deposit
 

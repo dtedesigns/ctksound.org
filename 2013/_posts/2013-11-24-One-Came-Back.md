@@ -1,4 +1,5 @@
 ---
+permalink: 2013/2013-11-24/
 layout: ace-sermon
 title: 2013-11-24, Luke 17:11-19, One Came Back
 
@@ -6,13 +7,13 @@ date: 2013-11-24
 version: 1
 
 sermon:
-  updated_at: 2013-11-24 14:19:35
-  created_at: 2013-11-24 14:19:35
+  updated_at: "2013-11-24 14:19:35"
+  created_at: "2013-11-24 14:19:35"
   published: null
   track: 47
   date: 2013-11-24
   reader: Pastor Jeff Holwerda
-  scripture: Luke 17:11-19
+  scripture: "Luke 17:11-19"
   preacher: Pastor Ken Carr
   title: One Came Back
   series: Book of Luke
@@ -27,8 +28,8 @@ sermon:
   scripture_length: "01:45"
 
 ace:
-  updated_at: 2013-11-24 14:21:31
-  created_at: 2013-11-24 14:21:31
+  updated_at: "2013-11-24 14:21:31"
+  created_at: "2013-11-24 14:21:31"
   published: null
   id: 134
   series: 2013 ACE Fall Series
