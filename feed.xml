@@ -1,0 +1,50 @@
+---
+layout: none
+---
+<?xml version='1.0' encoding='UTF-8'?>
+<rss version='2.0' xmlns:atom='http://www.w3.org/2005/Atom'>
+    <channel>
+        <title>{{site.name|xml_escape}}</title>
+        <link>{{site.url}}</link>
+        <description>{{site.description|xml_escape}}</description>
+        <language>en-us</language>
+        <copyright>{{site.copyright|xml_escape}}</copyright>
+        <image>
+            <url>{{site.url}}/{{site.img}}</url>
+            <title>{{site.name|xml_escape}}</title>
+            <link>{{site.url}}/{{site.image}}</link>
+        </image>
+        <managingEditor>{{site.webmaster|xml_escape}}</managingEditor>
+        <webMaster>{{site.webmaster|xml_escape}}</webMaster>
+        <generator>Brain Power + Jekyll</generator>
+        <ttl>5</ttl>
+        <lastBuildDate>{{ site.time | date: "%a, %d %b %Y %H:%M:%S %z" }}</lastBuildDate>
+        <atom:link href='http://recordings.ctksound.org/rss/' rel='self' type='application/rss+xml' />
+
+    {% for post in site.posts %}
+        {% if post.ace %}
+        <item>
+            <title>{{post.ace.title|xml_escape}}</title>
+            <description><![CDATA[11/24, Gabriel, What is the Atonement/Reconciliation?<br />47:09 Total<br />]]></description>
+            <category>Aces</category>
+            <enclosure url="http://ctksound.org/recordings/2013-11-24,%20ACE,%20What%20is%20Atonement.mp3" length='33960019' type='audio/mpeg'></enclosure>
+            <guid>http://ctksound.org/recordings/2013-11-24,%20ACE,%20What%20is%20Atonement.mp3</guid>
+            <pubDate>Tue, 26 Nov 2013 18:53:58 -0600</pubDate>
+        </item>
+        {% endif %}
+        {% if post.sermon %}
+        <!-- <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li> #} -->
+        <item>
+            <title>{{post.sermon.title|xml_escape}}</title>
+            <description><![CDATA[11/24, Gabriel, What is the Atonement/Reconciliation?<br />47:09 Total<br />]]></description>
+            <category>Aces</category>
+            <enclosure url="{{site.url}}/2013-11-24,%20ACE,%20What%20is%20Atonement.mp3" length='33960019' type='audio/mpeg'></enclosure>
+            <!--<guid>{{site.url}}/2013-11-24,%20ACE,%20What%20is%20Atonement.mp3</guid>-->
+            <guid isPermaLink="true">{{ site.url }}/{{ post.url }}</guid>
+            <pubDate>{{ post.date | date: "%a, %d %b %Y %H:%M:%S %z" }}</pubDate>
+        </item>
+        {% endif %}
+    {% endfor %}
+
+    </channel>
+</rss>

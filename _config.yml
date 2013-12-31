@@ -1,4 +1,9 @@
 name: Christ the King Sound Files
+description: This is the place to get all recently released Christ the King recordings.
+url: http://recordings.ctksound.org
+copyright: Copyright 2001-2014 Christ the King Church of Fox Valley
+webmaster: kgust@pobox.com (Kevin Gustavson)
+image: ctk.png
 markdown: redcarpet
 pygments: true
 #lsi: true
