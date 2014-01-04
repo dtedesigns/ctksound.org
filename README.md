@@ -16,4 +16,4 @@ See branch [sinatra](https://github.com/dtedesigns/ctksound.org/tree/sinatra) fo
 
 
 ### Branch kohana
-See branch [Branch kohana](https://github.com/dtedesigns/ctksound.org/tree/kohana) for version 1.0.
+See branch [kohana](https://github.com/dtedesigns/ctksound.org/tree/kohana) for version 1.0.
