@@ -1,10 +1,11 @@
 ---
-permalink: 2013/2013-12-08/
-layout: ace-sermon
+permalink: 2013/12/08/
+layout: sunday
 title: 2013-12-08, Guard the Good Deposit
 
-date: 2013-12-08
 version: 1
+date: 2013-12-08
+published: published
 
 ace:
   updated_at: "2013-12-09 18:38:19"

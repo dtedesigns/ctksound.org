@@ -27,6 +27,7 @@ table th, table td {
 {% assign title = page.sermon.title | title_url %}
 {% assign sermon = date|append:", "|append:page.sermon.scripture|append:", "|append:page.sermon.title %}
 {% assign sermon_url = date|append:", "|append:scripture|append:", "|append:title %}
+<br/>
 
 <!-- Files -->
 <div id="files">
@@ -38,9 +39,10 @@ table th, table td {
     </a>
   </div>
   {% endif %}
+
   <div id="sermon">
     <p class="type">Sermon:</p>
-    <a href="http://recordings.ctksound.org/{{date}}/{{sermon_url}}.mp3">
+    <a href="{{sermon_url}}.mp3">
         {{sermon}}.mp3
     </a>
   </div>

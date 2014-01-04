@@ -1,10 +1,11 @@
 ---
-permalink: 2013/2013-12-01/
-layout: ace-sermon
+permalink: 2013/12/01/
+layout: sunday
 title: 2013-12-01, Evanglism and the Message of Foolishness
 
-date: 2013-12-01
 version: 1
+date: 2013-12-01
+published: published
 
 sermon:
     published: "2013-12-07 21:26:35"

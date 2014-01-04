@@ -16,7 +16,9 @@ tmp
 .DS_Store
 
 # source files
-2013/2013*
+2013/*
+2014/*
+!*/_posts/
 
 # YARD artifacts
 .yardoc

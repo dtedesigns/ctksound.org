@@ -1,10 +1,11 @@
 ---
-permalink: 2013/2013-11-24/
-layout: ace-sermon
+permalink: 2013/11/24/
+layout: sunday
 title: 2013-11-24, Luke 17:11-19, One Came Back
 
-date: 2013-11-24
 version: 1
+date: 2013-11-24
+published: published
 
 sermon:
   updated_at: "2013-11-24 14:19:35"

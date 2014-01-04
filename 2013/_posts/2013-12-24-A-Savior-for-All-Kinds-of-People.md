@@ -1,10 +1,11 @@
 ---
-permalink: 2013/2013-12-24/
-layout: ace-sermon
+permalink: 2013/12/24/
+layout: special
 title: 2013-12-24, A Savior for All Kinds of People
 
-date: 2013-12-24
 version: 1
+date: 2013-12-24
+published: published
 
 sermon:
   updated_at: 2013-12-25 21:38:22

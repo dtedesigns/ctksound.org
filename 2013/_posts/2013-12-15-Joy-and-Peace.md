@@ -1,10 +1,11 @@
 ---
-permalink: 2013/2013-12-15/
-layout: ace-sermon
+permalink: 2013/12/15/
+layout: sunday
 title: 2013-12-15, Joy and Peace
 
-date: 2013-12-15
 version: 1
+date: 2013-12-15
+published: published
 
 ace:
   updated_at: "2013-12-15 10:15:55"
