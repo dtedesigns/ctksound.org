@@ -13,6 +13,7 @@ spec/reports
 test/tmp
 test/version_tmp
 tmp
+.DS_Store
 
 # source files
 2013/2013*
