@@ -6,4 +6,9 @@ webmaster: kgust@pobox.com (Kevin Gustavson)
 image: ctk.png
 markdown: redcarpet
 pygments: true
+exclude:
+    - "*.wav"
+    - "*.cue"
+    - "*.aup"
+    - "*_data"
 #lsi: true

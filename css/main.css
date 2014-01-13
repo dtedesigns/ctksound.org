@@ -29,6 +29,10 @@ a         { color: #00a; }
 a:hover   { color: #000; }
 a:visited { color: #a0a; }
 
+table th, table td {
+    padding-right: 30px;
+}
+
 /*****************************************************************************/
 /*
 /* Home
@@ -70,7 +74,9 @@ a:visited { color: #a0a; }
 
 .title {
   display: inline-block;
+  font-weight: bold;
   margin-bottom: 2em;
+  margin: 10px 0 0 0;
 }
 
 .title a {
@@ -159,11 +165,25 @@ a:visited { color: #a0a; }
   background-color: #333;
 }
 
+#files {
+  text-align: left;
+}
+    #files .recording {
+        margin: 15px auto;
+    }
+    #files .type {
+        font-weight: bold;
+    }
+
+    #files p {
+        margin: auto 0;
+    }
+
 /*****************************************************************************/
 /*
 /* Published or Not-Published
 /*
 /*****************************************************************************/
 .not-published {
-    background-color: #eee;
+    background-color: #fee;
 }

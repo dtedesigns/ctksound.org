@@ -1,23 +1,6 @@
 ---
 layout: default
 ---
-<style type="text/css">
-.title {
-  font-weight: bold;
-  margin: 10px 0 0 0;
-}
-#files {
-  text-align: left;
-}
-    #files p {
-        margin: auto 0;
-    }
-
-table th, table td {
-  padding: 0 7px;
-}
-</style>
-
 {% assign date = page.date|date: "%Y-%m-%d" %}
 
 {% assign ace = date|append:", ACE, "|append:page.ace.title %}
@@ -27,20 +10,19 @@ table th, table td {
 {% assign title = page.sermon.title | title_url %}
 {% assign sermon = date|append:", "|append:page.sermon.scripture|append:", "|append:page.sermon.title %}
 {% assign sermon_url = date|append:", "|append:scripture|append:", "|append:title %}
-<br/>
 
 <!-- Files -->
 <div id="files">
   {% if page.ace %}
-  <div id="ace">
+  <div id="ace" class="recording">
     <p class="type">ACE:</p>
-    <a href="http://recordings.ctksound.org/{{date}}/{{ace_url}}.mp3">
+    <a href="{{ace_url}}.mp3">
         {{ace_url}}.mp3
     </a>
   </div>
   {% endif %}
 
-  <div id="sermon">
+  <div id="sermon" class="recording">
     <p class="type">Sermon:</p>
     <a href="{{sermon_url}}.mp3">
         {{sermon}}.mp3
