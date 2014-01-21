@@ -32,7 +32,7 @@ layout: none
             </description>
             <category>Aces</category>
             <enclosure url="{{ace_url}}.mp3" length='33960019' type='audio/mpeg'></enclosure>
-            <guid isPermaLink="true">{{ site.url }}{{ post.url }}</guid>
+            <guid isPermaLink="true">{{ post.url }}</guid>
             <pubDate>Tue, 26 Nov 2013 18:53:58 -0600</pubDate>
         </item>
         {% endif %}
@@ -45,7 +45,7 @@ layout: none
             </description>
             <category>Aces</category>
             <enclosure url="{{sermon_url}}.mp3" length='33960019' type='audio/mpeg'></enclosure>
-            <guid isPermaLink="true">{{ site.url }}{{ post.url }}</guid>
+            <guid isPermaLink="true">{{ post.url }}</guid>
             <pubDate>{{ post.date | date: "%a, %d %b %Y %H:%M:%S %z" }}</pubDate>
         </item>
         {% endif %}
