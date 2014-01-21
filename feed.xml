@@ -1,8 +1,8 @@
 ---
 layout: none
 ---
-{% assign date = page.date|date: "%Y-%m-%d" %}<?xml version='1.0' encoding='UTF-8'?>
-<rss version='2.0' xmlns:atom='http://www.w3.org/2005/Atom'>
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>{{site.name|xml_escape}}</title>
         <link>{{site.url}}</link>
@@ -19,21 +19,22 @@ layout: none
         <generator>Brain Power + Jekyll</generator>
         <ttl>5</ttl>
         <lastBuildDate>{{ site.time | date: "%a, %d %b %Y %H:%M:%S %z" }}</lastBuildDate>
-        <atom:link href='http://recordings.ctksound.org/feed.xml' rel='self' type='application/rss+xml' />
+        <atom:link href="http://recordings.ctksound.org/" rel="self" type="application/rss+xml" />
 
     {% for post in site.posts %}
+        {% assign date = post.date|date: "%Y-%m-%d" %}
         {% if post.ace %}
-        {% assign ace = date|append:", ACE, "|append:page.ace.title %}
-        {% assign ace_url = date|append:", ACE, "|append:page.ace.title|title_url %}
+        {% assign ace = date|append:", ACE, "|append:post.ace.title %}
+        {% assign ace_url = date|append:", ACE, "|append:post.ace.title|title_url %}
         <item>
             <title>{{post.ace.title|xml_escape}}</title>
             <description>
               <![CDATA[11/24, Gabriel, What is the Atonement/Reconciliation?<br />47:09 Total<br />]]>
             </description>
             <category>Aces</category>
-            <enclosure url="{{ace_url}}.mp3" length='33960019' type='audio/mpeg'></enclosure>
-            <guid>{{ ace_url }}</guid>
-            <pubDate>Tue, 26 Nov 2013 18:53:58 -0600</pubDate>
+            <enclosure url="{{site.url}}/{{ace_url}}.mp3" length="33960019" type="audio/mpeg"></enclosure>
+            <guid isPermaLink="true">{{ site.url }}/{{ post.url }}/ace</guid>
+            <pubDate>{{ post.date | date: "%a, %d %b %Y %H:%M:%S %z" }}</pubDate>
         </item>
         {% endif %}
 
@@ -44,8 +45,8 @@ layout: none
               <![CDATA[11/24, Gabriel, What is the Atonement/Reconciliation?<br />47:09 Total<br />]]>
             </description>
             <category>Aces</category>
-            <enclosure url="{{sermon_url}}.mp3" length='33960019' type='audio/mpeg'></enclosure>
-            <guid>{{ sermon_url }}</guid>
+            <enclosure url="{{site.url}}/{{sermon_url}}.mp3" length="33960019" type="audio/mpeg"></enclosure>
+            <guid isPermaLink="true">{{ site.url }}/{{ post.url }}/sermon</guid>
             <pubDate>{{ post.date | date: "%a, %d %b %Y %H:%M:%S %z" }}</pubDate>
         </item>
         {% endif %}
