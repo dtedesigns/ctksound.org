@@ -1,7 +1,7 @@
 ---
 layout: none
 ---
-<?xml version='1.0' encoding='UTF-8'?>
+{% assign date = page.date|date: "%Y-%m-%d" %}<?xml version='1.0' encoding='UTF-8'?>
 <rss version='2.0' xmlns:atom='http://www.w3.org/2005/Atom'>
     <channel>
         <title>{{site.name|xml_escape}}</title>
@@ -23,26 +23,32 @@ layout: none
 
     {% for post in site.posts %}
         {% if post.ace %}
+        {% assign ace = date|append:", ACE, "|append:page.ace.title %}
+        {% assign ace_url = date|append:", ACE, "|append:page.ace.title|title_url %}
         <item>
             <title>{{post.ace.title|xml_escape}}</title>
-            <description><![CDATA[11/24, Gabriel, What is the Atonement/Reconciliation?<br />47:09 Total<br />]]></description>
+            <description>
+              <![CDATA[11/24, Gabriel, What is the Atonement/Reconciliation?<br />47:09 Total<br />]]>
+            </description>
             <category>Aces</category>
-            <enclosure url="http://ctksound.org/recordings/2013-11-24,%20ACE,%20What%20is%20Atonement.mp3" length='33960019' type='audio/mpeg'></enclosure>
-            <guid isPermaLink="true">{{ site.url }}/{{ post.url }}</guid>
+            <enclosure url="{{ace_url}}.mp3" length='33960019' type='audio/mpeg'></enclosure>
+            <guid isPermaLink="true">{{ site.url }}{{ post.url }}</guid>
             <pubDate>Tue, 26 Nov 2013 18:53:58 -0600</pubDate>
         </item>
         {% endif %}
+
         {% if post.sermon %}
         <item>
             <title>{{post.sermon.title|xml_escape}}</title>
-            <description><![CDATA[11/24, Gabriel, What is the Atonement/Reconciliation?<br />47:09 Total<br />]]></description>
+            <description>
+              <![CDATA[11/24, Gabriel, What is the Atonement/Reconciliation?<br />47:09 Total<br />]]>
+            </description>
             <category>Aces</category>
-            <enclosure url="{{site.url}}/2013-11-24,%20ACE,%20What%20is%20Atonement.mp3" length='33960019' type='audio/mpeg'></enclosure>
-            <guid isPermaLink="true">{{ site.url }}/{{ post.url }}</guid>
+            <enclosure url="{{sermon_url}}.mp3" length='33960019' type='audio/mpeg'></enclosure>
+            <guid isPermaLink="true">{{ site.url }}{{ post.url }}</guid>
             <pubDate>{{ post.date | date: "%a, %d %b %Y %H:%M:%S %z" }}</pubDate>
         </item>
         {% endif %}
     {% endfor %}
-
     </channel>
 </rss>
