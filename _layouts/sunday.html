@@ -3,9 +3,6 @@ layout: default
 ---
 {% assign date = page.date|date: "%Y-%m-%d" %}
 
-{% assign ace = date|append:", ACE, "|append:page.ace.title %}
-{% assign ace_url = date|append:", ACE, "|append:page.ace.title|title_url %}
-
 {% assign scripture = {{page.sermon.scripture}} | scripture_url %}
 {% assign title = page.sermon.title | title_url %}
 {% assign sermon = date|append:", "|append:page.sermon.scripture|append:", "|append:page.sermon.title %}
@@ -14,6 +11,9 @@ layout: default
 <!-- Files -->
 <div id="files">
   {% if page.ace %}
+  {% assign ace = date|append:", ACE, "|append:page.ace.title %}
+  {% assign ace_url = date|append:", ACE, "|append:page.ace.title|title_url %}
+
   <div id="ace" class="recording">
     <p class="type">ACE:</p>
     <a href="{{ace_url}}.mp3">
