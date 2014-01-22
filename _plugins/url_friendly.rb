@@ -1,3 +1,6 @@
+require 'liquid'
+require 'uri'
+
 module Jekyll
   module AssetFilter
     def scripture_url(input)
@@ -15,6 +18,10 @@ module Jekyll
       minutes = (time / 60).to_i
       seconds = (time % 60).to_i
       return sprintf('%d:%02d', minutes, seconds)
+    end
+
+    def url_encode(url)
+      return URI.escape(url, Regexp.new("[^#{URI::PATTERN::UNRESERVED}]"))
     end
   end
 end
