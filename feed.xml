@@ -19,16 +19,15 @@ layout: none
         <generator>Brain Power + Jekyll</generator>
         <ttl>5</ttl>
         <lastBuildDate>{{ site.time | date: "%a, %d %b %Y %H:%M:%S %z" }}</lastBuildDate>
-        <atom:link href="http://recordings.ctksound.org/" rel="self" type="application/rss+xml" />
-    {% for post in site.posts %} {% assign date = post.date|date: "%Y-%m-%d" %}
-        {% if post.ace %} {% assign ace = date|append:", ACE, "|append:post.ace.title %} {% assign ace_url = date|append:", ACE, "|append:post.ace.title|title_url %}
+        <atom:link href="http://recordings.ctksound.org/feed.xml" rel="self" type="application/rss+xml" />
+        {% for post in site.posts %}{% assign date = post.date|date: "%Y-%m-%d" %}{% if post.ace %}{% assign ace = date|append:", ACE, "|append:post.ace.title %} {% assign ace_url = date|append:", ACE, "|append:post.ace.title|title_url %}
         <item>
             <title>{{post.ace.title|xml_escape}}</title>
             <description>
               <![CDATA[{{post.date| date: "%m/%d"}}, {{post.ace.teacher}}, {{post.ace.title}}<br />00:00 Total<br />]]>
             </description>
             <category>Aces</category>
-            <enclosure url="{{site.url}}/{{post.date|date: "%Y"}}/{{post.date|date: "%m"}}/{{post.date|date: "%d"}}/{{ace_url|xml_escape}}.mp3" length="33960019" type="audio/mpeg"></enclosure>
+            <enclosure url="{{site.url}}/{{post.date|date: "%Y"}}/{{post.date|date: "%m"}}/{{post.date|date: "%d"}}/{{ace_url|xml_escape}}.mp3" length="33960019" type="audio/mpeg" />
             <guid isPermaLink="true">{{ site.url }}{{ post.url }}ace</guid>
             <pubDate>{{ post.date | date: "%a, %d %b %Y %H:%M:%S %z" }}</pubDate>
         </item>
@@ -39,7 +38,7 @@ layout: none
               <![CDATA[{{post.date| date: "%m/%d"}}, {{post.sermon.preacher|xml_escape}}, {{post.sermon.title|xml_escape}}<br />00:00 Total<br />]]>
             </description>
             <category>Aces</category>
-            <enclosure url="{{site.url}}/{{post.date|date: "%Y"}}/{{post.date|date: "%m"}}/{{post.date|date: "%d"}}/{{sermon_url|xml_escape}}.mp3" length="33960019" type="audio/mpeg"></enclosure>
+            <enclosure url="{{site.url}}/{{post.date|date: "%Y"}}/{{post.date|date: "%m"}}/{{post.date|date: "%d"}}/{{sermon_url|xml_escape}}.mp3" length="33960019" type="audio/mpeg" />
             <guid isPermaLink="true">{{ site.url }}{{ post.url }}sermon</guid>
             <pubDate>{{ post.date | date: "%a, %d %b %Y %H:%M:%S %z" }}</pubDate>
         </item>
