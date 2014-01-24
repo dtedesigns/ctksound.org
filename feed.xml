@@ -27,11 +27,11 @@ layout: none
         <![CDATA[{{post.date| date: "%m/%d"}}, {{post.ace.teacher}}, {{post.ace.title}}<br />00:00 Total<br />]]>
       </description>
       <category>Aces</category>
-      <enclosure url="{{site.url}}/{{post.date|date: "%Y"}}/{{post.date|date: "%m"}}/{{post.date|date: "%d"}}/{{ace_url|xml_escape}}.mp3" length="33960019" type="audio/mpeg" />
+      <enclosure url="{{site.url}}/{{post.date|date: "%Y"}}/{{post.date|date: "%m"}}/{{post.date|date: "%d"}}/{{ace_url|}}.mp3" length="33960019" type="audio/mpeg" />
       <guid isPermaLink="true">{{ site.url }}{{ post.url }}ace</guid>
       <pubDate>{{ post.date | date: "%a, %d %b %Y %H:%M:%S %z" }}</pubDate>
     </item>
-    {% endif %}{% if post.sermon %}{% assign sermon_url = date|append:", "|append:post.sermon.scripture|append:", "|append:post.sermon.title|title_url|url_encode %}
+    {% endif %}{% if post.sermon %}{% assign sermon_url = date|append:", "|append:post.sermon.scripture|scripture_url|append:", "|append:post.sermon.title|title_url|url_encode %}
     <item>
       <title>{{post.sermon.title|xml_escape}}</title>
       <description>
