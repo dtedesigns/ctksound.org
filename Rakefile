@@ -9,6 +9,6 @@ task :deadweight do
     dw.root = "http://localhost:4000"
     dw.stylesheets = [ "/css/main.css" ]
     dw.pages = [ "/", "/2014/02/09" ]
-    #dw.ignore_selectors = /flash_notice|flash_error/
+    dw.ignore_selectors = /not-published|flash_notice|flash_error/
     puts dw.run
 end
