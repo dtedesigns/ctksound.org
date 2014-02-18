@@ -11,4 +11,7 @@ exclude:
     - "*.cue"
     - "*.aup"
     - "*_data"
+    - "iKey_*"
+    - "Gemfile"
+    - "Rakefile"
 #lsi: true
