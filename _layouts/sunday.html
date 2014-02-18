@@ -28,6 +28,18 @@ layout: default
         {{sermon}}.mp3
     </a>
   </div>
+
+  {% if page.baptism %}
+  {% assign baptism = date|append:", baptism, "|append:page.baptism.title %}
+  {% assign baptism_url = date|append:", Infant Baptism, "|append:page.baptism.child|title_url %}
+
+  <div id="baptism" class="recording">
+    <p class="type">Infant Baptism:</p>
+    <a href="{{baptism_url}}.mp3">
+        {{baptism_url}}.mp3
+    </a>
+  </div>
+  {% endif %}
 </div>
 
 <!-- Label -->
