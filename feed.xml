@@ -24,10 +24,10 @@ layout: none
     <item>
       <title>{{post.ace.title|xml_escape}}</title>
       <description>
-        <![CDATA[{{post.date| date: "%m/%d"}}, {{post.ace.teacher}}, {{post.ace.title}}<br />00:00 Total<br />]]>
+        <![CDATA[{{post.date| date: "%m/%d"}}, {{post.ace.teacher}}, {{post.ace.title}}]]>
       </description>
-      <category>Aces</category>
-      <enclosure url="{{site.url}}{{post.date|date: "%Y"}}/{{post.date|date: "%m"}}/{{post.date|date: "%d"}}/{{ace_url}}.mp3" length="33960019" type="audio/mpeg" />
+      <category>Ace</category>
+      <enclosure url="{{site.url}}{{post.date|date: "%Y"}}/{{post.date|date: "%m"}}/{{post.date|date: "%d"}}/{{ace_url}}.mp3" type="audio/mpeg" />
       <guid isPermaLink="true">{{site.url}}{{post.date|date: "%Y"}}/{{post.date|date: "%m"}}/{{post.date|date: "%d"}}/{{ace_url}}.mp3</guid>
       <pubDate>{{ post.date | date: "%a, %d %b %Y %H:%M:%S %z" }}</pubDate>
     </item>
@@ -35,11 +35,22 @@ layout: none
     <item>
       <title>{{post.sermon.title|xml_escape}}</title>
       <description>
-        <![CDATA[{{post.date| date: "%m/%d"}}, {{post.sermon.preacher|xml_escape}}, {{post.sermon.title|xml_escape}}<br />00:00 Total<br />]]>
+        <![CDATA[{{post.date| date: "%m/%d"}}, {{post.sermon.preacher|xml_escape}}, {{post.sermon.title|xml_escape}}]]>
       </description>
-      <category>Aces</category>
-      <enclosure url="{{site.url}}{{post.date|date: "%Y"}}/{{post.date|date: "%m"}}/{{post.date|date: "%d"}}/{{sermon_url}}.mp3" length="33960019" type="audio/mpeg" />
+      <category>Sermon</category>
+      <enclosure url="{{site.url}}{{post.date|date: "%Y"}}/{{post.date|date: "%m"}}/{{post.date|date: "%d"}}/{{sermon_url}}.mp3" type="audio/mpeg" />
       <guid isPermaLink="true">{{site.url}}{{post.date|date: "%Y"}}/{{post.date|date: "%m"}}/{{post.date|date: "%d"}}/{{sermon_url}}.mp3</guid>
+      <pubDate>{{ post.date | date: "%a, %d %b %Y %H:%M:%S %z" }}</pubDate>
+    </item>
+    {% endif %}{% if post.baptism %}{% assign baptism_url = date|append:", Infant Baptism, "|append:post.baptism.child|title_url|url_encode %}
+    <item>
+      <title>{{post.baptism.child|xml_escape}}</title>
+      <description>
+        <![CDATA[{{post.date| date: "%m/%d"}}, Infant Baptism, {{post.baptism.child|xml_escape}}]]>
+      </description>
+      <category>Infant Baptism</category>
+      <enclosure url="{{site.url}}{{post.date|date: "%Y"}}/{{post.date|date: "%m"}}/{{post.date|date: "%d"}}/{{baptism_url}}.mp3" type="audio/mpeg" />
+      <guid isPermaLink="true">{{site.url}}{{post.date|date: "%Y"}}/{{post.date|date: "%m"}}/{{post.date|date: "%d"}}/{{baptism_url}}.mp3</guid>
       <pubDate>{{ post.date | date: "%a, %d %b %Y %H:%M:%S %z" }}</pubDate>
     </item>
     {% endif %}
