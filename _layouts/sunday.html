@@ -19,6 +19,9 @@ layout: default
     <a href="{{ace_url}}.mp3">
         {{ace_url}}.mp3
     </a>
+    <audio controls="controls">
+        <source src="{{ace_url}}.mp3" type="audio/mpeg" />
+    </audio>
   </div>
   {% endif %}
 
@@ -27,6 +30,9 @@ layout: default
     <a href="{{sermon_url}}.mp3">
         {{sermon}}.mp3
     </a>
+    <audio controls="controls">
+        <source src="{{sermon_url}}.mp3" type="audio/mpeg" />
+    </audio>
   </div>
 
   {% if page.baptism %}
@@ -38,6 +44,9 @@ layout: default
     <a href="{{baptism_url}}.mp3">
         {{baptism_url}}.mp3
     </a>
+    <audio controls="controls">
+        <source src="{{baptism_url}}.mp3" type="audio/mpeg" />
+    </audio>
   </div>
   {% endif %}
 </div>
