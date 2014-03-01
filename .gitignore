@@ -1,5 +1,3 @@
-_*
-
 *.gem
 *.rbc
 .bundle
@@ -16,9 +14,13 @@ tmp
 .DS_Store
 
 # source files
-2013/*
-2014/*
-!*/_posts/
+_20*/*
+20*/*
+!20*/_posts
+_validator.html
+
+# generated files
+_site/
 
 # YARD artifacts
 .yardoc
