@@ -1,24 +1,21 @@
 ---
 layout: default
 ---
-{% assign date = page.date|date: "%Y-%m-%d" %}
+<!-- Assignments -->
+{% include assignments.html %}
 
-{% assign scripture = {{page.sermon.scripture}} | scripture_url %}
-{% assign title = page.sermon.title | title_url %}
-{% assign sermon = date|append:", "|append:page.sermon.scripture|append:", "|append:page.sermon.title %}
-{% assign sermon_url = date|append:", "|append:scripture|append:", "|append:title %}
+<!-- Label Info -->
+{% include label_info.html %}
+
+<!-- Mail Body -->
+{% include mailto.html %}
 
 <!-- Files -->
 <div id="files">
   {% if page.ace %}
-  {% assign ace = date|append:", ACE, "|append:page.ace.title %}
-  {% assign ace_url = date|append:", ACE, "|append:page.ace.title|title_url %}
-
   <div id="ace" class="recording">
     <p class="type">ACE:</p>
-    <a href="{{ace_url}}.mp3">
-        {{ace_url}}.mp3
-    </a>
+    <a href="{{ace_url}}.mp3">{{ace_url}}.mp3</a>
     <audio controls="controls">
         <source src="{{ace_url}}.mp3" type="audio/mpeg" />
     </audio>
@@ -27,9 +24,7 @@ layout: default
 
   <div id="sermon" class="recording">
     <p class="type">Sermon:</p>
-    <a href="{{sermon_url}}.mp3">
-        {{sermon}}.mp3
-    </a>
+    <a href="{{sermon_url}}.mp3">{{sermon}}.mp3</a>
     <audio controls="controls">
         <source src="{{sermon_url}}.mp3" type="audio/mpeg" />
     </audio>
@@ -41,9 +36,7 @@ layout: default
 
   <div id="baptism" class="recording">
     <p class="type">Infant Baptism:</p>
-    <a href="{{baptism_url}}.mp3">
-        {{baptism_url}}.mp3
-    </a>
+    <a href="{{baptism_url}}.mp3">{{baptism_url}}.mp3</a>
     <audio controls="controls">
         <source src="{{baptism_url}}.mp3" type="audio/mpeg" />
     </audio>
@@ -51,17 +44,13 @@ layout: default
   {% endif %}
 </div>
 
-<!-- Label -->
+<!-- Label Info -->
 <div id="label">
-  <span class="title">Label Info:</span><br/>
-  {{page.date|date: "%m/%d"}}, {{page.sermon.preacher|split: ' '|last}}, {{page.sermon.scripture}}, {{page.sermon.title}}<br/>
-  {% assign num_tracks = page.tracks|size|minus:1 %}
-  {{ page.tracks[num_tracks][1] | minus:0 | format_time }} Total Time<br/>
-  {{ page.tracks[0][1] | minus:page.tracks[0][0] | format_time  }} Scripture Reading
+  {{ label_info }}
 </div>
 
-{% if page.tracks %}
 <!-- Tracks -->
+{% if page.tracks %}
 <div id="tracks">
   <p> </p>
   <table>
@@ -76,3 +65,5 @@ layout: default
   </table>
 </div>
 {% endif %}
+
+{{ mailto_link }}

@@ -40,6 +40,10 @@ audio { margin-top: 7px; }
 /* Home
 /*
 /*****************************************************************************/
+.mailto, .mailto:hover, .mailto:visited {
+  color: transparent;
+}
+
 .posts {
   list-style-type: none;
   margin-bottom: 2em;

@@ -1,0 +1,7 @@
+<!-- Label Info -->
+{% capture label_info %}{% assign num_tracks = page.tracks|size|minus:1 %}
+<span class="title">Label Info:</span><br/>
+{{page.date|date: "%m/%d"}}, {{page.sermon.preacher|split: ' '|last}}, {{page.sermon.scripture}}, {{page.sermon.title}}<br/>
+{{ page.tracks[num_tracks][1] | minus:0 | format_time }} Total Time<br/>
+{{ page.tracks[0][1] | minus:page.tracks[0][0] | format_time  }} Scripture Reading
+{% endcapture %}

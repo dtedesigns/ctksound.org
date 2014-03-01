@@ -1,0 +1,19 @@
+{% assign date = page.date|date: "%Y-%m-%d" %}
+{% assign friendly_date = page.date|date: "%B %d" %}
+
+{% assign scripture = {{page.sermon.scripture}} | scripture_url %}
+{% assign title = page.sermon.title | title_url %}
+{% assign sermon = date|append:", "|append:page.sermon.scripture|append:", "|append:page.sermon.title %}
+{% assign sermon_url = date|append:", "|append:scripture|append:", "|append:title %}
+{% assign multiple = false %}
+
+{% if page.ace %}
+{% assign ace = date|append:", ACE, "|append:page.ace.title %}
+{% assign ace_url = date|append:", ACE, "|append:page.ace.title|title_url %}
+{% assign multiple = true %}
+{% endif %}
+
+{% if page.baptism %}
+{% assign multiple = true %}
+{% endif %}
+
