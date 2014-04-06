@@ -14,6 +14,13 @@
 {% endif %}
 
 {% if page.baptism %}
+{% assign baptism = date|append:", baptism, "|append:page.baptism.title %}
+{% assign baptism_url = date|append:", Infant Baptism, "|append:page.baptism.child|title_url %}
 {% assign multiple = true %}
 {% endif %}
 
+{% if page.special %}
+{% assign special = date|append:", special, "|append:page.special.title %}
+{% assign special_url = date|append:", "|append:page.special.who|append:", "|append:page.special.title|title_url %}
+{% assign multiple = true %}
+{% endif %}

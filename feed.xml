@@ -20,7 +20,7 @@ layout: none
     <ttl>5</ttl>
     <lastBuildDate>{{ site.time | date: "%a, %d %b %Y %H:%M:%S %z" }}</lastBuildDate>
     <atom:link href="{{site.url}}feed.xml" rel="self" type="application/rss+xml" />
-    {% for post in site.posts %}{% assign date = post.date|date: "%Y-%m-%d" %}{% if post.ace %}{% assign ace = date|append:", ACE, "|append:post.ace.title %} {% assign ace_url = date|append:", ACE, "|append:post.ace.title|title_url|url_encode %}
+    {% for post in site.posts %}{% assign date = post.date|date: "%Y-%m-%d" %}{% if post.ace.title %}{% assign ace = date|append:", ACE, "|append:post.ace.title %} {% assign ace_url = date|append:", ACE, "|append:post.ace.title|title_url|url_encode %}
     <item>
       <title>{{post.ace.title|xml_escape}}</title>
       <description>

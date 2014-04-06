@@ -12,34 +12,48 @@ layout: default
 
 <!-- Files -->
 <div id="files">
-  {% if page.ace %}
-  <div id="ace" class="recording">
-    <p class="type">ACE:</p>
-    <a href="{{ace_url}}.mp3">{{ace_url}}.mp3</a>
-    <audio controls="controls">
-        <source src="{{ace_url}}.mp3" type="audio/mpeg" />
-    </audio>
-  </div>
-  {% endif %}
+    {% if page.ace %}
+    <div id="ace" class="recording">
+        <p class="type">ACE:</p>
+    {% if page.ace.title %}
+        <a href="{{ace_url}}.mp3">{{ace_url}}.mp3</a>
+        <p><audio src="{{ace_url}}.mp3" type="audio/mpeg" controls="controls" /></p>
+        {% if page.ace.notes %}
+        <p><em>{{ page.ace.notes }}</em></p>
+        {% endif %}
+    {% else %}
+        {% if page.ace.notes %}
+        <p><em>{{ page.ace.notes }}</em></p>
+        {% endif %}
+    {% endif %}
+    </div>
+    {% endif %}
 
-  <div id="sermon" class="recording">
-    <p class="type">Sermon:</p>
-    <a href="{{sermon_url}}.mp3">{{sermon}}.mp3</a>
-    <audio controls="controls">
-        <source src="{{sermon_url}}.mp3" type="audio/mpeg" />
-    </audio>
-  </div>
+    <div id="sermon" class="recording">
+        <p class="type">Sermon:</p>
+        <a href="{{sermon_url}}.mp3">{{sermon}}.mp3</a>
+        <p><audio src="{{sermon_url}}.mp3" type="audio/mpeg" controls="controls" /></p>
+        {% if page.sermon.notes %}
+        <p><em>{{ page.sermon.notes }}</em></p>
+        {% endif %}
+    </div>
 
   {% if page.baptism %}
-  {% assign baptism = date|append:", baptism, "|append:page.baptism.title %}
-  {% assign baptism_url = date|append:", Infant Baptism, "|append:page.baptism.child|title_url %}
 
   <div id="baptism" class="recording">
     <p class="type">Infant Baptism:</p>
     <a href="{{baptism_url}}.mp3">{{baptism_url}}.mp3</a>
-    <audio controls="controls">
-        <source src="{{baptism_url}}.mp3" type="audio/mpeg" />
-    </audio>
+    <p><audio src="{{baptism_url}}.mp3" type="audio/mpeg" controls="controls" /></p>
+    {% if page.baptism.notes %}<p><em>{{ page.baptism.notes }}</em></p>{% endif %}
+  </div>
+  {% endif %}
+
+  {% if page.special %}
+  <div id="special" class="recording">
+    <p class="type">{{ page.special.type }}:</p>
+    <a href="{{special_url}}.mp3">{{special_url}}.mp3</a>
+    <p><audio src="{{special_url}}.mp3" type="audio/mpeg" controls="controls" /></p>
+    {% if page.special.notes %}<p><em>{{ page.special.notes }}</em></p>{% endif %}
   </div>
   {% endif %}
 </div>
