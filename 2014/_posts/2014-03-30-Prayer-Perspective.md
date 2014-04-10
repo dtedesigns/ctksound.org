@@ -1,10 +1,6 @@
 ---
-permalink: 2014/03/30/
 layout: sunday
-
 version: 1
-date: 2014-03-30
-published: published
 engineer: Joel Zaruba
 processor: Kevin Gustavson
 

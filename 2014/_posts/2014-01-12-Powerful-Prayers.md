@@ -1,11 +1,8 @@
 ---
-permalink: 2014/01/12/
 layout: sunday
-title: Acts 12:1-5, Powerful Prayers
-
 version: 1
-date: 2014-01-12
-published: published
+engineer: David Thom
+processor: Kevin Gustavson
 
 ace:
   updated_at: 2014-01-12 15:42:12

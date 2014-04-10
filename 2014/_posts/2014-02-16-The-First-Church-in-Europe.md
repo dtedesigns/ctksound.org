@@ -1,10 +1,6 @@
 ---
-permalink: 2014/02/16/
 layout: sunday
-
 version: 1
-date: 2014-02-16
-published: published
 engineer: Kevin Gustavson
 processor: Kevin Gustavson
 

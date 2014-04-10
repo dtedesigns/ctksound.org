@@ -1,10 +1,6 @@
 ---
-permalink: 2014/03/09/
 layout: sunday
-
 version: 1
-date: 2014-03-09
-published: published
 engineer: David Thom
 processor: Kevin Gustavson
 

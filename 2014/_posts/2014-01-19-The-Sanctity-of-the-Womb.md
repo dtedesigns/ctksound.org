@@ -1,11 +1,8 @@
 ---
-permalink: 2014/01/19/
 layout: sunday
-title: Jeremiah 1:1-5, The Sanctity of the Womb
-
 version: 1
-date: 2014-01-19
-published: "published"
+engineer: Kevin Gustavson
+processor: Kevin Gustavson
 
 ace:
   updated_at: 2014-01-19 15:40:49

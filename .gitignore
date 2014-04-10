@@ -21,6 +21,7 @@ _validator.html
 
 # generated files
 _site/
+Gemfile.lock
 
 # YARD artifacts
 .yardoc

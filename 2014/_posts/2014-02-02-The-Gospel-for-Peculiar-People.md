@@ -1,11 +1,8 @@
 ---
-permalink: 2014/02/02/
 layout: sunday
-
 version: 1
-date: 2014-02-02
-published: published
-
+engineer: Kevin Gustavson
+processor: Kevin Gustavson
 
 sermon:
     updated_at: 2014-02-02 14:31:54

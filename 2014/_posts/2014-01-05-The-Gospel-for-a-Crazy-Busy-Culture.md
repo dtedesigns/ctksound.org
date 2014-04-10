@@ -1,11 +1,8 @@
 ---
-permalink: 2014/01/05/
 layout: sunday
-title: Luke 10:25-42, The Gospel for a Crazy Busy Culture
-
 version: 1
-date: 2014-01-05
-published: published
+engineer: Kevin Gustavson
+processor: Kevin Gustavson
 
 sermon:
   updated_at: 2014-01-05 14:29:57

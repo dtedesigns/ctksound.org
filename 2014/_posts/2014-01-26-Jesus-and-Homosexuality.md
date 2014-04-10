@@ -1,10 +1,8 @@
 ---
-permalink: 2014/01/26/
 layout: sunday
-
 version: 1
-date: 2014-01-26
-published: published
+engineer: Joel Zaruba
+processor: Kevin Gustavson
 
 ace:
   updated_at: 2014-01-26 20:20:08
