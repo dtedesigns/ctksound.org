@@ -17,6 +17,7 @@ sermon:
   reader: Kevin Gustavson
   series: Book of Romans
   comment: Scripture Reading was re-recorded. Original reader was Pastor Ken Carr.
+  notes: This was recorded on the pulpit microphone; it contains occasional sound volume drop-offs.
 
 tracks:
     - [0.000000,45.915964,"Romans 8:1-4",Kevin Gustavson]
