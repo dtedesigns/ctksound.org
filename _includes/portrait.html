@@ -1,0 +1,17 @@
+{% if page.portrait %}
+  {% assign portrait = date|append:", Portrait, "|append:page.portrait.who %}
+  {% assign portrait_url = date|append:", Portrait of Grace, "|append:page.portrait.who|title_url %}
+  {% assign multiple = true %}
+
+  {% if page.portrait.who %}
+    <div id="portrait" class="recording">
+      <p class="type">Portrait of Grace:</p>
+      <a href="{{portrait_url}}.mp3">{{portrait_url}}.mp3</a>
+      <p><audio src="{{portrait_url}}.mp3" type="audio/mpeg" controls="controls" /></p>
+    </div>
+  {% else %}
+    {% if page.portrait.notes %}
+    <p><em>{{ page.portrait.notes }}</em></p>
+    {% endif %}
+  {% endif %}
+{% endif %}
