@@ -6,8 +6,11 @@ permalink: /:year/:month/:day
 url: http://recordings.ctksound.org/
 webmaster: kgust@pobox.com (Kevin Gustavson)
 
-markdown: redcarpet
-pygments: true
+source: ./_source
+destination: ./_site
+
+markdown: kramdown
+highlighter: pygments
 exclude:
     - "*.wav"
     - "*.cue"
