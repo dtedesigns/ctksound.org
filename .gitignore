@@ -14,9 +14,9 @@ tmp
 .DS_Store
 
 # source files
-_20*/*
-20*/*
-!20*/_posts
+_source/_20*/*
+_source/20*/*
+!_source/20*/_posts
 _validator.html
 
 # generated files
