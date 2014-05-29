@@ -1,6 +1,4 @@
 ---
-layout: sunday
-version: 1
 engineer: Kevin Gustavson    
 processor: Kevin Gustavson
 
