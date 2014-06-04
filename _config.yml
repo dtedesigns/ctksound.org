@@ -1,9 +1,11 @@
+category_dir: ""
 copyright: Copyright 2001-2014 Christ the King Church of Fox Valley
 description: This is the place to get all recently released Christ the King recordings.
 image: images/ctk.gif
+#lsi: true
 name: Christ the King Sound Team
-#permalink: pretty
 permalink: /:year/:month/:day
+port: 4004
 url: http://recordings.ctksound.org/
 webmaster: kgust@pobox.com (Kevin Gustavson)
 
@@ -13,24 +15,28 @@ destination: ./_site
 markdown: kramdown
 highlighter: pygments
 exclude:
-    - "*.wav"
-    - "*.cue"
-    - "*.aup"
-    - "*_data"
-    - "iKey_*"
-    - "Gemfile"
-    - "Rakefile"
-#lsi: true
+  - "*.wav"
+  - "*.cue"
+  - "*.aup"
+  - "*_data"
+  - "iKey_*"
+  - "Gemfile"
+  - "Rakefile"
+
+# Pagination
+paginate: 15
+pagination_enabled: true
+paginate_path: "page-:num"
+custom_paginate: 15
+custom_paginate_path: "page-:num"
 
 defaults:
-    -
-        scope:
-            path: "" # empty string means all files
-        values:
-            layout: default
-    -
-        scope:
-            path: ""
-            type: post
-        values:
-            layout: sunday
+  - scope:
+      path: "" # empty string means all files
+    values:
+      layout: default
+  - scope:
+      path: ""
+      type: post
+    values:
+      layout: sunday
