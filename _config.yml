@@ -16,6 +16,7 @@ exclude:
     - "*.wav"
     #- "*.flac"
     - "*.cue"
+    - "*.m3u"
     - "*.aup"
     - "*_data"
     - "iKey_*"
