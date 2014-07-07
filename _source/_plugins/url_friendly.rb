@@ -11,7 +11,7 @@ module Jekyll
     def title_url(input)
       temp = input.gsub('&', 'and')
       temp.gsub!(/[\/]/, '_')
-      return temp.gsub(/[^a-zA-Z0-9 \-\/,_]/, '')
+      return temp.gsub(/[^a-zA-Z0-9'"() \-\/,_]/, '')
     end
 
     def format_time(time)
@@ -21,7 +21,7 @@ module Jekyll
     end
 
     def url_encode(url)
-      return URI.escape(url, Regexp.new("[^#{URI::PATTERN::UNRESERVED}]"))
+      return URI.escape(url)
     end
   end
 end
