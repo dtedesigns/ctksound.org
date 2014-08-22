@@ -1,6 +1,12 @@
-- Pastor Ken Carr
-- Pastor Jeff Holwerda
-- Elder William Gabriel
-- Tighe Farrow
-- James Hansen SIM
+- name: Ken Carr
+  title: Pastor
+- name: Doug O'Donnell
+  title: Pastor
+- name: Jeff Holwerda
+  title: Pastor
+- name: Bill Gabriel
+  title: Elder
+- name: Tighe Farrow
+- name: Jim Hansen
+  title: Missionary - SIM
 
