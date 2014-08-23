@@ -1,0 +1,33 @@
+---
+layout: default
+---
+
+<!--
+<h2>Preachers</h2>
+<ul>
+    {% for preacher in site.data.preachers %}
+    <li>{{ preacher.title}} {{ preacher.name }}</li>
+    {% endfor %}
+</ul>
+-->
+
+<h2>Sermons</h2>
+<ul>
+    {% for recording in site.data.sermons|sort:"date" %}
+    {% if recording.year == page.year %}
+    <li>{{recording.date}}, {{recording.scripture}}, {{recording.title}} ({{recording.preacher}})</li>
+    {% endif %}
+    {% endfor %}
+</ul>
+
+<!--
+<h2>Sunday School (ACE)</h2>
+<ul>
+    {% for recording in site.data.aces %}
+    {% if false and page.year == recording.date|slice: 0, 4 %}
+    <li>{{recording.date|slice: 1, 4}} - {{recording.date}}, {{recording.series}}, {{recording.title}} ({{recording.teacher}})</li>
+    {% endif %}
+    {% endfor %}
+</ul>
+-->
+
