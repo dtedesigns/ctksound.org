@@ -1,8 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'jekyll'
-gem 'kramdown'
-#gem 'jekyll-pagination'
+gem 'github-pages'
 
 group :test do
     gem 'colored'
