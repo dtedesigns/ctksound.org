@@ -35,8 +35,6 @@ exclude:
 paginate: 15
 pagination_enabled: true
 paginate_path: "page-:num"
-custom_paginate: 15
-custom_paginate_path: "page-:num"
 
 defaults:
   - scope:
