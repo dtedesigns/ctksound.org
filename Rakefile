@@ -27,3 +27,5 @@ desc "Deploy to AWS"
 task :deploy => [:build] do
     sh "/Users/kevin/bin/s3cmd sync /Users/kevin/Sites/ctksound/_site/ s3://recordings.ctksound.org/"
 end
+
+task default: [deploy]

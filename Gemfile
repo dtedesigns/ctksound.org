@@ -1,3 +1,6 @@
+#ruby=ruby-2.1
+#ruby-gemset=ctksound
+
 source 'https://rubygems.org'
 
 gem 'jekyll'
