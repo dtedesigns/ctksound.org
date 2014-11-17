@@ -1,11 +1,11 @@
-{% capture mail_body %}Sandy,
+{% capture mail_body %}Andy,
 
-The {%if multiple%}recordings{%else%}recording{%endif%} for {{friendly_date}} {%if multiple%}have{%else%}has{%endif%} been uploaded to http://recordings.ctksound.org/{{page.date|date: "%Y/%m/%d/"}}.{% if page.ace %}
-{{ ace_url }}.mp3{% endif %}{% if page.sermon %}
-{{ sermon_url }}.mp3{% endif %}{% if page.special %}
-{{ special_url }}.mp3{% endif %}
-{{ label_info|strip_html }}
-The CTK Sound Team{% endcapture %}
+The {%if multiple%}recordings{%else%}recording{%endif%} for {{friendly_date}} can be found at:
+http://recordings.ctksound.org/{{page.date|date: "%Y/%m/%d/"}}
+
+-- 
+Kevin Gustavson
+Sound Team Manager{% endcapture %}
 
 {% capture mailto_link %}
 <a class="mailto" href="mailto:?subject={%if multiple%}Recordings{%else%}Recording{%endif%} for {{friendly_date}}&body={{mail_body|uri_escape}}"
