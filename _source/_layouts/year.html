@@ -15,7 +15,18 @@ layout: default
 <ul>
     {% for recording in site.data.sermons|sort:"date" %}
     {% if recording.year == page.year %}
-    <li>{{recording.date}}, {{recording.scripture}}, {{recording.title}} ({{recording.preacher}})</li>
+
+    {% assign month = recording.date|date: "%m" %}
+    {% assign day = recording.date|date: "%d" %}
+    {% assign scripture = {{recording.scripture}} | scripture_url %}
+    {% assign title = recording.title | title_url %}
+    {% assign sermon = date|append:", "|append:recording.scripture|append:", "|append:recording.title %}
+    {% assign sermon_url = recording.date|append:", "|append:scripture|append:", "|append:title %}
+
+    <li>
+    <a href="/{{recording.year}}/{{month}}/{{day}}/{{sermon_url}}.mp3">{{recording.date}}, {{recording.scripture}}, {{recording.title}}</a>
+        ({{recording.preacher}})
+    </li>
     {% endif %}
     {% endfor %}
 </ul>
