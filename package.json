@@ -1,0 +1,28 @@
+{
+  "name": "recordings.ctksound.org",
+  "version": "0.1.0",
+  "description": "CtK Sound Team Recordings Archive",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dtedesigns/ctksound.org.git"
+  },
+  "keywords": [
+    "ctk",
+    "sound",
+    "recordings"
+  ],
+  "author": "Kevin Gustavson <kgust@pobox.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dtedesigns/ctksound.org/issues"
+  },
+  "homepage": "https://github.com/dtedesigns/ctksound.org",
+  "dependencies": {
+    "js-yaml": "^3.2.3",
+    "mysql": "^2.5.3"
+  }
+}
