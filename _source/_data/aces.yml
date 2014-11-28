@@ -1,1783 +1,1507 @@
-[
-  {
-    "id": "1",
-    "series": "ACE - What is a Healthy Church",
-    "title": "What is a Healthy Church 8",
-    "teacher": "Ken Carr",
-    "comment": "Based on the Book",
-    "date": "2009-02-08",
-    "disk": "8",
-    "spl": null,
-    "published": "2009-02-08 14:20:10",
-    "created_at": "2009-02-08 14:20:10",
-    "updated_at": "2010-05-23 19:42:00"
-  },
-  {
-    "id": "2",
-    "series": "ACE - What is a Healthy Church",
-    "title": "What is a Healthy Church 6",
-    "teacher": "Ken Carr",
-    "comment": "Based on the Book",
-    "date": "2008-12-14",
-    "disk": "8",
-    "spl": null,
-    "published": "2009-02-08 16:34:21",
-    "created_at": "2009-02-08 16:34:21",
-    "updated_at": "2010-05-23 19:42:00"
-  },
-  {
-    "id": "3",
-    "series": "ACE - What is a Healthy Church",
-    "title": "What is a Healthy Church 7",
-    "teacher": "Jeff Holwerda",
-    "comment": "Based on the Book",
-    "date": "2009-01-25",
-    "disk": "8",
-    "spl": null,
-    "published": "2009-02-08 16:35:18",
-    "created_at": "2009-02-08 16:35:18",
-    "updated_at": "2010-05-23 19:42:00"
-  },
-  {
-    "id": "4",
-    "series": "ACE - Essential Christian Doctrines",
-    "title": "Impossible to Continue in Sin?",
-    "teacher": "Tighe Farrow",
-    "comment": "Romans 6",
-    "date": "2009-02-01",
-    "disk": "8",
-    "spl": null,
-    "published": "2009-02-08 16:38:27",
-    "created_at": "2009-02-08 16:38:27",
-    "updated_at": "2010-05-23 19:42:00"
-  },
-  {
-    "id": "5",
-    "series": "ACE - Essential Christian Doctrines",
-    "title": "Is the Law Sin or Does the Law Bring Death to Me?",
-    "teacher": "Tighe Farrow",
-    "comment": "Romans 7:7-12,13-25",
-    "date": "2009-02-15",
-    "disk": "8",
-    "spl": null,
-    "published": "2009-02-15 11:25:42",
-    "created_at": "2009-02-15 11:25:42",
-    "updated_at": "2010-05-23 19:42:00"
-  },
-  {
-    "id": "6",
-    "series": "ACE - What is a Healthy Church",
-    "title": "What is a Healthy Church 9",
-    "teacher": "Jeff Holwerda",
-    "comment": "Mark #7 - Biblical Church Discipline",
-    "date": "2009-02-22",
-    "disk": "8",
-    "spl": null,
-    "published": "2009-02-22 21:28:37",
-    "created_at": "2009-02-22 21:28:37",
-    "updated_at": "2010-05-23 19:42:00"
-  },
-  {
-    "id": "7",
-    "series": "ACE - Essential Christian Doctrines",
-    "title": "The Great Eight",
-    "teacher": "Tighe Farrow",
-    "comment": "Romans 8",
-    "date": "2009-03-01",
-    "disk": "8",
-    "spl": null,
-    "published": "2009-03-03 23:16:41",
-    "created_at": "2009-03-03 23:16:41",
-    "updated_at": "2010-05-23 19:42:00"
-  },
-  {
-    "id": "8",
-    "series": "ACE - What is a Healthy Church",
-    "title": "What is a Healthy Church 10",
-    "teacher": "Ken Carr",
-    "comment": null,
-    "date": "2009-03-08",
-    "disk": "8",
-    "spl": null,
-    "published": "2009-03-08 22:13:04",
-    "created_at": "2009-03-08 22:13:04",
-    "updated_at": "2010-05-23 19:42:00"
-  },
-  {
-    "id": "9",
-    "series": "ACE - Essential Christian Doctrines",
-    "title": "Predestination plus What About Israel?",
-    "teacher": "Tighe Farrow",
-    "comment": "Romans 8:28-30, 9:1-29",
-    "date": "2009-03-15",
-    "disk": "8",
-    "spl": null,
-    "published": "2009-03-15 10:18:39",
-    "created_at": "2009-03-15 10:18:39",
-    "updated_at": "2010-05-23 19:42:00"
-  },
-  {
-    "id": "10",
-    "series": "ACE - What is a Healthy Church",
-    "title": "What is a Healthy Church 11",
-    "teacher": "Jeff Holwerda",
-    "comment": "Biblical Church Leadership",
-    "date": "2009-03-22",
-    "disk": "8",
-    "spl": null,
-    "published": "2009-03-24 17:58:21",
-    "created_at": "2009-03-24 17:58:21",
-    "updated_at": "2010-05-23 19:42:00"
-  },
-  {
-    "id": "11",
-    "series": "5th Sunday",
-    "title": "No ACE Today",
-    "teacher": "None",
-    "comment": null,
-    "date": "2009-03-29",
-    "disk": "8",
-    "spl": null,
-    "published": "2009-03-29 13:28:52",
-    "created_at": "2009-03-29 13:28:52",
-    "updated_at": "2010-05-23 19:42:00"
-  },
-  {
-    "id": "12",
-    "series": "ACE - The Messianic Psalms",
-    "title": "The Messianic Psalms - Psalm 69",
-    "teacher": "Ken Carr",
-    "comment": null,
-    "date": "2009-04-05",
-    "disk": "8",
-    "spl": null,
-    "published": "2009-04-05 14:06:48",
-    "created_at": "2009-04-05 14:06:48",
-    "updated_at": "2010-05-23 19:42:00"
-  },
-  {
-    "id": "13",
-    "series": "ACE - Essential Christian Doctrines",
-    "title": "Paradox - Divine Sovereignty and Human Freewill",
-    "teacher": "Tighe Farrow",
-    "comment": "Romans 9",
-    "date": "2009-04-12",
-    "disk": "8",
-    "spl": null,
-    "published": "2009-04-12 15:54:56",
-    "created_at": "2009-04-12 15:54:56",
-    "updated_at": "2010-05-23 19:42:00"
-  },
-  {
-    "id": "14",
-    "series": "ACE - Essential Christian Doctrines",
-    "title": "Why won't Israel believe?",
-    "teacher": "Tighe Farrow",
-    "comment": "Romans 9:30-10:21",
-    "date": "2009-04-19",
-    "disk": "8",
-    "spl": null,
-    "published": "2009-04-19 13:21:37",
-    "created_at": "2009-04-19 13:21:37",
-    "updated_at": "2010-05-23 19:42:00"
-  },
-  {
-    "id": "15",
-    "series": "Missions Sunday",
-    "title": "Missions Report - Todd & Sue Kelly",
-    "teacher": "Todd Kelly",
-    "comment": "Serving with Leadership Resources",
-    "date": "2009-04-26",
-    "disk": "8",
-    "spl": null,
-    "published": "2009-04-26 17:22:55",
-    "created_at": "2009-04-26 17:22:55",
-    "updated_at": "2010-05-23 19:42:00"
-  },
-  {
-    "id": "16",
-    "series": "ACE - Essential Christian Doctrines",
-    "title": "Gentiles Grafted Into the Tree of Israel and the Jealousy of the Jews",
-    "teacher": "Tighe Farrow",
-    "comment": null,
-    "date": "2009-05-03",
-    "disk": "8",
-    "spl": null,
-    "published": "2009-05-03 16:15:24",
-    "created_at": "2009-05-03 16:15:24",
-    "updated_at": "2010-05-23 19:42:00"
-  },
-  {
-    "id": "17",
-    "series": "ACE - Singular Teaching",
-    "title": "Religion and the Gospel",
-    "teacher": "Jeff Holwerda",
-    "comment": "Adapted from Tim Keller",
-    "date": "2009-05-10",
-    "disk": "8",
-    "spl": null,
-    "published": "2009-05-10 13:31:17",
-    "created_at": "2009-05-10 13:31:17",
-    "updated_at": "2010-05-23 19:42:00"
-  },
-  {
-    "id": "18",
-    "series": "ACE - Singular Teaching",
-    "title": "Two Ways to Live",
-    "teacher": "Ken Carr",
-    "comment": "Refresher",
-    "date": "2009-05-17",
-    "disk": "8",
-    "spl": null,
-    "published": "2009-05-17 14:07:53",
-    "created_at": "2009-05-17 14:07:53",
-    "updated_at": "2010-05-23 19:42:00"
-  },
-  {
-    "id": "19",
-    "series": "ACE - Essential Christian Doctrines",
-    "title": "The Ground We\\'ve Covered",
-    "teacher": "Tighe Farrow",
-    "comment": "Last Lesson",
-    "date": "2009-05-31",
-    "disk": "8",
-    "spl": null,
-    "published": "2009-06-04 19:25:43",
-    "created_at": "2009-06-04 19:25:43",
-    "updated_at": "2010-05-23 19:42:00"
-  },
-  {
-    "id": "20",
-    "series": "Child Dedication",
-    "title": "Dedication of Simeon Yi-Lun Gabriel",
-    "teacher": "Ken Carr",
-    "comment": null,
-    "date": "2009-05-24",
-    "disk": "8",
-    "spl": null,
-    "published": "2009-05-24 13:57:56",
-    "created_at": "2009-05-24 13:57:56",
-    "updated_at": "2010-05-23 19:42:00"
-  },
-  {
-    "id": "21",
-    "series": "Christian Relationships",
-    "title": "Romans 1-11 Review of Christian Doctrine",
-    "teacher": "Tighe Farrow",
-    "comment": "Review of what was covered last year and begin Romans 12",
-    "date": "2009-09-13",
-    "disk": "9",
-    "spl": null,
-    "published": "2009-09-13 14:29:30",
-    "created_at": "2009-09-13 14:29:30",
-    "updated_at": "2010-05-23 19:42:00"
-  },
-  {
-    "id": "22",
-    "series": "Christian Relationships",
-    "title": "Relationship to ourselves, Relationship to others",
-    "teacher": "Tighe Farrow",
-    "comment": "Romans 12:3-8,9-16",
-    "date": "2009-09-20",
-    "disk": "9",
-    "spl": null,
-    "published": "2009-09-20 16:08:51",
-    "created_at": "2009-09-20 16:08:51",
-    "updated_at": "2010-05-23 19:42:00"
-  },
-  {
-    "id": "23",
-    "series": "Christian Relationships",
-    "title": "Relationship to Our Enemies and Evildoers",
-    "teacher": "Tighe Farrow",
-    "comment": "Romans 12:17-21",
-    "date": "2009-09-27",
-    "disk": "9",
-    "spl": null,
-    "published": "2009-09-28 21:06:06",
-    "created_at": "2009-09-28 21:06:06",
-    "updated_at": "2010-05-23 19:42:00"
-  },
-  {
-    "id": "24",
-    "series": "RC Sproul World View Series",
-    "title": "Secularism",
-    "teacher": "Tighe Farrow",
-    "comment": "Video Series",
-    "date": "2009-10-04",
-    "disk": "9",
-    "spl": null,
-    "published": "2009-10-04 22:08:32",
-    "created_at": "2009-10-04 22:08:32",
-    "updated_at": "2010-05-23 19:42:00"
-  },
-  {
-    "id": "25",
-    "series": "Christian Relationships",
-    "title": "Our Relationships - The Secularist",
-    "teacher": "Tighe Farrow",
-    "comment": "Response to the R.C. Sproul video series",
-    "date": "2009-10-11",
-    "disk": "9",
-    "spl": null,
-    "published": "2009-10-11 13:20:57",
-    "created_at": "2009-10-11 13:20:57",
-    "updated_at": "2010-05-23 19:42:00"
-  },
-  {
-    "id": "26",
-    "series": "ACE - Missions Reports",
-    "title": "Africa Missions Report",
-    "teacher": "Victor Kuligin",
-    "comment": "A new direction for the Kuligins",
-    "date": "2009-10-18",
-    "disk": "9",
-    "spl": null,
-    "published": "2009-10-18 16:20:10",
-    "created_at": "2009-10-18 16:20:10",
-    "updated_at": "2010-05-23 19:42:00"
-  },
-  {
-    "id": "27",
-    "series": "Christian Relationships",
-    "title": "The Christian's relationship to the State",
-    "teacher": "Tighe Farrow",
-    "comment": "Romans 13:1-7",
-    "date": "2009-11-01",
-    "disk": "9",
-    "spl": null,
-    "published": "2009-11-01 17:02:56",
-    "created_at": "2009-11-01 17:02:56",
-    "updated_at": "2010-05-23 19:42:00"
-  },
-  {
-    "id": "28",
-    "series": "Christian Relationships",
-    "title": "Relationship to the Law and Christ's Return",
-    "teacher": "Tighe Farrow",
-    "comment": "Romans 13:8-14",
-    "date": "2009-11-08",
-    "disk": "9",
-    "spl": null,
-    "published": "2009-11-09 14:23:50",
-    "created_at": "2009-11-09 14:23:50",
-    "updated_at": "2010-05-23 19:42:00"
-  },
-  {
-    "id": "32",
-    "series": "Christian Relationships",
-    "title": "Relationship to the \"weak\" in faith",
-    "teacher": "Tighe Farrow",
-    "comment": "Romans 14-15:13",
-    "date": "2009-12-06",
-    "disk": "9",
-    "spl": null,
-    "published": "2009-12-06 22:35:56",
-    "created_at": "2009-12-06 22:35:56",
-    "updated_at": "2010-05-23 19:42:00"
-  },
-  {
-    "id": "33",
-    "series": "RC Sproul World View Series",
-    "title": "Pragmatism",
-    "teacher": "Tighe Farrow",
-    "comment": "Christian World Views",
-    "date": "2009-12-13",
-    "disk": "9",
-    "spl": null,
-    "published": "2009-12-13 15:38:09",
-    "created_at": "2009-12-13 15:38:09",
-    "updated_at": "2010-05-23 19:42:00"
-  },
-  {
-    "id": "35",
-    "series": "RC Sproul World View Series",
-    "title": "Positivism",
-    "teacher": "Tighe Farrow",
-    "comment": "Everything must be verified emperically.",
-    "date": "2010-01-10",
-    "disk": "9",
-    "spl": null,
-    "published": "2010-01-10 10:13:38",
-    "created_at": "2010-01-10 10:13:38",
-    "updated_at": "2010-05-23 19:42:00"
-  },
-  {
-    "id": "36",
-    "series": "Missions Report",
-    "title": "Owens in Vietnam",
-    "teacher": "Daniel and Heather Owens",
-    "comment": "",
-    "date": "2010-01-24",
-    "disk": "9",
-    "spl": null,
-    "published": "2010-01-24 09:33:06",
-    "created_at": "2010-01-24 09:25:41",
-    "updated_at": "2010-05-23 19:42:00"
-  },
-  {
-    "id": "37",
-    "series": "Congregational Update",
-    "title": "Financial Update",
-    "teacher": "Eric Day",
-    "comment": "",
-    "date": "2010-01-31",
-    "disk": "9",
-    "spl": null,
-    "published": "2010-01-31 10:35:48",
-    "created_at": "2010-01-31 10:35:48",
-    "updated_at": "2010-05-23 19:42:00"
-  },
-  {
-    "id": "38",
-    "series": "RC Sproul World View Series",
-    "title": "Pluralism and Relativism",
-    "teacher": "Tighe Farrow",
-    "comment": "",
-    "date": "2010-02-07",
-    "disk": "9",
-    "spl": null,
-    "published": "2010-02-08 07:24:07",
-    "created_at": "2010-02-08 07:24:07",
-    "updated_at": "2010-05-23 19:42:00"
-  },
-  {
-    "id": "39",
-    "series": "Missions Report",
-    "title": "Kelly Overview (Missions)",
-    "teacher": "Kelly Bryant",
-    "comment": "Awesome story by someone who is only 19 years old!",
-    "date": "2010-02-14",
-    "disk": "9",
-    "spl": null,
-    "published": "2010-02-14 16:53:46",
-    "created_at": "2010-02-14 16:44:54",
-    "updated_at": "2010-05-23 19:42:00"
-  },
-  {
-    "id": "40",
-    "series": "Baptism",
-    "title": "Baptism Wrap-up",
-    "teacher": "Tighe Farrow",
-    "comment": "With comments by Nicholas Piotrowski",
-    "date": "2010-04-11",
-    "disk": "9",
-    "spl": null,
-    "published": "2010-04-16 14:37:15",
-    "created_at": "2010-04-16 14:37:15",
-    "updated_at": "2010-05-23 19:42:00"
-  },
-  {
-    "id": "41",
-    "series": "RC Sproul World View Series",
-    "title": "Science and Evolution",
-    "teacher": "Tighe Farrow",
-    "comment": "Spontaneous Discussion of Science and Evolution because R.C. Sproul Video refused to play.",
-    "date": "2010-04-25",
-    "disk": "9",
-    "spl": null,
-    "published": "2010-04-25 17:14:05",
-    "created_at": "2010-04-25 16:58:41",
-    "updated_at": "2010-05-23 19:42:00"
-  },
-  {
-    "id": "42",
-    "series": "RC Sproul World View Series",
-    "title": "Economics",
-    "teacher": "Tighe Farrow",
-    "comment": "Very good view on economics",
-    "date": "2010-05-09",
-    "disk": "9",
-    "spl": null,
-    "published": "2010-05-09 13:33:06",
-    "created_at": "2010-05-09 13:33:06",
-    "updated_at": "2010-05-23 19:42:00"
-  },
-  {
-    "id": "43",
-    "series": "ACE - Essential Christian Doctrines",
-    "title": "Apologetics - Evangelism",
-    "teacher": "Tighe Farrow",
-    "comment": "Part 1 - Review of Evangelism and Web of Truth",
-    "date": "2010-05-16",
-    "disk": "9",
-    "spl": null,
-    "published": "2010-05-17 14:21:01",
-    "created_at": "2010-05-17 14:21:01",
-    "updated_at": "2010-05-23 19:42:00"
-  },
-  {
-    "id": "44",
-    "series": "ACE - Essential Christian Doctrines",
-    "title": "The Web of Truth and the Ten Commandments",
-    "teacher": "Tighe Farrow",
-    "comment": "Last Sunday School for the Season",
-    "date": "2010-05-23",
-    "disk": "9",
-    "spl": null,
-    "published": "2010-05-28 07:22:01",
-    "created_at": "2010-05-23 13:33:16",
-    "updated_at": "2010-05-28 07:22:01"
-  },
-  {
-    "id": "46",
-    "series": "2010 Fall Teaching Schedule",
-    "title": "Solas of the Reformation Part 1",
-    "teacher": "Tighe Farrow",
-    "comment": "The Five Solas of the Reformation - SOLA SCRIPTURA",
-    "date": "2010-09-12",
-    "disk": "10",
-    "spl": null,
-    "published": "2010-09-18 21:31:28",
-    "created_at": "2010-09-18 21:01:55",
-    "updated_at": "2010-09-18 21:31:28"
-  },
-  {
-    "id": "47",
-    "series": "2010 Fall Teaching Schedule",
-    "title": "Solas of the Reformation Part 2",
-    "teacher": "Tighe Farrow",
-    "comment": "The Five Solas of the Reformation - SOLA CHRISTUS",
-    "date": "2010-09-26",
-    "disk": "10",
-    "spl": null,
-    "published": "2010-10-01 10:47:24",
-    "created_at": "2010-09-26 14:01:45",
-    "updated_at": "2010-10-01 10:47:24"
-  },
-  {
-    "id": "48",
-    "series": "2010 Fall Teaching Schedule",
-    "title": "Solas of the Reformation Part 4",
-    "teacher": "Tighe Farrow",
-    "comment": "The Five Solas - SOLA GRATIA",
-    "date": "2010-10-10",
-    "disk": "10",
-    "spl": null,
-    "published": "2010-10-14 11:42:35",
-    "created_at": "2010-10-12 22:19:07",
-    "updated_at": "2010-10-14 11:42:35"
-  },
-  {
-    "id": "49",
-    "series": "Missions Sunday",
-    "title": "Missions in Jordan",
-    "teacher": "Tim and Rebecca Wick",
-    "comment": "For limited distribution. Do not publish on the Internet.",
-    "date": "2010-10-17",
-    "disk": "10",
-    "spl": null,
-    "published": null,
-    "created_at": "2010-10-19 22:07:38",
-    "updated_at": "2010-10-23 23:04:42"
-  },
-  {
-    "id": "50",
-    "series": "2010 Fall Teaching Schedule",
-    "title": "Solas of the Reformation Part 1",
-    "teacher": "Tighe Farrow",
-    "comment": "The Five Solas - SOLA GRATIA and SOLA FIDE",
-    "date": "2010-10-24",
-    "disk": "10",
-    "spl": null,
-    "published": "2010-11-16 21:55:37",
-    "created_at": "2010-10-25 14:10:21",
-    "updated_at": "2010-11-16 21:55:38"
-  },
-  {
-    "id": "51",
-    "series": "2010 Fall Teaching Schedule",
-    "title": "The Five Solas Part 7",
-    "teacher": "Tighe Farrow",
-    "comment": "Soli Deo Gloria",
-    "date": "2010-11-14",
-    "disk": "10",
-    "spl": "[{\"type\":\"average\",\"value\":\"70\"},{\"type\":\"average\",\"value\":\"\"}]",
-    "published": "2010-11-18 11:51:10",
-    "created_at": "2010-11-14 17:02:37",
-    "updated_at": "2010-11-23 12:55:57"
-  },
-  {
-    "id": "52",
-    "series": "R. C. Sproul - Christian Worldviews",
-    "title": "R. C. Sproul - Art",
-    "teacher": "",
-    "comment": "no recording",
-    "date": "2010-12-05",
-    "disk": "10",
-    "spl": "[{\"type\":\"average\",\"value\":\"\"},{\"type\":\"average\",\"value\":\"\"}]",
-    "published": null,
-    "created_at": "2010-12-07 22:41:34",
-    "updated_at": "2010-12-07 22:42:25"
-  },
-  {
-    "id": "53",
-    "series": "2010 Fall Teaching Schedule",
-    "title": "The Niceno-Constantinopolitan Creed",
-    "teacher": "Nicholas Piotrowski",
-    "comment": "The Creeds",
-    "date": "2010-12-12",
-    "disk": "10",
-    "spl": "[{\"type\":\"average\",\"value\":\"58\"},{\"type\":\"max\",\"value\":\"69.30\"}]",
-    "published": "2010-12-14 22:21:54",
-    "created_at": "2010-12-12 14:49:29",
-    "updated_at": "2010-12-18 10:35:15"
-  },
-  {
-    "id": "54",
-    "series": "2011 ACE Winter Series",
-    "title": "Apostacy, Part 1",
-    "teacher": "Tighe Farrow",
-    "comment": "",
-    "date": "2011-01-09",
-    "disk": "10",
-    "spl": "[{\"type\":\"average\",\"value\":\"\"},{\"type\":\"average\",\"value\":\"\"}]",
-    "published": "2011-01-10 19:50:55",
-    "created_at": "2011-01-09 17:15:39",
-    "updated_at": "2011-01-10 19:50:55"
-  },
-  {
-    "id": "55",
-    "series": "2011 ACE Winter Series",
-    "title": "Apostacy, Part 2",
-    "teacher": "Tighe Farrow",
-    "comment": "",
-    "date": "2011-01-16",
-    "disk": "10",
-    "spl": "[{\"type\":\"average\",\"value\":\"\"},{\"type\":\"average\",\"value\":\"\"}]",
-    "published": "2011-01-22 11:37:36",
-    "created_at": "2011-01-19 20:04:40",
-    "updated_at": "2011-01-22 11:37:36"
-  },
-  {
-    "id": "56",
-    "series": "2011 ACE Winter Series",
-    "title": "Apostacy, Part 3",
-    "teacher": "Tighe Farrow",
-    "comment": "",
-    "date": "2011-01-23",
-    "disk": "10",
-    "spl": "[{\"type\":\"average\",\"value\":\"54\"},{\"type\":\"max\",\"value\":\"72\"}]",
-    "published": "2011-01-25 05:56:01",
-    "created_at": "2011-01-23 11:39:02",
-    "updated_at": "2011-01-25 05:56:01"
-  },
-  {
-    "id": "57",
-    "series": "2011 5th Sunday Congregational Meeting",
-    "title": "January 2011 Congregational Meeting",
-    "teacher": "Pastor Ken Carr",
-    "comment": "",
-    "date": "2011-01-30",
-    "disk": "10",
-    "spl": "[{\"type\":\"average\",\"value\":\"\"},{\"type\":\"average\",\"value\":\"\"}]",
-    "published": "2011-02-05 09:39:36",
-    "created_at": "2011-01-30 12:58:41",
-    "updated_at": "2011-02-05 09:39:37"
-  },
-  {
-    "id": "58",
-    "series": "2011 ACE Winter Series",
-    "title": "Apostle's Creed Part 2",
-    "teacher": "Nicholas Piotrowski",
-    "comment": "",
-    "date": "2011-02-13",
-    "disk": "10",
-    "spl": "[{\"type\":\"average\",\"value\":\"\"},{\"type\":\"average\",\"value\":\"\"}]",
-    "published": "2011-02-15 22:39:49",
-    "created_at": "2011-02-15 22:13:17",
-    "updated_at": "2011-02-15 22:39:49"
-  },
-  {
-    "id": "59",
-    "series": "Essential Christian Doctrines",
-    "title": "Essential Christian Doctrines - Lesson 1",
-    "teacher": "Tighe Farrow",
-    "comment": "Transmitter was set incorrectly, the recording level was too low.",
-    "date": "2011-02-27",
-    "disk": "10",
-    "spl": "[{\"type\":\"average\",\"value\":\"55\"},{\"type\":\"max\",\"value\":\"66\"}]",
-    "published": "2011-03-01 22:27:05",
-    "created_at": "2011-03-01 22:23:08",
-    "updated_at": "2011-03-01 22:27:05"
-  },
-  {
-    "id": "60",
-    "series": "2011 ACE Winter Series",
-    "title": "Essential Doctrines - Lesson 2",
-    "teacher": "Tighe Farrow",
-    "comment": "",
-    "date": "2011-03-06",
-    "disk": "10",
-    "spl": "[{\"type\":\"average\",\"value\":\"\"},{\"type\":\"average\",\"value\":\"\"}]",
-    "published": "2011-03-09 17:12:14",
-    "created_at": "2011-03-09 14:04:42",
-    "updated_at": "2011-03-09 18:40:21"
-  },
-  {
-    "id": "61",
-    "series": "2011 ACE Winter Series",
-    "title": "Essential Christian Doctrines - Lesson 3",
-    "teacher": "Tighe Farrow",
-    "comment": "The Importance of the Resurrection.",
-    "date": "2011-03-13",
-    "disk": "10",
-    "spl": "[{\"type\":\"average\",\"value\":\"\"},{\"type\":\"average\",\"value\":\"\"}]",
-    "published": "2011-03-13 15:23:54",
-    "created_at": "2011-03-13 10:05:48",
-    "updated_at": "2011-03-13 15:23:54"
-  },
-  {
-    "id": "62",
-    "series": "2011 ACE Winter Series",
-    "title": "Essential Christian Doctrines - Lesson 4",
-    "teacher": "Tighe Farrow",
-    "comment": "Atonement",
-    "date": "2011-03-20",
-    "disk": "10",
-    "spl": "[{\"type\":\"average\",\"value\":\"\"},{\"type\":\"average\",\"value\":\"\"}]",
-    "published": "2011-03-22 22:25:57",
-    "created_at": "2011-03-22 18:23:11",
-    "updated_at": "2011-03-22 22:25:57"
-  },
-  {
-    "id": "63",
-    "series": "",
-    "title": "No ACE Today",
-    "teacher": "",
-    "comment": "",
-    "date": "2011-03-27",
-    "disk": "10",
-    "spl": "[{\"type\":\"average\",\"value\":\"\"},{\"type\":\"average\",\"value\":\"\"}]",
-    "published": null,
-    "created_at": "2011-03-27 17:53:31",
-    "updated_at": "2011-03-27 17:53:31"
-  },
-  {
-    "id": "64",
-    "series": "2011 ACE Winter Series",
-    "title": "The Marks of a Cult, Part 1",
-    "teacher": " Tighe Farrow",
-    "comment": "Video. No lesson today.",
-    "date": "2011-04-03",
-    "disk": "10",
-    "spl": "[{\"type\":\"average\",\"value\":\"\"},{\"type\":\"average\",\"value\":\"\"}]",
-    "published": null,
-    "created_at": "2011-04-03 09:54:24",
-    "updated_at": "2011-04-03 09:54:24"
-  },
-  {
-    "id": "65",
-    "series": "2011 ACE Winter Series",
-    "title": "The Marks of a Cult, Part 2",
-    "teacher": "Tighe Farrow",
-    "comment": "No recording this week.",
-    "date": "2011-04-10",
-    "disk": "10",
-    "spl": "[{\"type\":\"average\",\"value\":\"\"},{\"type\":\"average\",\"value\":\"\"}]",
-    "published": null,
-    "created_at": "2011-04-13 20:31:29",
-    "updated_at": "2011-04-13 20:32:21"
-  },
-  {
-    "id": "66",
-    "series": "2011 Missions Sunday",
-    "title": "Todd Kelly Missions Update",
-    "teacher": "Todd Kelly",
-    "comment": "Todd Kelly talked about what he does and gave a short slide show.",
-    "date": "2011-04-17",
-    "disk": "10",
-    "spl": "[{\"type\":\"average\",\"value\":\"\"},{\"type\":\"average\",\"value\":\"\"}]",
-    "published": "2011-04-24 23:03:24",
-    "created_at": "2011-04-20 19:38:36",
-    "updated_at": "2011-04-24 23:03:24"
-  },
-  {
-    "id": "67",
-    "series": "",
-    "title": "",
-    "teacher": "",
-    "comment": "No Sunday school this week. Easter Sunday 2011",
-    "date": "2011-04-24",
-    "disk": "10",
-    "spl": "[{\"type\":\"average\",\"value\":\"\"},{\"type\":\"average\",\"value\":\"\"}]",
-    "published": null,
-    "created_at": "2011-04-25 22:54:20",
-    "updated_at": "2011-04-25 22:55:12"
-  },
-  {
-    "id": "68",
-    "series": "2011 ACE Spring Series",
-    "title": "The Marks of a Cult, Part 3",
-    "teacher": "Tighe Farrow",
-    "comment": "Video Series -- No recording",
-    "date": "2011-05-01",
-    "disk": "10",
-    "spl": "[{\"type\":\"average\",\"value\":\"\"},{\"type\":\"average\",\"value\":\"\"}]",
-    "published": null,
-    "created_at": "2011-05-02 20:58:23",
-    "updated_at": "2011-05-02 20:58:23"
-  },
-  {
-    "id": "69",
-    "series": "2011 ACE Spring Series",
-    "title": "The Marks of a Cult, Part 3",
-    "teacher": "Tighe Farrow",
-    "comment": "Video series . . . no recording",
-    "date": "2011-05-08",
-    "disk": "10",
-    "spl": "[{\"type\":\"average\",\"value\":\"\"},{\"type\":\"average\",\"value\":\"\"}]",
-    "published": null,
-    "created_at": "2011-05-10 19:47:30",
-    "updated_at": "2011-05-10 19:47:30"
-  },
-  {
-    "id": "70",
-    "series": "2011 ACE Spring Series",
-    "title": "Cults - How to Respond",
-    "teacher": "Tighe Farrow",
-    "comment": "This is the follow-up to the video series.",
-    "date": "2011-05-15",
-    "disk": "10",
-    "spl": "[{\"type\":\"average\",\"value\":\"\"},{\"type\":\"average\",\"value\":\"\"}]",
-    "published": "2011-05-16 18:53:19",
-    "created_at": "2011-05-15 13:44:34",
-    "updated_at": "2011-05-16 18:53:19"
-  },
-  {
-    "id": "71",
-    "series": "2011 ACE Spring Series",
-    "title": "Communicating the Gospel",
-    "teacher": "Pastor Ken Carr",
-    "comment": "Final ACE for the season.",
-    "date": "2011-05-22",
-    "disk": "10",
-    "spl": "[{\"type\":\"average\",\"value\":\"\"},{\"type\":\"average\",\"value\":\"\"}]",
-    "published": "2011-05-24 22:37:50",
-    "created_at": "2011-05-24 22:20:19",
-    "updated_at": "2011-05-24 22:37:50"
-  },
-  {
-    "id": "72",
-    "series": "2011 ACE Fall Series",
-    "title": "ACE 2011-12 Introduction",
-    "teacher": "Tighe Farrow",
-    "comment": "First Lesson of the Fall",
-    "date": "2011-09-11",
-    "disk": "10",
-    "spl": "[{\"type\":\"average\",\"value\":\"\"},{\"type\":\"average\",\"value\":\"\"}]",
-    "published": "2011-09-18 13:05:57",
-    "created_at": "2011-09-12 19:29:53",
-    "updated_at": "2011-09-18 13:05:57"
-  },
-  {
-    "id": "73",
-    "series": "2011 ACE Fall Series",
-    "title": "Biblical Apologetics",
-    "teacher": "Tighe Farrow",
-    "comment": "",
-    "date": "2011-09-18",
-    "disk": "10",
-    "spl": "[{\"type\":\"average\",\"value\":\"\"},{\"type\":\"average\",\"value\":\"\"}]",
-    "published": "2011-09-21 19:50:26",
-    "created_at": "2011-09-19 19:59:39",
-    "updated_at": "2011-09-21 19:50:26"
-  },
-  {
-    "id": "74",
-    "series": "2011 ACE Fall Series",
-    "title": "Biblical Apologetics -- Lesson 2",
-    "teacher": "Tighe Farrow",
-    "comment": "General and Special Revelation\nThe necessary being.",
-    "date": "2011-09-25",
-    "disk": "10",
-    "spl": "[{\"type\":\"average\",\"value\":\"\"},{\"type\":\"average\",\"value\":\"\"}]",
-    "published": "2011-09-29 21:23:56",
-    "created_at": "2011-09-26 20:13:17",
-    "updated_at": "2011-10-16 09:38:54"
-  },
-  {
-    "id": "75",
-    "series": "2011 ACE Fall Series",
-    "title": "Jehovah's Witnesses DVD",
-    "teacher": "Tighe Farrow",
-    "comment": "No recording today!",
-    "date": "2011-10-02",
-    "disk": "10",
-    "spl": "[{\"type\":\"average\",\"value\":\"\"},{\"type\":\"average\",\"value\":\"\"}]",
-    "published": null,
-    "created_at": "2011-10-02 13:13:11",
-    "updated_at": "2011-10-02 13:13:11"
-  },
-  {
-    "id": "76",
-    "series": "2011 ACE Fall Series",
-    "title": "Jehovah's Witnesses DVD Follow-up",
-    "teacher": "Tighe Farrow",
-    "comment": "",
-    "date": "2011-10-09",
-    "disk": "10",
-    "spl": "[{\"type\":\"average\",\"value\":\"\"},{\"type\":\"average\",\"value\":\"\"}]",
-    "published": "2011-10-13 19:59:51",
-    "created_at": "2011-10-10 22:07:06",
-    "updated_at": "2011-10-13 19:59:51"
-  },
-  {
-    "id": "77",
-    "series": "2011 ACE Fall Series",
-    "title": "Biblical Apologetics - Man Before Sin",
-    "teacher": "Tighe Farrow",
-    "comment": "Man Before Sin -- Lesson 3",
-    "date": "2011-10-16",
-    "disk": "10",
-    "spl": "[{\"type\":\"average\",\"value\":\"\"},{\"type\":\"average\",\"value\":\"\"}]",
-    "published": "2011-10-17 22:34:08",
-    "created_at": "2011-10-16 08:54:15",
-    "updated_at": "2011-10-17 22:34:08"
-  },
-  {
-    "id": "78",
-    "series": "2011 ACE Fall Series",
-    "title": "Biblical Apologetics - Lesson 4",
-    "teacher": "Tighe Farrow",
-    "comment": "Biblical Apologetics - Man under Sin",
-    "date": "2011-10-23",
-    "disk": "10",
-    "spl": "[{\"type\":\"average\",\"value\":\"\"},{\"type\":\"average\",\"value\":\"\"}]",
-    "published": "2011-10-23 15:45:20",
-    "created_at": "2011-10-23 09:42:45",
-    "updated_at": "2011-10-23 15:45:20"
-  },
-  {
-    "id": "79",
-    "series": "2011 ACE Fall Series",
-    "title": "Biblical Apologetics -- Lesson 5",
-    "teacher": "Tighe Farrow",
-    "comment": "",
-    "date": "2011-10-30",
-    "disk": "10",
-    "spl": "[{\"type\":\"average\",\"value\":\"\"},{\"type\":\"average\",\"value\":\"\"}]",
-    "published": "2011-10-31 20:59:07",
-    "created_at": "2011-10-30 11:20:51",
-    "updated_at": "2011-10-31 20:59:07"
-  },
-  {
-    "id": "80",
-    "series": "2011 ACE Fall Series",
-    "title": "Question Box - Session 1",
-    "teacher": "Tighe Farrow",
-    "comment": "",
-    "date": "2011-11-06",
-    "disk": "10",
-    "spl": "[{\"type\":\"average\",\"value\":\"\"},{\"type\":\"average\",\"value\":\"\"}]",
-    "published": "2011-11-08 06:13:00",
-    "created_at": "2011-11-06 11:29:22",
-    "updated_at": "2011-11-08 06:13:01"
-  },
-  {
-    "id": "81",
-    "series": "2011 ACE Fall Series",
-    "title": "Owens Missions Update",
-    "teacher": "Daniel Owens",
-    "comment": "Do not publish!",
-    "date": "2011-11-13",
-    "disk": "10",
-    "spl": "[{\"type\":\"average\",\"value\":\"\"},{\"type\":\"average\",\"value\":\"\"}]",
-    "published": "2011-11-17 20:03:50",
-    "created_at": "2011-11-15 06:40:07",
-    "updated_at": "2011-11-17 20:03:50"
-  },
-  {
-    "id": "82",
-    "series": "2011 ACE Fall Series",
-    "title": "Cults - Mormonism - Lesson 1",
-    "teacher": "Tighe Farrow",
-    "comment": "No recording this week.",
-    "date": "2011-12-04",
-    "disk": "10",
-    "spl": "[{\"type\":\"average\",\"value\":\"\"},{\"type\":\"average\",\"value\":\"\"}]",
-    "published": null,
-    "created_at": "2011-12-04 11:20:09",
-    "updated_at": "2011-12-04 11:20:09"
-  },
-  {
-    "id": "83",
-    "series": "2011 ACE Fall Series",
-    "title": "Cults - Mormonism - Lesson 2",
-    "teacher": "Tighe Farrow",
-    "comment": "No recording this week. Video.",
-    "date": "2011-12-11",
-    "disk": "10",
-    "spl": "[{\"type\":\"average\",\"value\":\"\"},{\"type\":\"average\",\"value\":\"\"}]",
-    "published": null,
-    "created_at": "2011-12-11 16:43:44",
-    "updated_at": "2011-12-11 16:43:44"
-  },
-  {
-    "id": "84",
-    "series": "2011 ACE Fall Series",
-    "title": "Cults - Mormonism - Lesson 3",
-    "teacher": "Tighe Farrow",
-    "comment": "Video Series â€” No recording today!",
-    "date": "2011-12-18",
-    "disk": "10",
-    "spl": "[{\"type\":\"average\",\"value\":\"\"},{\"type\":\"average\",\"value\":\"\"}]",
-    "published": null,
-    "created_at": "2011-12-18 22:00:22",
-    "updated_at": "2011-12-18 22:00:22"
-  },
-  {
-    "id": "85",
-    "series": "",
-    "title": "",
-    "teacher": "",
-    "comment": "No ACE Lesson this week.",
-    "date": "2012-01-01",
-    "disk": "11",
-    "spl": "[{\"type\":\"average\",\"value\":\"\"},{\"type\":\"average\",\"value\":\"\"}]",
-    "published": null,
-    "created_at": "2012-01-03 21:37:41",
-    "updated_at": "2012-01-03 21:37:41"
-  },
-  {
-    "id": "86",
-    "series": "Biblical Apologetics",
-    "title": "Biblical Apologetics - Review",
-    "teacher": "Tighe Farrow",
-    "comment": "Fall Review",
-    "date": "2012-01-08",
-    "disk": "11",
-    "spl": "[{\"type\":\"average\",\"value\":\"\"},{\"type\":\"average\",\"value\":\"\"}]",
-    "published": "2012-01-09 21:23:04",
-    "created_at": "2012-01-09 20:47:40",
-    "updated_at": "2012-01-09 21:23:04"
-  },
-  {
-    "id": "87",
-    "series": "2012 ACE Winter Series",
-    "title": "Biblical Apologetics - Review II",
-    "teacher": "Tighe Farrow",
-    "comment": "",
-    "date": "2012-01-15",
-    "disk": "11",
-    "spl": "[{\"type\":\"average\",\"value\":\"\"},{\"type\":\"average\",\"value\":\"\"}]",
-    "published": "2012-01-19 12:51:16",
-    "created_at": "2012-01-15 16:00:09",
-    "updated_at": "2012-01-19 12:51:16"
-  },
-  {
-    "id": "88",
-    "series": "2012 Winter Series",
-    "title": "Biblical Apologetics - Introduction to Evidentialism",
-    "teacher": "Tighe Farrow",
-    "comment": "Presuppositionalism\nEvidentialism\nComposite",
-    "date": "2012-01-22",
-    "disk": "11",
-    "spl": "[{\"type\":\"average\",\"value\":\"\"},{\"type\":\"average\",\"value\":\"\"}]",
-    "published": "2012-02-04 22:44:21",
-    "created_at": "2012-01-23 08:30:41",
-    "updated_at": "2012-02-04 22:44:21"
-  },
-  {
-    "id": "89",
-    "series": "2012 ACE Winter Series",
-    "title": "Fifth Sunday Congregational Meeting",
-    "teacher": "Pastor Ken Carr",
-    "comment": "Not for distribution.",
-    "date": "2012-01-29",
-    "disk": "11",
-    "spl": "[{\"type\":\"average\",\"value\":\"\"},{\"type\":\"average\",\"value\":\"\"}]",
-    "published": "2012-01-29 22:19:16",
-    "created_at": "2012-01-29 16:40:14",
-    "updated_at": "2012-01-29 22:19:16"
-  },
-  {
-    "id": "90",
-    "series": "2012 ACE Winter Series",
-    "title": "Questioning Evangelism",
-    "teacher": "Bill Gabriel",
-    "comment": "Thoughts on Witnessing",
-    "date": "2012-02-19",
-    "disk": "11",
-    "spl": "[{\"type\":\"average\",\"value\":\"\"},{\"type\":\"average\",\"value\":\"\"}]",
-    "published": "2012-02-28 13:44:11",
-    "created_at": "2012-02-19 20:51:15",
-    "updated_at": "2012-03-25 21:03:30"
-  },
-  {
-    "id": "91",
-    "series": "True U Video Series",
-    "title": "Lesson 3: Big Bang Cosmology, Part 2 -- In the Beginning",
-    "teacher": "Tighe Farrow",
-    "comment": "No recording today.",
-    "date": "2012-02-26",
-    "disk": "11",
-    "spl": "[{\"type\":\"average\",\"value\":\"\"},{\"type\":\"average\",\"value\":\"\"}]",
-    "published": null,
-    "created_at": "2012-02-26 09:54:28",
-    "updated_at": "2012-03-25 21:02:46"
-  },
-  {
-    "id": "92",
-    "series": "True U Video Series",
-    "title": "Does God Exist â€” DNA Part 1",
-    "teacher": "Tighe Farrow",
-    "comment": "No recording today.\nTrue U: ",
-    "date": "2012-03-11",
-    "disk": "11",
-    "spl": "[{\"type\":\"average\",\"value\":\"\"},{\"type\":\"average\",\"value\":\"\"}]",
-    "published": null,
-    "created_at": "2012-03-11 13:50:18",
-    "updated_at": "2012-03-25 21:00:31"
-  },
-  {
-    "id": "93",
-    "series": "True U Video Series",
-    "title": "Does God Exist â€” DNA Part 2",
-    "teacher": "Tighe Farrow",
-    "comment": "Video.  No recording today.",
-    "date": "2012-03-18",
-    "disk": "11",
-    "spl": "[{\"type\":\"average\",\"value\":\"\"},{\"type\":\"average\",\"value\":\"\"}]",
-    "published": null,
-    "created_at": "2012-03-18 15:50:10",
-    "updated_at": "2012-03-25 21:00:01"
-  },
-  {
-    "id": "94",
-    "series": "2012 ACE Winter Series",
-    "title": "Question Box - Session 2",
-    "teacher": "Tighe Farrow",
-    "comment": "",
-    "date": "2012-03-25",
-    "disk": "11",
-    "spl": "[{\"type\":\"average\",\"value\":\"\"},{\"type\":\"average\",\"value\":\"\"}]",
-    "published": "2012-03-25 21:07:06",
-    "created_at": "2012-03-25 20:39:09",
-    "updated_at": "2012-03-25 21:07:06"
-  },
-  {
-    "id": "95",
-    "series": "True U Video Series",
-    "title": "Does God Exist â€” Big Bang Part 3",
-    "teacher": "Tighe Farrow",
-    "comment": "No recording today.",
-    "date": "2012-03-04",
-    "disk": "11",
-    "spl": "[{\"type\":\"average\",\"value\":\"\"},{\"type\":\"average\",\"value\":\"\"}]",
-    "published": null,
-    "created_at": "2012-03-25 21:01:18",
-    "updated_at": "2012-03-25 21:01:18"
-  },
-  {
-    "id": "96",
-    "series": "True U Video Series",
-    "title": "Does God Exist â€” Big Bang Part 1",
-    "teacher": "Tighe Farrow",
-    "comment": "No recording today.",
-    "date": "2012-02-12",
-    "disk": "11",
-    "spl": "[{\"type\":\"average\",\"value\":\"\"},{\"type\":\"average\",\"value\":\"\"}]",
-    "published": null,
-    "created_at": "2012-03-25 21:04:29",
-    "updated_at": "2012-03-25 21:04:29"
-  },
-  {
-    "id": "97",
-    "series": "True U Video Series",
-    "title": "Does God Exist â€” Reason and Faith",
-    "teacher": "Tighe Farrow",
-    "comment": "No recording today.",
-    "date": "2012-02-05",
-    "disk": "11",
-    "spl": "[{\"type\":\"average\",\"value\":\"\"},{\"type\":\"average\",\"value\":\"\"}]",
-    "published": null,
-    "created_at": "2012-03-25 21:05:12",
-    "updated_at": "2012-03-25 21:05:12"
-  },
-  {
-    "id": "98",
-    "series": "",
-    "title": "",
-    "teacher": "",
-    "comment": "No ACE today.",
-    "date": "2012-04-01",
-    "disk": "11",
-    "spl": "[{\"type\":\"average\",\"value\":\"\"},{\"type\":\"average\",\"value\":\"\"}]",
-    "published": null,
-    "created_at": "2012-04-01 11:45:23",
-    "updated_at": "2012-04-01 11:45:23"
-  },
-  {
-    "id": "99",
-    "series": "",
-    "title": "",
-    "teacher": "",
-    "comment": "True U Video Series: No recording today.",
-    "date": "2012-04-15",
-    "disk": "11",
-    "spl": "[{\"type\":\"average\",\"value\":\"\"},{\"type\":\"average\",\"value\":\"\"}]",
-    "published": null,
-    "created_at": "2012-04-16 20:30:17",
-    "updated_at": "2012-04-16 20:30:17"
-  },
-  {
-    "id": "100",
-    "series": "",
-    "title": "",
-    "teacher": "",
-    "comment": "True U Video Series: No recording today.",
-    "date": "2012-04-22",
-    "disk": "11",
-    "spl": "[{\"type\":\"average\",\"value\":\"\"},{\"type\":\"average\",\"value\":\"\"}]",
-    "published": null,
-    "created_at": "2012-04-24 17:02:22",
-    "updated_at": "2012-04-24 17:02:22"
-  },
-  {
-    "id": "101",
-    "series": "2012 ACE Spring Series",
-    "title": "Question Box - Session 3",
-    "teacher": "Tighe Farrow",
-    "comment": "",
-    "date": "2012-04-29",
-    "disk": "11",
-    "spl": "[{\"type\":\"min\",\"value\":\"\"},{\"type\":\"average\",\"value\":\"\"}]",
-    "published": "2012-04-30 23:10:34",
-    "created_at": "2012-04-30 20:58:43",
-    "updated_at": "2012-04-30 23:10:34"
-  },
-  {
-    "id": "102",
-    "series": "",
-    "title": "",
-    "teacher": "",
-    "comment": "True U video series. No recording today.",
-    "date": "2012-05-06",
-    "disk": "11",
-    "spl": "[{\"type\":\"average\",\"value\":\"\"},{\"type\":\"average\",\"value\":\"\"}]",
-    "published": null,
-    "created_at": "2012-05-12 10:08:10",
-    "updated_at": "2012-05-12 10:08:10"
-  },
-  {
-    "id": "103",
-    "series": "",
-    "title": "",
-    "teacher": "",
-    "comment": "Summer schedule has begun.",
-    "date": "2012-05-20",
-    "disk": "11",
-    "spl": "[{\"type\":\"average\",\"value\":\"\"},{\"type\":\"average\",\"value\":\"\"}]",
-    "published": null,
-    "created_at": "2012-05-28 15:55:33",
-    "updated_at": "2012-05-28 15:55:33"
-  },
-  {
-    "id": "104",
-    "series": "2012 ACE - 1 Corinthians",
-    "title": "Lesson 1 - Introduction",
-    "teacher": "Tighe Farrow",
-    "comment": "1 Corinthians 1:1-9",
-    "date": "2012-09-09",
-    "disk": "11",
-    "spl": "[{\"type\":\"average\",\"value\":\"\"},{\"type\":\"average\",\"value\":\"\"}]",
-    "published": "2012-09-14 07:03:32",
-    "created_at": "2012-09-09 13:42:57",
-    "updated_at": "2012-09-16 14:35:12"
-  },
-  {
-    "id": "105",
-    "series": "2012 ACE - Missions Sunday",
-    "title": "Missions Update - Michele MuÃ±oz",
-    "teacher": "Michele MuÃ±oz",
-    "comment": "",
-    "date": "2012-09-16",
-    "disk": "11",
-    "spl": "[{\"type\":\"average\",\"value\":\"\"},{\"type\":\"average\",\"value\":\"\"}]",
-    "published": "2012-09-19 20:36:04",
-    "created_at": "2012-09-16 14:36:56",
-    "updated_at": "2012-09-19 20:36:04"
-  },
-  {
-    "id": "106",
-    "series": "2012 ACE - 1 Corinthians",
-    "title": "Lesson 02: Divisions",
-    "teacher": "Tighe Farrow",
-    "comment": "",
-    "date": "2012-09-23",
-    "disk": "11",
-    "spl": "[{\"type\":\"average\",\"value\":\"\"},{\"type\":\"average\",\"value\":\"\"}]",
-    "published": "2012-09-24 20:00:26",
-    "created_at": "2012-09-23 15:28:24",
-    "updated_at": "2012-09-24 20:00:26"
-  },
-  {
-    "id": "107",
-    "series": "2012 Fifth Sunday",
-    "title": "Fifth Sunday Congregational Meeting",
-    "teacher": "Pastor Ken Carr",
-    "comment": "No recording today.",
-    "date": "2012-09-30",
-    "disk": "11",
-    "spl": "[{\"type\":\"average\",\"value\":\"\"},{\"type\":\"average\",\"value\":\"\"}]",
-    "published": null,
-    "created_at": "2012-09-30 15:52:46",
-    "updated_at": "2012-09-30 15:53:15"
-  },
-  {
-    "id": "108",
-    "series": "2012 ACE - 1 Corinthians",
-    "title": "Lesson 3 - Wisdom & Discernment",
-    "teacher": "Tighe Farrow",
-    "comment": "",
-    "date": "2012-10-07",
-    "disk": "11",
-    "spl": "[{\"type\":null,\"value\":null},{\"type\":null,\"value\":null}]",
-    "published": "2012-10-11 20:24:36",
-    "created_at": "2012-10-07 15:31:43",
-    "updated_at": "2012-10-11 20:24:36"
-  },
-  {
-    "id": "109",
-    "series": "2012 ACE - 1 Corinthians",
-    "title": "Lesson 04 - The Right Attitude",
-    "teacher": "Tighe Farrow",
-    "comment": "1 Corinthians 4:1-21",
-    "date": "2012-10-14",
-    "disk": "11",
-    "spl": "[{\"type\":null,\"value\":null},{\"type\":null,\"value\":null}]",
-    "published": "2012-10-17 19:28:13",
-    "created_at": "2012-10-15 19:34:02",
-    "updated_at": "2012-10-17 19:28:14"
-  },
-  {
-    "id": "110",
-    "series": "2012 ACE - 1 Corinthians",
-    "title": "Lesson 05 - Various Situations",
-    "teacher": "Tighe Farrow",
-    "comment": "",
-    "date": "2012-10-21",
-    "disk": "11",
-    "spl": "[{\"type\":null,\"value\":null},{\"type\":null,\"value\":null}]",
-    "published": "2012-10-23 20:52:12",
-    "created_at": "2012-10-22 19:48:04",
-    "updated_at": "2012-10-23 20:52:12"
-  },
-  {
-    "id": "111",
-    "series": "2012 Missions Updates",
-    "title": "Nystrom PNG Missions Update",
-    "teacher": "John and Bonnie Nystrom",
-    "comment": "",
-    "date": "2012-12-09",
-    "disk": "11",
-    "spl": "[{\"type\":null,\"value\":null},{\"type\":null,\"value\":null}]",
-    "published": "2012-12-12 06:59:09",
-    "created_at": "2012-12-09 16:44:36",
-    "updated_at": "2012-12-12 06:59:10"
-  },
-  {
-    "id": "112",
-    "series": "2013 ACE - 1 Corinthians",
-    "title": "Lesson 06 - Marriage",
-    "teacher": "Tighe Farrow",
-    "comment": "",
-    "date": "2013-01-06",
-    "disk": "11",
-    "spl": "[{\"type\":null,\"value\":null},{\"type\":null,\"value\":null}]",
-    "published": "2013-01-09 20:16:57",
-    "created_at": "2013-01-09 19:50:55",
-    "updated_at": "2013-01-09 20:16:57"
-  },
-  {
-    "id": "113",
-    "series": "2013 ACE - 1 Corinthians",
-    "title": "Lesson 07 - Food Sacrificed to Idols",
-    "teacher": "Tighe Farrow",
-    "comment": "",
-    "date": "2013-01-13",
-    "disk": "11",
-    "spl": "[{\"type\":null,\"value\":null},{\"type\":null,\"value\":null}]",
-    "published": "2013-01-19 21:15:08",
-    "created_at": "2013-01-13 21:16:58",
-    "updated_at": "2013-01-19 21:15:08"
-  },
-  {
-    "id": "114",
-    "series": "2013 Missions Sunday",
-    "title": "Kelly Missions Update",
-    "teacher": "Todd Kelly",
-    "comment": "Missions Sunday and Luncheon",
-    "date": "2013-02-03",
-    "disk": "11",
-    "spl": "[{\"type\":null,\"value\":null},{\"type\":null,\"value\":null}]",
-    "published": "2013-02-04 20:10:33",
-    "created_at": "2013-02-03 20:56:14",
-    "updated_at": "2013-02-04 20:10:33"
-  },
-  {
-    "id": "115",
-    "series": "2013 ACE - 1 Corinthians",
-    "title": "Lesson 08 - Concerning Worship",
-    "teacher": "Tighe Farrow",
-    "comment": "",
-    "date": "2013-02-10",
-    "disk": "11",
-    "spl": "[{\"type\":null,\"value\":null},{\"type\":null,\"value\":null}]",
-    "published": null,
-    "created_at": "2013-02-10 21:53:40",
-    "updated_at": "2013-02-10 21:53:40"
-  },
-  {
-    "id": "116",
-    "series": "2013 ACE - 1 Corinthians",
-    "title": "Lesson 09 - Concerning Worship",
-    "teacher": "Tighe Farrow",
-    "comment": "",
-    "date": "2013-02-17",
-    "disk": "11",
-    "spl": "[{\"type\":null,\"value\":null},{\"type\":null,\"value\":null}]",
-    "published": "2013-02-23 23:00:02",
-    "created_at": "2013-02-17 16:53:12",
-    "updated_at": "2013-02-23 23:00:02"
-  },
-  {
-    "id": "117",
-    "series": "2013 ACE - 1 Corinthians",
-    "title": "Lesson 10 - Spiritual Gifts",
-    "teacher": "Tighe Farrow",
-    "comment": "",
-    "date": "2013-02-24",
-    "disk": "11",
-    "spl": "[{\"type\":null,\"value\":null},{\"type\":null,\"value\":null}]",
-    "published": "2013-03-02 13:10:39",
-    "created_at": "2013-02-24 21:19:19",
-    "updated_at": "2013-03-02 13:10:39"
-  },
-  {
-    "id": "118",
-    "series": "2013 ACE - 1 Corinthians",
-    "title": "Lesson 11 - Love",
-    "teacher": "Tighe Farrow",
-    "comment": "",
-    "date": "2013-03-03",
-    "disk": "11",
-    "spl": "[{\"type\":null,\"value\":null},{\"type\":null,\"value\":null}]",
-    "published": "2013-03-09 18:52:38",
-    "created_at": "2013-03-03 16:39:05",
-    "updated_at": "2013-03-09 18:52:38"
-  },
-  {
-    "id": "119",
-    "series": "2013 ACE - 1 Corinthians",
-    "title": "Lesson 12 - Spiritual Gifts",
-    "teacher": "Tighe Farrow",
-    "comment": "",
-    "date": "2013-03-10",
-    "disk": "11",
-    "spl": "[{\"type\":null,\"value\":null},{\"type\":null,\"value\":null}]",
-    "published": "2013-03-16 11:05:01",
-    "created_at": "2013-03-14 21:08:50",
-    "updated_at": "2013-03-16 11:05:01"
-  },
-  {
-    "id": "120",
-    "series": "2013 ACE - 1 Corinthians",
-    "title": "Lesson 13 - Spiritual Gifts",
-    "teacher": "Tighe Farrow",
-    "comment": "1 Corinthians 14:20-27",
-    "date": "2013-03-17",
-    "disk": "11",
-    "spl": "[{\"type\":null,\"value\":null},{\"type\":null,\"value\":null}]",
-    "published": "2013-03-19 20:50:46",
-    "created_at": "2013-03-17 09:49:13",
-    "updated_at": "2013-03-19 20:50:46"
-  },
-  {
-    "id": "121",
-    "series": "2013 ACE - 1 Corinthians",
-    "title": "Lesson 14 - Resurrection Part 1",
-    "teacher": "Tighe Farrow",
-    "comment": "",
-    "date": "2013-04-21",
-    "disk": "11",
-    "spl": "[{\"type\":null,\"value\":null},{\"type\":null,\"value\":null}]",
-    "published": "2013-04-23 21:08:18",
-    "created_at": "2013-04-23 20:03:18",
-    "updated_at": "2013-04-23 21:08:18"
-  },
-  {
-    "id": "122",
-    "series": "2013 ACE - 1 Corinthians",
-    "title": "Lesson 16 - Mystery & Closing",
-    "teacher": "Tighe Farrow",
-    "comment": "",
-    "date": "2013-05-05",
-    "disk": "11",
-    "spl": "[{\"type\":null,\"value\":null},{\"type\":null,\"value\":null}]",
-    "published": "2013-05-11 18:14:00",
-    "created_at": "2013-05-06 21:16:51",
-    "updated_at": "2013-05-11 18:14:00"
-  },
-  {
-    "id": "123",
-    "series": "2013 ACE Fall Series",
-    "title": "Hansen Missions Update",
-    "teacher": "Jim Hansen",
-    "comment": "Jim and Kathy Hansen are missionaries with SIM in Bolivia.",
-    "date": "2013-09-08",
-    "disk": "11",
-    "spl": "[{\"type\":null,\"value\":null},{\"type\":null,\"value\":null}]",
-    "published": "2013-09-14 15:01:45",
-    "created_at": "2013-09-09 21:53:08",
-    "updated_at": "2013-09-14 15:01:45"
-  },
-  {
-    "id": "124",
-    "series": "2013 ACE Fall Series",
-    "title": "Revelation",
-    "teacher": "Pastor Jeff Holwerda",
-    "comment": "Part 1 of our new fall series.  What is revelation and why is it so important?",
-    "date": "2013-09-15",
-    "disk": "11",
-    "spl": "[{\"type\":null,\"value\":null},{\"type\":null,\"value\":null}]",
-    "published": "2013-09-21 16:23:36",
-    "created_at": "2013-09-21 09:42:50",
-    "updated_at": "2013-09-21 16:23:36"
-  },
-  {
-    "id": "125",
-    "series": "2013 ACE Fall Series",
-    "title": "What is the Bible & Scripture",
-    "teacher": "Bill Gabriel",
-    "comment": "",
-    "date": "2013-09-22",
-    "disk": "11",
-    "spl": "[{\"type\":null,\"value\":null},{\"type\":null,\"value\":null}]",
-    "published": "2013-09-24 21:51:07",
-    "created_at": "2013-09-24 20:25:46",
-    "updated_at": "2013-09-24 21:51:07"
-  },
-  {
-    "id": "126",
-    "series": "2013 ACE Fall Series",
-    "title": "What is the Bible?",
-    "teacher": "Ken Carr",
-    "comment": "What is the Bible? (Grudem)\nScripture (Packer)",
-    "date": "2013-09-29",
-    "disk": "11",
-    "spl": "[{\"type\":null,\"value\":null},{\"type\":null,\"value\":null}]",
-    "published": "2013-09-30 22:41:52",
-    "created_at": "2013-09-30 13:19:19",
-    "updated_at": "2013-09-30 22:41:52"
-  },
-  {
-    "id": "127",
-    "series": "2013 ACE Fall Series",
-    "title": "The Trinity",
-    "teacher": "Andy Underhile",
-    "comment": "",
-    "date": "2013-10-06",
-    "disk": "11",
-    "spl": "[{\"type\":null,\"value\":null},{\"type\":null,\"value\":null}]",
-    "published": "2013-10-07 20:39:54",
-    "created_at": "2013-10-07 16:35:45",
-    "updated_at": "2013-10-07 20:39:54"
-  },
-  {
-    "id": "128",
-    "series": "2013 ACE Fall Series",
-    "title": "Creation",
-    "teacher": "Pastor Jeff Holwerda",
-    "comment": "A lively discussion!",
-    "date": "2013-10-13",
-    "disk": "11",
-    "spl": "[{\"type\":null,\"value\":null},{\"type\":null,\"value\":null}]",
-    "published": "2013-10-17 06:36:23",
-    "created_at": "2013-10-13 13:28:46",
-    "updated_at": "2013-10-17 06:36:23"
-  },
-  {
-    "id": "129",
-    "series": "2013 ACE Fall Series",
-    "title": "Prayer",
-    "teacher": "Bill Gabriel",
-    "comment": "",
-    "date": "2013-10-20",
-    "disk": "11",
-    "spl": "[{\"type\":null,\"value\":null},{\"type\":null,\"value\":null}]",
-    "published": "2013-10-23 21:50:29",
-    "created_at": "2013-10-20 14:58:39",
-    "updated_at": "2013-10-23 21:50:29"
-  },
-  {
-    "id": "130",
-    "series": "2013 ACE Fall Series",
-    "title": "What are Angels, Satan, and Demons?",
-    "teacher": "Pastor Ken Carr",
-    "comment": "",
-    "date": "2013-10-27",
-    "disk": "11",
-    "spl": "[{\"type\":null,\"value\":null},{\"type\":null,\"value\":null}]",
-    "published": "2013-10-28 23:03:23",
-    "created_at": "2013-10-28 18:52:00",
-    "updated_at": "2013-10-28 23:03:23"
-  },
-  {
-    "id": "131",
-    "series": "2013 ACE Fall Series",
-    "title": "What is Sin?",
-    "teacher": "Andy Underhile",
-    "comment": "",
-    "date": "2013-11-03",
-    "disk": "11",
-    "spl": "[{\"type\":null,\"value\":null},{\"type\":null,\"value\":null}]",
-    "published": "2013-11-03 21:50:37",
-    "created_at": "2013-11-03 15:20:32",
-    "updated_at": "2013-11-03 21:50:37"
-  },
-  {
-    "id": "132",
-    "series": "2013 ACE Fall Series",
-    "title": "What is Prayer?",
-    "teacher": "Pastor Jeff Holwerda",
-    "comment": "",
-    "date": "2013-11-10",
-    "disk": "11",
-    "spl": "[{\"type\":null,\"value\":null},{\"type\":null,\"value\":null}]",
-    "published": "2013-11-10 21:58:45",
-    "created_at": "2013-11-10 13:46:55",
-    "updated_at": "2013-11-10 21:58:45"
-  },
-  {
-    "id": "133",
-    "series": "2013 ACE Fall Series",
-    "title": "Who is Christ? / The Mediator",
-    "teacher": "Pastor Ken Carr",
-    "comment": "",
-    "date": "2013-11-17",
-    "disk": "11",
-    "spl": "[{\"type\":null,\"value\":null},{\"type\":null,\"value\":null}]",
-    "published": "2013-11-22 06:06:12",
-    "created_at": "2013-11-17 14:29:03",
-    "updated_at": "2013-11-22 06:06:13"
-  },
-  {
-    "id": "134",
-    "series": "2013 ACE Fall Series",
-    "title": "What is the Atonement/Reconciliation?",
-    "teacher": "Bill Gabriel",
-    "comment": "",
-    "date": "2013-11-24",
-    "disk": "11",
-    "spl": "[{\"type\":null,\"value\":null},{\"type\":null,\"value\":null}]",
-    "published": "2013-11-26 18:53:58",
-    "created_at": "2013-11-24 14:21:31",
-    "updated_at": "2013-11-26 18:53:58"
-  },
-  {
-    "id": "135",
-    "series": "2013 ACE Fall Series",
-    "title": "What is Election?",
-    "teacher": "Pastor Jeff Holwerda",
-    "comment": "",
-    "date": "2013-12-08",
-    "disk": "11",
-    "spl": "[{\"type\":null,\"value\":null},{\"type\":null,\"value\":null}]",
-    "published": "2013-12-09 18:38:19",
-    "created_at": "2013-12-08 16:33:04",
-    "updated_at": "2013-12-09 18:38:19"
-  },
-  {
-    "id": "136",
-    "series": "2013 ACE Fall Series",
-    "title": "What is Resurrection?",
-    "teacher": "Andy Underhile",
-    "comment": "",
-    "date": "2013-12-15",
-    "disk": "11",
-    "spl": "[{\"type\":null,\"value\":null},{\"type\":null,\"value\":null}]",
-    "published": "2013-12-15 15:32:49",
-    "created_at": "2013-12-15 10:15:55",
-    "updated_at": "2013-12-15 15:32:49"
-  },
-  {
-    "id": "137",
-    "series": "2014 ACE Winter Series",
-    "title": "What Does It Mean To Become A Christian?",
-    "teacher": "Andy Underhile",
-    "comment": "",
-    "date": "2014-01-12",
-    "disk": "11",
-    "spl": "[{\"type\":null,\"value\":null},{\"type\":null,\"value\":null}]",
-    "published": "2014-01-13 21:07:25",
-    "created_at": "2014-01-12 15:42:12",
-    "updated_at": "2014-01-13 21:07:25"
-  },
-  {
-    "id": "138",
-    "series": "2014 ACE Winter Series",
-    "title": "What is Faith?",
-    "teacher": "Jeff Holwerda",
-    "comment": "",
-    "date": "2014-01-19",
-    "disk": "11",
-    "spl": "[{\"type\":null,\"value\":null},{\"type\":null,\"value\":null}]",
-    "published": "2014-01-19 22:00:38",
-    "created_at": "2014-01-19 15:40:49",
-    "updated_at": "2014-01-19 22:00:38"
-  },
-  {
-    "id": "139",
-    "series": "2014 ACE Winter Series",
-    "title": "Regeneration",
-    "teacher": "Andy Underhile",
-    "comment": "",
-    "date": "2014-01-26",
-    "disk": "11",
-    "spl": "[{\"type\":null,\"value\":null},{\"type\":null,\"value\":null}]",
-    "published": "2014-01-27 19:51:53",
-    "created_at": "2014-01-26 20:20:08",
-    "updated_at": "2014-01-27 19:51:53"
-  },
-  {
-    "id": "140",
-    "series": "2014 ACE Winter Series",
-    "title": "What are Justification and Adoption?",
-    "teacher": "Jeff Holwerda",
-    "comment": "",
-    "date": "2014-02-09",
-    "disk": "11",
-    "spl": "[{\"type\":null,\"value\":null},{\"type\":null,\"value\":null}]",
-    "published": "2014-02-15 23:14:03",
-    "created_at": "2014-02-09 14:26:36",
-    "updated_at": "2014-02-15 23:14:03"
-  },
-  {
-    "id": "141",
-    "series": "2014 ACE Winter Series",
-    "title": "Missions Update - Greg and Debbie Nichols",
-    "teacher": "Greg and Debbie Nichols",
-    "comment": "",
-    "date": "2014-02-16",
-    "disk": "11",
-    "spl": "[{\"type\":null,\"value\":null},{\"type\":null,\"value\":null}]",
-    "published": null,
-    "created_at": "2014-02-16 15:09:12",
-    "updated_at": "2014-02-16 15:09:12"
-  },
-  {
-    "id": "142",
-    "series": "2014 ACE Winter Series",
-    "title": "What are Sanctification and Perserverance?",
-    "teacher": "Pastor Ken Carr",
-    "comment": "",
-    "date": "2014-02-23",
-    "disk": "11",
-    "spl": "[{\"type\":null,\"value\":null},{\"type\":null,\"value\":null}]",
-    "published": null,
-    "created_at": "2014-02-23 15:07:58",
-    "updated_at": "2014-02-23 15:07:58"
-  }
-]
+- id: 1
+  series: ACE - What is a Healthy Church
+  title: What is a Healthy Church 8
+  teacher: Ken Carr
+  comment: Based on the Book
+  date: 2009-02-08T06:00:00.000Z
+  disk: 8
+  spl: null
+  published: 2009-02-08T20:20:10.000Z
+  created_at: 2009-02-08T20:20:10.000Z
+  updated_at: 2010-05-24T00:42:00.000Z
+- id: 2
+  series: ACE - What is a Healthy Church
+  title: What is a Healthy Church 6
+  teacher: Ken Carr
+  comment: Based on the Book
+  date: 2008-12-14T06:00:00.000Z
+  disk: 8
+  spl: null
+  published: 2009-02-08T22:34:21.000Z
+  created_at: 2009-02-08T22:34:21.000Z
+  updated_at: 2010-05-24T00:42:00.000Z
+- id: 3
+  series: ACE - What is a Healthy Church
+  title: What is a Healthy Church 7
+  teacher: Jeff Holwerda
+  comment: Based on the Book
+  date: 2009-01-25T06:00:00.000Z
+  disk: 8
+  spl: null
+  published: 2009-02-08T22:35:18.000Z
+  created_at: 2009-02-08T22:35:18.000Z
+  updated_at: 2010-05-24T00:42:00.000Z
+- id: 4
+  series: ACE - Essential Christian Doctrines
+  title: Impossible to Continue in Sin?
+  teacher: Tighe Farrow
+  comment: Romans 6
+  date: 2009-02-01T06:00:00.000Z
+  disk: 8
+  spl: null
+  published: 2009-02-08T22:38:27.000Z
+  created_at: 2009-02-08T22:38:27.000Z
+  updated_at: 2010-05-24T00:42:00.000Z
+- id: 5
+  series: ACE - Essential Christian Doctrines
+  title: Is the Law Sin or Does the Law Bring Death to Me?
+  teacher: Tighe Farrow
+  comment: "Romans 7:7-12,13-25"
+  date: 2009-02-15T06:00:00.000Z
+  disk: 8
+  spl: null
+  published: 2009-02-15T17:25:42.000Z
+  created_at: 2009-02-15T17:25:42.000Z
+  updated_at: 2010-05-24T00:42:00.000Z
+- id: 6
+  series: ACE - What is a Healthy Church
+  title: What is a Healthy Church 9
+  teacher: Jeff Holwerda
+  comment: "Mark #7 - Biblical Church Discipline"
+  date: 2009-02-22T06:00:00.000Z
+  disk: 8
+  spl: null
+  published: 2009-02-23T03:28:37.000Z
+  created_at: 2009-02-23T03:28:37.000Z
+  updated_at: 2010-05-24T00:42:00.000Z
+- id: 7
+  series: ACE - Essential Christian Doctrines
+  title: The Great Eight
+  teacher: Tighe Farrow
+  comment: Romans 8
+  date: 2009-03-01T06:00:00.000Z
+  disk: 8
+  spl: null
+  published: 2009-03-04T05:16:41.000Z
+  created_at: 2009-03-04T05:16:41.000Z
+  updated_at: 2010-05-24T00:42:00.000Z
+- id: 8
+  series: ACE - What is a Healthy Church
+  title: What is a Healthy Church 10
+  teacher: Ken Carr
+  comment: null
+  date: 2009-03-08T06:00:00.000Z
+  disk: 8
+  spl: null
+  published: 2009-03-09T03:13:04.000Z
+  created_at: 2009-03-09T03:13:04.000Z
+  updated_at: 2010-05-24T00:42:00.000Z
+- id: 9
+  series: ACE - Essential Christian Doctrines
+  title: Predestination plus What About Israel?
+  teacher: Tighe Farrow
+  comment: "Romans 8:28-30, 9:1-29"
+  date: 2009-03-15T05:00:00.000Z
+  disk: 8
+  spl: null
+  published: 2009-03-15T15:18:39.000Z
+  created_at: 2009-03-15T15:18:39.000Z
+  updated_at: 2010-05-24T00:42:00.000Z
+- id: 10
+  series: ACE - What is a Healthy Church
+  title: What is a Healthy Church 11
+  teacher: Jeff Holwerda
+  comment: Biblical Church Leadership
+  date: 2009-03-22T05:00:00.000Z
+  disk: 8
+  spl: null
+  published: 2009-03-24T22:58:21.000Z
+  created_at: 2009-03-24T22:58:21.000Z
+  updated_at: 2010-05-24T00:42:00.000Z
+- id: 11
+  series: 5th Sunday
+  title: No ACE Today
+  teacher: None
+  comment: null
+  date: 2009-03-29T05:00:00.000Z
+  disk: 8
+  spl: null
+  published: 2009-03-29T18:28:52.000Z
+  created_at: 2009-03-29T18:28:52.000Z
+  updated_at: 2010-05-24T00:42:00.000Z
+- id: 12
+  series: ACE - The Messianic Psalms
+  title: The Messianic Psalms - Psalm 69
+  teacher: Ken Carr
+  comment: null
+  date: 2009-04-05T05:00:00.000Z
+  disk: 8
+  spl: null
+  published: 2009-04-05T19:06:48.000Z
+  created_at: 2009-04-05T19:06:48.000Z
+  updated_at: 2010-05-24T00:42:00.000Z
+- id: 13
+  series: ACE - Essential Christian Doctrines
+  title: Paradox - Divine Sovereignty and Human Freewill
+  teacher: Tighe Farrow
+  comment: Romans 9
+  date: 2009-04-12T05:00:00.000Z
+  disk: 8
+  spl: null
+  published: 2009-04-12T20:54:56.000Z
+  created_at: 2009-04-12T20:54:56.000Z
+  updated_at: 2010-05-24T00:42:00.000Z
+- id: 14
+  series: ACE - Essential Christian Doctrines
+  title: "Why won't Israel believe?"
+  teacher: Tighe Farrow
+  comment: "Romans 9:30-10:21"
+  date: 2009-04-19T05:00:00.000Z
+  disk: 8
+  spl: null
+  published: 2009-04-19T18:21:37.000Z
+  created_at: 2009-04-19T18:21:37.000Z
+  updated_at: 2010-05-24T00:42:00.000Z
+- id: 15
+  series: Missions Sunday
+  title: "Missions Report - Todd & Sue Kelly"
+  teacher: Todd Kelly
+  comment: Serving with Leadership Resources
+  date: 2009-04-26T05:00:00.000Z
+  disk: 8
+  spl: null
+  published: 2009-04-26T22:22:55.000Z
+  created_at: 2009-04-26T22:22:55.000Z
+  updated_at: 2010-05-24T00:42:00.000Z
+- id: 16
+  series: ACE - Essential Christian Doctrines
+  title: Gentiles Grafted Into the Tree of Israel and the Jealousy of the Jews
+  teacher: Tighe Farrow
+  comment: null
+  date: 2009-05-03T05:00:00.000Z
+  disk: 8
+  spl: null
+  published: 2009-05-03T21:15:24.000Z
+  created_at: 2009-05-03T21:15:24.000Z
+  updated_at: 2010-05-24T00:42:00.000Z
+- id: 17
+  series: ACE - Singular Teaching
+  title: Religion and the Gospel
+  teacher: Jeff Holwerda
+  comment: Adapted from Tim Keller
+  date: 2009-05-10T05:00:00.000Z
+  disk: 8
+  spl: null
+  published: 2009-05-10T18:31:17.000Z
+  created_at: 2009-05-10T18:31:17.000Z
+  updated_at: 2010-05-24T00:42:00.000Z
+- id: 18
+  series: ACE - Singular Teaching
+  title: Two Ways to Live
+  teacher: Ken Carr
+  comment: Refresher
+  date: 2009-05-17T05:00:00.000Z
+  disk: 8
+  spl: null
+  published: 2009-05-17T19:07:53.000Z
+  created_at: 2009-05-17T19:07:53.000Z
+  updated_at: 2010-05-24T00:42:00.000Z
+- id: 19
+  series: ACE - Essential Christian Doctrines
+  title: "The Ground We\\'ve Covered"
+  teacher: Tighe Farrow
+  comment: Last Lesson
+  date: 2009-05-31T05:00:00.000Z
+  disk: 8
+  spl: null
+  published: 2009-06-05T00:25:43.000Z
+  created_at: 2009-06-05T00:25:43.000Z
+  updated_at: 2010-05-24T00:42:00.000Z
+- id: 20
+  series: Child Dedication
+  title: Dedication of Simeon Yi-Lun Gabriel
+  teacher: Ken Carr
+  comment: null
+  date: 2009-05-24T05:00:00.000Z
+  disk: 8
+  spl: null
+  published: 2009-05-24T18:57:56.000Z
+  created_at: 2009-05-24T18:57:56.000Z
+  updated_at: 2010-05-24T00:42:00.000Z
+- id: 21
+  series: Christian Relationships
+  title: Romans 1-11 Review of Christian Doctrine
+  teacher: Tighe Farrow
+  comment: Review of what was covered last year and begin Romans 12
+  date: 2009-09-13T05:00:00.000Z
+  disk: 9
+  spl: null
+  published: 2009-09-13T19:29:30.000Z
+  created_at: 2009-09-13T19:29:30.000Z
+  updated_at: 2010-05-24T00:42:00.000Z
+- id: 22
+  series: Christian Relationships
+  title: "Relationship to ourselves, Relationship to others"
+  teacher: Tighe Farrow
+  comment: "Romans 12:3-8,9-16"
+  date: 2009-09-20T05:00:00.000Z
+  disk: 9
+  spl: null
+  published: 2009-09-20T21:08:51.000Z
+  created_at: 2009-09-20T21:08:51.000Z
+  updated_at: 2010-05-24T00:42:00.000Z
+- id: 23
+  series: Christian Relationships
+  title: Relationship to Our Enemies and Evildoers
+  teacher: Tighe Farrow
+  comment: "Romans 12:17-21"
+  date: 2009-09-27T05:00:00.000Z
+  disk: 9
+  spl: null
+  published: 2009-09-29T02:06:06.000Z
+  created_at: 2009-09-29T02:06:06.000Z
+  updated_at: 2010-05-24T00:42:00.000Z
+- id: 24
+  series: RC Sproul World View Series
+  title: Secularism
+  teacher: Tighe Farrow
+  comment: Video Series
+  date: 2009-10-04T05:00:00.000Z
+  disk: 9
+  spl: null
+  published: 2009-10-05T03:08:32.000Z
+  created_at: 2009-10-05T03:08:32.000Z
+  updated_at: 2010-05-24T00:42:00.000Z
+- id: 25
+  series: Christian Relationships
+  title: Our Relationships - The Secularist
+  teacher: Tighe Farrow
+  comment: Response to the R.C. Sproul video series
+  date: 2009-10-11T05:00:00.000Z
+  disk: 9
+  spl: null
+  published: 2009-10-11T18:20:57.000Z
+  created_at: 2009-10-11T18:20:57.000Z
+  updated_at: 2010-05-24T00:42:00.000Z
+- id: 26
+  series: ACE - Missions Reports
+  title: Africa Missions Report
+  teacher: Victor Kuligin
+  comment: A new direction for the Kuligins
+  date: 2009-10-18T05:00:00.000Z
+  disk: 9
+  spl: null
+  published: 2009-10-18T21:20:10.000Z
+  created_at: 2009-10-18T21:20:10.000Z
+  updated_at: 2010-05-24T00:42:00.000Z
+- id: 27
+  series: Christian Relationships
+  title: "The Christian's relationship to the State"
+  teacher: Tighe Farrow
+  comment: "Romans 13:1-7"
+  date: 2009-11-01T05:00:00.000Z
+  disk: 9
+  spl: null
+  published: 2009-11-01T23:02:56.000Z
+  created_at: 2009-11-01T23:02:56.000Z
+  updated_at: 2010-05-24T00:42:00.000Z
+- id: 28
+  series: Christian Relationships
+  title: "Relationship to the Law and Christ's Return"
+  teacher: Tighe Farrow
+  comment: "Romans 13:8-14"
+  date: 2009-11-08T06:00:00.000Z
+  disk: 9
+  spl: null
+  published: 2009-11-09T20:23:50.000Z
+  created_at: 2009-11-09T20:23:50.000Z
+  updated_at: 2010-05-24T00:42:00.000Z
+- id: 32
+  series: Christian Relationships
+  title: "Relationship to the \"weak\" in faith"
+  teacher: Tighe Farrow
+  comment: "Romans 14-15:13"
+  date: 2009-12-06T06:00:00.000Z
+  disk: 9
+  spl: null
+  published: 2009-12-07T04:35:56.000Z
+  created_at: 2009-12-07T04:35:56.000Z
+  updated_at: 2010-05-24T00:42:00.000Z
+- id: 33
+  series: RC Sproul World View Series
+  title: Pragmatism
+  teacher: Tighe Farrow
+  comment: Christian World Views
+  date: 2009-12-13T06:00:00.000Z
+  disk: 9
+  spl: null
+  published: 2009-12-13T21:38:09.000Z
+  created_at: 2009-12-13T21:38:09.000Z
+  updated_at: 2010-05-24T00:42:00.000Z
+- id: 35
+  series: RC Sproul World View Series
+  title: Positivism
+  teacher: Tighe Farrow
+  comment: Everything must be verified emperically.
+  date: 2010-01-10T06:00:00.000Z
+  disk: 9
+  spl: null
+  published: 2010-01-10T16:13:38.000Z
+  created_at: 2010-01-10T16:13:38.000Z
+  updated_at: 2010-05-24T00:42:00.000Z
+- id: 36
+  series: Missions Report
+  title: Owens in Vietnam
+  teacher: Daniel and Heather Owens
+  comment: ""
+  date: 2010-01-24T06:00:00.000Z
+  disk: 9
+  spl: null
+  published: 2010-01-24T15:33:06.000Z
+  created_at: 2010-01-24T15:25:41.000Z
+  updated_at: 2010-05-24T00:42:00.000Z
+- id: 37
+  series: Congregational Update
+  title: Financial Update
+  teacher: Eric Day
+  comment: ""
+  date: 2010-01-31T06:00:00.000Z
+  disk: 9
+  spl: null
+  published: 2010-01-31T16:35:48.000Z
+  created_at: 2010-01-31T16:35:48.000Z
+  updated_at: 2010-05-24T00:42:00.000Z
+- id: 38
+  series: RC Sproul World View Series
+  title: Pluralism and Relativism
+  teacher: Tighe Farrow
+  comment: ""
+  date: 2010-02-07T06:00:00.000Z
+  disk: 9
+  spl: null
+  published: 2010-02-08T13:24:07.000Z
+  created_at: 2010-02-08T13:24:07.000Z
+  updated_at: 2010-05-24T00:42:00.000Z
+- id: 39
+  series: Missions Report
+  title: Kelly Overview (Missions)
+  teacher: Kelly Bryant
+  comment: "Awesome story by someone who is only 19 years old!"
+  date: 2010-02-14T06:00:00.000Z
+  disk: 9
+  spl: null
+  published: 2010-02-14T22:53:46.000Z
+  created_at: 2010-02-14T22:44:54.000Z
+  updated_at: 2010-05-24T00:42:00.000Z
+- id: 40
+  series: Baptism
+  title: Baptism Wrap-up
+  teacher: Tighe Farrow
+  comment: With comments by Nicholas Piotrowski
+  date: 2010-04-11T05:00:00.000Z
+  disk: 9
+  spl: null
+  published: 2010-04-16T19:37:15.000Z
+  created_at: 2010-04-16T19:37:15.000Z
+  updated_at: 2010-05-24T00:42:00.000Z
+- id: 41
+  series: RC Sproul World View Series
+  title: Science and Evolution
+  teacher: Tighe Farrow
+  comment: Spontaneous Discussion of Science and Evolution because R.C. Sproul Video refused to play.
+  date: 2010-04-25T05:00:00.000Z
+  disk: 9
+  spl: null
+  published: 2010-04-25T22:14:05.000Z
+  created_at: 2010-04-25T21:58:41.000Z
+  updated_at: 2010-05-24T00:42:00.000Z
+- id: 42
+  series: RC Sproul World View Series
+  title: Economics
+  teacher: Tighe Farrow
+  comment: Very good view on economics
+  date: 2010-05-09T05:00:00.000Z
+  disk: 9
+  spl: null
+  published: 2010-05-09T18:33:06.000Z
+  created_at: 2010-05-09T18:33:06.000Z
+  updated_at: 2010-05-24T00:42:00.000Z
+- id: 43
+  series: ACE - Essential Christian Doctrines
+  title: Apologetics - Evangelism
+  teacher: Tighe Farrow
+  comment: Part 1 - Review of Evangelism and Web of Truth
+  date: 2010-05-16T05:00:00.000Z
+  disk: 9
+  spl: null
+  published: 2010-05-17T19:21:01.000Z
+  created_at: 2010-05-17T19:21:01.000Z
+  updated_at: 2010-05-24T00:42:00.000Z
+- id: 44
+  series: ACE - Essential Christian Doctrines
+  title: The Web of Truth and the Ten Commandments
+  teacher: Tighe Farrow
+  comment: Last Sunday School for the Season
+  date: 2010-05-23T05:00:00.000Z
+  disk: 9
+  spl: null
+  published: 2010-05-28T12:22:01.000Z
+  created_at: 2010-05-23T18:33:16.000Z
+  updated_at: 2010-05-28T12:22:01.000Z
+- id: 46
+  series: 2010 Fall Teaching Schedule
+  title: Solas of the Reformation Part 1
+  teacher: Tighe Farrow
+  comment: The Five Solas of the Reformation - SOLA SCRIPTURA
+  date: 2010-09-12T05:00:00.000Z
+  disk: 10
+  spl: null
+  published: 2010-09-19T02:31:28.000Z
+  created_at: 2010-09-19T02:01:55.000Z
+  updated_at: 2010-09-19T02:31:28.000Z
+- id: 47
+  series: 2010 Fall Teaching Schedule
+  title: Solas of the Reformation Part 2
+  teacher: Tighe Farrow
+  comment: The Five Solas of the Reformation - SOLA CHRISTUS
+  date: 2010-09-26T05:00:00.000Z
+  disk: 10
+  spl: null
+  published: 2010-10-01T15:47:24.000Z
+  created_at: 2010-09-26T19:01:45.000Z
+  updated_at: 2010-10-01T15:47:24.000Z
+- id: 48
+  series: 2010 Fall Teaching Schedule
+  title: Solas of the Reformation Part 4
+  teacher: Tighe Farrow
+  comment: The Five Solas - SOLA GRATIA
+  date: 2010-10-10T05:00:00.000Z
+  disk: 10
+  spl: null
+  published: 2010-10-14T16:42:35.000Z
+  created_at: 2010-10-13T03:19:07.000Z
+  updated_at: 2010-10-14T16:42:35.000Z
+- id: 49
+  series: Missions Sunday
+  title: Missions in Jordan
+  teacher: Tim and Rebecca Wick
+  comment: For limited distribution. Do not publish on the Internet.
+  date: 2010-10-17T05:00:00.000Z
+  disk: 10
+  spl: null
+  published: null
+  created_at: 2010-10-20T03:07:38.000Z
+  updated_at: 2010-10-24T04:04:42.000Z
+- id: 50
+  series: 2010 Fall Teaching Schedule
+  title: Solas of the Reformation Part 1
+  teacher: Tighe Farrow
+  comment: The Five Solas - SOLA GRATIA and SOLA FIDE
+  date: 2010-10-24T05:00:00.000Z
+  disk: 10
+  spl: null
+  published: 2010-11-17T03:55:37.000Z
+  created_at: 2010-10-25T19:10:21.000Z
+  updated_at: 2010-11-17T03:55:38.000Z
+- id: 51
+  series: 2010 Fall Teaching Schedule
+  title: The Five Solas Part 7
+  teacher: Tighe Farrow
+  comment: Soli Deo Gloria
+  date: 2010-11-14T06:00:00.000Z
+  disk: 10
+  spl: "[{\"type\":\"average\",\"value\":\"70\"},{\"type\":\"average\",\"value\":\"\"}]"
+  published: 2010-11-18T17:51:10.000Z
+  created_at: 2010-11-14T23:02:37.000Z
+  updated_at: 2010-11-23T18:55:57.000Z
+- id: 52
+  series: R. C. Sproul - Christian Worldviews
+  title: R. C. Sproul - Art
+  teacher: ""
+  comment: no recording
+  date: 2010-12-05T06:00:00.000Z
+  disk: 10
+  spl: "[{\"type\":\"average\",\"value\":\"\"},{\"type\":\"average\",\"value\":\"\"}]"
+  published: null
+  created_at: 2010-12-08T04:41:34.000Z
+  updated_at: 2010-12-08T04:42:25.000Z
+- id: 53
+  series: 2010 Fall Teaching Schedule
+  title: The Niceno-Constantinopolitan Creed
+  teacher: Nicholas Piotrowski
+  comment: The Creeds
+  date: 2010-12-12T06:00:00.000Z
+  disk: 10
+  spl: "[{\"type\":\"average\",\"value\":\"58\"},{\"type\":\"max\",\"value\":\"69.30\"}]"
+  published: 2010-12-15T04:21:54.000Z
+  created_at: 2010-12-12T20:49:29.000Z
+  updated_at: 2010-12-18T16:35:15.000Z
+- id: 54
+  series: 2011 ACE Winter Series
+  title: "Apostacy, Part 1"
+  teacher: Tighe Farrow
+  comment: ""
+  date: 2011-01-09T06:00:00.000Z
+  disk: 10
+  spl: "[{\"type\":\"average\",\"value\":\"\"},{\"type\":\"average\",\"value\":\"\"}]"
+  published: 2011-01-11T01:50:55.000Z
+  created_at: 2011-01-09T23:15:39.000Z
+  updated_at: 2011-01-11T01:50:55.000Z
+- id: 55
+  series: 2011 ACE Winter Series
+  title: "Apostacy, Part 2"
+  teacher: Tighe Farrow
+  comment: ""
+  date: 2011-01-16T06:00:00.000Z
+  disk: 10
+  spl: "[{\"type\":\"average\",\"value\":\"\"},{\"type\":\"average\",\"value\":\"\"}]"
+  published: 2011-01-22T17:37:36.000Z
+  created_at: 2011-01-20T02:04:40.000Z
+  updated_at: 2011-01-22T17:37:36.000Z
+- id: 56
+  series: 2011 ACE Winter Series
+  title: "Apostacy, Part 3"
+  teacher: Tighe Farrow
+  comment: ""
+  date: 2011-01-23T06:00:00.000Z
+  disk: 10
+  spl: "[{\"type\":\"average\",\"value\":\"54\"},{\"type\":\"max\",\"value\":\"72\"}]"
+  published: 2011-01-25T11:56:01.000Z
+  created_at: 2011-01-23T17:39:02.000Z
+  updated_at: 2011-01-25T11:56:01.000Z
+- id: 57
+  series: 2011 5th Sunday Congregational Meeting
+  title: January 2011 Congregational Meeting
+  teacher: Pastor Ken Carr
+  comment: ""
+  date: 2011-01-30T06:00:00.000Z
+  disk: 10
+  spl: "[{\"type\":\"average\",\"value\":\"\"},{\"type\":\"average\",\"value\":\"\"}]"
+  published: 2011-02-05T15:39:36.000Z
+  created_at: 2011-01-30T18:58:41.000Z
+  updated_at: 2011-02-05T15:39:37.000Z
+- id: 58
+  series: 2011 ACE Winter Series
+  title: "Apostle's Creed Part 2"
+  teacher: Nicholas Piotrowski
+  comment: ""
+  date: 2011-02-13T06:00:00.000Z
+  disk: 10
+  spl: "[{\"type\":\"average\",\"value\":\"\"},{\"type\":\"average\",\"value\":\"\"}]"
+  published: 2011-02-16T04:39:49.000Z
+  created_at: 2011-02-16T04:13:17.000Z
+  updated_at: 2011-02-16T04:39:49.000Z
+- id: 59
+  series: Essential Christian Doctrines
+  title: Essential Christian Doctrines - Lesson 1
+  teacher: Tighe Farrow
+  comment: "Transmitter was set incorrectly, the recording level was too low."
+  date: 2011-02-27T06:00:00.000Z
+  disk: 10
+  spl: "[{\"type\":\"average\",\"value\":\"55\"},{\"type\":\"max\",\"value\":\"66\"}]"
+  published: 2011-03-02T04:27:05.000Z
+  created_at: 2011-03-02T04:23:08.000Z
+  updated_at: 2011-03-02T04:27:05.000Z
+- id: 60
+  series: 2011 ACE Winter Series
+  title: Essential Doctrines - Lesson 2
+  teacher: Tighe Farrow
+  comment: ""
+  date: 2011-03-06T06:00:00.000Z
+  disk: 10
+  spl: "[{\"type\":\"average\",\"value\":\"\"},{\"type\":\"average\",\"value\":\"\"}]"
+  published: 2011-03-09T23:12:14.000Z
+  created_at: 2011-03-09T20:04:42.000Z
+  updated_at: 2011-03-10T00:40:21.000Z
+- id: 61
+  series: 2011 ACE Winter Series
+  title: Essential Christian Doctrines - Lesson 3
+  teacher: Tighe Farrow
+  comment: The Importance of the Resurrection.
+  date: 2011-03-13T06:00:00.000Z
+  disk: 10
+  spl: "[{\"type\":\"average\",\"value\":\"\"},{\"type\":\"average\",\"value\":\"\"}]"
+  published: 2011-03-13T20:23:54.000Z
+  created_at: 2011-03-13T15:05:48.000Z
+  updated_at: 2011-03-13T20:23:54.000Z
+- id: 62
+  series: 2011 ACE Winter Series
+  title: Essential Christian Doctrines - Lesson 4
+  teacher: Tighe Farrow
+  comment: Atonement
+  date: 2011-03-20T05:00:00.000Z
+  disk: 10
+  spl: "[{\"type\":\"average\",\"value\":\"\"},{\"type\":\"average\",\"value\":\"\"}]"
+  published: 2011-03-23T03:25:57.000Z
+  created_at: 2011-03-22T23:23:11.000Z
+  updated_at: 2011-03-23T03:25:57.000Z
+- id: 63
+  series: ""
+  title: No ACE Today
+  teacher: ""
+  comment: ""
+  date: 2011-03-27T05:00:00.000Z
+  disk: 10
+  spl: "[{\"type\":\"average\",\"value\":\"\"},{\"type\":\"average\",\"value\":\"\"}]"
+  published: null
+  created_at: 2011-03-27T22:53:31.000Z
+  updated_at: 2011-03-27T22:53:31.000Z
+- id: 64
+  series: 2011 ACE Winter Series
+  title: "The Marks of a Cult, Part 1"
+  teacher: " Tighe Farrow"
+  comment: Video. No lesson today.
+  date: 2011-04-03T05:00:00.000Z
+  disk: 10
+  spl: "[{\"type\":\"average\",\"value\":\"\"},{\"type\":\"average\",\"value\":\"\"}]"
+  published: null
+  created_at: 2011-04-03T14:54:24.000Z
+  updated_at: 2011-04-03T14:54:24.000Z
+- id: 65
+  series: 2011 ACE Winter Series
+  title: "The Marks of a Cult, Part 2"
+  teacher: Tighe Farrow
+  comment: No recording this week.
+  date: 2011-04-10T05:00:00.000Z
+  disk: 10
+  spl: "[{\"type\":\"average\",\"value\":\"\"},{\"type\":\"average\",\"value\":\"\"}]"
+  published: null
+  created_at: 2011-04-14T01:31:29.000Z
+  updated_at: 2011-04-14T01:32:21.000Z
+- id: 66
+  series: 2011 Missions Sunday
+  title: Todd Kelly Missions Update
+  teacher: Todd Kelly
+  comment: Todd Kelly talked about what he does and gave a short slide show.
+  date: 2011-04-17T05:00:00.000Z
+  disk: 10
+  spl: "[{\"type\":\"average\",\"value\":\"\"},{\"type\":\"average\",\"value\":\"\"}]"
+  published: 2011-04-25T04:03:24.000Z
+  created_at: 2011-04-21T00:38:36.000Z
+  updated_at: 2011-04-25T04:03:24.000Z
+- id: 67
+  series: ""
+  title: ""
+  teacher: ""
+  comment: No Sunday school this week. Easter Sunday 2011
+  date: 2011-04-24T05:00:00.000Z
+  disk: 10
+  spl: "[{\"type\":\"average\",\"value\":\"\"},{\"type\":\"average\",\"value\":\"\"}]"
+  published: null
+  created_at: 2011-04-26T03:54:20.000Z
+  updated_at: 2011-04-26T03:55:12.000Z
+- id: 68
+  series: 2011 ACE Spring Series
+  title: "The Marks of a Cult, Part 3"
+  teacher: Tighe Farrow
+  comment: Video Series -- No recording
+  date: 2011-05-01T05:00:00.000Z
+  disk: 10
+  spl: "[{\"type\":\"average\",\"value\":\"\"},{\"type\":\"average\",\"value\":\"\"}]"
+  published: null
+  created_at: 2011-05-03T01:58:23.000Z
+  updated_at: 2011-05-03T01:58:23.000Z
+- id: 69
+  series: 2011 ACE Spring Series
+  title: "The Marks of a Cult, Part 3"
+  teacher: Tighe Farrow
+  comment: Video series . . . no recording
+  date: 2011-05-08T05:00:00.000Z
+  disk: 10
+  spl: "[{\"type\":\"average\",\"value\":\"\"},{\"type\":\"average\",\"value\":\"\"}]"
+  published: null
+  created_at: 2011-05-11T00:47:30.000Z
+  updated_at: 2011-05-11T00:47:30.000Z
+- id: 70
+  series: 2011 ACE Spring Series
+  title: Cults - How to Respond
+  teacher: Tighe Farrow
+  comment: This is the follow-up to the video series.
+  date: 2011-05-15T05:00:00.000Z
+  disk: 10
+  spl: "[{\"type\":\"average\",\"value\":\"\"},{\"type\":\"average\",\"value\":\"\"}]"
+  published: 2011-05-16T23:53:19.000Z
+  created_at: 2011-05-15T18:44:34.000Z
+  updated_at: 2011-05-16T23:53:19.000Z
+- id: 71
+  series: 2011 ACE Spring Series
+  title: Communicating the Gospel
+  teacher: Pastor Ken Carr
+  comment: Final ACE for the season.
+  date: 2011-05-22T05:00:00.000Z
+  disk: 10
+  spl: "[{\"type\":\"average\",\"value\":\"\"},{\"type\":\"average\",\"value\":\"\"}]"
+  published: 2011-05-25T03:37:50.000Z
+  created_at: 2011-05-25T03:20:19.000Z
+  updated_at: 2011-05-25T03:37:50.000Z
+- id: 72
+  series: 2011 ACE Fall Series
+  title: ACE 2011-12 Introduction
+  teacher: Tighe Farrow
+  comment: First Lesson of the Fall
+  date: 2011-09-11T05:00:00.000Z
+  disk: 10
+  spl: "[{\"type\":\"average\",\"value\":\"\"},{\"type\":\"average\",\"value\":\"\"}]"
+  published: 2011-09-18T18:05:57.000Z
+  created_at: 2011-09-13T00:29:53.000Z
+  updated_at: 2011-09-18T18:05:57.000Z
+- id: 73
+  series: 2011 ACE Fall Series
+  title: Biblical Apologetics
+  teacher: Tighe Farrow
+  comment: ""
+  date: 2011-09-18T05:00:00.000Z
+  disk: 10
+  spl: "[{\"type\":\"average\",\"value\":\"\"},{\"type\":\"average\",\"value\":\"\"}]"
+  published: 2011-09-22T00:50:26.000Z
+  created_at: 2011-09-20T00:59:39.000Z
+  updated_at: 2011-09-22T00:50:26.000Z
+- id: 74
+  series: 2011 ACE Fall Series
+  title: Biblical Apologetics -- Lesson 2
+  teacher: Tighe Farrow
+  comment: "General and Special Revelation\nThe necessary being."
+  date: 2011-09-25T05:00:00.000Z
+  disk: 10
+  spl: "[{\"type\":\"average\",\"value\":\"\"},{\"type\":\"average\",\"value\":\"\"}]"
+  published: 2011-09-30T02:23:56.000Z
+  created_at: 2011-09-27T01:13:17.000Z
+  updated_at: 2011-10-16T14:38:54.000Z
+- id: 75
+  series: 2011 ACE Fall Series
+  title: "Jehovah's Witnesses DVD"
+  teacher: Tighe Farrow
+  comment: "No recording today!"
+  date: 2011-10-02T05:00:00.000Z
+  disk: 10
+  spl: "[{\"type\":\"average\",\"value\":\"\"},{\"type\":\"average\",\"value\":\"\"}]"
+  published: null
+  created_at: 2011-10-02T18:13:11.000Z
+  updated_at: 2011-10-02T18:13:11.000Z
+- id: 76
+  series: 2011 ACE Fall Series
+  title: "Jehovah's Witnesses DVD Follow-up"
+  teacher: Tighe Farrow
+  comment: ""
+  date: 2011-10-09T05:00:00.000Z
+  disk: 10
+  spl: "[{\"type\":\"average\",\"value\":\"\"},{\"type\":\"average\",\"value\":\"\"}]"
+  published: 2011-10-14T00:59:51.000Z
+  created_at: 2011-10-11T03:07:06.000Z
+  updated_at: 2011-10-14T00:59:51.000Z
+- id: 77
+  series: 2011 ACE Fall Series
+  title: Biblical Apologetics - Man Before Sin
+  teacher: Tighe Farrow
+  comment: Man Before Sin -- Lesson 3
+  date: 2011-10-16T05:00:00.000Z
+  disk: 10
+  spl: "[{\"type\":\"average\",\"value\":\"\"},{\"type\":\"average\",\"value\":\"\"}]"
+  published: 2011-10-18T03:34:08.000Z
+  created_at: 2011-10-16T13:54:15.000Z
+  updated_at: 2011-10-18T03:34:08.000Z
+- id: 78
+  series: 2011 ACE Fall Series
+  title: Biblical Apologetics - Lesson 4
+  teacher: Tighe Farrow
+  comment: Biblical Apologetics - Man under Sin
+  date: 2011-10-23T05:00:00.000Z
+  disk: 10
+  spl: "[{\"type\":\"average\",\"value\":\"\"},{\"type\":\"average\",\"value\":\"\"}]"
+  published: 2011-10-23T20:45:20.000Z
+  created_at: 2011-10-23T14:42:45.000Z
+  updated_at: 2011-10-23T20:45:20.000Z
+- id: 79
+  series: 2011 ACE Fall Series
+  title: Biblical Apologetics -- Lesson 5
+  teacher: Tighe Farrow
+  comment: ""
+  date: 2011-10-30T05:00:00.000Z
+  disk: 10
+  spl: "[{\"type\":\"average\",\"value\":\"\"},{\"type\":\"average\",\"value\":\"\"}]"
+  published: 2011-11-01T01:59:07.000Z
+  created_at: 2011-10-30T16:20:51.000Z
+  updated_at: 2011-11-01T01:59:07.000Z
+- id: 80
+  series: 2011 ACE Fall Series
+  title: Question Box - Session 1
+  teacher: Tighe Farrow
+  comment: ""
+  date: 2011-11-06T05:00:00.000Z
+  disk: 10
+  spl: "[{\"type\":\"average\",\"value\":\"\"},{\"type\":\"average\",\"value\":\"\"}]"
+  published: 2011-11-08T12:13:00.000Z
+  created_at: 2011-11-06T17:29:22.000Z
+  updated_at: 2011-11-08T12:13:01.000Z
+- id: 81
+  series: 2011 ACE Fall Series
+  title: Owens Missions Update
+  teacher: Daniel Owens
+  comment: "Do not publish!"
+  date: 2011-11-13T06:00:00.000Z
+  disk: 10
+  spl: "[{\"type\":\"average\",\"value\":\"\"},{\"type\":\"average\",\"value\":\"\"}]"
+  published: 2011-11-18T02:03:50.000Z
+  created_at: 2011-11-15T12:40:07.000Z
+  updated_at: 2011-11-18T02:03:50.000Z
+- id: 82
+  series: 2011 ACE Fall Series
+  title: Cults - Mormonism - Lesson 1
+  teacher: Tighe Farrow
+  comment: No recording this week.
+  date: 2011-12-04T06:00:00.000Z
+  disk: 10
+  spl: "[{\"type\":\"average\",\"value\":\"\"},{\"type\":\"average\",\"value\":\"\"}]"
+  published: null
+  created_at: 2011-12-04T17:20:09.000Z
+  updated_at: 2011-12-04T17:20:09.000Z
+- id: 83
+  series: 2011 ACE Fall Series
+  title: Cults - Mormonism - Lesson 2
+  teacher: Tighe Farrow
+  comment: No recording this week. Video.
+  date: 2011-12-11T06:00:00.000Z
+  disk: 10
+  spl: "[{\"type\":\"average\",\"value\":\"\"},{\"type\":\"average\",\"value\":\"\"}]"
+  published: null
+  created_at: 2011-12-11T22:43:44.000Z
+  updated_at: 2011-12-11T22:43:44.000Z
+- id: 84
+  series: 2011 ACE Fall Series
+  title: Cults - Mormonism - Lesson 3
+  teacher: Tighe Farrow
+  comment: "Video Series â€” No recording today!"
+  date: 2011-12-18T06:00:00.000Z
+  disk: 10
+  spl: "[{\"type\":\"average\",\"value\":\"\"},{\"type\":\"average\",\"value\":\"\"}]"
+  published: null
+  created_at: 2011-12-19T04:00:22.000Z
+  updated_at: 2011-12-19T04:00:22.000Z
+- id: 85
+  series: ""
+  title: ""
+  teacher: ""
+  comment: No ACE Lesson this week.
+  date: 2012-01-01T06:00:00.000Z
+  disk: 11
+  spl: "[{\"type\":\"average\",\"value\":\"\"},{\"type\":\"average\",\"value\":\"\"}]"
+  published: null
+  created_at: 2012-01-04T03:37:41.000Z
+  updated_at: 2012-01-04T03:37:41.000Z
+- id: 86
+  series: Biblical Apologetics
+  title: Biblical Apologetics - Review
+  teacher: Tighe Farrow
+  comment: Fall Review
+  date: 2012-01-08T06:00:00.000Z
+  disk: 11
+  spl: "[{\"type\":\"average\",\"value\":\"\"},{\"type\":\"average\",\"value\":\"\"}]"
+  published: 2012-01-10T03:23:04.000Z
+  created_at: 2012-01-10T02:47:40.000Z
+  updated_at: 2012-01-10T03:23:04.000Z
+- id: 87
+  series: 2012 ACE Winter Series
+  title: Biblical Apologetics - Review II
+  teacher: Tighe Farrow
+  comment: ""
+  date: 2012-01-15T06:00:00.000Z
+  disk: 11
+  spl: "[{\"type\":\"average\",\"value\":\"\"},{\"type\":\"average\",\"value\":\"\"}]"
+  published: 2012-01-19T18:51:16.000Z
+  created_at: 2012-01-15T22:00:09.000Z
+  updated_at: 2012-01-19T18:51:16.000Z
+- id: 88
+  series: 2012 Winter Series
+  title: Biblical Apologetics - Introduction to Evidentialism
+  teacher: Tighe Farrow
+  comment: "Presuppositionalism\nEvidentialism\nComposite"
+  date: 2012-01-22T06:00:00.000Z
+  disk: 11
+  spl: "[{\"type\":\"average\",\"value\":\"\"},{\"type\":\"average\",\"value\":\"\"}]"
+  published: 2012-02-05T04:44:21.000Z
+  created_at: 2012-01-23T14:30:41.000Z
+  updated_at: 2012-02-05T04:44:21.000Z
+- id: 89
+  series: 2012 ACE Winter Series
+  title: Fifth Sunday Congregational Meeting
+  teacher: Pastor Ken Carr
+  comment: Not for distribution.
+  date: 2012-01-29T06:00:00.000Z
+  disk: 11
+  spl: "[{\"type\":\"average\",\"value\":\"\"},{\"type\":\"average\",\"value\":\"\"}]"
+  published: 2012-01-30T04:19:16.000Z
+  created_at: 2012-01-29T22:40:14.000Z
+  updated_at: 2012-01-30T04:19:16.000Z
+- id: 90
+  series: 2012 ACE Winter Series
+  title: Questioning Evangelism
+  teacher: Bill Gabriel
+  comment: Thoughts on Witnessing
+  date: 2012-02-19T06:00:00.000Z
+  disk: 11
+  spl: "[{\"type\":\"average\",\"value\":\"\"},{\"type\":\"average\",\"value\":\"\"}]"
+  published: 2012-02-28T19:44:11.000Z
+  created_at: 2012-02-20T02:51:15.000Z
+  updated_at: 2012-03-26T02:03:30.000Z
+- id: 91
+  series: True U Video Series
+  title: "Lesson 3: Big Bang Cosmology, Part 2 -- In the Beginning"
+  teacher: Tighe Farrow
+  comment: No recording today.
+  date: 2012-02-26T06:00:00.000Z
+  disk: 11
+  spl: "[{\"type\":\"average\",\"value\":\"\"},{\"type\":\"average\",\"value\":\"\"}]"
+  published: null
+  created_at: 2012-02-26T15:54:28.000Z
+  updated_at: 2012-03-26T02:02:46.000Z
+- id: 92
+  series: True U Video Series
+  title: Does God Exist â€” DNA Part 1
+  teacher: Tighe Farrow
+  comment: "No recording today.\nTrue U: "
+  date: 2012-03-11T06:00:00.000Z
+  disk: 11
+  spl: "[{\"type\":\"average\",\"value\":\"\"},{\"type\":\"average\",\"value\":\"\"}]"
+  published: null
+  created_at: 2012-03-11T18:50:18.000Z
+  updated_at: 2012-03-26T02:00:31.000Z
+- id: 93
+  series: True U Video Series
+  title: Does God Exist â€” DNA Part 2
+  teacher: Tighe Farrow
+  comment: Video.  No recording today.
+  date: 2012-03-18T05:00:00.000Z
+  disk: 11
+  spl: "[{\"type\":\"average\",\"value\":\"\"},{\"type\":\"average\",\"value\":\"\"}]"
+  published: null
+  created_at: 2012-03-18T20:50:10.000Z
+  updated_at: 2012-03-26T02:00:01.000Z
+- id: 94
+  series: 2012 ACE Winter Series
+  title: Question Box - Session 2
+  teacher: Tighe Farrow
+  comment: ""
+  date: 2012-03-25T05:00:00.000Z
+  disk: 11
+  spl: "[{\"type\":\"average\",\"value\":\"\"},{\"type\":\"average\",\"value\":\"\"}]"
+  published: 2012-03-26T02:07:06.000Z
+  created_at: 2012-03-26T01:39:09.000Z
+  updated_at: 2012-03-26T02:07:06.000Z
+- id: 95
+  series: True U Video Series
+  title: Does God Exist â€” Big Bang Part 3
+  teacher: Tighe Farrow
+  comment: No recording today.
+  date: 2012-03-04T06:00:00.000Z
+  disk: 11
+  spl: "[{\"type\":\"average\",\"value\":\"\"},{\"type\":\"average\",\"value\":\"\"}]"
+  published: null
+  created_at: 2012-03-26T02:01:18.000Z
+  updated_at: 2012-03-26T02:01:18.000Z
+- id: 96
+  series: True U Video Series
+  title: Does God Exist â€” Big Bang Part 1
+  teacher: Tighe Farrow
+  comment: No recording today.
+  date: 2012-02-12T06:00:00.000Z
+  disk: 11
+  spl: "[{\"type\":\"average\",\"value\":\"\"},{\"type\":\"average\",\"value\":\"\"}]"
+  published: null
+  created_at: 2012-03-26T02:04:29.000Z
+  updated_at: 2012-03-26T02:04:29.000Z
+- id: 97
+  series: True U Video Series
+  title: Does God Exist â€” Reason and Faith
+  teacher: Tighe Farrow
+  comment: No recording today.
+  date: 2012-02-05T06:00:00.000Z
+  disk: 11
+  spl: "[{\"type\":\"average\",\"value\":\"\"},{\"type\":\"average\",\"value\":\"\"}]"
+  published: null
+  created_at: 2012-03-26T02:05:12.000Z
+  updated_at: 2012-03-26T02:05:12.000Z
+- id: 98
+  series: ""
+  title: ""
+  teacher: ""
+  comment: No ACE today.
+  date: 2012-04-01T05:00:00.000Z
+  disk: 11
+  spl: "[{\"type\":\"average\",\"value\":\"\"},{\"type\":\"average\",\"value\":\"\"}]"
+  published: null
+  created_at: 2012-04-01T16:45:23.000Z
+  updated_at: 2012-04-01T16:45:23.000Z
+- id: 99
+  series: ""
+  title: ""
+  teacher: ""
+  comment: "True U Video Series: No recording today."
+  date: 2012-04-15T05:00:00.000Z
+  disk: 11
+  spl: "[{\"type\":\"average\",\"value\":\"\"},{\"type\":\"average\",\"value\":\"\"}]"
+  published: null
+  created_at: 2012-04-17T01:30:17.000Z
+  updated_at: 2012-04-17T01:30:17.000Z
+- id: 100
+  series: ""
+  title: ""
+  teacher: ""
+  comment: "True U Video Series: No recording today."
+  date: 2012-04-22T05:00:00.000Z
+  disk: 11
+  spl: "[{\"type\":\"average\",\"value\":\"\"},{\"type\":\"average\",\"value\":\"\"}]"
+  published: null
+  created_at: 2012-04-24T22:02:22.000Z
+  updated_at: 2012-04-24T22:02:22.000Z
+- id: 101
+  series: 2012 ACE Spring Series
+  title: Question Box - Session 3
+  teacher: Tighe Farrow
+  comment: ""
+  date: 2012-04-29T05:00:00.000Z
+  disk: 11
+  spl: "[{\"type\":\"min\",\"value\":\"\"},{\"type\":\"average\",\"value\":\"\"}]"
+  published: 2012-05-01T04:10:34.000Z
+  created_at: 2012-05-01T01:58:43.000Z
+  updated_at: 2012-05-01T04:10:34.000Z
+- id: 102
+  series: ""
+  title: ""
+  teacher: ""
+  comment: True U video series. No recording today.
+  date: 2012-05-06T05:00:00.000Z
+  disk: 11
+  spl: "[{\"type\":\"average\",\"value\":\"\"},{\"type\":\"average\",\"value\":\"\"}]"
+  published: null
+  created_at: 2012-05-12T15:08:10.000Z
+  updated_at: 2012-05-12T15:08:10.000Z
+- id: 103
+  series: ""
+  title: ""
+  teacher: ""
+  comment: Summer schedule has begun.
+  date: 2012-05-20T05:00:00.000Z
+  disk: 11
+  spl: "[{\"type\":\"average\",\"value\":\"\"},{\"type\":\"average\",\"value\":\"\"}]"
+  published: null
+  created_at: 2012-05-28T20:55:33.000Z
+  updated_at: 2012-05-28T20:55:33.000Z
+- id: 104
+  series: 2012 ACE - 1 Corinthians
+  title: Lesson 1 - Introduction
+  teacher: Tighe Farrow
+  comment: "1 Corinthians 1:1-9"
+  date: 2012-09-09T05:00:00.000Z
+  disk: 11
+  spl: "[{\"type\":\"average\",\"value\":\"\"},{\"type\":\"average\",\"value\":\"\"}]"
+  published: 2012-09-14T12:03:32.000Z
+  created_at: 2012-09-09T18:42:57.000Z
+  updated_at: 2012-09-16T19:35:12.000Z
+- id: 105
+  series: 2012 ACE - Missions Sunday
+  title: Missions Update - Michele MuÃ±oz
+  teacher: Michele MuÃ±oz
+  comment: ""
+  date: 2012-09-16T05:00:00.000Z
+  disk: 11
+  spl: "[{\"type\":\"average\",\"value\":\"\"},{\"type\":\"average\",\"value\":\"\"}]"
+  published: 2012-09-20T01:36:04.000Z
+  created_at: 2012-09-16T19:36:56.000Z
+  updated_at: 2012-09-20T01:36:04.000Z
+- id: 106
+  series: 2012 ACE - 1 Corinthians
+  title: "Lesson 02: Divisions"
+  teacher: Tighe Farrow
+  comment: ""
+  date: 2012-09-23T05:00:00.000Z
+  disk: 11
+  spl: "[{\"type\":\"average\",\"value\":\"\"},{\"type\":\"average\",\"value\":\"\"}]"
+  published: 2012-09-25T01:00:26.000Z
+  created_at: 2012-09-23T20:28:24.000Z
+  updated_at: 2012-09-25T01:00:26.000Z
+- id: 107
+  series: 2012 Fifth Sunday
+  title: Fifth Sunday Congregational Meeting
+  teacher: Pastor Ken Carr
+  comment: No recording today.
+  date: 2012-09-30T05:00:00.000Z
+  disk: 11
+  spl: "[{\"type\":\"average\",\"value\":\"\"},{\"type\":\"average\",\"value\":\"\"}]"
+  published: null
+  created_at: 2012-09-30T20:52:46.000Z
+  updated_at: 2012-09-30T20:53:15.000Z
+- id: 108
+  series: 2012 ACE - 1 Corinthians
+  title: "Lesson 3 - Wisdom & Discernment"
+  teacher: Tighe Farrow
+  comment: ""
+  date: 2012-10-07T05:00:00.000Z
+  disk: 11
+  spl: "[{\"type\":null,\"value\":null},{\"type\":null,\"value\":null}]"
+  published: 2012-10-12T01:24:36.000Z
+  created_at: 2012-10-07T20:31:43.000Z
+  updated_at: 2012-10-12T01:24:36.000Z
+- id: 109
+  series: 2012 ACE - 1 Corinthians
+  title: Lesson 04 - The Right Attitude
+  teacher: Tighe Farrow
+  comment: "1 Corinthians 4:1-21"
+  date: 2012-10-14T05:00:00.000Z
+  disk: 11
+  spl: "[{\"type\":null,\"value\":null},{\"type\":null,\"value\":null}]"
+  published: 2012-10-18T00:28:13.000Z
+  created_at: 2012-10-16T00:34:02.000Z
+  updated_at: 2012-10-18T00:28:14.000Z
+- id: 110
+  series: 2012 ACE - 1 Corinthians
+  title: Lesson 05 - Various Situations
+  teacher: Tighe Farrow
+  comment: ""
+  date: 2012-10-21T05:00:00.000Z
+  disk: 11
+  spl: "[{\"type\":null,\"value\":null},{\"type\":null,\"value\":null}]"
+  published: 2012-10-24T01:52:12.000Z
+  created_at: 2012-10-23T00:48:04.000Z
+  updated_at: 2012-10-24T01:52:12.000Z
+- id: 111
+  series: 2012 Missions Updates
+  title: Nystrom PNG Missions Update
+  teacher: John and Bonnie Nystrom
+  comment: ""
+  date: 2012-12-09T06:00:00.000Z
+  disk: 11
+  spl: "[{\"type\":null,\"value\":null},{\"type\":null,\"value\":null}]"
+  published: 2012-12-12T12:59:09.000Z
+  created_at: 2012-12-09T22:44:36.000Z
+  updated_at: 2012-12-12T12:59:10.000Z
+- id: 112
+  series: 2013 ACE - 1 Corinthians
+  title: Lesson 06 - Marriage
+  teacher: Tighe Farrow
+  comment: ""
+  date: 2013-01-06T06:00:00.000Z
+  disk: 11
+  spl: "[{\"type\":null,\"value\":null},{\"type\":null,\"value\":null}]"
+  published: 2013-01-10T02:16:57.000Z
+  created_at: 2013-01-10T01:50:55.000Z
+  updated_at: 2013-01-10T02:16:57.000Z
+- id: 113
+  series: 2013 ACE - 1 Corinthians
+  title: Lesson 07 - Food Sacrificed to Idols
+  teacher: Tighe Farrow
+  comment: ""
+  date: 2013-01-13T06:00:00.000Z
+  disk: 11
+  spl: "[{\"type\":null,\"value\":null},{\"type\":null,\"value\":null}]"
+  published: 2013-01-20T03:15:08.000Z
+  created_at: 2013-01-14T03:16:58.000Z
+  updated_at: 2013-01-20T03:15:08.000Z
+- id: 114
+  series: 2013 Missions Sunday
+  title: Kelly Missions Update
+  teacher: Todd Kelly
+  comment: Missions Sunday and Luncheon
+  date: 2013-02-03T06:00:00.000Z
+  disk: 11
+  spl: "[{\"type\":null,\"value\":null},{\"type\":null,\"value\":null}]"
+  published: 2013-02-05T02:10:33.000Z
+  created_at: 2013-02-04T02:56:14.000Z
+  updated_at: 2013-02-05T02:10:33.000Z
+- id: 115
+  series: 2013 ACE - 1 Corinthians
+  title: Lesson 08 - Concerning Worship
+  teacher: Tighe Farrow
+  comment: ""
+  date: 2013-02-10T06:00:00.000Z
+  disk: 11
+  spl: "[{\"type\":null,\"value\":null},{\"type\":null,\"value\":null}]"
+  published: null
+  created_at: 2013-02-11T03:53:40.000Z
+  updated_at: 2013-02-11T03:53:40.000Z
+- id: 116
+  series: 2013 ACE - 1 Corinthians
+  title: Lesson 09 - Concerning Worship
+  teacher: Tighe Farrow
+  comment: ""
+  date: 2013-02-17T06:00:00.000Z
+  disk: 11
+  spl: "[{\"type\":null,\"value\":null},{\"type\":null,\"value\":null}]"
+  published: 2013-02-24T05:00:02.000Z
+  created_at: 2013-02-17T22:53:12.000Z
+  updated_at: 2013-02-24T05:00:02.000Z
+- id: 117
+  series: 2013 ACE - 1 Corinthians
+  title: Lesson 10 - Spiritual Gifts
+  teacher: Tighe Farrow
+  comment: ""
+  date: 2013-02-24T06:00:00.000Z
+  disk: 11
+  spl: "[{\"type\":null,\"value\":null},{\"type\":null,\"value\":null}]"
+  published: 2013-03-02T19:10:39.000Z
+  created_at: 2013-02-25T03:19:19.000Z
+  updated_at: 2013-03-02T19:10:39.000Z
+- id: 118
+  series: 2013 ACE - 1 Corinthians
+  title: Lesson 11 - Love
+  teacher: Tighe Farrow
+  comment: ""
+  date: 2013-03-03T06:00:00.000Z
+  disk: 11
+  spl: "[{\"type\":null,\"value\":null},{\"type\":null,\"value\":null}]"
+  published: 2013-03-10T00:52:38.000Z
+  created_at: 2013-03-03T22:39:05.000Z
+  updated_at: 2013-03-10T00:52:38.000Z
+- id: 119
+  series: 2013 ACE - 1 Corinthians
+  title: Lesson 12 - Spiritual Gifts
+  teacher: Tighe Farrow
+  comment: ""
+  date: 2013-03-10T06:00:00.000Z
+  disk: 11
+  spl: "[{\"type\":null,\"value\":null},{\"type\":null,\"value\":null}]"
+  published: 2013-03-16T16:05:01.000Z
+  created_at: 2013-03-15T02:08:50.000Z
+  updated_at: 2013-03-16T16:05:01.000Z
+- id: 120
+  series: 2013 ACE - 1 Corinthians
+  title: Lesson 13 - Spiritual Gifts
+  teacher: Tighe Farrow
+  comment: "1 Corinthians 14:20-27"
+  date: 2013-03-17T05:00:00.000Z
+  disk: 11
+  spl: "[{\"type\":null,\"value\":null},{\"type\":null,\"value\":null}]"
+  published: 2013-03-20T01:50:46.000Z
+  created_at: 2013-03-17T14:49:13.000Z
+  updated_at: 2013-03-20T01:50:46.000Z
+- id: 121
+  series: 2013 ACE - 1 Corinthians
+  title: Lesson 14 - Resurrection Part 1
+  teacher: Tighe Farrow
+  comment: ""
+  date: 2013-04-21T05:00:00.000Z
+  disk: 11
+  spl: "[{\"type\":null,\"value\":null},{\"type\":null,\"value\":null}]"
+  published: 2013-04-24T02:08:18.000Z
+  created_at: 2013-04-24T01:03:18.000Z
+  updated_at: 2013-04-24T02:08:18.000Z
+- id: 122
+  series: 2013 ACE - 1 Corinthians
+  title: "Lesson 16 - Mystery & Closing"
+  teacher: Tighe Farrow
+  comment: ""
+  date: 2013-05-05T05:00:00.000Z
+  disk: 11
+  spl: "[{\"type\":null,\"value\":null},{\"type\":null,\"value\":null}]"
+  published: 2013-05-11T23:14:00.000Z
+  created_at: 2013-05-07T02:16:51.000Z
+  updated_at: 2013-05-11T23:14:00.000Z
+- id: 123
+  series: 2013 ACE Fall Series
+  title: Hansen Missions Update
+  teacher: Jim Hansen
+  comment: Jim and Kathy Hansen are missionaries with SIM in Bolivia.
+  date: 2013-09-08T05:00:00.000Z
+  disk: 11
+  spl: "[{\"type\":null,\"value\":null},{\"type\":null,\"value\":null}]"
+  published: 2013-09-14T20:01:45.000Z
+  created_at: 2013-09-10T02:53:08.000Z
+  updated_at: 2013-09-14T20:01:45.000Z
+- id: 124
+  series: 2013 ACE Fall Series
+  title: Revelation
+  teacher: Pastor Jeff Holwerda
+  comment: Part 1 of our new fall series.  What is revelation and why is it so important?
+  date: 2013-09-15T05:00:00.000Z
+  disk: 11
+  spl: "[{\"type\":null,\"value\":null},{\"type\":null,\"value\":null}]"
+  published: 2013-09-21T21:23:36.000Z
+  created_at: 2013-09-21T14:42:50.000Z
+  updated_at: 2013-09-21T21:23:36.000Z
+- id: 125
+  series: 2013 ACE Fall Series
+  title: "What is the Bible & Scripture"
+  teacher: Bill Gabriel
+  comment: ""
+  date: 2013-09-22T05:00:00.000Z
+  disk: 11
+  spl: "[{\"type\":null,\"value\":null},{\"type\":null,\"value\":null}]"
+  published: 2013-09-25T02:51:07.000Z
+  created_at: 2013-09-25T01:25:46.000Z
+  updated_at: 2013-09-25T02:51:07.000Z
+- id: 126
+  series: 2013 ACE Fall Series
+  title: What is the Bible?
+  teacher: Ken Carr
+  comment: "What is the Bible? (Grudem)\nScripture (Packer)"
+  date: 2013-09-29T05:00:00.000Z
+  disk: 11
+  spl: "[{\"type\":null,\"value\":null},{\"type\":null,\"value\":null}]"
+  published: 2013-10-01T03:41:52.000Z
+  created_at: 2013-09-30T18:19:19.000Z
+  updated_at: 2013-10-01T03:41:52.000Z
+- id: 127
+  series: 2013 ACE Fall Series
+  title: The Trinity
+  teacher: Andy Underhile
+  comment: ""
+  date: 2013-10-06T05:00:00.000Z
+  disk: 11
+  spl: "[{\"type\":null,\"value\":null},{\"type\":null,\"value\":null}]"
+  published: 2013-10-08T01:39:54.000Z
+  created_at: 2013-10-07T21:35:45.000Z
+  updated_at: 2013-10-08T01:39:54.000Z
+- id: 128
+  series: 2013 ACE Fall Series
+  title: Creation
+  teacher: Pastor Jeff Holwerda
+  comment: "A lively discussion!"
+  date: 2013-10-13T05:00:00.000Z
+  disk: 11
+  spl: "[{\"type\":null,\"value\":null},{\"type\":null,\"value\":null}]"
+  published: 2013-10-17T11:36:23.000Z
+  created_at: 2013-10-13T18:28:46.000Z
+  updated_at: 2013-10-17T11:36:23.000Z
+- id: 129
+  series: 2013 ACE Fall Series
+  title: Prayer
+  teacher: Bill Gabriel
+  comment: ""
+  date: 2013-10-20T05:00:00.000Z
+  disk: 11
+  spl: "[{\"type\":null,\"value\":null},{\"type\":null,\"value\":null}]"
+  published: 2013-10-24T02:50:29.000Z
+  created_at: 2013-10-20T19:58:39.000Z
+  updated_at: 2013-10-24T02:50:29.000Z
+- id: 130
+  series: 2013 ACE Fall Series
+  title: "What are Angels, Satan, and Demons?"
+  teacher: Pastor Ken Carr
+  comment: ""
+  date: 2013-10-27T05:00:00.000Z
+  disk: 11
+  spl: "[{\"type\":null,\"value\":null},{\"type\":null,\"value\":null}]"
+  published: 2013-10-29T04:03:23.000Z
+  created_at: 2013-10-28T23:52:00.000Z
+  updated_at: 2013-10-29T04:03:23.000Z
+- id: 131
+  series: 2013 ACE Fall Series
+  title: What is Sin?
+  teacher: Andy Underhile
+  comment: ""
+  date: 2013-11-03T05:00:00.000Z
+  disk: 11
+  spl: "[{\"type\":null,\"value\":null},{\"type\":null,\"value\":null}]"
+  published: 2013-11-04T03:50:37.000Z
+  created_at: 2013-11-03T21:20:32.000Z
+  updated_at: 2013-11-04T03:50:37.000Z
+- id: 132
+  series: 2013 ACE Fall Series
+  title: What is Prayer?
+  teacher: Pastor Jeff Holwerda
+  comment: ""
+  date: 2013-11-10T06:00:00.000Z
+  disk: 11
+  spl: "[{\"type\":null,\"value\":null},{\"type\":null,\"value\":null}]"
+  published: 2013-11-11T03:58:45.000Z
+  created_at: 2013-11-10T19:46:55.000Z
+  updated_at: 2013-11-11T03:58:45.000Z
+- id: 133
+  series: 2013 ACE Fall Series
+  title: Who is Christ? / The Mediator
+  teacher: Pastor Ken Carr
+  comment: ""
+  date: 2013-11-17T06:00:00.000Z
+  disk: 11
+  spl: "[{\"type\":null,\"value\":null},{\"type\":null,\"value\":null}]"
+  published: 2013-11-22T12:06:12.000Z
+  created_at: 2013-11-17T20:29:03.000Z
+  updated_at: 2013-11-22T12:06:13.000Z
+- id: 134
+  series: 2013 ACE Fall Series
+  title: What is the Atonement/Reconciliation?
+  teacher: Bill Gabriel
+  comment: ""
+  date: 2013-11-24T06:00:00.000Z
+  disk: 11
+  spl: "[{\"type\":null,\"value\":null},{\"type\":null,\"value\":null}]"
+  published: 2013-11-27T00:53:58.000Z
+  created_at: 2013-11-24T20:21:31.000Z
+  updated_at: 2013-11-27T00:53:58.000Z
+- id: 135
+  series: 2013 ACE Fall Series
+  title: What is Election?
+  teacher: Pastor Jeff Holwerda
+  comment: ""
+  date: 2013-12-08T06:00:00.000Z
+  disk: 11
+  spl: "[{\"type\":null,\"value\":null},{\"type\":null,\"value\":null}]"
+  published: 2013-12-10T00:38:19.000Z
+  created_at: 2013-12-08T22:33:04.000Z
+  updated_at: 2013-12-10T00:38:19.000Z
+- id: 136
+  series: 2013 ACE Fall Series
+  title: What is Resurrection?
+  teacher: Andy Underhile
+  comment: ""
+  date: 2013-12-15T06:00:00.000Z
+  disk: 11
+  spl: "[{\"type\":null,\"value\":null},{\"type\":null,\"value\":null}]"
+  published: 2013-12-15T21:32:49.000Z
+  created_at: 2013-12-15T16:15:55.000Z
+  updated_at: 2013-12-15T21:32:49.000Z
+- id: 137
+  series: 2014 ACE Winter Series
+  title: What Does It Mean To Become A Christian?
+  teacher: Andy Underhile
+  comment: ""
+  date: 2014-01-12T06:00:00.000Z
+  disk: 11
+  spl: "[{\"type\":null,\"value\":null},{\"type\":null,\"value\":null}]"
+  published: 2014-01-14T03:07:25.000Z
+  created_at: 2014-01-12T21:42:12.000Z
+  updated_at: 2014-01-14T03:07:25.000Z
+- id: 138
+  series: 2014 ACE Winter Series
+  title: What is Faith?
+  teacher: Jeff Holwerda
+  comment: ""
+  date: 2014-01-19T06:00:00.000Z
+  disk: 11
+  spl: "[{\"type\":null,\"value\":null},{\"type\":null,\"value\":null}]"
+  published: 2014-01-20T04:00:38.000Z
+  created_at: 2014-01-19T21:40:49.000Z
+  updated_at: 2014-01-20T04:00:38.000Z
+- id: 139
+  series: 2014 ACE Winter Series
+  title: Regeneration
+  teacher: Andy Underhile
+  comment: ""
+  date: 2014-01-26T06:00:00.000Z
+  disk: 11
+  spl: "[{\"type\":null,\"value\":null},{\"type\":null,\"value\":null}]"
+  published: 2014-01-28T01:51:53.000Z
+  created_at: 2014-01-27T02:20:08.000Z
+  updated_at: 2014-01-28T01:51:53.000Z
+- id: 140
+  series: 2014 ACE Winter Series
+  title: What are Justification and Adoption?
+  teacher: Jeff Holwerda
+  comment: ""
+  date: 2014-02-09T06:00:00.000Z
+  disk: 11
+  spl: "[{\"type\":null,\"value\":null},{\"type\":null,\"value\":null}]"
+  published: 2014-02-16T05:14:03.000Z
+  created_at: 2014-02-09T20:26:36.000Z
+  updated_at: 2014-02-16T05:14:03.000Z
+- id: 141
+  series: 2014 ACE Winter Series
+  title: Missions Update - Greg and Debbie Nichols
+  teacher: Greg and Debbie Nichols
+  comment: ""
+  date: 2014-02-16T06:00:00.000Z
+  disk: 11
+  spl: "[{\"type\":null,\"value\":null},{\"type\":null,\"value\":null}]"
+  published: null
+  created_at: 2014-02-16T21:09:12.000Z
+  updated_at: 2014-02-16T21:09:12.000Z
+- id: 142
+  series: 2014 ACE Winter Series
+  title: What are Sanctification and Perserverance?
+  teacher: Pastor Ken Carr
+  comment: ""
+  date: 2014-02-23T06:00:00.000Z
+  disk: 11
+  spl: "[{\"type\":null,\"value\":null},{\"type\":null,\"value\":null}]"
+  published: null
+  created_at: 2014-02-23T21:07:58.000Z
+  updated_at: 2014-02-23T21:07:58.000Z

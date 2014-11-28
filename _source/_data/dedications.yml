@@ -1,0 +1,135 @@
+- id: 1
+  date: 2010-03-28T05:00:00.000Z
+  official: Pastor Ken Carr
+  child: Peter Nathaniel Day
+  comment: ""
+  type: dedication
+  published: 2011-09-05T16:48:15.000Z
+  created_at: 2010-03-28T21:10:41.000Z
+  updated_at: 2010-03-28T21:24:13.000Z
+- id: 2
+  date: 2010-10-24T05:00:00.000Z
+  official: Pastor Ken Carr
+  child: Benjamin James Day
+  comment: ""
+  type: dedication
+  published: 2011-09-05T16:48:21.000Z
+  created_at: 2010-10-25T19:05:30.000Z
+  updated_at: 2010-10-26T04:33:31.000Z
+- id: 3
+  date: 2010-12-12T06:00:00.000Z
+  official: Test Official
+  child: A Test Child
+  comment: "This is just a test; if this had been an actual dedication, you could download and listen. :-)"
+  type: test
+  published: 2011-09-05T16:56:18.000Z
+  created_at: 2010-12-18T16:43:49.000Z
+  updated_at: 2010-12-18T16:43:49.000Z
+- id: 4
+  date: 2011-01-02T06:00:00.000Z
+  official: Reverend Kenneth Carr
+  child: Dana Helen Backfish
+  comment: The actual ceremony was performed away from the microphone.
+  type: infant_baptism
+  published: 2011-09-05T16:48:31.000Z
+  created_at: 2011-01-08T17:11:42.000Z
+  updated_at: 2011-01-08T17:52:33.000Z
+- id: 5
+  date: 2011-02-13T06:00:00.000Z
+  official: Timothy Sattler
+  child: Elinor Kate Gabriel
+  comment: Introduction by Ken Carr
+  type: dedication
+  published: 2011-02-16T04:39:50.000Z
+  created_at: 2011-02-16T04:32:20.000Z
+  updated_at: 2011-02-16T04:39:50.000Z
+- id: 6
+  date: 2011-03-06T06:00:00.000Z
+  official: Test Official
+  child: Test Child
+  comment: this is a test...
+  type: test
+  published: 2011-09-05T16:48:56.000Z
+  created_at: 2011-03-10T00:40:49.000Z
+  updated_at: 2011-03-10T00:40:56.000Z
+- id: 7
+  date: 2011-05-29T05:00:00.000Z
+  official: Chaplin Kenneth Carr
+  child: Ingrid Susan Wit
+  comment: Memorial Day Weekend
+  type: dedication
+  published: null
+  created_at: 2011-05-29T20:45:08.000Z
+  updated_at: 2011-05-29T20:45:08.000Z
+- id: 8
+  date: 2011-07-10T05:00:00.000Z
+  official: Pastor Ken Carr
+  child: Andreas Jarrett Piotrowski
+  comment: ""
+  type: dedication
+  published: 2011-08-07T21:10:10.000Z
+  created_at: 2011-07-12T00:03:30.000Z
+  updated_at: 2011-08-07T21:10:10.000Z
+- id: 9
+  date: 2012-02-26T06:00:00.000Z
+  official: Reverend Kenneth Carr
+  child: Alyssa Grace Busch
+  comment: ""
+  type: dedication
+  published: null
+  created_at: 2012-02-26T16:44:38.000Z
+  updated_at: 2012-02-26T16:44:38.000Z
+- id: 10
+  date: 2012-04-15T05:00:00.000Z
+  official: Reverend Kenneth Carr
+  child: Isabel Marie Busch
+  comment: ""
+  type: dedication
+  published: 2012-04-17T03:17:54.000Z
+  created_at: 2012-04-17T01:31:57.000Z
+  updated_at: 2012-04-17T01:31:57.000Z
+- id: 11
+  date: 2012-05-13T05:00:00.000Z
+  official: Reverend Kenneth Carr
+  child: Nolan Stephen and Nathan Gordon Giere
+  comment: ""
+  type: dedication
+  published: 2012-05-15T03:10:24.000Z
+  created_at: 2012-05-15T02:29:55.000Z
+  updated_at: 2012-05-15T03:10:24.000Z
+- id: 12
+  date: 2012-07-15T05:00:00.000Z
+  official: Pastor Jeffrey Holwerda
+  child: Ruby Joy Jeanine Gabriel
+  comment: ""
+  type: dedication
+  published: null
+  created_at: 2012-07-16T00:57:03.000Z
+  updated_at: 2012-07-16T00:57:03.000Z
+- id: 13
+  date: 2012-10-14T05:00:00.000Z
+  official: Pastor Ken Carr
+  child: Mae Sophia Masterman
+  comment: ""
+  type: dedication
+  published: null
+  created_at: 2012-10-16T00:26:31.000Z
+  updated_at: 2012-10-16T00:26:31.000Z
+- id: 14
+  date: 2014-01-26T06:00:00.000Z
+  official: Pastor Ken Carr
+  child: Andrew Thomas Lasse
+  comment: ""
+  type: dedication
+  published: null
+  created_at: 2014-01-27T02:20:40.000Z
+  updated_at: 2014-01-27T02:20:40.000Z
+- id: 15
+  date: 2014-02-09T06:00:00.000Z
+  official: Reverend Kenneth Carr
+  child: Haley Elizabeth Busch
+  comment: ""
+  type: dedication
+  published: null
+  created_at: 2014-02-09T20:27:29.000Z
+  updated_at: 2014-02-09T20:27:29.000Z
