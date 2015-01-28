@@ -1,0 +1,29 @@
+---
+layout: default
+permalink: /datatables/
+---
+
+<div id="home">
+  <h1>Recordings</h1>
+
+  <table class="display data-table" cellspacing="0" width="100%">
+    <thead>
+      <tr>
+        <th>Date</th>
+        <th>Scripture</th>
+        <th>Title</th>
+        <th>Preacher</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for post in site.posts %}
+      <tr>
+          <td>{{ post.date | date_to_string }}</td>
+          <td>{{ post.sermon.scripture }}</td>
+          <td><a href="{{ post.url }}">{{ post.sermon.title }}</a></td>
+          <td>{{ post.sermon.preacher }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
