@@ -6,7 +6,7 @@ image: images/ctk.gif
 name: Christ the King Sound Team
 permalink: /:year/:month/:day
 port: 4000
-url: http://recordings.ctksound.org/
+url: https://recordings.ctksound.org/
 webmaster: kgust@pobox.com (Kevin Gustavson)
 
 source: ./_source
